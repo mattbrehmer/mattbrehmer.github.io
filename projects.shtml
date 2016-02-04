@@ -1,0 +1,353 @@
+<html><html xmnls="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Matthew Brehmer, PhD Candidate, UBC InfoVis Group</title>
+		<link rel = "stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+		<style type="text/css"></style>
+		<script>window["_GOOG_TRANS_EXT_VER"] = "1";</script>
+	</head>
+	<body>
+
+		<div id="content-wrapper">
+
+			<div id = "header">
+				<div id="logo">
+					<div id="page-title">
+            Matthew Brehmer
+          </div>
+          <div id="tagline">
+            PhD Candidate, <a href="http://www.ubc.ca" target="_blank">UBC</a> <a href="http://www.cs.ubc.ca/group/infovis" target="_blank">InfoVis</a> & <a href="http://www.cs.ubc.ca/labs/imager/Meetings/mux.html" target="_blank">MUX</a> Groups
+          </div>
+	      </div>
+				<!--/logo-->
+	      <div id="nav" class="right">
+            <a href="index.shtml">home</a>
+        </div>
+        <!--/nav-->
+			</div>
+			<!--/header-->
+
+		<div id = "content">
+
+			<h2>projects</h2>
+
+			<!--List of projects-->
+
+        <div class="pub-one-column" id="boxplots">
+          <div class="thumb">
+            <img src="images/proj-thumbs/2014-boxplots-thumb.png"> <!-- Thumbnail size should be 200px wide; height can vary -->
+          </div>
+          <div class="text">
+            <p class="title">
+              The Design Space of Interactive Boxplots
+            </p>
+            <p>
+              <span class="venue">
+                Summer 2014
+              </span>
+            </p>
+            <p class="abstract">This project explores the design space of boxplots and related statistical graphics, asking how to increase the utility of boxplots via simplification, interaction, or juxtaposition with other visualizations. Boxplots may be more effective as secondary or supporting visualizations, and linked highlighting between primary visualizations and boxplots may increase boxplot understanding.</p>
+            &rarr; [<a href="http://bl.ocks.org/mattbrehmer/12ea86353bc807df2187" target="_blank">Simple box plot with point overlay and hover (bl.ocks)</a>] <br>
+            &rarr; [<a href="http://bl.ocks.org/mattbrehmer/8be29724bdd7a63ff41d" target="_blank">Box plot with bidirectional brushing (bl.ocks)</a>] <br>
+            &rarr; [<a href="http://bl.ocks.org/mattbrehmer/82cf72481d4753eca1cf" target="_blank">Color stock chart (bl.ocks)</a>] <br>
+            &rarr; [<a href="http://bl.ocks.org/mattbrehmer/287e44c9a12151967874" target="_blank">Juxtaposed Focus + Context Box Plots (bl.ocks)</a>]
+          </div>
+        </div>
+
+        <div class="pub-one-column" id="pulse">
+          <div class="thumb">
+            <a href="https://www.mitacs.ca/r/32856" target="_blank"><img src="images/proj-thumbs/2014-energy-thumb.png"></a> <!-- Thumbnail size should be 200px wide; height can vary -->
+          </div>
+          <div class="text">
+            <p class="title">
+              <a href="https://www.mitacs.ca/r/32856" target="_blank">Multidimensional Energy Consumption Analysis in Large Organizations: An Information Visualization Design Study</a>
+            </p>
+            <p>
+              <span class="venue">
+                October 2013 - February 2014
+              </span>
+            </p>
+            <p class="abstract">The goal of this project is to improve the process by which professional energy managers and utility company personnel analyze large amounts of data related to energy consumption. This process is often exploratory, meaning that many analysis questions are open-ended and cannot be phrased as a directed query. Open-ended exploration can be supported by information visualization, which involves a collection of techniques for displaying and interacting with large amounts and varying types of data. Information visualization provides users with an overview of the data, as well as an ability to drill down into specific subsets of the data as their analysis questions are refined. The application of information visualization techniques to the problem of large-scale energy consumption analysis will involve an iterative user-centred design and evaluation process, which will include eliciting requirements from representative users, designing prototypes, implementing, and evaluating one or more information visualization tools.</p>
+            &rarr; [<a href="https://www.mitacs.ca/accelerate" target="_blank">Mitacs Accelerate</a> <a href="https://www.mitacs.ca/r/32856" target="_blank">research project description</a>]
+          </div>
+        </div>
+
+				<div class="pub-one-column" id="shinyfork">
+          <div class="thumb">
+            <a href="https://mattbrehmer.shinyapps.io/ShinyFork/" target="_blank"><img src="images/proj-thumbs/2013-shinyfork-thumb.png"></a> <!-- Thumbnail size should be 200px wide; height can vary -->
+          </div>
+          <div class="text">
+            <p class="title">
+              <a href="https://mattbrehmer.shinyapps.io/ShinyFork/">ShinyFork</a>
+            </p>
+            <p>
+              <span class="venue">
+                May 2013
+              </span>
+            </p>
+            <p class="abstract"><a href="https://mattbrehmer.shinyapps.io/ShinyFork/" target="_blank">ShinyFork</a> is a tool for exploring over 14,000 album reviews from <a href="http://www.pitchfork.com/reviews/albums/" target="_blank">pitchfork.com</a>, an online music editorial. ShinyFork was written in R using the <a href="http://www.rstudio.com/shiny/" target="_blank">Shiny</a> and <a href="http://ggplot2.org/" target="_blank">ggplot2</a> packages. The data was collected using <a href="https://scraperwiki.com/" target="_blank">ScraperWiki</a>.</p>
+            &rarr; [<a href="https://mattbrehmer.shinyapps.io/ShinyFork/" target="_blank">try ShinyFork</a>]
+            [<a href="http://bl.ocks.org/mattbrehmer/5645155" target="_blank">ShinyFork source (bl.ocks)</a>]
+          </div>
+        </div>
+
+				<div class="pub-one-column" id="rpe">
+          <div class="thumb">
+            <img src="images/proj-thumbs/2012-overview-thumb.png"> <!-- Thumbnail size should be 200px wide; height can vary -->
+          </div>
+            <div class="text">
+              <p class="title">
+                A Preliminary Post-Deployment Evaluation of a Visual Document Mining Tool.
+              </p>
+              <p>
+                <span class="venue">
+                  <a href="https://www.cs.ubc.ca/Candidates/grad/prospective/programs/phd#rpe" target="_blank">UBC Department of Computer Science PhD Research Proficiency Evaluation Project</a>, Sept. 2012
+                </span>
+              </p>
+              <p class="abstract">A post-deployment evaluation of a visualization tool can be difficult to conduct, particularly when evaluation criteria is contingent on determining how domain-specific professionals use the tool in the context of their ongoing work. Such is the case with <a href="http://overview.ap.org/" target="_blank">Overview</a>, a visualization tool for exploring large document corpuses, built by our collaborator <a href="http://jonathanstray.com/" target="_blank">Jonathan Stray</a> at the <a href="http://ap.org/" target="_blank">Associated Press</a>. In this report I reflect upon the process and findings of an ongoing post-deployment, mixed-method evaluation of <a href="http://overview.ap.org/" target="_blank">Overview</a>, which includes an in-depth case study of a journalist who used <a href="http://overview.ap.org/" target="_blank">Overview</a> to investigate a large email corpus. I also reflect upon how this work factors into my long-term research goals relating to exploratory data analysis and evaluation in information visualization.</p>
+              &rarr; [<em>For more information, see</em> <a href="/labs/imager/tr/2014/Overview/">Overview: The Design, Adoption, and Analysis of a Visual Document Mining Tool For Investigative Journalists</a>. To appear in IEEE Trans. Visualization and Computer Graphics (TVCG, Proc. InfoVis)</span>, 2014]
+          </div>
+        </div>
+
+				<div class="pub-one-column" id="595">
+          <div class="thumb">
+            <img src="images/proj-thumbs/2012-docmining-thumb.png"> <!-- Thumbnail size should be 200px wide; height can vary -->
+          </div>
+          <div class="text">
+            <p class="title">
+              <a href="http://people.cs.ubc.ca/~brehmer/proj/595.pdf">Document Mining in Data Journalism</a>
+            </p>
+            <p>
+              <span class="venue">
+                 A course project for <a href="http://ecps.educ.ubc.ca/scheduled-ecps-courses" target="_blank">EPSE 595: Introduction to Qualitative Research</a>, April 2012.
+              </span>
+            </p>
+            <p class="abstract">In the fall of 2010, the WikiLeaks organization released nearly 400,000 text documents relating to the conduct of US armed forces and independent security contractors during the war in Iraq. Since that time, specialized investigative "data journalists" have reported on what was contained in this vast deposit of documents, which included startling information regarding civilian casualties, friendly fire incidents, and observed breaches of protocol. My proposed research, in brief, asks how data journalists “mine” such deposits, how they seek information to support or refute prior findings, or how they come to discover unanticipated yet newsworthy stories hiding in the data.</p>
+            &rarr; [<a href="http://people.cs.ubc.ca/~brehmer/proj/595.pdf">pdf</a>]
+          </div>
+        </div>
+
+				<div class="pub-one-column" id="533">
+          <div class="thumb">
+            <a href="http://cs.ubc.ca/~brehmer/demo/omnivore/InformedOmnivore.html"><img src="images/proj-thumbs/2011-omnivore-thumb.png"></a> <!-- Thumbnail size should be 200px wide; height can vary -->
+          </div>
+          <div class="text">
+            <p class="title">
+              <a href="http://people.cs.ubc.ca/~brehmer/proj/533.pdf">Informed Omnivore: Visualizing Organic Food Production in	Canada</a>
+            </p>
+            <p>
+              <span class="venue">
+                 A course project for <a href="http://people.cs.ubc.ca/~tmm/courses/533-09/" target="_blank">CPSC 533C: Information Visualization</a>, Dec. 2009.
+              </span>
+            </p>
+            <p class="abstract">This project report documents a	design study in the domain of organic agriculture, and presents Informed Omnivore, an exploratory analysis tool for visualizing the Canadian organic food industry. A goal of this application is to provide consumers with the information necessary to make informed choices when buying local or organic food. I provide an overview of the domain, task, and data addressed by the application, followed by a description of the information visualization solution. This is followed by an analysis of the solution's strengths and weaknesses. This report concludes with a discussion of potential areas for future work. The contribution of <a href="http://cs.ubc.ca/~brehmer/demo/omnivore/InformedOmnivore.html">Informed Omnivore</a> is a demonstration of information visualization techniques applied to domain of organic agriculture, motivating casual users to make sustainable and healthy food choices.<br><br>Informed Omnivore was written in ActionScript using <a href="http://www.adobe.com/ca/products/flex.html" target="_blank">Adobe Flex</a> and the <a href="http://flare.prefuse.org/" target="_blank">Flare/prefuse</a> visualization library.</p>
+            &rarr; [<a href="http://people.cs.ubc.ca/~brehmer/proj/533.pdf">pdf</a>]
+            [<a href="http://cs.ubc.ca/~brehmer/demo/omnivore/InformedOmnivore.html">try Informed Omnivore</a>]
+            <br /><br />
+            <p class="title">
+              <a href="http://people.cs.ubc.ca/~brehmer/proj/579.pdf">A Design Analysis of Informed Omnivore</a>
+            </p>
+            <p>
+              <span class="venue">
+                 A course project for <a href="http://www2.psych.ubc.ca/~rensink/courses/psyc579/" target="_blank">PSYC 579: Topics in Perception: Visual Display Design</a>, April 2011.
+              </span>
+            </p>
+            <p class="abstract">The usability of a visual interface	is largely dependent on the extent to which visual perceptual mechanisms are supported. This report investigates the design of a visual	interface, identifying interface elements that are both optimally and	poorly designed, with respect to perceptual mechanisms. Recommendations, grounded in an understanding of these mechanisms, are offered to improve	the visual design of the interface.</p>
+            &rarr; [<a href="http://people.cs.ubc.ca/~brehmer/proj/579.pdf">pdf</a>]
+          </div>
+        </div>
+
+        <div class="pub-one-column" if="543">
+          <div class="thumb">
+            <img src="images/proj-thumbs/2010-crayola-thumb.png"> <!-- Thumbnail size should be 200px wide; height can vary -->
+          </div>
+          <div class="text">
+            <p class="title">
+              <a href="http://people.cs.ubc.ca/~brehmer/proj/543.pdf">Exploring the Haptic Crayola Effect</a>
+            </p>
+            <p>
+              <span class="authors">
+             with Inwook Hwang,
+             <a href="/~jchendy" target="_blank">Jeff Hendy</a>, and
+             <a href="http://www.ece.ubc.ca/~andreass/" target="_blank">Andreas Sotirkopoulos</a>
+              </span>
+              <br>
+              <span class="venue">
+                 A course project for <a href="http://people.cs.ubc.ca/~cs543/current-term/" target="_blank">CPSC 543: Physical User Interface Design &amp; Evaluation</a>, April. 2010.
+              </span>
+            </p>
+            <p class="abstract">Haptic icons are short sequences of vibrations designed to provide meaningful information and feedback to the user. In order for the icons to be useful, strategies to help users to identify, distinguish, and recall them need to be developed. In this paper, we investigate the effect that naming haptic icons has on the accuracy with which users are able to identify, distinguish, and recall the icons. We have conducted a between-subjects experiment using 60 participants equally divided in three naming conditions: no names, pre-selected non-descriptive names, and self-selected names. The experiment examined the impact that different naming strategies had on the ability of participants to accurately match the icons to given stimuli as well as their ability to remember the names. Our results suggest that while many participants felt that the names were useful, naming did not actually have any significant impact on the accuracy with which users were able to match icons to targets. Additionally, participants reported that allowing them to choose the names for the icons enabled them to better remember and distinguish the icons than participants who were presented with icons given non-descriptive names. Despite this finding, the groups did not differ significantly in their ability to remember the icons.</p>
+            &rarr; [<a href="http://people.cs.ubc.ca/~brehmer/proj/543.pdf">pdf</a>]
+            [<a href="/~brehmer/publications.shtml#crayola">IEEE World Haptics conference paper</a>]
+          </div>
+        </div>
+
+				<div class="pub-one-column" id="544">
+          <div class="thumb">
+            <img src="images/proj-thumbs/2009-walkabout-thumb.png"> <!-- Thumbnail size should be 200px wide; height can vary -->
+          </div>
+          <div class="text">
+            <p class="title">
+              Walkabout: A Persuasive System to Motivate People to Walk and Facilitate Social Walks Planning
+            </p>
+            <p>
+              <span class="authors">
+              with Mohamed El-Zohairy, Gordon Jih-Shiang Chang, and H. Gökhan Himmetoğlu
+              </span>
+              <br>
+              <span class="venue">
+                 A course project for <a href="http://people.cs.ubc.ca/~cs544/Fall2009/" target="_blank">CPSC 544: Human Computer Interaction</a>, Dec. 2009.
+              </span>
+            </p>
+            <p class="abstract">This project describes the design of Walkabout; a persuasive mobile application that aims to motivate its users to walk. The design addresses this goal by providing users easy access to knowledge about popular places for walking and by increasing their motivation to walk through leveraging their social network. If we are to consider the increasing ubiquity of mobile devices and their location-aware capabilities, we can be confident that our design is feasible. In this paper, a mixed horizontal/vertical medium fidelity prototype, which is based on initial low-fidelity prototypes, is presented along with a formal evaluation process and results. In addition, we present evidence indicating that our mobile application design is likely to have positive long-term effects on users' walking habits.</p>
+          </div>
+        </div>
+
+        <div class="pub-one-column" id="gaim">
+          <div class="thumb">
+            <ahref="http://dundee.cs.queensu.ca/wiki/index.php/GAIM_Developer_Documentation" target="_blank"><img src="images/proj-thumbs/2009-gaim-uml-thumb.png"></a> <!-- Thumbnail size should be 200px wide; height can vary -->
+          </div>
+          <div class="text">
+            <p class="title">
+              <a href="http://dundee.cs.queensu.ca/wiki/index.php/GAIM_Developer_Documentation" target="_blank">General Active Input Model (GAIM) Framework</a>
+            </p>
+            <p>
+              <br>
+              <span class="venue">
+                 Research performed at the <a title="EQUIS" href="http://equis.cs.queensu.ca/" target="_blank">EQUIS (Engineering Interactive Systems at Queen’s University)</a> lab, Kingston,	Canada, Summer 2009.
+              </span>
+            </p>
+            <p class="abstract">Many active games are developed around specific hardware platforms, such as accelerometers, camera input, or pedal and steering input. Stach and Graham reviewed 114 active games for the purpose of classifying input techniques found throughout these games, abstracted away from the input hardware. Previous analogous classifications have been carried out for traditional input techniques (mouse, keyboard) and tabletop computing. Hardware-independent input includes power, pointing,	stance, gestures, tap, and continuous control. These can be used in	conjunction with traditional input (mouse, keyboard, gamepad, or a joystick). Many existing hardware-dependent games could make use of alternative hardware should they make use of a toolkit which abstracts	input type from the hardware device being used. This would allow game developers to focus on game content and story rather than low-level	input peripherals. This would also make games more portable and allow	for people with different hardware to play together.
+            <br /><br />
+            Input can be abstracted from specific devices in two stages. Device-specific data can be abstracted to the level of which the data's origin could be from one of many devices in the same class. The data is then again abstracted to the level of input techniques, which could employ a variety of device classes.
+            <br /><br />
+            At the device level, input data from individual devices is collected, implementing the interfaces described at the abstract device level. An example of which is the Tunturi E6R, which implements the IBike and IHRMonitor interfaces, providing properties such as power wattage generated and current heart rate. The device level is a thin layer above any available proprietary 3rd party or existing APIs for enabled devices.
+            <br /><br />
+            The abstract device level refers to broad classes of input devices, or devices with a substantial amount shared functionality.These include exercise equipment (bikes, treadmills, etc.),	accelerometers, cameras, exertion or resistance devices, pads, and mats. For example, Bike input can refer to many instances of exercise bicycle hardware devices, such as the Tunturi E6R or the FitXF PCGamerBike Mini.	Camera input can represent input from standard webcams, Sony Eyetoy	cameras, or Project Natal input.
+            <br /><br />
+            The input level refers to the high-level hardware-independent or abstract input in active games. This level of input includes the aforementioned input types: gesture, stance, pointing, power, continuous control, and tap.
+            <br /><br />
+            The GAIM framework is written in Visual C# / XNA Studio 3.0, allowing for easy integration with existing XNA-basedgames.</p>
+            &rarr; [<a	href="http://dundee.cs.queensu.ca/wiki/index.php/GAIM_Developer_Documentation" target="_blank">GAIM Developer Documentation</a>]
+            [<a href="/~brehmer/publications.shtml#gaim">ACM Future Play conference paper</a>]
+          </div>
+        </div>
+
+        <div class="pub-one-column" id="508">
+          <div class="thumb">
+            <img src="images/proj-thumbs/2012-508-thumb.png">
+            <!-- Thumbnail size should be 200px wide; height can vary -->
+          </div>
+          <div class="text">
+            <p class="title">
+              <a href="http://people.cs.ubc.ca/~brehmer/proj/508.pdf">Performance Evaluation in Operating Systems Research: Approaches and Challenges</a>
+            </p>
+            <p>
+              <br>
+              <span class="venue">
+                 A course project for <a href="http://www.cs.ubc.ca/~feeley/cs508/index.html" target="_blank">CPSC 508: Operating Systems</a>, Dec. 2012.
+              </span>
+            </p>
+            <p class="abstract">A survey of four research papers pertaining to performance evaluation of operating system is presented. This survey and its related discussion highlight the approaches to system evaluation along with its associated challenges and tradeoffs. The article speaks to methodological issues of realism, accuracy, the granularity of measurement, the portability of measurement techniques and tools, as well as the 	comparability and reproducibility of methods and results.</p>
+            &rarr; [<a href="http://people.cs.ubc.ca/~brehmer/proj/508.pdf">pdf</a>]
+          </div>
+        </div>
+
+        <div class="pub-one-column" id="423">
+          <div class="thumb">
+            <img src="images/proj-thumbs/2009-go423-thumb.png"> <!-- Thumbnail size should be 200px wide; height can vary -->
+          </div>
+          <div class="text">
+            <p class="title">
+              <a href="http://people.cs.ubc.ca/~brehmer/proj/423.pdf">Using Global and Local Information as Contextual Cues: Evidence from Go	Expertise</a>
+            </p>
+            <p>
+              <br>
+              <span class="venue">
+                 A course project for <a href="http://www.queensu.ca/calendars/archive/2008-09/ASC/pg475.html#56068" target="_blank">PSYC 423: Selected Topics in Real-World Scene Perception</a>, April 2009.
+              </span>
+            </p>
+            <p class="abstract">Research on contextual cueing with real-world scenes has demonstrated that the location of task-relevant visual information can be predicted from a stable visual context, and that scene-target associations are explicitly encoded in memory. In	addition, observers are biased to associate target locations in	naturalistic scenes with global contexts. Less acknowledged is the possibility that observers with domain-specific expertise may form these associations differently than non-experts for scenes representative of	their domain. This study contrasts the role of global and local contexts in contextual cueing for domain-specific scenes. Go board configurations	serve as the domain, as their meaningfulness depends on an observer's	knowledge of the game.</p>
+            &rarr; [<a href="http://people.cs.ubc.ca/~brehmer/proj/423.pdf">pdf</a>]
+          </div>
+        </div>
+
+        <div class="pub-one-column" id="kalimba">
+          <div class="thumb">
+            <img src="images/proj-thumbs/2008-kalimba-thumb.png"> <!-- Thumbnail size should be 200px wide; height can vary -->
+          </div>
+          <div class="text">
+            <p class="title">
+              <a href="http://people.cs.ubc.ca/~brehmer/proj/258.pdf">The Guitar-Mounted Kalimba: Musical Instrument Building Project</a>
+            </p>
+            <p>
+              <br>
+              <span class="venue">
+                 A course project for <a href="http://www.queensu.ca/calendars/archive/2008-09/ASC/pg395.html#50390 target="_blank"">MUSC 258: the Science &amp; Technology of Music</a>, Dec. 2008.
+              </span>
+            </p>
+            <p class="abstract">The results	of a musical instrument building project, in which I have built a	guitar-mounted kalimba, or thumb piano. I will also discuss the	construction of a second instrument, a regular wood-mounted kalimba, which in many ways improves upon its guitar-mounted counterpart.</p>
+            &rarr; [<a href="http://people.cs.ubc.ca/~brehmer/proj/258.pdf">pdf</a>]
+          </div>
+        </div>
+
+	<!-- 			<h2>presentations</h2>
+
+        <div class="pub-one-column">
+          <div class="thumb">
+          </div>
+          <div class="text">
+    				<a href="http://cs.ubc.ca/~brehmer/proj/13.03.06_task_taxonomy_mux.pdf">On Visualization Tasks</a>.
+    				<a href="http://www.cs.ubc.ca/nest/imager/imager-web/Meetings/mux.html">MUX</a> forum, Mar 06, 2013.
+    				[<a href="http://cs.ubc.ca/~brehmer/proj/13.03.06_task_taxonomy_mux.pdf">pdf</a>]
+          </div>
+        </div>
+
+        <div class="pub-one-column">
+  				<div class="thumb">
+          </div>
+          <div class="text">
+            <a href="http://cs.ubc.ca/~brehmer/proj/Imager_05.23.12.pdf">2 Evaluation Projects: Document Mining in Data Journalism</a>.
+    				<a href="http://www.cs.ubc.ca/labs/imager/imager.php">Imager</a> social, May 23, 2012.
+    				[<a href="http://cs.ubc.ca/~brehmer/proj/Imager_05.23.12.pdf">pdf</a>]
+          </div>
+        </div>
+
+        <div class="pub-one-column">
+  				<div class="thumb">
+          </div>
+          <div class="text">
+            <a href="http://cs.ubc.ca/~brehmer/proj/11.12.08_black_box.pdf">The Black Box of Sensemaking and Scientific Discovery</a>. Dec 08, 2011.
+    				[<a href="http://cs.ubc.ca/~brehmer/proj/11.12.08_black_box.pdf">pdf</a>]
+          </div>
+        </div>
+
+        <div class="pub-one-column">
+          <div class="thumb">
+          </div>
+  				<div class="text">
+            <a href="http://cs.ubc.ca/~brehmer/proj/MUX_01.12.11.pdf">Research Overview</a>.
+    				<a href="http://www.cs.ubc.ca/nest/imager/imager-web/Meetings/mux.html">MUX/IDRG</a> forum, Jan 12, 2011.
+    				[<a href="http://cs.ubc.ca/~brehmer/proj/MUX_01.12.11.pdf">pdf</a>]
+          </div>
+        </div> -->
+				<!--p id="citation"><strong>Matthew Brehmer</strong>. Paper discussion: [Monk, C. A., Trafton, J. G., and Boehm-Davis, D. A. "<a href="http://interruptions.net/literature/Monk-JEPA08.pdf">The effect of interruption duration and demand on resuming suspended goals</a>". Journal of experimental psychology, Applied (14,4), 299-313, 2008.]. <a href="http://www.cs.ubc.ca/labs/imager/Meetings/idrg.html">IDRG</a>, Oct 19, 2010.</p>
+
+				<p id="citation"><strong>Matthew Brehmer</strong>. Paper discussion: [Wherton, J. and Monk, A. "<a href="http://linkinghub.elsevier.com/retrieve/pii/S1071581908000268">Technological opportunities for supporting people with dementia who are living at home</a>". International Journal of Human-Computer Studies (66), 571-586, 2008.]. <a href="http://www.cs.ubc.ca/labs/imager/Meetings/idrg.html">IDRG</a>, May 18, 2010.</p-->
+		</div>
+		<!--/content-->
+	</div>
+	<!--/content-wrapper-->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-71343625-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>
