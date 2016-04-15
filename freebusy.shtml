@@ -16,7 +16,7 @@
 		     <div id = "header">
 					<div id="logo">
 						<div id="page-title">
-	      			<a href="index.shtml">Matthew Brehmer</a>
+	      			<a href="/">Matthew Brehmer</a>
 	          </div>
 	          <div id="tagline">
 	            PhD Candidate, <a href="http://www.ubc.ca" target="_blank">UBC</a> <a href="http://www.cs.ubc.ca/group/infovis" target="_blank">InfoVis</a> & <a href="http://www.cs.ubc.ca/labs/imager/Meetings/mux.html" target="_blank">MUX</a> Groups
@@ -24,10 +24,10 @@
 		      </div>
 					<!--/logo-->
 		      <div id="nav" class="right">
-		      	<a href="#skills">skills</a>
-	          <a href="index.shtml#domains">domains</a>
-	          <a href="index.shtml#talks">talks</a>
-	          <a href="index.shtml#pubs">publications</a>
+		      	<a href="/#skills">skills</a>
+	          <a href="/#domains">domains</a>
+	          <a href="/#talks">talks</a>
+	          <a href="/#pubs">publications</a>
 	          <a href="mb_cv.pdf">cv</a>
 	        </div>
 	        <!--/nav-->
