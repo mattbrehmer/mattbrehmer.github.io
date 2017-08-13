@@ -4,27 +4,31 @@
 
 /* Typeface, Text Size, Colour */
 body {
-font-family: "Century Gothic", "Helvetica Neue", Helvetica, Frutiger,geneva,verdana,trebuchet,arial,sans-serif;
+font-family: 'Open Sans',"Apple SD Gothic Neo", "Segoe UI Web Regular","wf_segoe-ui_normal","Segoe UI","Segoe UI Symbol","Myriad","Calibri","UnDotum","Damascus","Futura","Helvetica Neue","BBAlpha Sans","S60 Sans","Arial",sans-serif;
 font-size: 12px;
 line-height: normal;
 }
 
 h1 {
 font-variant: small-caps;
-font-family:"Century Gothic", "Helvetica Neue", Helvetica, Frutiger,geneva,verdana,trebuchet,arial,sans-serif;
 font-size: 24px;
 font-weight: bold;
 margin: 0px 0px 0px 0;
-color: #333333;
+color: #666;
 }
 
 h2 {
 font-variant: small-caps;
-font-family:"Century Gothic", "Helvetica Neue", Helvetica, Frutiger,geneva,verdana,trebuchet,arial,sans-serif;
 font-size: 16px;
 font-weight: bold;
 color: #333333;
 margin: 0px 0 10px 0;
+}
+
+.moreinfo {
+  font-variant: small-caps;
+  font-weight: bold;
+  color: #666;
 }
 
 #nav a {
@@ -70,7 +74,6 @@ text-align: left;
 }
 
 #page-title{
-font-family: "Century Gothic", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
 font-size: 36px;
 width: 450px;
 height: 37px;
@@ -78,8 +81,8 @@ clear:both;
 }
 
 #tagline{
-font-family: "Century Gothic", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
 font-size: 18px;
+color: #666;
 width: 450px;
 height: 20px;
 }
@@ -232,7 +235,7 @@ width: 565px;
 margin: 0px 0px 0px -10px;
 padding: 0px 0px 0px 10px;
 float: left;
-background: #eeffff;
+/* background: #eeffff; */
 border-radius:10px 10px 10px 10px;
 }
 
