@@ -28,12 +28,10 @@ margin: 0px 0 10px 0;
 .moreinfo {
   font-variant: small-caps;
   font-weight: bold;
-  color: #666;
 }
 
 #nav a {
 font-variant: small-caps;
-font-family:"Century Gothic", "Helvetica Neue", Helvetica, Frutiger,geneva,verdana,trebuchet,arial,sans-serif;
 text-decoration: none;
 font-size: 16px;
 color: #2A5DB0;
