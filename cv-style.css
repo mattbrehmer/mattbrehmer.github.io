@@ -119,14 +119,12 @@ max-width: 720px;
 min-width: 720px;
 width: 720px;
 margin: 10px 0 0 0;
-padding-top:75px;
 }
 
 /* Header file */
 
 #header-wrapper{
 width: 100%;
-position: fixed;
 top: 0px;
 left: 0px;
 margin:0;
