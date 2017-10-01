@@ -259,6 +259,11 @@ float: right;
 width: 140px;
 }
 
+.pub .date_span {
+  float:right;
+  font-weight: bold;
+}
+
 
 /* Used for Publications page */
 .pub-one-column .text{
