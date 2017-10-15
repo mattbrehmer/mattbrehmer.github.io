@@ -41,10 +41,12 @@ margin: 0px 0 10px 0;
 .moreinfo {
   font-variant: small-caps;
   font-weight: 600;
+  color: #666;
 }
 
 .crossref {
   /* font-weight: 600; */
+  color: #666;
   font-size: 10px;
 }
 
@@ -73,7 +75,7 @@ text-decoration: none;
 }
 
 a {
-color: #2A5DB0;
+color: #333;
 text-decoration: none;
 }
 
