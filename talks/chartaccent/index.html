@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>ChartAccent @ UBC: 17-10-24</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+		<link href="//cdnjs.cloudflare.com/ajax/libs/cc-icons/1.2.1/css/cc-icons.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+		<link href="font-awesome.min.css" rel="stylesheet">	
+		<link rel="shortcut icon" href="favicon.ico" />
+
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!--SECTION: INTRO-->
+				
+				<section>
+					
+					<h3>Chart<span style="color:gold">Accent</span>:</h3>
+					<hr>
+					<h4>Annotation for Data-Driven Storytelling</h4>
+					<small><a href="https://donghaoren.org/" target="_blank">Donghao Ren</a> (UCSB), <a href="http://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> (MSR), <a href="https://research.microsoft.com/en-us/um/people/bongshin/" target="_blank">Bongshin Lee</a> (MSR), <br><a href="http://cs.ucsb.edu/~holl/" target="_blank">Tobias Höllerer</a> (UCSB), and <a href="https://faculty.ist.psu.edu/choe/" target="_blank">Eun Kyoung Choe</a> (UMD)
+					<br><br><a href="https://chartaccent.github.io/" target="_blank">chart<span style="color:gold">accent</span>.github.io</a> &middot; <a href="http://twitter.com/chartaccent" target="_blank">@chartaccent</a></small>
+
+					<!-- <img class="white_img" width="80" height="80" data-src="assets/HCI.png" alt="HCI@MSR" style="margin:0px; background: none; border: none; box-shadow:none">
+					<img class="white_img" width="80" height="80" data-src="assets/ubc.png" alt="University of British Columbia" style="margin:0px; background: none; border: none; box-shadow:none"> -->
+
+					<span class="attribution"><a href="https://doi.org/10.1109/PACIFICVIS.2017.8031599" target="_blank">IEEE PacificVis 2017</a> &middot; 10-24-2017 @ UBC CPSC 547 &middot; <i class="cc cc-cc"></i> slides: <a href="https://mattbrehmer.github.io/talks/chartaccent/">mattbrehmer.github.io/talks/chartaccent/</a>  </span>
+
+					<aside class="notes">
+						
+					</aside>
+
+				</section>						
+				
+				<!--SECTION: CHARTACCENT-->
+
+				<section>
+
+					<blockquote>
+							<span class="body_span"><em>“the annotation layer is the <br>most important thing we do... <br>otherwise it’s a case of here it is, <br>you go figure it out."</em></span>
+					</blockquote>
+					<small>- Amanda Cox, <br><em>New York Times</em> Graphics Editor</small>
+				</section>	
+
+				<section data-background="#fff">
+					<h4>Chart Annotation in the Wild</h4>									
+					<img data-src="assets/annotation_examples.png">	
+					<span class="attribution">Examples from <em><a href="https://powerbi.microsoft.com/en-us/blog/what-story-does-your-timeline-tell-introducing-the-timeline-storyteller-custom-visual-for-microsoft-power-bi/" style="color:cornflowerblue;" target="_blank">Characterizing Visualization Insights from Quantified-Selfers’ Personal Data Presentations</a></em> by Choe et al (2015)</span>						
+				</section>
+
+				<section data-background="#fff">
+					<h5><a href="https://www.vis4.net/blog/2015/03/seven-features-youll-wantin-your-next-charting-tool/" style="color:cornflowerblue;" target="_blank">7 Features You'll Want in your Next Charting Tool</a></h5>
+					<hr>
+					<iframe data-src="https://www.vis4.net/blog/2015/03/seven-features-youll-wantin-your-next-charting-tool/" width="100%" height="510"></iframe>
+					<span class="attribution"><a href="https://www.vis4.net/blog/2015/03/seven-features-youll-wantin-your-next-charting-tool/" style="color:cornflowerblue;" target="_blank">vis4.net/blog/2015/03/seven-features-youll-wantin-your-next-charting-tool/</a> by Gregor Aisch (<em>New York Times</em>)</span>
+				</section>
+
+				<section data-background="#fff">
+					<h5>A Survey of annotated charts in news media</h5>
+					<hr>
+					<iframe data-src="https://docs.google.com/spreadsheets/d/1LjQv8GLPkBVjmJcVWj5RNRwwRtfo7p6ui-GVSuK-shk/pubhtml?gid=209301764&single=true&widget=true&headers=false" width="100%" height="510"></iframe>
+					<span class="attribution">106 surveyed charts appearing in six major news outlets: <a href="https://chartaccent.github.io/#section-survey" style="color:cornflowerblue;" target="_blank">chartaccent.github.io/#section-survey</a></span>
+				</section>					
+
+				<section data-background="#fff">
+					<h4>Types of Annotation Targets</h4>									
+					<img data-src="assets/targets1.png">	
+				</section>
+
+				<section data-background="#fff">
+					<h4>Types of Annotation Targets (cont.)</h4>									
+					<img data-src="assets/targets2.png">	
+				</section>
+
+				<section data-background="#fff">
+					<h4>Types of Annotation Forms</h4>									
+					<img data-src="assets/forms.png">	
+				</section>
+
+				<section>
+					<h4><a href="https://chartaccent.github.io/chartaccent.html" target="_blank">chart<span style="color:gold">accent</span>.github.io</a></h4>
+					<hr>
+					<iframe data-src="https://chartaccent.github.io/" width="100%" height="510"></iframe>
+					<span class="attribution">Use ChartAccent in your browser: <a href="https://chartaccent.github.io/chartaccent.html" target="_blank">chartaccent.github.io/chartaccent.html</a></span>
+				</section>
+
+				<section data-background="#fff">
+					<h5>Preliminary Study: <a href="https://chartaccent.github.io/#section-examples" style="color:cornflowerblue;" target="_blank">Reproducing Annotated Charts</a></h5>									
+					<img data-src="assets/reproduction-study.png">	
+					<span class="attribution">Charts used in study: <a href="https://chartaccent.github.io/#section-examples" style="color:cornflowerblue;" target="_blank">chartaccent.github.io/#section-examples</a></span>				
+				</section>
+
+				<section data-background="#fff">
+					<h5>For those who prefer code: <a href="http://d3-annotation.susielu.com/" style="color:cornflowerblue;" target="_blank">D3-Annotation</a></h5>
+					<hr>
+					<iframe data-src="http://d3-annotation.susielu.com/" width="100%" height="510"></iframe>
+					<span class="attribution"><a href="http://d3-annotation.susielu.com/" style="color:cornflowerblue;" target="_blank">d3-annotation.susielu.com</a> by Susie Lu (Netflix)</span>
+				</section>
+
+				<section data-background="#fff">
+					<h4>Coming Soon: ChartAccent in <a href="https://powerbi.microsoft.com/en-us/" style="color:cornflowerblue;" target="_blank">Power BI</a></h4>									
+					<img data-src="assets/chartaccent-powerbi.png">	
+				</section>
+
+				<section>
+						
+					<h4>Summary: <a href="https://chartaccent.github.io/" target="_blank">chart<span style="color:gold">accent</span></a></h4>
+					<hr>
+					<span class="body_span">Consider the design space of annotation forms and targets. <br><br> How can we apply these techniques more broadly? <br> (beyond bar charts, line graphs, scatterplots)</span>
+				
+					<aside class="notes">
+					</aside>	
+
+				</section>
+
+				<!--SECTION: CONCLUSION-->
+
+				<section>
+
+					<span><a href="https://chartaccent.github.iocom" target="_blank">chart<span style="color:gold">accent</span>.github.io</a></span>
+					<br><span class="body_span"><a href="https://github.com/chartaccent/chartaccent" target="_blank">open-source</a> tool for web & coming soon for <a href="https://powerbi.microsoft.com/en-us/" target="_blank">Power BI</a>
+					</span>
+					
+					<hr>
+
+					<small><a href="https://donghaoren.org/" target="_blank">Donghao Ren</a> (UCSB), <a href="http://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> (MSR), <a href="https://research.microsoft.com/en-us/um/people/bongshin/" target="_blank">Bongshin Lee</a> (MSR), <br><a href="http://cs.ucsb.edu/~holl/" target="_blank">Tobias Höllerer</a> (UCSB), and <a href="https://faculty.ist.psu.edu/choe/" target="_blank">Eun Kyoung Choe</a> (UMD)
+					<br><br>slides: <a href="https://mattbrehmer.github.io/talks/chartaccent/">mattbrehmer.github.io/talks/chartaccent/</a></small>
+
+					<aside class="notes">
+					</aside>	
+	
+				</section>				
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				progress: false,
+				slideNumber: false,
+				showNotes: false,
+				mouseWheel: true,
+				history: true,
+				viewDistance: 3,
+				transition: 'fade',
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
