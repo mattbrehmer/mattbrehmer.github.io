@@ -121,9 +121,9 @@ clear:both;
 #footer {
   border-top: 1px solid #ccc;
   margin-bottom: 50px;
-  max-width: 760px;
-  min-width: 760px;
-  width: 760px;
+  max-width: 745px;
+  min-width: 745px;
+  width: 745px;
   min-height: 25px;
   margin:0 auto 0px;
   padding:0;
@@ -151,17 +151,17 @@ margin-bottom: 30px;
 }
 
 #content-wrapper{
-max-width: 760px;
-min-width: 760px;
-width: 760px;
+max-width: 745px;
+min-width: 745px;
+width: 745px;
 margin: 0 auto 20px;
 }
 
 
 #content{
-max-width: 760px;
-min-width: 760px;
-width: 760px;
+max-width: 745px;
+min-width: 745px;
+width: 745px;
 margin: 10px 0 0 0;
 }
 
@@ -178,9 +178,9 @@ z-index: 10;
 }
 
 #header{
-max-width: 760px;
-min-width: 760px;
-width: 760px;
+max-width: 745px;
+min-width: 745px;
+width: 745px;
 min-height: 75px;
 margin:0 auto 0px;
 padding:0;
@@ -252,7 +252,7 @@ img {
 
 #right-column {
 float: left;
-width: 560px;
+width: 545px;
 margin-bottom: 50px;
 border-left: 1px solid #ccc;
 padding: 0px 0px 0px 15px;
@@ -281,14 +281,14 @@ border-radius:10px 10px 10px 10px;
 }
 
 .pub{
-width: 555px;
+width: 540px;
 margin: 0px 0px 10px 0px;
 padding: 0px 0px 10px 0px;
 float: left;
 }
 
 .pub-one-column{
-width: 760px;
+width: 745px;
 float: left;
 margin: 10px 0px 10px 0px;
 border-bottom: 1px solid #999999;
@@ -306,7 +306,10 @@ width: 140px;
 
 .pub .date_span {
   float:right;
-  font-weight: bold;
+  font-weight: 600;
+  font-variant: small-caps;
+  color: #666;
+  font-size: 11px;
 }
 
 
@@ -326,6 +329,8 @@ margin: 10px;
 .pub-one-column .venue .name{
 font-style: italic;
 }
+
+.pagebreak { page-break-after: always; } /* page-break-after works, as well */
 
 .emph{
 font-weight: bold;
