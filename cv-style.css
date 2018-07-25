@@ -299,6 +299,10 @@ float: left;
 width: 450px;
 }
 
+.pub .date {
+  font-size: 12px;
+}
+
 .pub .thumb{
 float: right;
 width: 140px;
