@@ -25,6 +25,38 @@
 
 	<body>
 
+		<script type="text/javascript" src="preloader.js" charset="UTF-8"></script>     
+		<script>
+
+			imagesArray = [
+				"images/charticulator.gif",
+				"images/timeline_storyteller.gif",
+				"images/ranges.gif",
+				"images/vip.png",
+				"images/dds.png",
+				"images/mobilevis.png"
+			];
+
+			new preLoader(imagesArray, {
+				onProgress: function(img, imageEl, index){
+						// fires every time an image is done or errors.
+						// imageEl will be falsy if error
+						// console.log('just ' +  (!imageEl ? 'failed: ' : 'loaded: ') + img);
+						// imageContainer.appendChild(imageEl);
+						// can access any propery of this
+						// console.log(this.completed.length + this.errors.length + ' / ' + this.queue.length + ' done');
+				},
+				onComplete: function(loaded, errors){
+						// fires when whole list is done. cache is primed.
+						// console.log('assets loaded:', loaded);
+						// imageContainer.style.display = 'block';
+						if (errors){
+								console.log('the following failed', errors);
+						}
+				}
+			});
+		</script>
+
 		<div id="content-wrapper">
 
 			<div id="header-wrapper">
