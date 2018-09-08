@@ -4,13 +4,14 @@
 
 /* Typeface, Text Size, Colour */
 body {
-font-family: 'Open Sans',"Apple SD Gothic Neo", "Segoe UI Web Regular","wf_segoe-ui_normal","Segoe UI","Segoe UI Symbol","Myriad","Calibri","UnDotum","Damascus","Futura","Helvetica Neue","BBAlpha Sans","S60 Sans","Arial",sans-serif;
+font-family: 'Lato',"Apple SD Gothic Neo", "Segoe UI Web Regular","wf_segoe-ui_normal","Segoe UI","Segoe UI Symbol","Myriad","Calibri","UnDotum","Damascus","Futura","Helvetica Neue","BBAlpha Sans","S60 Sans","Arial",sans-serif;
 font-size: 13px;
 line-height: normal;
 }
 
-strong {
-  font-weight: 600;
+.matthew {
+  font-weight: 500;
+  text-decoration: underline;
 }
 
 hr {
@@ -25,7 +26,7 @@ hr {
 h1 {
 font-variant: small-caps;
 font-size: 24px;
-font-weight: 400;
+font-weight: 500;
 margin: 0px 0px 0px 0;
 color: #2A5DB0;
 }
@@ -33,15 +34,15 @@ color: #2A5DB0;
 h2 {
 font-variant: small-caps;
 font-size: 16px;
-font-weight: 400;
+font-weight: 500;
 color: #2A5DB0;
 margin: 0px 0 10px 0;
 }
 
 .moreinfo {
   font-variant: small-caps;
-  font-weight: 600;
-  color: #666;
+  font-weight: 500;
+  color: #888;
 }
 
 .crossref {
@@ -299,7 +300,7 @@ float: left;
 width: 450px;
 }
 
-.pub .date {
+.pub .details {
   font-size: 12px;
 }
 
@@ -310,7 +311,7 @@ width: 140px;
 
 .pub .date_span {
   float:right;
-  font-weight: 600;
+  font-weight: 500;
   font-variant: small-caps;
   color: #666;
   font-size: 11px;
@@ -341,8 +342,8 @@ font-weight: bold;
 }
 
 .title{
-font-weight: 600;
-font-style: italic;
+font-weight: 500;
+color: #2A5DB0;
 }
 
 #publications .award{
