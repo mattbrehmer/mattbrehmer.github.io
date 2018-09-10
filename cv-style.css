@@ -45,6 +45,13 @@ margin: 0px 0 10px 0;
   color: #666;
 }
 
+.moreinfo_small {
+  font-variant: small-caps;
+  font-weight: 500;
+  color: #666;
+  font-size: 10px;
+}
+
 .crossref {
   /* font-weight: 600; */
   color: #666;
@@ -120,7 +127,6 @@ clear:both;
   }
 
 #footer {
-  border-top: 1px solid #ccc;
   margin-bottom: 50px;
   max-width: 745px;
   min-width: 745px;
