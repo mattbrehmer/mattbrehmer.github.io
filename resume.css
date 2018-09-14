@@ -306,13 +306,18 @@ float: left;
 width: 450px;
 }
 
+.pub .narrow_text{
+  float: left;
+  width: 350px;
+  }
+
 .pub .details {
   font-size: 12px;
 }
 
 .pub .thumb{
 float: right;
-width: 140px;
+width: 190px;
 }
 
 .pub .date_span {
