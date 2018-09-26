@@ -39,6 +39,14 @@ color: #2A5DB0;
 margin: 0px 0 10px 0;
 }
 
+.pagebreak_h2 {
+  font-variant: small-caps;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2A5DB0;
+  margin: 0px 0px 0px 170px;
+  }
+
 .moreinfo {
   font-variant: small-caps;
   font-weight: 500;
@@ -308,7 +316,7 @@ width: 450px;
 
 .pub .narrow_text{
   float: left;
-  width: 350px;
+  width: 320px;
   }
 
 .pub .details {
@@ -317,7 +325,7 @@ width: 450px;
 
 .pub .thumb{
 float: right;
-width: 190px;
+width: 220px;
 }
 
 .pub .date_span {
@@ -344,6 +352,11 @@ margin: 10px;
 
 .pub-one-column .venue .name{
 font-style: italic;
+}
+
+.pagenum {
+  margin-left: -186px;
+  line-height: 10px;
 }
 
 .pagebreak { page-break-after: always; } /* page-break-after works, as well */
