@@ -41,12 +41,21 @@
 	
 					<span class="attribution">IEEE VIS 2018 &middot; slides: <a href="http://mattbrehmer.github.io/talks/ranges" target="_blank">mattbrehmer.github.io/talks/ranges</a> &middot; video: <a href="https://flic.kr/p/6rPtGo" target="_blank"> flickr/notthisorthat</a> (cc by-nc)</span>
 
+					<aside class="notes">
+					
+					</aside>
+
 				</section>
 
 				<!-- ================================================== -->
 
 				<section data-background="assets/nyt.png">
 					<span class="attribution" style="color:black">image: <em>The New York Times</em> (June 4, 2017)</span>
+
+					<aside class="notes">
+						The next time you pick up the print edition of The New York Times, turn to the weather page; here you’ll see temperature ranges over time. Highs and lows for the last five days and the next five days are superimposed over average and record temperature ranges for 22 American cities, and you’ll also get a full month of temperature ranges for New York City itself.
+					</aside>
+
 				</section>
 
 				<!-- ================================================== -->
@@ -54,6 +63,10 @@
 				<section data-background="#fff">
 						<img data-src="assets/olson.png" width="100%" style="box-shadow: none"/>
 						<span class="attribution">image: <a href="https://fivethirtyeight.com/features/what-12-months-of-record-setting-temperatures-looks-like-across-the-u-s/" target="_blank" style="color:cornflowerblue">Randy Olson (2015) for fivethirtyeight.com</a></span>
+
+						<aside class="notes">
+							Or the next time you ask the question "was this past year warmer or more erratic than usual?", you might encounter a chart like one by Randy Olson, overlaying observed and average ranges for every day of an entire year.
+						</aside>
 				</section>
 
 				<!-- ================================================== -->
@@ -61,6 +74,75 @@
 				<section data-background="#3A3A3C" data-background="assets/boam.png">
 					<img data-src="assets/boam.png" width="100%" style="box-shadow: none"/>
 					<span class="attribution">image: <a href="https://ericboam.com/7-Months-of-Sleep" target="_blank">Eric Boam</a></span>
+
+					<aside class="notes">
+						These charts are fairly conventional when it comes to weather reporting, but they certainly aren’t limited to the weather domain. Consider Eric Boam's "7 Months of Sleep" project, in which every day has a range indicating the hours slept, with bedtimes at the top and waking times the next morning at the bottom. And as with temperature data, the range marks are superimposed, in this case sleep is superimposed over the time spent in bed but not necessarily sleeping.
+					</aside>
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="#fff">
+					<img data-src="assets/nyt_olson_boam.png" style="box-shadow: none"/>		
+					
+					<span class="attribution">images (clockwise from left): <em>The New York Times</em> &middot;  <a href="https://ericboam.com/7-Months-of-Sleep" target="_blank"  style="color:cornflowerblue">Eric Boam</a> &middot; <a href="https://fivethirtyeight.com/features/what-12-months-of-record-setting-temperatures-looks-like-across-the-u-s/" target="_blank" style="color:cornflowerblue">Randy Olson</a>  </span>
+
+
+					<aside class="notes">
+						These examples work well in print and when shown on large displays, but that's not how many of us now consume weather data or personal health and activity data, such as sleep duration. Instead, these and several other sources of range data are likely to be consumed from a mobile device. 
+					</aside>
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="#fff">
+					<img data-src="assets/weather_apps.png" style="box-shadow: none"/>				
+					
+					<span class="attribution">apps: <a href="https://darksky.net/app" target="_blank" style="color:cornflowerblue">Dark Sky</a> © &middot;  <a href="http://theweathertron.com/" target="_blank" style="color:cornflowerblue">Weathertron</a> © &middot; <a href="http://weatherlineapp.com/" target="_blank" style="color:cornflowerblue">Weather Line</a> © </span>
+
+
+					<aside class="notes">
+						There are weather apps like Dark Sky, Weathertron, and Weatherline that feature a rectangle or point-pair temperature range encoding for 7 or 10 days or aggregated across 12 months. 
+					</aside>
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="#fff">
+					<img data-src="assets/sleep_apps.png" style="box-shadow: none"/>				
+					
+					<span class="attribution">apps: <a href="https://www.azumio.com/s/sleeptime/index.html" target="_blank" style="color:cornflowerblue">Azumio Sleep Time</a> © &middot;  <a href="https://connect.garmin.com/en-US/" target="_blank" style="color:cornflowerblue">Garmin Connect</a> © &middot; <a href="https://apple.com" target="_blank" style="color:cornflowerblue">Bedtime (iOS Clock)</a> © </span>
+
+
+					<aside class="notes">
+						As for sleep tracking, we have apps like Azumio's Sleep Time, Garminis Connect, or the Bedtime feature in the iOS Clock app. 
+					</aside>
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="#fff">
+					<img data-src="assets/health_apps.png" style="box-shadow: none"/>				
+					
+					<span class="attribution">apps:  <a href="https://apple.com" target="_blank" style="color:cornflowerblue">Activity (iOS)</a> © &middot;  <a href="http://doi.acm.org/10.1145/2750858.2804266" target="_blank" style="color:cornflowerblue">SleepTight (Choe et al, Proc. UbiComp 2015)</a> &middot; <a href="http://doi.acm.org/10.1145/1133265.1133364" target="_blank" style="color:cornflowerblue">Chittaro (Proc. AVI 2006)</a> </span>
+
+
+					<aside class="notes">
+						If you’re an Apple Watch wearer, you may be familiar with its visualization of heart rate ranges on the watch itself and within the companion iOS Activity app, which shows quite a few more ranges over time on a small display. Visualization on smartwatches is a topic in itself, so we'll focus on mobile phone displays, and if we consider the range charts shown in the iOS Activity app and those shown in several research prototypes, it’s worth finding out just how many ranges can be feasibly shown on a mobile phone, especially as the resolution of newer devices continues to increases. 
+					</aside>
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="#fff">
+					<img data-src="assets/health_apps.png" style="box-shadow: none"/>				
+					
+					<span class="attribution">apps:  <a href="https://apple.com" target="_blank" style="color:cornflowerblue">Activity (iOS)</a> © &middot;  <a href="http://doi.acm.org/10.1145/2750858.2804266" target="_blank" style="color:cornflowerblue">SleepTight (Choe et al, Proc. UbiComp 2015)</a> &middot; <a href="http://doi.acm.org/10.1145/1133265.1133364" target="_blank" style="color:cornflowerblue">Chittaro (Proc. AVI 2006)</a> </span>
+
+
+					<aside class="notes">
+						Another central question to our work relates to the linear convention used when visualizing ranges over time. Time is also cyclical; we experience seasons, lunar cycles, and weekday/weekend routines. The cyclicality of time is exemplified in work like Tim Kekeritz's Weather Radials, or in a number of radial range charts featured in Manuel Lima’s Book of Circles. 
+					</aside>
 				</section>
 
 				<!-- ================================================== -->
@@ -99,7 +181,11 @@
 				"assets/notthisorthat.gif",
 				"assets/nyt.png",
 				"assets/olson.png",
-				"assets/boam.png"
+				"assets/boam.png",
+				"assets/nyt_olson_boam.png",
+				"assets/weather_apps.png",
+				"assets/sleep_apps.png",
+				"assets/health_apps.png"
       ];
 
       new preLoader(imagesArray, {
