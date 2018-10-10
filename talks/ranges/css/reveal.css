@@ -1593,7 +1593,7 @@ body {
   
 
 html.dimbg .slide-background {
-  opacity: 0.33!important; 
+  opacity: 0.5!important; 
   filter: saturate(0%);
 }
 

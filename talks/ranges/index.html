@@ -31,7 +31,7 @@
 
 				<!-- ================================================== -->
 				
-				<section data-background="assets/notthisorthat.gif" data-state="dimbg">
+				<section data-background-video="assets/notthisorthat.mp4" data-background-video-loop data-state="dimbg">
 					<h5>Visualizing Ranges Over Time on Mobile Phones</h5>		
 					<hr>
 					<h5>A Task-Based Crowdsourced Evaluation</h5>
@@ -218,6 +218,26 @@
 				</section>
 
 				<!-- ================================================== -->
+
+				<section>
+						<h5>Range Encoding, Explained</h5>
+						<img data-src="assets/encoding.png" style="box-shadow: none"/>									
+							
+						<aside class="notes">
+								It's also important to note that the quantitative scale for a linear layout is different for these two data types, owing to the weather reporting convention that warmer temperatures are higher in a chart and that later times are lower in calendars. The color encoding reinforces this difference. We also provided different semantic cues for these two datatypes, which included different wordings in task instructions and different iconography. As a result, we divided our participants into two groups, one for temperature ranges and one for sleep ranges. We did not directly compare the results of the two groups due to these confounds. They should be seen as separate experiments.
+							</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section data-background-video="assets/tasks.mp4" data-background-video-loop data-background-size="contain">						
+						<h5 style="position:fixed; top: 10px; left: 50%; transform: translate(-50%,0%);">Experimental Tasks</h5>
+						<aside class="notes">
+								Using an existing visualization task typology as a framework, we arrived at 5 experimental tasks, having increasing difficulty and completed in order, though within each task we counterbalanced the presentation of layout and granularity, with several trials for each combination. These tasks included locating dates, reading values on indicated dates, locating extreme range values, comparing observed and average range values on indicated dates, and comparing spans of observed and average ranges. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
 	
 			</div>
 		</div>
@@ -265,7 +285,8 @@
 				"assets/smartphone.png",
 				"assets/screenshots/linear_year_temp.png",
 				"assets/screenshots/linear_year_sleep.png",
-				"assets/sleep_apps_average.png"
+				"assets/sleep_apps_average.png",
+				"assets/encoding.png"
       ];
 
       new preLoader(imagesArray, {
