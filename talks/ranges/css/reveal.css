@@ -1605,6 +1605,12 @@ html .attribution {
     font-weight: 100;
 }
 
+html .affiliation {
+  position:fixed;
+  bottom:0px;
+  left: 0px;  
+}
+
 html .white_img {
     filter: saturate(0%) brightness(200%);    
     margin: 0px;
