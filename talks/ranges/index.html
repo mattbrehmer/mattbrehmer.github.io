@@ -339,7 +339,7 @@
 						<section>
 							<h5>Radial : Linear completion time ratios by task</h5>
 							<img data-src="assets/plot_completion_time_ratios.png" style="box-shadow: none" width="100%"/>		
-							<span class="attribution">Note: Error bars are 95% Confidence Intervals</span>			
+							<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
 		
 							<aside class="notes">
 								Let's first consider the performance differences between linear and radial layouts. With respect to task completion time, people tend to complete comparison tasks in about the same amount of time with either layout, but for tasks that require locating values, people tend to be slower with radial layouts, irrespective of the source of the data, especially when reading values for an indicated day. 
@@ -351,7 +351,7 @@
 						<section>
 							<h5>Radial - Linear error rate differences by task</h5>
 							<img data-src="assets/plot_error_rate_ratios.png" style="box-shadow: none" width="100%"/>		
-							<span class="attribution">Note: Error bars are 95% Confidence Intervals</span>			
+							<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
 		
 							<aside class="notes">
 								However, radial layouts don’t seem to incur accuracy costs, at least with temperature range data, where there tends to be a lot of seasonal variation. With sleep range data, which exhibits no seasonal variation, people are less accurate when reading values for indicated dates or when locating extreme values. 
@@ -361,8 +361,9 @@
 						<!-- ================================================== -->
 
 						<section>
-							<h5>Interpreting Radial / Linear performance differences</h5>
-										
+							<h5>Interpreting Radial vs. Linear performance differences</h5>
+							<img data-src="assets/layout_interpretation.png" style="box-shadow: none" width="100%"/>					
+							<span class="attribution"><span style="color: gold;">Note</span>: pixel dimensions assume an iPhone 6 (w = 375 pt) with a device-pixel ratio of 2x and a chart region having 12.5% margins</span>	
 		
 							<aside class="notes">
 								The difficulty in reading range values for indicated dates may be due to the fact that the quantitative domain in a radial layout is compressed to half of the chart area, from the center to the periphery, thus putting it at a disadvantage relative to a linear layout, where the quantitative domain spans the entire height of the chart, so individual marks are twice as tall. We kept the chart size constant between the two layout conditions, but it would be interesting to repeat our experiment in which mark size is kept constant instead of chart size, which would involve a linear range chart that was half the height of the charts used in our current experiment. 
@@ -371,6 +372,17 @@
 						</section>
 		
 						<!-- ================================================== -->
+
+						<section>
+								<h5>Interpreting Radial vs. Linear performance differences</h5>
+			
+								<aside class="notes">
+									Our findings also suggest that it does not make a difference whether the task has to do with the beginning or end of the range. We had speculated about whether the increased chronological resolution around the periphery of a radial layout would contribute to better performance for locating and reading values at the periphery, and conversely whether the cluttered center of a radial layout would incur worse performance. People tended to be slower with a radial layout irrespective of whether the task asked them about the start or end of the range, there were no pronounced differences in accuracy in this regard.
+	
+								</aside>
+							</section>
+			
+							<!-- ================================================== -->
 	
 			</div>
 		</div>
@@ -420,7 +432,8 @@
 				"assets/sleep_apps_average.png",
 				"assets/encoding.png",
 				"assets/plot_completion_time_ratios.png",
-				"assets/plot_error_rate_ratios.png"
+				"assets/plot_error_rate_ratios.png",
+				"assets/layout_interpretation.png"
       ];
 
       new preLoader(imagesArray, {
