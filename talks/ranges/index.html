@@ -73,7 +73,7 @@
 
 				<section data-background="#3A3A3C" data-background="assets/boam.png">
 					<img data-src="assets/boam.png" width="100%" style="box-shadow: none"/>
-					<span class="attribution">image: <a href="https://ericboam.com/7-Months-of-Sleep" target="_blank">Eric Boam</a></span>
+					<span class="attribution">image: <a href="https://ericboam.com/7-Months-of-Sleep" target="_blank">Eric Boam's <em>7 Months of Sleep</em></a></span>
 
 					<aside class="notes">
 						These charts are fairly conventional when it comes to weather reporting, but they certainly aren’t limited to the weather domain. Consider Eric Boam's "7 Months of Sleep" project, in which every day has a range indicating the hours slept, with bedtimes at the top and waking times the next morning at the bottom. And as with temperature data, the range marks are superimposed, in this case sleep is superimposed over the time spent in bed but not necessarily sleeping.
@@ -148,14 +148,12 @@
 
 				<!-- ================================================== -->
 
-				<section data-background="#fff">
-					<img data-src="assets/sadowski.png" style="box-shadow: none" width="100%"/>
+				<section>
+					<img data-src="assets/ff.png" style="box-shadow: none" width="100%"/>
 					
-					<span class="attribution"><a href="https://mobileinfovis.com/" target="_blank" style="color:cornflowerblue">mobileinfovis.com (Sebastian Sadowski, 2018)</a> </span>
-
 
 					<aside class="notes">
-						But are these designs appropriate for mobile displays? Bear in mind that mobile app and website designers appear to be quite fond of radial layouts, as illustrated in a survey by Sebastian Sadowski. 
+						The answer to how many ranges can be fit into mobile display and to whether you should use a linear or radial layout is of course, "it depends". It depends on the semantics of the data, and it depends on what task you are performing with the chart. And we know this because we conducted a crowdsourced experiment in which we asked crowd workers to perform a set of different tasks with either temperature range data or sleep duration range data, with both linear and radial layouts, and across three granularities of time: a week of 7 seven ranges, a month of up to 31 ranges, and a year of up to 366 ranges. 
 					</aside>
 				</section>
 
@@ -202,7 +200,8 @@
 				"assets/health_apps.png",
 				"assets/weather_radial.png",
 				"assets/book_of_circles.png",
-				"assets/sadowski.png"
+				"assets/sadowski.png",
+				"assets/ff.png"
       ];
 
       new preLoader(imagesArray, {
