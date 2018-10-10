@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Visualizing Ranges Over Time on Mobile Phones</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -135,13 +135,27 @@
 				<!-- ================================================== -->
 
 				<section data-background="#fff">
-					<img data-src="assets/health_apps.png" style="box-shadow: none"/>				
+					<img data-src="assets/weather_radial.png" style="box-shadow: none" height="500"/>
+					<img data-src="assets/book_of_circles.png" height="500"/>		
 					
-					<span class="attribution">apps:  <a href="https://apple.com" target="_blank" style="color:cornflowerblue">Activity (iOS)</a> © &middot;  <a href="http://doi.acm.org/10.1145/2750858.2804266" target="_blank" style="color:cornflowerblue">SleepTight (Choe et al, Proc. UbiComp 2015)</a> &middot; <a href="http://doi.acm.org/10.1145/1133265.1133364" target="_blank" style="color:cornflowerblue">Chittaro (Proc. AVI 2006)</a> </span>
+					<span class="attribution">images:  <a href="http://www.weather-radials.com/" target="_blank" style="color:cornflowerblue"><em>Weather Radials</em> (by Timm Kekeritz of Raureif GmbH)</a> © &middot;  <a href="https://www.papress.com/html/product.details.dna?isbn=9781616895280" target="_blank" style="color:cornflowerblue"><em>The Book of Circles</em> (Manuel Lima, 2017)</a> </span>
 
 
 					<aside class="notes">
 						Another central question to our work relates to the linear convention used when visualizing ranges over time. Time is also cyclical; we experience seasons, lunar cycles, and weekday/weekend routines. The cyclicality of time is exemplified in work like Tim Kekeritz's Weather Radials, or in a number of radial range charts featured in Manuel Lima’s Book of Circles. 
+					</aside>
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="#fff">
+					<img data-src="assets/sadowski.png" style="box-shadow: none" width="100%"/>
+					
+					<span class="attribution"><a href="https://mobileinfovis.com/" target="_blank" style="color:cornflowerblue">mobileinfovis.com (Sebastian Sadowski, 2018)</a> </span>
+
+
+					<aside class="notes">
+						But are these designs appropriate for mobile displays? Bear in mind that mobile app and website designers appear to be quite fond of radial layouts, as illustrated in a survey by Sebastian Sadowski. 
 					</aside>
 				</section>
 
@@ -185,7 +199,10 @@
 				"assets/nyt_olson_boam.png",
 				"assets/weather_apps.png",
 				"assets/sleep_apps.png",
-				"assets/health_apps.png"
+				"assets/health_apps.png",
+				"assets/weather_radial.png",
+				"assets/book_of_circles.png",
+				"assets/sadowski.png"
       ];
 
       new preLoader(imagesArray, {
