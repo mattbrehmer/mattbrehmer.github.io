@@ -374,15 +374,53 @@
 						<!-- ================================================== -->
 
 						<section>
-								<h5>Interpreting Radial vs. Linear performance differences</h5>
+							<h5>No advantage at the periphery relative to the center</h5>
+							<img data-src="assets/layout_target_value.png" style="box-shadow: none" width="100%"/>				
+							<aside class="notes">
+								Our findings also suggest that it does not make a difference whether the task has to do with the beginning or end of the range. We had speculated about whether the increased chronological resolution around the periphery of a radial layout would contribute to better performance for locating and reading values at the periphery, and conversely whether the cluttered center of a radial layout would incur worse performance. People tended to be slower with a radial layout irrespective of whether the task asked them about the start or end of the range, there were no pronounced differences in accuracy in this regard.
+
+							</aside>
+						</section>
 			
-								<aside class="notes">
-									Our findings also suggest that it does not make a difference whether the task has to do with the beginning or end of the range. We had speculated about whether the increased chronological resolution around the periphery of a radial layout would contribute to better performance for locating and reading values at the periphery, and conversely whether the cluttered center of a radial layout would incur worse performance. People tended to be slower with a radial layout irrespective of whether the task asked them about the start or end of the range, there were no pronounced differences in accuracy in this regard.
-	
-								</aside>
-							</section>
-			
-							<!-- ================================================== -->
+						<!-- ================================================== -->
+
+						<section>
+							<h5>People prefer (and are more confident with) Linear layouts</h5>
+							<img data-src="assets/plot_pref.png" style="box-shadow: none" width="100%"/>					
+							<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
+		
+							<aside class="notes">
+								It's also worth remarking that participants universally preferred linear layouts, and they felt more confident using linear layouts relative to radial ones.
+							</aside>
+						</section>
+		
+						<!-- ================================================== -->
+
+						<section>
+							<h5 style="color: gold;">Radial or Linear?</h5>
+
+							<small>
+								<p>People are, in general, <span style="color: gold;">slower</span> when using a radial layout.</p>
+								<p>However, only in some data + task contexts are people less accurate.</p>							
+							</small>
+
+							<aside class="notes">
+								So you might be wondering if our results contribute another nail in the coffin so to speak for radial layouts in general, this despite their popularity in practice and design communities. It's tempting to say this but our results are somewhat more nuanced. Yes, people tend to be slower with radial layouts, and only in value reading task contexts are they less accurate. 
+							</aside>
+						</section>
+		
+						<!-- ================================================== -->
+
+						<section>
+							<h5>Layout does not appear to affect comparison performance</h5>
+							
+
+							<aside class="notes">
+									Yet, If the task is primarily about comparing ranges values or comparing spans of observed and averages ranges, like comparing whether the observed temperatures in one month were more aligned with average temperatures relative to some other month, it doesn’t appear to matter whether you use a linear or radial layout, at least in terms of accuracy. 
+							</aside>
+						</section>
+		
+						<!-- ================================================== -->
 	
 			</div>
 		</div>
@@ -433,7 +471,9 @@
 				"assets/encoding.png",
 				"assets/plot_completion_time_ratios.png",
 				"assets/plot_error_rate_ratios.png",
-				"assets/layout_interpretation.png"
+				"assets/layout_interpretation.png",
+				"assets/layout_target_value.png",
+				"assets/plot_pref.png"
       ];
 
       new preLoader(imagesArray, {
