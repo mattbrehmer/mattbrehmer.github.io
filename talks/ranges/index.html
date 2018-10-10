@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
+		<link href="font-awesome.min.css" rel="stylesheet">	
+		<link rel="shortcut icon" href="favicon.ico" />
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- ================================================== -->
+				
+				<section data-background="assets/notthisorthat.mp4">
+					<h4>Visualizing Ranges on Mobile Phones</h4>		
+					<hr>
+					<h5>A Task-Based Crowdsourced Evaluation</h5>
+					
+					<small><a href="http://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> &middot; Microsoft Research &middot; <a href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a>
+					<br><br>In collaboration with Bongshin Lee, Petra Isenberg, & Eun Kyoung Choe</small>
+	
+					<span class="attribution">IEEE VIS 2018 &middot; slides: <a href="http://mattbrehmer.github.io/talks/ranges" target="_blank">mattbrehmer.github.io/talks/ranges</a></span>
+
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="assets/nyt.png">
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="assets/olson.png">
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="assets/boam.png">
+				</section>
+
+				<!-- ================================================== -->
+	
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				progress: false,
+				slideNumber: true,
+				showNotes: false,
+				mouseWheel: false,
+				history: true,
+				viewDistance: 3,
+				transition: 'fade',
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
