@@ -107,7 +107,7 @@
 
 
 					<aside class="notes">
-						There are weather apps like Dark Sky, Weathertron, and Weatherline that feature a rectangle or point-pair temperature range encoding for 7 or 10 days or aggregated across 12 months. 
+						There are weather apps like Dark Sky, Weathertron, and Weatherline that display ranges for 7 or 10 days or aggregated across 12 months. 
 					</aside>
 				</section>
 
@@ -121,21 +121,21 @@
 
 
 					<aside class="notes">
-						As for sleep tracking, we have apps like Azumio's Sleep Time, Garmin's Connect, or the Bedtime feature in the iOS Clock app. 
+						And there are sleep tracking apps like Azumio's Sleep Time, Garmin's Connect, or the Bedtime feature in the iOS Clock app. 
 					</aside>
 				</section>
 
 				<!-- ================================================== -->
 
 				<section data-background="#fff">
-					<h5>Ranges in Health and Research Apps</h5>
+					<h5>How many ranges can you show in a mobile display?</h5>
 					<img data-src="assets/health_apps.png" style="box-shadow: none" height="500"/>				
 					
 					<span class="attribution">apps:  <a href="https://apple.com" target="_blank" style="color:cornflowerblue">Activity (iOS)</a> © &middot;  <a href="http://doi.acm.org/10.1145/2750858.2804266" target="_blank" style="color:cornflowerblue">SleepTight (Choe et al, Proc. UbiComp 2015)</a> &middot; <a href="http://doi.acm.org/10.1145/1133265.1133364" target="_blank" style="color:cornflowerblue">Chittaro (Proc. AVI 2006)</a> </span>
 
 
 					<aside class="notes">
-						If you're an Apple Watch wearer, you may be familiar with its visualization of heart rate ranges on the watch itself and within the companion iOS Activity app, which shows quite a few more ranges over time on a small display. Visualization on smartwatches is a topic in itself, so we'll focus on mobile phone displays, and if we consider the range charts shown in the iOS Activity app and those shown in several research prototypes, it's worth finding out just how many ranges can be feasibly shown on a mobile phone, especially as the resolution of newer devices continues to increases. 
+						And if we consider the heart rate range charts shown in the iOS Activity app and the sleep and blood pressure ranges shown in these research prototypes, it's worth finding out just how many ranges can be feasibly shown on a mobile phone. 
 					</aside>
 				</section>
 
@@ -150,7 +150,7 @@
 
 
 					<aside class="notes">
-						Another central question to our work relates to the linear convention used when visualizing ranges over time. Time is also cyclical; we experience seasons, lunar cycles, and weekday/weekend routines. The cyclicality of time is exemplified in work like Tim Kekeritz's Weather Radials, or in a number of radial range charts featured in Manuel Lima's Book of Circles. 
+						The other central question of our work relates to the linear convention used when visualizing ranges over time. Time is also cyclical; we experience seasons, lunar cycles, and weekday/weekend routines. The cyclicality of time is exemplified in work like Tim Kekeritz's Weather Radials, or in a number of radial range charts featured in Manuel Lima's Book of Circles. 
 					</aside>
 				</section>
 
@@ -168,22 +168,12 @@
 
 				<!-- ================================================== -->
 
-				<section>
-					<img data-src="assets/ff.png" style="box-shadow: none" width="100%"/>					
-
-					<aside class="notes">
-						The answer to how many ranges can be fit into mobile display and to whether you should use a linear or radial layout is of course, "it depends". It depends on the semantics of the data, and it depends on what task you are performing with the chart. And we know this because we conducted a crowdsourced experiment in which we asked crowd workers to perform a set of different tasks, with both linear and radial layouts, and across three granularities of time: a week of 7 seven ranges, a month of up to 31 ranges, and a year of 365 ranges. 
-					</aside>
-				</section>
-
-				<!-- ================================================== -->
-
 				<section data-background="assets/smartphone.png" data-state="dimbg">
 					<h5 style="color:gold">A Crowdsourced Experiment on Mobile Phones</h5>
 					<span class="attribution" style="color:white">image: <a href="https://flic.kr/p/24mfesr" target="_blank"> flickr/newkemall</a> (cc by)</span>
 
 					<aside class="notes">
-						In designing our experiment, was wanted to maximize external validity as much as possible. This involved asking participants to perform the experiment on their own phone, as well as using real and representative range data. 
+						The answer to how many ranges can be fit into mobile display and to whether you should use a linear or radial layout is of course, "it depends on the data and the task". We know this because we conducted a crowdsourced experiment in which we asked crowd workers to perform a set of different tasks on their mobile phone. 
 					</aside>
 
 				</section>
@@ -191,36 +181,35 @@
 				<!-- ================================================== -->
 
 				<section>
-					<h5>Temperature and Sleep Duration Ranges</h5>
+					<img data-src="assets/ff.png" style="box-shadow: none" width="100%"/>					
+
+					<aside class="notes">
+						 Our experiment involved both linear and radial layouts, as well as three granularities of time: a week of 7 seven ranges, a month of up to 31 ranges, and a year of 365 ranges. 
+					</aside>
+				</section>
+
+				<!-- ================================================== -->
+
+				<section>
+					<h5>Data: <span style="color: #FF7F0E;">Temperature</span> (Left) and <span style="color: cornflowerblue;">Sleep Duration</span> (Right) Ranges</h5>
 					<img data-src="assets/screenshots/linear_year_temp.png" style="box-shadow: none" height="400"/>
 					<img data-src="assets/screenshots/linear_year_sleep.png" style="box-shadow: none" height="400"/>		
 
 					<span class="attribution" style="color:white">data sources: (L) <a href="https://www.wunderground.com/" target="_blank">wunderground.com</a> + <a href="http://www.intellicast.com/" target="_blank">intellicast.com</a> (temperature) &middot; (R) <a href="https://redd.it/1c1sah" target="_blank">redd.it/1c1sah</a> (sleep)</span>
 
 					<aside class="notes">
-						Given the prevalence of ranges in weather and sleep tracking applications, we opted to use a year of daily temperature range data from a temperate American city known for its seasonal fluctuations, as well as a year of real bedtime and waking time data from a diligent quantified selfer on the r/datasets subreddit. For the temperature data we had recorded average temperatures, but with the sleep data, we only had the observed sleep time ranges. 
+						Given the prevalence of ranges in weather and sleep tracking applications, we opted to use a year of daily temperature range data from a temperate American city known for its seasonal fluctuations, as well as a year of real bedtime and waking time data from a diligent quantified selfer on the r/datasets subreddit. 
+						<br><br>
+						For the temperature data we had recorded average temperatures, but with the sleep data, we only had the observed sleep time ranges. To produce the analog of an ‘average sleep' range, we considered that sleep apps such as iOS's Bedtime indicates sleep time goals, as well as the popular advice we hear from health professionals that it is best to keep a consistent sleep schedule and to sleep for about 8 hours if you are an adult. This means that while the ‘average' ranges for daily temperatures fluctuate throughout the year, the ‘average' sleep range remains constant throughout the year. 
+
 					</aside>
 
-				</section>
-
-				<!-- ================================================== -->
-
-				<section data-background="#fff">
-					<h5>Goal Sleep Times ≈ Average Ranges</h5>
-					<img data-src="assets/sleep_apps_average.png" style="box-shadow: none" height="500"/>				
-					
-					<span class="attribution">apps: <a href="https://connect.garmin.com/en-US/" target="_blank" style="color:cornflowerblue">Garmin Connect</a> © &middot; <a href="https://apple.com" target="_blank" style="color:cornflowerblue">Bedtime (iOS Clock)</a> © </span>
-
-
-					<aside class="notes">
-						To produce the analog of an ‘average sleep' range, we considered that sleep apps such as iOS's Bedtime indicates sleep time goals, as well as the popular advice we hear from health professionals that it is best to keep a consistent sleep schedule and to sleep for about 8 hours if you are an adult. This means that while the ‘average' ranges for daily temperatures fluctuate throughout the year, the ‘average' sleep range remains constant throughout the year. 
-					</aside>
 				</section>
 
 				<!-- ================================================== -->
 
 				<section>
-						<h5>Temperature and Sleep Range Encoding, Explained</h5>
+						<h5><span style="color: #FF7F0E;">Temperature</span> (L) and <span style="color: cornflowerblue;">Sleep</span> (R) Range Encoding, Explained</h5>
 						<img data-src="assets/encoding.png" style="box-shadow: none"/>									
 							
 						<aside class="notes">
