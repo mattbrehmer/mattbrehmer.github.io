@@ -1600,7 +1600,8 @@ html.dimbg .slide-background {
 html .attribution {
     position:fixed;
     bottom:0;
-    left:0;
+    left:50%;
+    transform: translate(-50%, 0);
     font-size:0.25em;
     font-weight: 100;
 }
@@ -1608,7 +1609,8 @@ html .attribution {
 html .affiliation {
   position:fixed;
   bottom:0px;
-  left: 0px;  
+  left:50%;
+  transform: translate(-50%, 0);  
 }
 
 html .white_img {
