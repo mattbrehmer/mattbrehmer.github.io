@@ -106,7 +106,7 @@
 
 
 					<aside class="notes">
-						There are weather apps like Dark Sky, Weathertron, and Weatherline that display ranges for 7 or 10 days or aggregated across 12 months. 
+						There are weather apps like these that display ranges for 7 or 10 days or aggregated across 12 months. 
 					</aside>
 				</section>
 
@@ -120,7 +120,7 @@
 
 
 					<aside class="notes">
-						And there are sleep tracking apps like Azumio's Sleep Time, Garmin's Connect, or the Bedtime feature in the iOS Clock app. 
+						And similarly there are ranges shown in sleep tracking apps such as these. 
 					</aside>
 				</section>
 
@@ -134,7 +134,7 @@
 
 
 					<aside class="notes">
-						And if we consider the heart rate range charts shown in the iOS Activity app and the sleep and blood pressure ranges shown in these research prototypes, it's worth finding out just how many ranges can be feasibly shown on a mobile phone. 
+						If we consider the heart rate range charts shown in the iOS Activity app and the sleep and blood pressure ranges shown in these research prototypes, it's worth finding out just how many ranges can be feasibly shown on a mobile phone. 
 					</aside>
 				</section>
 
@@ -149,7 +149,7 @@
 
 
 					<aside class="notes">
-						The other central question of our work relates to the linear convention used when visualizing ranges over time. Time is also cyclical; we experience seasons, lunar cycles, and weekday/weekend routines. The cyclicality of time is exemplified in work like Tim Kekeritz's Weather Radials, or in a number of radial range charts featured in Manuel Lima's Book of Circles. 
+						The other primary question of our work relates to the linear convention used when visualizing ranges over time. Time is also cyclical; we experience seasons, lunar cycles, and weekday/weekend routines. The cyclicality of time is exemplified in work like Tim Kekeritz's Weather Radials, or in a number of radial range charts featured in Manuel Lima's Book of Circles. 
 					</aside>
 				</section>
 
@@ -199,7 +199,7 @@
 					<aside class="notes">
 						Given the prevalence of ranges in weather and sleep tracking applications, we opted to use a year of daily temperature range data from a temperate American city known for its seasonal fluctuations, as well as a year of real bedtime and waking time data from a diligent quantified selfer on the r/datasets subreddit. 
 						<br><br>
-						For the temperature data we had recorded average temperatures, but with the sleep data, we only had the observed sleep time ranges. To produce the analog of an ‘average sleep' range, we considered that sleep apps such as iOS's Bedtime indicates sleep time goals, as well as the popular advice we hear from health professionals that it is best to keep a consistent sleep schedule and to sleep for about 8 hours if you are an adult. This means that while the ‘average' ranges for daily temperatures fluctuate throughout the year, the ‘average' sleep range remains constant throughout the year. 
+						For the temperature data we had observed as well as recorded average temperatures (we show the latter in grey, with the color gradient observed temperature range superimposed over it). However, with sleep data, we only had the observed sleep time ranges. To produce the analog of an 'average sleep' range, we considered that sleep apps such as iOS's Bedtime of Garmin's Connect app indicates sleep time goals, and we also hear of popular advice from health professionals that it is best to keep a consistent sleep schedule and to sleep for about 8 hours if you are an adult. This means that while the 'average' ranges for daily temperatures fluctuate throughout the year, the 'average' sleep range remains constant throughout the year. 
 
 					</aside>
 
@@ -252,7 +252,7 @@
 
 					<section data-background-video="assets/ranges-locate-minmax.mp4" data-background-video-loop data-background-size="contain">						
 						<aside class="notes">
-						locating extreme range values, comparing observed and average range values on indicated dates, and comparing spans of observed and average ranges. 
+						locating extreme range values, 
 						</aside>
 					</section>
 	
@@ -276,7 +276,7 @@
 
 					<section data-background-video="assets/ranges-locate-minmax.mp4" data-background-video-loop data-background-size="contain">						
 						<aside class="notes">
-							For the other tasks, participants had to select a region on the chart. We asked participants to contain the correct response within a dashed region that followed their touch point, and this region spanned between 1/7th and 1/12th of the possible response domain, depending on the granularity; in other words, they didn't need to exactly touch the correct value. After containing their response with this dashed region, they had to tap on a ‘done' button to proceed to the next trial. 
+							For the other tasks, participants had to select a region on the chart. We asked participants to contain the correct response within a dashed region that followed their touch point, and this region spanned between 1/7th and 1/12th of the possible response domain, depending on the granularity; in other words, they didn't need to exactly touch the correct value. 
 						</aside>
 					</section>
 	
@@ -341,7 +341,7 @@
 						<span class="attribution">icons: <a href="https://fontawesome.com" target="_blank">fontawesome.com</a></span>
 													
 						<aside class="notes">
-							We excluded results from 13 participants, due to non-completion, non-compliance, or for failing to correctly respond to quality control trials distributed throughout the experiment, leaving 40 participants in the Temperature group and 47 participants in the Sleep group. Trial completion time varied by task, layout, and granularity, but overall participants completed individual trials in less than 5 seconds per trial. The error rate was similarly varied across tasks, layouts, and granularities. We calculated ratios in completion time and differences in error rate between the two types of layouts and between the 3 levels of granularity. 
+							We excluded results from 13 participants, due to non-completion, non-compliance, or for failing to correctly respond to quality control trials distributed throughout the experiment, leaving 40 participants in the Temperature group and 47 participants in the Sleep group. With the remaining data, we calculated ratios in completion time and differences in error rate between the two types of layouts and between the 3 levels of granularity. 
 						</aside>
 					</section>
 		
@@ -353,7 +353,31 @@
 						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
 	
 						<aside class="notes">
-							Let's first consider ratios in task completion time between linear and radial layouts, where the error bars here are 95% confidence intervals, and in cases where the confidence interval crosses a completion time ratio of 1 (the white dashed line), we interpret these as cases where layout has little or no effect. Given our results, people tend to complete comparison tasks in about the same amount of time with either layout, but for tasks that require locating values, people tend to be slower with radial layouts, irrespective of the source of the data, especially when reading values for an indicated day. 
+							Let's first consider ratios in task completion time between linear and radial layouts, where the error bars here are 95% confidence intervals, and in cases where the confidence interval crosses a completion time ratio of 1 (the white dashed line), we interpret these as cases where layout has little or no effect. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+						<img data-src="assets/plot_completion_time_ratios_2.png" style="box-shadow: none" width="100%"/>		
+						<small>Radial / Linear completion time ratios</small>
+						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
+	
+						<aside class="notes">
+							Given our results, people tend to complete comparison tasks in about the same amount of time with either layout, 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+						<img data-src="assets/plot_completion_time_ratios_3.png" style="box-shadow: none" width="100%"/>		
+						<small>Radial / Linear completion time ratios</small>
+						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
+	
+						<aside class="notes">
+							but for tasks that require locating values, people tend to be slower with radial layouts, irrespective of the source of the data, especially when reading values for an indicated day. 
 						</aside>
 					</section>
 	
@@ -365,7 +389,19 @@
 						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
 	
 						<aside class="notes">
-							However, radial layouts don't seem to incur accuracy costs, at least with temperature range data, where there tends to be a lot of seasonal variation. With sleep range data, which exhibits no seasonal variation, people are less accurate when reading values for indicated dates or when locating extreme values. 
+							However, radial layouts don't seem to incur accuracy costs, at least with temperature range data, where there tends to be a lot of seasonal variation. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+						<img data-src="assets/plot_error_rate_ratios_2.png" style="box-shadow: none" width="100%"/>		
+						<small>Radial - Linear error rate differences</small>
+						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
+	
+						<aside class="notes">
+							With sleep range data, which exhibits no seasonal variation, people are less accurate when reading values for indicated dates or when locating extreme values. 
 						</aside>
 					</section>
 	
@@ -373,11 +409,11 @@
 
 					<section>
 						<h5>Interpreting Radial vs. Linear performance differences</h5>
-						<img data-src="assets/layout_interpretation.png" style="box-shadow: none" width="100%"/>					
+						<img data-src="assets/layout_interpretation.png" style="box-shadow: none" height="600"/>					
 						<span class="attribution"><span style="color: gold;">Note</span>: dimensions of an iPhone 6 (w = 375 pt) with a device-pixel ratio of 2x and 12.5% margins</span>	
 	
 						<aside class="notes">
-							The difficulty in reading range values for indicated dates may be due to the fact that the quantitative domain in a radial layout is compressed to half of the chart area, from the center to the periphery, thus putting it at a disadvantage relative to a linear layout, where the quantitative domain spans the entire height of the chart, so individual marks are twice as tall. We kept the chart size constant between the two layout conditions, but it would be interesting to repeat our experiment in which mark size is kept constant instead of chart size, which would involve a linear range chart that was half the height of the charts used in our current experiment. 
+							The difficulty in reading range values for indicated dates may be due to the fact that the quantitative domain in a radial layout is compressed to half of the chart area, from the center to the periphery, thus putting it at a disadvantage relative to a linear layout, where the quantitative domain spans the entire height of the chart, so individual marks are twice as tall. We kept the chart size constant between the two layout conditions, but it would be interesting to repeat our experiment in which mark size is kept constant instead of chart size, meaning that linear range charts would be compressed to half of their current height. 
 
 						</aside>
 					</section>
@@ -386,9 +422,10 @@
 
 					<section>
 						<h5>No advantage at the periphery relative to the center</h5>
-						<img data-src="assets/layout_target_value.png" style="box-shadow: none" width="100%"/>				
+						<img data-src="assets/layout_interpretation_periphery.png" style="box-shadow: none" width="600"/>				
+						<span class="attribution"><span style="color: gold;">Note</span>: dimensions of an iPhone 6 (w = 375 pt) with a device-pixel ratio of 2x and 12.5% margins</span>	
 						<aside class="notes">
-							Our findings also suggest that it does not make a difference whether the task has to do with the beginning or end of the range. We had speculated about whether the increased chronological resolution around the periphery of a radial layout would contribute to better performance for locating and reading values at the periphery, and conversely whether the cluttered center of a radial layout would incur worse performance. People tended to be slower with a radial layout irrespective of whether the task asked them about the start or end of the range, there were no pronounced differences in accuracy in this regard.
+							Our findings also suggest that it does not make a difference whether the task has to do with the beginning or end of the range. We had speculated about whether the increased chronological resolution around the periphery of a radial layout would contribute to better performance for locating and reading values at the periphery, and conversely whether the center of a radial layout would incur worse performance. People tended to be slower with a radial layout irrespective of whether the task asked them about the start or end of the range, there were no pronounced differences in accuracy in this regard.
 
 						</aside>
 					</section>
@@ -406,21 +443,21 @@
 						</small>
 						
 						<aside class="notes">
-							So you might be wondering if our results contribute another nail in the coffin so to speak for radial layouts in general, this despite their popularity in practice and design communities. It's tempting to say this but our results are somewhat more nuanced. Yes, people tend to be slower with radial layouts, and only in value reading task contexts are they less accurate. It's also worth remarking that participants universally preferred linear layouts, and they felt more confident using linear layouts relative to radial ones.
+							So you might be wondering if our results contribute another nail in the coffin so to speak for radial layouts in general, this despite their popularity in practice and design communities. It's tempting to say this but our results are somewhat more nuanced. Yes, people tend to be slower with radial layouts, but only in value reading task contexts are they less accurate, while there seems to be no difference in accuracy for comparison tasks. It's also worth remarking that participants universally preferred linear layouts, and they felt more confident using linear layouts relative to radial ones.
 
 						</aside>
 					</section>
 	
 					<!-- ================================================== -->
 
-					<section>
+					<!-- <section>
 						<h5>Layout does not appear to affect comparison performance</h5>
 						<img data-src="assets/compare_interpretation.png" style="box-shadow: none" width="100%"/>
 
 						<aside class="notes">
 							Yet, If the task is primarily about comparing ranges values or comparing spans of observed and averages ranges, like comparing whether the observed temperatures in one month were more aligned with average temperatures relative to some other month, it doesn't appear to matter whether you use a linear or radial layout, at least in terms of accuracy. 
 						</aside>
-					</section>
+					</section> -->
 	
 					<!-- ================================================== -->
 
@@ -430,8 +467,8 @@
 						<span class="attribution">animation: <a href="https://www.climate-lab-book.ac.uk/spirals/" target="_blank">Ed Hawkins' <em>Climate Spirals</em></a></span>
 
 						<aside class="notes">
-								It's also entirely possible that there are tasks other than those we considered where a radial layout has an advantage or performance parity with a linear layout, such as in year-over-year comparisons like in Ed Hawkins' Climate Spirals - though to determine this we may need to revisit our choice of encoding and consider the use of paging, scrolling, or animation, at which point performance depends on memory as well as perception. Nevertheless, there are opportunities for additional future research in this area.
-							</aside>
+							It's also possible that there are tasks other than those we considered where a radial layout has an advantage or performance parity with a linear layout, such as in year-over-year comparisons like in Ed Hawkins' Climate Spirals - future research could involve reconsidering our choice of encoding and instead opt for paging, scrolling, or animation, at which point performance may depend on memory as well as perception. 
+						</aside>
 					</section>
 	
 					<!-- ================================================== -->
@@ -441,7 +478,7 @@
 						<img data-src="assets/ff.png" style="box-shadow: none" width="100%"/>					
 	
 						<aside class="notes">
-							Our other primary question in this work is how many ranges can you fit in a mobile display and still retain reasonable task performance, such as when you jump from a week of 7 ranges to a month of 31 ranges to a year of 365. You might expect that adding more marks in a chart will incur worse performance, but this is not what we saw.
+							Our other primary question in this work is how many ranges can you fit in a mobile display and still retain reasonable task performance, such as when you jump from a week of 7 ranges to a month of 31 ranges to a year of 365. You might expect that adding more marks in a chart will incur worse performance, but again our findings are more nuanced.
 						</aside>
 					</section>
 	
@@ -453,7 +490,19 @@
 						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
 	
 						<aside class="notes">
-							As you might expect, people were slower with a month ranges than with a week of ranges, and in some instances the ratios in completion time from a week to a month was greater than from a month to a year. 
+							As you might expect, people were slower with a month ranges than with a week of ranges, 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+						<img data-src="assets/plot_g_RT_2.png" style="box-shadow: none; margin: 0px" width="100%"/>					
+						<small>Completion time ratios between granularities</small>
+						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
+	
+						<aside class="notes">
+							and in some instances the ratios in completion time from a week to a month was greater than from a month to a year. 
 						</aside>
 					</section>
 	
@@ -465,7 +514,19 @@
 						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
 	
 						<aside class="notes">
-							With regards to accuracy, the jump from a week to a month only incurred noticeably worse performance when locating extreme values. Interestingly, there were cases where people were as accurate or even more accurate with a year of ranges than with a month of ranges, particularly among those looking for extreme temperatures. It is in this respect that we observed different results between the temperature and sleep range groups, where the expected annual trend of temperature ranges appears to make the task easier relative to examining a month of temperature ranges. 
+							With regards to accuracy, the jump from a week to a month only incurred noticeably worse performance when locating extreme values. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+						<img data-src="assets/plot_g_err_2.png" style="box-shadow: none; margin: 0px" width="100%"/>			
+						<small>Accuracy differences between granularities</small>
+						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
+	
+						<aside class="notes">
+							Interestingly, there were cases where people were as accurate or even more accurate with a year of ranges than with a month of ranges, particularly among those looking for extreme temperatures. It is in this respect that we observed different results between the temperature and sleep range groups, where the expected annual trend of temperature ranges appears to make the task easier relative to examining a month of temperature ranges. 
 						</aside>
 					</section>
 	
@@ -500,7 +561,7 @@
 	
 					<!-- ================================================== -->
 
-					<section data-background="assets/smartphone.png" data-state="dimbg" data-background-opacity=0.2>
+					<section data-background="assets/smartphone.png" data-state="dimbg" data-background-opacity=0.3>
 						<h5>Our findings only apply to mobile contexts</h5>
 
 						<span class="attribution" style="color:white">image: <a href="https://flic.kr/p/24mfesr" target="_blank"> flickr/newkemall</a> (cc by)</span>
@@ -512,8 +573,9 @@
 	
 					<!-- ================================================== -->
 
-					<section data-background-video="assets/task-comparison.mp4" data-background-video-loop data-background-size="contain">
-						
+					<section data-background-video="assets/task-comparison.mp4" data-background-video-loop data-background-size="contain" data-background-opacity=0.3>
+						<h5>Interacting with visualization on mobile devices</h5>
+
 						<aside class="notes">
 							Nor do our results allow us to comment on the experience of interacting with range charts with different layouts and granularities. We designed the response mechanism in each task to be fairly simple, without requiring precise selection or the entering of responses into text fields.  
 						</aside>
@@ -527,7 +589,7 @@
 						<img data-src="assets/no_semantics_frame.png" style="box-shadow: none; margin: 0px" height="650"/>	
 						
 						<aside class="notes">
-							The design of experiments such as ours aim for a balance between external validity and control over potential confounds. In light of our results and the possible differences between participants who saw temperature data and those who saw sleep data, a potentially informative follow-up experiment would be to remove the semantic cues from the charts and the task wording, to use synthetic data, or to repeat the experiment with other sources of range data, such as heart rate or blood pressure.  
+							In light of our results and the possible differences between participants who saw temperature ranges and those who saw sleep ranges, a potentially informative follow-up experiment would be to remove the semantic cues from the charts and the task wording, to use synthetic data, or to repeat the experiment with other sources of range data, such as heart rate or blood pressure.  
 						</aside>
 					</section>
 	
@@ -538,7 +600,7 @@
 						<span class="attribution">image: <a href="https://ericboam.com/7-Months-of-Sleep" target="_blank">Eric Boam's <em>7 Months of Sleep</em></a></span>
 						
 						<aside class="notes">
-							Another direction to consider is the engagement of the participants with respect to their lived experience of the data being shown: what would our task performance results look like if participants were looking at their own sleep data? Or if they were looking at temperature data from where they lived? Perhaps what is needed here is a deeper engagement between visualization researchers and the quantified self community, with people who already have a keen interest in tracking and analyzing their personal data, particularly when that data is consumed from a mobile phone.   
+							Another question pertains to what would our task performance results would have looked like if participants were looking at their own sleep data? Or if they were looking at temperature data from where they lived? Perhaps what is needed here is a deeper engagement between visualization researchers and the quantified self community, with people who already have a keen interest in tracking and analyzing their personal data.   
 						</aside>
 					</section>
 	
@@ -575,7 +637,7 @@
 						<span class="attribution">IEEE VIS 2018 &middot; video: <a href="https://flic.kr/p/6rPtGo" target="_blank"> flickr/notthisorthat</a> (cc by-nc)</span>
 	
 						<aside class="notes">
-							To this end, our experimental application is available under an MIT open source license, and you can still experience our experiment on your own phone at aka.ms/ranges. We also invite you to engage with us, to provide feedback and ideas with respect to future research directions for visualization on mobile devices.     
+							Ultimately, we hope that this work inspires you to consider visualization for mobile directions and the potential research questions we as a community can ask via crowdsourced experimentation. For our part, the experimental application used in our experiment is available under an MIT open source license, and you can still experience our experiment on your own phone at aka.ms/ranges. We also invite you to engage with us, to provide feedback and ideas with respect to future research directions.     
 						</aside>
 	
 					</section>
@@ -594,11 +656,11 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				progress: false,
-				slideNumber: true,
+				slideNumber: false,
 				showNotes: false,
-				mouseWheel: false,
+				mouseWheel: true,
 				history: true,
-				viewDistance: 3,
+				viewDistance: 5,
 				transition: 'fade',
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
@@ -630,14 +692,19 @@
 				"assets/sleep_apps_average.png",
 				"assets/encoding.png",
 				"assets/plot_completion_time_ratios.png",
+				"assets/plot_completion_time_ratios_2.png",
+				"assets/plot_completion_time_ratios_3.png",
 				"assets/plot_error_rate_ratios.png",
+				"assets/plot_error_rate_ratios_2.png",
 				"assets/layout_interpretation.png",
-				"assets/layout_target_value.png",
+				"assets/layout_interpretation_periphery.png",
 				"assets/plot_pref.png",
 				"assets/compare_interpretation.png",
 				"assets/hawkins.gif",
 				"assets/plot_g_RT.png",
 				"assets/plot_g_err.png",
+				"assets/plot_g_RT_2.png",
+				"assets/plot_g_err_2.png",
 				"assets/radial_month.png",
 				"assets/no_semantics_frame.png",
 				"assets/mobilevis.png" 
