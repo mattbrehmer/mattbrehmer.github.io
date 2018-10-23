@@ -42,7 +42,7 @@
 
 					<span class="affiliation"><img data-src="assets/authors/affiliations.png" height="50" style="box-shadow: none"/></span>
 	
-					<span class="attribution">IEEE VIS 2018 &middot; slides: <a href="http://mattbrehmer.github.io/talks/ranges" target="_blank">mattbrehmer.github.io/talks/ranges</a> &middot; video: <a href="https://flic.kr/p/6rPtGo" target="_blank"> flickr/notthisorthat</a> (cc by-nc)</span>
+					<span class="attribution">IEEE VIS 2018 &middot; slides: <a href="https://aka.ms/ranges-vis" target="_blank">aka.ms/ranges-vis</a> &middot; video: <a href="https://flic.kr/p/6rPtGo" target="_blank"> flickr/notthisorthat</a> (cc by-nc)</span>
 
 					<aside class="notes">
 					
@@ -451,29 +451,6 @@
 	
 					<!-- ================================================== -->
 
-					<!-- <section>
-						<h5>Layout does not appear to affect comparison performance</h5>
-						<img data-src="assets/compare_interpretation.png" style="box-shadow: none" width="100%"/>
-
-						<aside class="notes">
-							Yet, If the task is primarily about comparing ranges values or comparing spans of observed and averages ranges, like comparing whether the observed temperatures in one month were more aligned with average temperatures relative to some other month, it doesn't appear to matter whether you use a linear or radial layout, at least in terms of accuracy. 
-						</aside>
-					</section> -->
-	
-					<!-- ================================================== -->
-
-					<!-- <section data-background="#333">
-						<h5 style="color: gold;">Radial layouts for other tasks?</h5>
-						<img data-src="assets/hawkins.gif" style="box-shadow: none" height="500"/>
-						<span class="attribution">animation: <a href="https://www.climate-lab-book.ac.uk/spirals/" target="_blank">Ed Hawkins' <em>Climate Spirals</em></a></span>
-
-						<aside class="notes">
-							It's also possible that there are tasks other than those we considered where a radial layout has an advantage or performance parity with a linear layout, such as in year-over-year comparisons like in Ed Hawkins' Climate Spirals - future research could involve reconsidering our choice of encoding and instead opt for paging, scrolling, or animation, at which point performance may depend on memory as well as perception. 
-						</aside>
-					</section> -->
-	
-					<!-- ================================================== -->
-
 					<section>
 
 						<img data-src="assets/ff.png" style="box-shadow: none" width="100%"/>					
@@ -589,24 +566,71 @@
 	
 					<!-- ================================================== -->
 
-					<!-- <section data-background="assets/health_apps.png" data-state="dimbg" data-background-opacity=0.15>
+					<section data-background="assets/boam.png" data-background-opacity=0.1>
+						<h5 style="color: gold;">The role of personal data and lived experience</h5>
+						<span class="attribution">image: <a href="https://ericboam.com/7-Months-of-Sleep" target="_blank">Eric Boam's <em>7 Months of Sleep</em></a></span>
+						
+						<aside class="notes">
+							Another question pertains to what would our task performance results would have looked like if participants were looking at their own sleep data? Or if they were looking at temperature data from where they lived? 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section data-background="assets/teaser.png" data-background-opacity="0.05">
+						<h5>Visualizing Ranges Over Time on Mobile Phones</h5>		
+						<hr>
+						<small><a href="http://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> &middot; Microsoft Research &middot; <a href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a>
+						<br><br>In collaboration with Bongshin Lee, Petra Isenberg, & Eun Kyoung Choe
+						<hr>
+						<p>
+							(mobile only) experimental app: <a href="http://aka.ms/ranges" target="_blank">aka.ms/ranges</a><br>
+							code: <a href="https://github.com/microsoft/RangesOnMobile" target="_blank">github.com/microsoft/RangesOnMobile</a><br>
+							slides: <a href="https://aka.ms/ranges-vis" target="_blank">aka.ms/ranges-vis</a><br>
+						</p></small>
+	
+						<span class="affiliation"><img data-src="assets/authors/affiliations.png" height="50" style="box-shadow: none"/></span>
+		
+						<span class="attribution">IEEE VIS 2018 &middot; video: <a href="https://flic.kr/p/6rPtGo" target="_blank"> flickr/notthisorthat</a> (cc by-nc)</span>
+	
+						<aside class="notes">
+							Ultimately, we hope that this work inspires you to consider visualization for mobile directions and the potential research questions we as a community can ask via crowdsourced experimentation. For our part, the experimental application used in our experiment is available under an MIT open source license, and you can still experience our experiment on your own phone at aka.ms/ranges. We also invite you to engage with us, to provide feedback and ideas with respect to future research directions.     
+						</aside>
+	
+					</section>
+
+					<!-- ================================================== -->
+
+					<section>
+						<h5>Layout does not appear to affect comparison performance</h5>
+						<img data-src="assets/compare_interpretation.png" style="box-shadow: none" width="100%"/>
+
+						<aside class="notes">
+							Yet, If the task is primarily about comparing ranges values or comparing spans of observed and averages ranges, like comparing whether the observed temperatures in one month were more aligned with average temperatures relative to some other month, it doesn't appear to matter whether you use a linear or radial layout, at least in terms of accuracy. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section data-background="#333">
+						<h5 style="color: gold;">Radial layouts for other tasks?</h5>
+						<img data-src="assets/hawkins.gif" style="box-shadow: none" height="500"/>
+						<span class="attribution">animation: <a href="https://www.climate-lab-book.ac.uk/spirals/" target="_blank">Ed Hawkins' <em>Climate Spirals</em></a></span>
+
+						<aside class="notes">
+							It's also possible that there are tasks other than those we considered where a radial layout has an advantage or performance parity with a linear layout, such as in year-over-year comparisons like in Ed Hawkins' Climate Spirals - future research could involve reconsidering our choice of encoding and instead opt for paging, scrolling, or animation, at which point performance may depend on memory as well as perception. 
+						</aside>
+					</section>
+					
+					<!-- ================================================== -->
+
+					<section data-background="assets/health_apps.png" data-state="dimbg" data-background-opacity=0.15>
 						<h5>Beyond temperature and sleep range data</h5>
 
 						<img data-src="assets/no_semantics_frame.png" style="box-shadow: none; margin: 0px" height="650"/>	
 						
 						<aside class="notes">
 							In light of our results and the possible differences between participants who saw temperature ranges and those who saw sleep ranges, a potentially informative follow-up experiment would be to remove the semantic cues from the charts and the task wording, to use synthetic data, or to repeat the experiment with other sources of range data, such as heart rate or blood pressure.  
-						</aside>
-					</section> -->
-	
-					<!-- ================================================== -->
-
-					<section data-background="assets/boam.png" data-background-opacity=0.1>
-						<h5 style="color: gold;">The role of personal data and lived experience</h5>
-						<span class="attribution">image: <a href="https://ericboam.com/7-Months-of-Sleep" target="_blank">Eric Boam's <em>7 Months of Sleep</em></a></span>
-						
-						<aside class="notes">
-							Another question pertains to what would our task performance results would have looked like if participants were looking at their own sleep data? Or if they were looking at temperature data from where they lived? Perhaps what is needed here is a deeper engagement between visualization researchers and the quantified self community, with people who already have a keen interest in tracking and analyzing their personal data.   
 						</aside>
 					</section>
 	
@@ -623,30 +647,6 @@
 							Beyond range data, our work reaffirms the need for more studies of visualization for mobile devices, particularly as more and more data from of our lives becomes accessible on our phones. The presence of visualization in mobile apps and in mobile-first news outlets will continue to rise, and the visualization research community must continue to investigate mobile-first and mobile-only visual encodings and interactions. Our work offers one approach to carrying out this research via crowdsourced experimentation, though there are certainly other approaches worth considering.    
 						</aside>
 					</section> -->
-	
-					<!-- ================================================== -->
-
-					<section data-background="assets/teaser.png" data-background-opacity="0.05">
-						<h5>Visualizing Ranges Over Time on Mobile Phones</h5>		
-						<hr>
-						<small><a href="http://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> &middot; Microsoft Research &middot; <a href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a>
-						<br><br>In collaboration with Bongshin Lee, Petra Isenberg, & Eun Kyoung Choe
-						<hr>
-						<p>
-							(mobile only) experimental app: <a href="http://aka.ms/ranges" target="_blank">aka.ms/ranges</a><br>
-							code: <a href="https://github.com/microsoft/RangesOnMobile" target="_blank">github.com/microsoft/RangesOnMobile</a><br>
-							slides: <a href="http://mattbrehmer.github.io/talks/ranges" target="_blank">mattbrehmer.github.io/talks/ranges</a><br>
-						</p></small>
-	
-						<span class="affiliation"><img data-src="assets/authors/affiliations.png" height="50" style="box-shadow: none"/></span>
-		
-						<span class="attribution">IEEE VIS 2018 &middot; video: <a href="https://flic.kr/p/6rPtGo" target="_blank"> flickr/notthisorthat</a> (cc by-nc)</span>
-	
-						<aside class="notes">
-							Ultimately, we hope that this work inspires you to consider visualization for mobile directions and the potential research questions we as a community can ask via crowdsourced experimentation. For our part, the experimental application used in our experiment is available under an MIT open source license, and you can still experience our experiment on your own phone at aka.ms/ranges. We also invite you to engage with us, to provide feedback and ideas with respect to future research directions.     
-						</aside>
-	
-					</section>
 
 					<!-- ================================================== -->
 	
