@@ -45,7 +45,7 @@
 					<span class="attribution">IEEE VIS 2018 &middot; slides: <a href="https://aka.ms/ranges-vis" target="_blank">aka.ms/ranges-vis</a> &middot; video: <a href="https://flic.kr/p/6rPtGo" target="_blank"> flickr/notthisorthat</a> (cc by-nc)</span>
 
 					<aside class="notes">
-					
+					For a paper about visualizing data on mobile phones, I'm going to start in a place you probably didn't expect, and that's the weather page of the print edition of the New York Times.
 					</aside>
 
 				</section>
@@ -56,7 +56,9 @@
 					<span class="attribution" style="color:black">image: <em>The New York Times</em> (June 4, 2017)</span>
 
 					<aside class="notes">
-						The next time you pick up the print edition of The New York Times, turn to the weather page; here you'll see temperature ranges over time. Highs and lows for the last five days and the next five days are superimposed over average and record temperature ranges for 22 American cities, and you'll also get a full month of temperature ranges for New York City itself.
+						here you'll see temperature ranges over time. 
+						<br><br>
+						Highs and lows for the last five days and the next five days are superimposed over average and record temperature ranges for 22 American cities, and you'll also get a full month of temperature ranges for New York City itself.
 					</aside>
 
 				</section>
@@ -68,7 +70,9 @@
 						<span class="attribution">image: <a href="https://fivethirtyeight.com/features/what-12-months-of-record-setting-temperatures-looks-like-across-the-u-s/" target="_blank" style="color:cornflowerblue">Randy Olson (2015) for fivethirtyeight.com</a></span>
 
 						<aside class="notes">
-							Or the next time you ask the question "was this past year warmer or more erratic than usual?", you might encounter a chart like one by Randy Olson, overlaying observed and average ranges for every day of an entire year. These charts are fairly conventional when it comes to weather reporting, but they certainly aren't limited to the weather domain. 
+							Or the next time you ask the question "was this past year warmer or more erratic than usual?", you might encounter a chart like one by Randy Olson, overlaying observed and average ranges for every day of an entire year. 
+							<br><br>
+							These charts are fairly conventional when it comes to weather reporting, but they certainly aren't limited to the weather domain. 
 						</aside>
 				</section>
 
@@ -79,7 +83,7 @@
 					<span class="attribution">image: <a href="https://ericboam.com/7-Months-of-Sleep" target="_blank">Eric Boam's <em>7 Months of Sleep</em></a></span>
 
 					<aside class="notes">
-						Consider Eric Boam's "7 Months of Sleep" project, in which every day has a range indicating the hours slept, with bedtimes at the top and waking times the next morning at the bottom. And as with temperature data, the range marks are superimposed, in this case sleep is superimposed over the time spent in bed but not necessarily sleeping.
+						Consider Eric Boam's "7 Months of Sleep" project, in which every day has a range indicating the hours slept, with bedtimes at the top and waking times the next morning at the bottom. 
 					</aside>
 				</section>
 
@@ -92,7 +96,9 @@
 
 
 					<aside class="notes">
-						These examples work well in print and when shown on large displays, but that's not how many of us now consume weather data or personal health and activity data, such as sleep duration. Instead, these and several other sources of range data are likely to be consumed from a mobile device. 
+						These examples work well in print and when shown on large displays, but that's not how many of us now consume weather data or personal health and activity data, such as sleep duration. 
+						<br><br>
+						Instead, these and several other sources of range data are likely to be consumed from a mobile device. 
 					</aside>
 				</section>
 
@@ -149,7 +155,11 @@
 
 
 					<aside class="notes">
-						The other primary question of our work relates to the linear convention used when visualizing ranges over time. Time is also cyclical; we experience seasons, lunar cycles, and weekday/weekend routines. The cyclicality of time is exemplified in work like Tim Kekeritz's Weather Radials, or in a number of radial range charts featured in Manuel Lima's Book of Circles. 
+						The other primary question of our work relates to the linear convention used when visualizing ranges over time. Time is also cyclical; we experience seasons, lunar cycles, and weekday/weekend routines. 
+						
+						<br><br>
+						
+						The cyclicality of time is exemplified in work like Tim Kekeritz's Weather Radials, or in a number of radial range charts featured in Manuel Lima's Book of Circles. 
 					</aside>
 				</section>
 
@@ -161,7 +171,8 @@
 					<span class="attribution">images:  <a href="https://mobileinfovis.com" target="_blank" style="color:cornflowerblue">mobileinfovis.com (by Sebastian Sadowski, 2018)</a> </span>
 
 					<aside class="notes">
-						But are these designs appropriate for mobile displays? Bear in mind that mobile app and website designers appear to be quite fond of radial layouts, as illustrated in a survey by Sebastian Sadowski. 
+						But are these designs appropriate for mobile displays? <br><br>
+						Bear in mind that mobile app and website designers appear to be quite fond of radial layouts, as illustrated in a survey by Sebastian Sadowski. 
 					</aside>
 				</section>
 
@@ -172,7 +183,8 @@
 					<span class="attribution" style="color:white">image: <a href="https://flic.kr/p/24mfesr" target="_blank"> flickr/newkemall</a> (cc by)</span>
 
 					<aside class="notes">
-						The answer to how many ranges can be fit into mobile display and to whether you should use a linear or radial layout is of course, "it depends on the data and the task". We know this because we conducted a crowdsourced experiment in which we asked crowd workers to perform a set of different tasks on their mobile phone. 
+						The answer to how many ranges can be fit into mobile display and to whether you should use a linear or radial layout is of course, "it depends on the data and the task". <br><br>
+						We know this because we conducted a crowdsourced experiment in which we asked crowd workers to perform a set of different tasks on their mobile phone. 
 					</aside>
 
 				</section>
@@ -199,7 +211,12 @@
 					<aside class="notes">
 						Given the prevalence of ranges in weather and sleep tracking applications, we opted to use a year of daily temperature range data from a temperate American city known for its seasonal fluctuations, as well as a year of real bedtime and waking time data from a diligent quantified selfer on the r/datasets subreddit. 
 						<br><br>
-						For the temperature data we had observed as well as recorded average temperatures (we show the latter in grey, with the color gradient observed temperature range superimposed over it). However, with sleep data, we only had the observed sleep time ranges. To produce the analog of an 'average sleep' range, we considered that sleep apps such as iOS's Bedtime of Garmin's Connect app indicates sleep time goals, and we also hear of popular advice from health professionals that it is best to keep a consistent sleep schedule and to sleep for about 8 hours if you are an adult. This means that while the 'average' ranges for daily temperatures fluctuate throughout the year, the 'average' sleep range remains constant throughout the year. 
+						For the temperature data we had observed as well as recorded average temperatures (we show the latter in grey, with the color gradient observed temperature range superimposed over it). However, with sleep data, we only had the observed sleep time ranges. 
+						
+						<br><br>
+						To produce the analog of an 'average sleep' range, we considered that sleep apps such as iOS's Bedtime of Garmin's Connect app indicates sleep time goals, and we also hear of popular advice from health professionals that it is best to keep a consistent sleep schedule and to sleep for about 8 hours if you are an adult. 
+						
+						<br><br>This means that while the 'average' ranges for daily temperatures fluctuate throughout the year, the 'average' sleep range remains constant throughout the year. 
 
 					</aside>
 
@@ -212,7 +229,19 @@
 						<img data-src="assets/encoding.png" style="box-shadow: none"/>									
 							
 						<aside class="notes">
-							It's also important to note that the quantitative scale for a linear layout is different for these two data types, owing to the weather reporting convention that warmer temperatures are higher in a chart and that later times are lower in calendars. The color encoding reinforces this difference. We also provided different semantic cues for these two datatypes, which included different wordings in task instructions and different iconography. As a result, we divided our participants into two groups, one for temperature ranges and one for sleep ranges. We did not directly compare the results of the two groups due to these confounds. They should be seen as separate experiments.
+							It's also important to note that the quantitative scale for a linear layout is different for these two data sources, owing to the weather reporting convention that warmer temperatures are higher in a chart and that later times are lower in calendars; The color encoding reinforces this difference. 
+							
+							<br><br>
+							
+							We also provided different semantic cues for these two data sources, which included different wordings in task instructions and different iconography. 
+							
+							<br><br>
+							
+							As a result, we divided our participants into two groups, one for temperature ranges and one for sleep ranges. 
+							
+							<br><br>
+							
+							We did not directly compare the results of the two groups due to these confounds; They should be seen as separate experiments.
 						</aside>
 					</section>
 	
@@ -276,7 +305,8 @@
 
 					<section data-background-video="assets/ranges-locate-minmax.mp4" data-background-video-loop data-background-size="contain">						
 						<aside class="notes">
-							For the other tasks, participants had to select a region on the chart. We asked participants to contain the correct response within a dashed region that followed their touch point, and this region spanned between 1/7th and 1/12th of the possible response domain, depending on the granularity; in other words, they didn't need to exactly touch the correct value. 
+							For the other tasks, participants had to select a region on the chart. <br><br>
+							We asked participants to contain the correct response within a dashed region that followed their touch point, and this region spanned between 1/7th and 1/12th of the possible response domain, depending on the granularity; in other words, they didn't need to exactly touch the correct value. 
 						</aside>
 					</section>
 	
@@ -319,7 +349,9 @@
 						<span class="attribution">icons: <a href="https://fontawesome.com" target="_blank">fontawesome.com</a></span>
 													
 						<aside class="notes">
-							We recruited 100 participants from Mechanical Turk's U.S. crowd worker population, split evenly into a temperature range group and a sleep range group. They only had one opportunity to perform the experiment in its entirety, which took between 20 and 25 minutes. They had to use a mobile phone running a recent version of iOS or Android and either the Chrome or Safari mobile browser. 
+							We recruited 100 participants from Mechanical Turk's U.S. crowd worker population, split evenly into a temperature range group and a sleep range group. <br><br>
+							They only had one opportunity to perform the experiment in its entirety, which took between 20 and 25 minutes. <br><br>
+							They had to use a mobile phone running a recent version of iOS or Android and either the Chrome or Safari mobile browser. 
 						</aside>
 					</section>
 	
@@ -341,7 +373,8 @@
 						<span class="attribution">icons: <a href="https://fontawesome.com" target="_blank">fontawesome.com</a></span>
 													
 						<aside class="notes">
-							We excluded results from 13 participants, due to non-completion, non-compliance, or for failing to correctly respond to quality control trials distributed throughout the experiment, leaving 40 participants in the Temperature group and 47 participants in the Sleep group. With the remaining data, we calculated ratios in completion time and differences in error rate between the two types of layouts and between the 3 levels of granularity. 
+							We excluded results from 13 participants, due to non-completion, non-compliance, or for failing to correctly respond to quality control trials distributed throughout the experiment, leaving 40 participants in the Temperature group and 47 participants in the Sleep group. <br><br>
+							With the remaining data, we calculated ratios in completion time and differences in error rate between the two layouts and between the 3 levels of granularity. 
 						</aside>
 					</section>
 		
@@ -413,7 +446,8 @@
 						<span class="attribution"><span style="color: gold;">Note</span>: dimensions of an iPhone 6 (w = 375 pt) with a device-pixel ratio of 2x and 12.5% margins</span>	
 	
 						<aside class="notes">
-							The difficulty in reading range values for indicated dates may be due to the fact that the quantitative domain in a radial layout is compressed to half of the chart area, from the center to the periphery, thus putting it at a disadvantage relative to a linear layout, where the quantitative domain spans the entire height of the chart, so individual marks are twice as tall. We kept the chart size constant between the two layout conditions, but it would be interesting to repeat our experiment in which mark size is kept constant instead of chart size, meaning that linear range charts would be compressed to half of their current height. 
+							The difficulty in reading range values for indicated dates may be due to the fact that the quantitative domain in a radial layout is compressed to half of the chart area, from the center to the periphery, thus putting it at a disadvantage relative to a linear layout, where the quantitative domain spans the entire height of the chart, so individual marks are twice as tall. <br><br>
+							We kept the chart size constant between the two layout conditions, but it would be interesting to repeat our experiment in which mark size is kept constant instead of chart size, meaning that linear range charts would be compressed to half of their current height. 
 
 						</aside>
 					</section>
@@ -425,7 +459,9 @@
 						<img data-src="assets/layout_interpretation_periphery.png" style="box-shadow: none" width="600"/>				
 						<span class="attribution"><span style="color: gold;">Note</span>: dimensions of an iPhone 6 (w = 375 pt) with a device-pixel ratio of 2x and 12.5% margins</span>	
 						<aside class="notes">
-							Our findings also suggest that it does not make a difference whether the task has to do with the beginning or end of the range. We had speculated about whether the increased chronological resolution around the periphery of a radial layout would contribute to better performance for locating and reading values at the periphery, and conversely whether the center of a radial layout would incur worse performance. People tended to be slower with a radial layout irrespective of whether the task asked them about the start or end of the range, there were no pronounced differences in accuracy in this regard.
+							Our findings also suggest that it does not make a difference whether the task has to do with the beginning or end of the range. <br><br>
+							We had speculated about whether the increased chronological resolution around the periphery of a radial layout would contribute to better performance for locating and reading values at the periphery, and conversely whether the center of a radial layout would incur worse performance. <br><br>
+							People tended to be slower with a radial layout irrespective of whether the task asked them about the start or end of the range, there were no pronounced differences in accuracy in this regard.
 
 						</aside>
 					</section>
@@ -444,7 +480,10 @@
 						</small>
 						
 						<aside class="notes">
-							So you might be wondering if our results contribute another nail in the coffin so to speak for radial layouts in general, this despite their popularity in practice and design communities. It's tempting to say this but our results are somewhat more nuanced. Yes, people tend to be slower with radial layouts, but only in value reading task contexts are they less accurate, while there seems to be no difference in accuracy for comparison tasks. It's also worth remarking that participants universally preferred linear layouts, and they felt more confident using linear layouts relative to radial ones.
+							So you might be wondering if our results contribute another nail in the coffin so to speak for radial layouts in general, this despite their popularity in practice and design communities. <br><br>
+							It's tempting to say this but our results are somewhat more nuanced. <br><br>
+							Yes, people tend to be slower with radial layouts, but only in value reading task contexts are they less accurate, while there seems to be no difference in accuracy for comparison tasks. <br><br>
+							However, it's also worth remarking that participants universally preferred linear layouts, and they felt more confident using linear layouts relative to radial ones.
 
 						</aside>
 					</section>
@@ -456,7 +495,8 @@
 						<img data-src="assets/ff.png" style="box-shadow: none" width="100%"/>					
 	
 						<aside class="notes">
-							Our other primary question in this work is how many ranges can you fit in a mobile display and still retain reasonable task performance, such as when you jump from a week of 7 ranges to a month of 31 ranges to a year of 365. You might expect that adding more marks in a chart will incur worse performance, but again our findings are more nuanced.
+							Our other primary question in this work is how many ranges can you fit in a mobile display and still retain reasonable task performance, such as when you jump from a week of 7 ranges to a month of 31 ranges to a year of 365. <br><br>
+							You might expect that adding more marks in a chart will incur worse performance, but again our findings are more nuanced.
 						</aside>
 					</section>
 	
@@ -504,7 +544,8 @@
 						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
 	
 						<aside class="notes">
-							Interestingly, there were cases where people were as accurate or even more accurate with a year of ranges than with a month of ranges, particularly among those looking for extreme temperatures. It is in this respect that we observed different results between the temperature and sleep range groups, where the expected annual trend of temperature ranges appears to make the task easier relative to examining a month of sleep ranges. 
+							Interestingly, there were cases where people were as accurate or even more accurate with a year of ranges than with a month of ranges, particularly among those looking for extreme temperatures. <br><br>
+							It is in this respect that we observed different results between the temperature and sleep range groups, where the expected annual trend of temperature ranges appears to make the task easier relative to examining a month of sleep ranges. 
 						</aside>
 					</section>
 	
@@ -514,7 +555,7 @@
 						<h5>Temperature and Sleep don't follow Monthly cycles</h5>
 						<img data-src="assets/radial_month.png" style="box-shadow: none; margin: 0px"/>			
 						<aside class="notes">
-							One interpretation of our results is that a month may not be an appropriate granularity for either temperature ranges or sleep ranges, since temperatures follow an annual cycle, not a monthly one, and we tend to have a weekly sleep routine across weekdays and weekends, as opposed to a monthly sleep routine. It is possible that other sources of range data are more appropriate to display at a monthly granularity, such as lunar or tidal cycles. 						
+							One interpretation of our results is that a month may not be an appropriate granularity for either temperature ranges or sleep ranges, since temperatures follow an annual cycle, not a monthly one, and we tend to have a weekly sleep routine across weekdays and weekends, as opposed to a monthly sleep routine.  						
 						</aside>
 					</section>
 	
@@ -538,7 +579,8 @@
 
 						
 						<aside class="notes">
-							Ultimately, the questions of which layout and which granularity to display are really questions about congruence with the data and task. You should ask whether a cycle is meaningful in the context of the data, whether the task is about locating values or comparing values, and whether task efficiency is the first priority.   						
+							Ultimately, the questions of which layout and which granularity to display are really questions about congruence with the data and task.  <br><br>
+							You should ask whether a cycle is meaningful in the context of the data, whether the task is about locating values or comparing values, and whether task efficiency is the first priority.   						
 						</aside>
 					</section>
 	
@@ -550,28 +592,19 @@
 						<span class="attribution" style="color:white">image: <a href="https://flic.kr/p/24mfesr" target="_blank"> flickr/newkemall</a> (cc by)</span>
 						
 						<aside class="notes">
-							It's important to stress that our results and how we interpreted them in terms of implications for design should in no way be used to inform the visualization of ranges over time in non-mobile contexts. Our experiment was conducted exclusively on mobile phones and we can only speak to that form factor.  					
+							It's important to stress that our results and how we interpreted them in terms of implications for design should in no way be used to inform the visualization of ranges over time in non-mobile contexts.  <br><br>
+							Our experiment was conducted exclusively on mobile phones and we can only speak to that form factor.  					
 						</aside>
 					</section>
 	
 					<!-- ================================================== -->
 
-					<section data-background-video="assets/task-comparison.mp4" data-background-video-loop data-background-size="contain" data-background-opacity=0.3>
+					<section data-background-video="assets/task-comparison.mp4" data-background-video-loop data-background-size="contain" data-background-opacity=0.25>
 						<h5>Interacting with visualization on mobile devices</h5>
 
 						<aside class="notes">
-							Nor do our results allow us to comment on the experience of interacting with range charts with different layouts and granularities. We designed the response mechanism in each task to be fairly simple, without requiring precise selection or the entering of responses into text fields.  
-						</aside>
-					</section>
-	
-					<!-- ================================================== -->
-
-					<section data-background="assets/boam.png" data-background-opacity=0.1>
-						<h5 style="color: gold;">The role of personal data and lived experience</h5>
-						<span class="attribution">image: <a href="https://ericboam.com/7-Months-of-Sleep" target="_blank">Eric Boam's <em>7 Months of Sleep</em></a></span>
-						
-						<aside class="notes">
-							Another question pertains to what would our task performance results would have looked like if participants were looking at their own sleep data? Or if they were looking at temperature data from where they lived? 
+							Nor do our results allow us to comment on the experience of interacting with range charts with different layouts and granularities.  <br><br>
+							We designed the response mechanism in each task to be fairly simple, without requiring precise selection or the entering of responses into text fields.  
 						</aside>
 					</section>
 	
@@ -594,9 +627,21 @@
 						<span class="attribution">IEEE VIS 2018 &middot; video: <a href="https://flic.kr/p/6rPtGo" target="_blank"> flickr/notthisorthat</a> (cc by-nc)</span>
 	
 						<aside class="notes">
-							Ultimately, we hope that this work inspires you to consider visualization for mobile directions and the potential research questions we as a community can ask via crowdsourced experimentation. For our part, the experimental application used in our experiment is available under an MIT open source license, and you can still experience our experiment on your own phone at aka.ms/ranges. We also invite you to engage with us, to provide feedback and ideas with respect to future research directions.     
+							Ultimately, we hope that this work inspires you to consider visualization for mobile directions and the potential research questions we as a community can ask via crowdsourced experimentation.  <br><br>
+							For our part, the experimental application used in our experiment is available under an MIT open source license, and you can still experience our experiment on your own phone at aka.ms/ranges.  <br><br>
+							At this point I'd like to thank my collaborators, thank you for listening, and I welcome your questions and comments.      
 						</aside>
 	
+					</section>
+
+					<!-- ================================================== -->
+
+					<section>
+						<h5>Supplemental</h5>
+
+						<aside class="notes">
+ 
+						</aside>
 					</section>
 
 					<!-- ================================================== -->
@@ -631,6 +676,17 @@
 						
 						<aside class="notes">
 							In light of our results and the possible differences between participants who saw temperature ranges and those who saw sleep ranges, a potentially informative follow-up experiment would be to remove the semantic cues from the charts and the task wording, to use synthetic data, or to repeat the experiment with other sources of range data, such as heart rate or blood pressure.  
+						</aside>
+					</section>
+
+					<!-- ================================================== -->
+
+					<section data-background="assets/boam.png" data-background-opacity=0.1>
+						<h5 style="color: gold;">The role of personal data and lived experience</h5>
+						<span class="attribution">image: <a href="https://ericboam.com/7-Months-of-Sleep" target="_blank">Eric Boam's <em>7 Months of Sleep</em></a></span>
+						
+						<aside class="notes">
+							Another question pertains to what would our task performance results would have looked like if participants were looking at their own sleep data? Or if they were looking at temperature data from where they lived? 
 						</aside>
 					</section>
 	
