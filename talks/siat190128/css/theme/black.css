@@ -208,8 +208,7 @@ body {
   display: inline-block;
   font-size: 0.6em;
   line-height: 1em;
-  vertical-align: top;
-  font-weight: 100; }
+  vertical-align: top; }
 
 .reveal small * {
   vertical-align: top; }
