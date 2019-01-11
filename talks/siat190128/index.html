@@ -1,0 +1,795 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Visualizing Ranges Over Time on Mobile Phones</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="shortcut icon" href="favicon.ico" />
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- ================================================== -->
+				
+				<section data-background-video="assets/notthisorthat.mp4" data-background-video-loop data-state="dimbg">
+					<h5>Visualizing Ranges Over Time on Mobile Phones</h5>		
+					<hr>
+					<h5>A Task-Based Crowdsourced Evaluation</h5>
+					
+					<small><br><a href="http://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> &middot; Microsoft Research &middot; <a href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a>
+					<br><br>In collaboration with Bongshin Lee, Petra Isenberg, & Eun Kyoung Choe</small>
+
+					<br>
+
+					<span class="affiliation"><img data-src="assets/authors/affiliations.png" height="50" style="box-shadow: none"/></span>
+	
+					<span class="attribution">IEEE VIS 2018 &middot; slides: <a href="https://aka.ms/ranges-vis" target="_blank">aka.ms/ranges-vis</a> &middot; video: <a href="https://flic.kr/p/6rPtGo" target="_blank"> flickr/notthisorthat</a> (cc by-nc)</span>
+
+					<aside class="notes">
+					For a paper about visualizing data on mobile phones, I'm going to start in a place you probably didn't expect, and that's the weather page of the print edition of the New York Times.
+					</aside>
+
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="assets/nyt.png">
+					<span class="attribution" style="color:black">image: <em>The New York Times</em> (June 4, 2017)</span>
+
+					<aside class="notes">
+						here you'll see temperature ranges over time. 
+						<br><br>
+						Highs and lows for the last five days and the next five days are superimposed over average and record temperature ranges for 22 American cities, and you'll also get a full month of temperature ranges for New York City itself.
+					</aside>
+
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="#fff">
+						<img data-src="assets/olson.png" width="100%" style="box-shadow: none"/>
+						<span class="attribution">image: <a href="https://fivethirtyeight.com/features/what-12-months-of-record-setting-temperatures-looks-like-across-the-u-s/" target="_blank" style="color:cornflowerblue">Randy Olson (2015) for fivethirtyeight.com</a></span>
+
+						<aside class="notes">
+							Or the next time you ask the question "was this past year warmer or more erratic than usual?", you might encounter a chart like one by Randy Olson, overlaying observed and average ranges for every day of an entire year. 
+							<br><br>
+							These charts are fairly conventional when it comes to weather reporting, but they certainly aren't limited to the weather domain. 
+						</aside>
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="#3A3A3C" data-background="assets/boam.png">
+					<img data-src="assets/boam.png" width="100%" style="box-shadow: none"/>
+					<span class="attribution">image: <a href="https://ericboam.com/7-Months-of-Sleep" target="_blank">Eric Boam's <em>7 Months of Sleep</em></a></span>
+
+					<aside class="notes">
+						Consider Eric Boam's "7 Months of Sleep" project, in which every day has a range indicating the hours slept, with bedtimes at the top and waking times the next morning at the bottom. 
+					</aside>
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="#fff">
+					<img data-src="assets/nyt_olson_boam.png" style="box-shadow: none"/>		
+					
+					<span class="attribution">images (clockwise from left): <em>The New York Times</em> &middot;  <a href="https://ericboam.com/7-Months-of-Sleep" target="_blank"  style="color:cornflowerblue">Eric Boam</a> &middot; <a href="https://fivethirtyeight.com/features/what-12-months-of-record-setting-temperatures-looks-like-across-the-u-s/" target="_blank" style="color:cornflowerblue">Randy Olson</a>  </span>
+
+
+					<aside class="notes">
+						These examples work well in print and when shown on large displays, but that's not how many of us now consume weather data or personal health and activity data, such as sleep duration. 
+						<br><br>
+						Instead, these and several other sources of range data are likely to be consumed from a mobile device. 
+					</aside>
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="#fff">
+					<h5>Ranges in Weather Apps</h5>
+					<img data-src="assets/weather_apps.png" style="box-shadow: none" height="500"/>				
+					
+					<span class="attribution">apps: <a href="https://darksky.net/app" target="_blank" style="color:cornflowerblue">Dark Sky</a> © &middot;  <a href="http://theweathertron.com/" target="_blank" style="color:cornflowerblue">Weathertron</a> © &middot; <a href="http://weatherlineapp.com/" target="_blank" style="color:cornflowerblue">Weather Line</a> © </span>
+
+
+					<aside class="notes">
+						There are weather apps like these that display ranges for 7 or 10 days or aggregated across 12 months. 
+					</aside>
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="#fff">
+					<h5>Ranges in Sleep Tracking Apps</h5>
+					<img data-src="assets/sleep_apps.png" style="box-shadow: none" height="500"/>				
+					
+					<span class="attribution">apps: <a href="https://www.azumio.com/s/sleeptime/index.html" target="_blank" style="color:cornflowerblue">Azumio Sleep Time</a> © &middot;  <a href="https://connect.garmin.com/en-US/" target="_blank" style="color:cornflowerblue">Garmin Connect</a> © &middot; <a href="https://apple.com" target="_blank" style="color:cornflowerblue">Bedtime (iOS Clock)</a> © </span>
+
+
+					<aside class="notes">
+						And similarly there are ranges shown in sleep tracking apps such as these. 
+					</aside>
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="#fff">
+					<h5>How many ranges can you show in a mobile display?</h5>
+					<img data-src="assets/health_apps.png" style="box-shadow: none" height="500"/>				
+					
+					<span class="attribution">apps:  <a href="https://apple.com" target="_blank" style="color:cornflowerblue">Activity (iOS)</a> © &middot;  <a href="http://doi.acm.org/10.1145/2750858.2804266" target="_blank" style="color:cornflowerblue">SleepTight (Choe et al, Proc. UbiComp 2015)</a> &middot; <a href="http://doi.acm.org/10.1145/1133265.1133364" target="_blank" style="color:cornflowerblue">Chittaro (Proc. AVI 2006)</a> </span>
+
+
+					<aside class="notes">
+						If we consider the heart rate range charts shown in the iOS Activity app and the sleep and blood pressure ranges shown in these research prototypes, it's worth finding out just how many ranges can be feasibly shown on a mobile phone. 
+					</aside>
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="#fff">
+					<h5>Ranges and Radial Layouts</h5>
+					<img data-src="assets/weather_radial.png" style="box-shadow: none" height="500"/>
+					<img data-src="assets/book_of_circles.png" height="500"/>		
+					
+					<span class="attribution">images:  <a href="http://www.weather-radials.com/" target="_blank" style="color:cornflowerblue"><em>Weather Radials</em> (by Timm Kekeritz)</a> © &middot;  <a href="https://www.papress.com/html/product.details.dna?isbn=9781616895280" target="_blank" style="color:cornflowerblue"><em>The Book of Circles</em> (Manuel Lima, 2017)</a> </span>
+
+
+					<aside class="notes">
+						The other primary question of our work relates to the linear convention used when visualizing ranges over time. Time is also cyclical; we experience seasons, lunar cycles, and weekday/weekend routines. 
+						
+						<br><br>
+						
+						The cyclicality of time is exemplified in work like Tim Kekeritz's Weather Radials, or in a number of radial range charts featured in Manuel Lima's Book of Circles. 
+					</aside>
+				</section>
+
+				<!-- ================================================== -->
+
+				<section  data-background="#fff">
+					<img data-src="assets/sadowski.png" style="box-shadow: none" width="100%"/>			
+					
+					<span class="attribution">images:  <a href="https://mobileinfovis.com" target="_blank" style="color:cornflowerblue">mobileinfovis.com (by Sebastian Sadowski, 2018)</a> </span>
+
+					<aside class="notes">
+						But are these designs appropriate for mobile displays? <br><br>
+						Bear in mind that mobile app and website designers appear to be quite fond of radial layouts, as illustrated in a survey by Sebastian Sadowski. 
+					</aside>
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="assets/smartphone.png" data-state="dimbg">
+					<h5 style="color:gold">A Crowdsourced Experiment on Mobile Phones</h5>
+					<span class="attribution" style="color:white">image: <a href="https://flic.kr/p/24mfesr" target="_blank"> flickr/newkemall</a> (cc by)</span>
+
+					<aside class="notes">
+						The answer to how many ranges can be fit into mobile display and to whether you should use a linear or radial layout is of course, "it depends on the data and the task". <br><br>
+						We know this because we conducted a crowdsourced experiment in which we asked crowd workers to perform a set of different tasks on their mobile phone. 
+					</aside>
+
+				</section>
+
+				<!-- ================================================== -->
+
+				<section>
+					<img data-src="assets/ff.png" style="box-shadow: none" width="100%"/>					
+
+					<aside class="notes">
+						 Our experiment involved both linear and radial layouts, as well as three granularities of time: a week of 7 seven ranges, a month of up to 31 ranges, and a year of 365 ranges. 
+					</aside>
+				</section>
+
+				<!-- ================================================== -->
+
+				<section>
+					<h5>Data: <span style="color: #FF7F0E;">Temperature</span> (Left) and <span style="color: cornflowerblue;">Sleep</span> (Right) Ranges</h5>
+					<img data-src="assets/screenshots/linear_year_temp.png" style="box-shadow: none" height="400"/>
+					<img data-src="assets/screenshots/linear_year_sleep.png" style="box-shadow: none" height="400"/>		
+
+					<span class="attribution" style="color:white">data sources: (L) <a href="https://www.wunderground.com/" target="_blank">wunderground.com</a> + <a href="http://www.intellicast.com/" target="_blank">intellicast.com</a> (temperature) &middot; (R) <a href="https://redd.it/1c1sah" target="_blank">redd.it/1c1sah</a> (sleep)</span>
+
+					<aside class="notes">
+						Given the prevalence of ranges in weather and sleep tracking applications, we opted to use a year of daily temperature range data from a temperate American city known for its seasonal fluctuations, as well as a year of real bedtime and waking time data from a diligent quantified selfer on the r/datasets subreddit. 
+						<br><br>
+						For the temperature data we had observed as well as recorded average temperatures (we show the latter in grey, with the color gradient observed temperature range superimposed over it). However, with sleep data, we only had the observed sleep time ranges. 
+						
+						<br><br>
+						To produce the analog of an 'average sleep' range, we considered that sleep apps such as iOS's Bedtime of Garmin's Connect app indicates sleep time goals, and we also hear of popular advice from health professionals that it is best to keep a consistent sleep schedule and to sleep for about 8 hours if you are an adult. 
+						
+						<br><br>This means that while the 'average' ranges for daily temperatures fluctuate throughout the year, the 'average' sleep range remains constant throughout the year. 
+
+					</aside>
+
+				</section>
+
+				<!-- ================================================== -->
+
+				<section>
+						<h5><span style="color: #FF7F0E;">Temperature</span> (L) and <span style="color: cornflowerblue;">Sleep</span> (R) Range Encoding, Explained</h5>
+						<img data-src="assets/encoding.png" style="box-shadow: none"/>									
+							
+						<aside class="notes">
+							It's also important to note that the quantitative scale for a linear layout is different for these two data sources, owing to the weather reporting convention that warmer temperatures are higher in a chart and that later times are lower in calendars; The color encoding reinforces this difference. 
+							
+							<br><br>
+							
+							We also provided different semantic cues for these two data sources, which included different wordings in task instructions and different iconography. 
+							
+							<br><br>
+							
+							As a result, we divided our participants into two groups, one for temperature ranges and one for sleep ranges. 
+							
+							<br><br>
+							
+							We did not directly compare the results of the two groups due to these confounds; They should be seen as separate experiments.
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>				
+						<h5><span style="color: gold;">5 Experimental Tasks</span></h5>		
+						<small>
+							<p>Locate Dates</p>
+							<p>Read Values (on an indicated day)</p>
+							<p>Locate Min / Max Values</p>
+							<p>Compare Values (on an indicated day)</p>
+							<p>Compare Ranges (between two indicated date spans)</p>
+						</small>
+						<aside class="notes">
+							Using an existing visualization task typology as a framework, we designed 5 experimental tasks, having increasing difficulty and completed in order, though within each task we counterbalanced the presentation of layout and granularity, with several trials for each combination. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section data-background-video="assets/ranges-locate-dates.mp4" data-background-video-loop data-background-size="contain">						
+						<aside class="notes">
+						These tasks included locating dates,
+						</aside>
+					</section>
+
+					<!-- ================================================== -->
+
+					<section data-background-video="assets/ranges-read-value.mp4" data-background-video-loop data-background-size="contain">						
+						<aside class="notes">
+						reading values on indicated dates, 
+						</aside>
+					</section>
+
+					<!-- ================================================== -->
+
+					<section data-background-video="assets/ranges-locate-minmax.mp4" data-background-video-loop data-background-size="contain">						
+						<aside class="notes">
+						locating extreme range values, 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section data-background-video="assets/ranges-compare-values.mp4" data-background-video-loop data-background-size="contain">						
+						<aside class="notes">
+						comparing observed and average range values on indicated dates, 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section data-background-video="assets/ranges-compare-ranges.mp4" data-background-video-loop data-background-size="contain">						
+						<aside class="notes">
+						and comparing spans of observed and average ranges. For the two comparison tasks, we presented participants with a fixed set of 3 response options. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section data-background-video="assets/ranges-locate-minmax.mp4" data-background-video-loop data-background-size="contain">						
+						<aside class="notes">
+							For the other tasks, participants had to select a region on the chart. <br><br>
+							We asked participants to contain the correct response within a dashed region that followed their touch point, and this region spanned between 1/7th and 1/12th of the possible response domain, depending on the granularity; in other words, they didn't need to exactly touch the correct value. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>						
+						<h5>Data We Collected:</h5>
+						<small>
+							<p><em>For each trial</em>:</p>
+							<p><span style="color: gold;"><i class="fas fa-stopwatch"></i></span> Trial completion time</p>
+							<p><span style="color: gold;"><i class="fas fa-check-circle"></i></span> Response accuracy</p>
+							<p><br></p>
+							<p><em>At each level of granularity</em>:</p>
+							<p><span style="color: gold;"><i class="fas fa-thumbs-up"></i></span> Preference: Linear or Radial</p>
+							<p><span style="color: gold;"><i class="fas fa-list-ol"></i></span> Confidence: Low (1) to High (5)</p>
+						</small>	
+						<span class="attribution">icons: <a href="https://fontawesome.com" target="_blank">fontawesome.com</a></span>
+					 							
+						<aside class="notes">
+							So we collected both completion time and response accuracy for each trial, and at the end of the experiment, we asked participants about their preference and their overall confidence in their responses for each combination of layout and granularity.
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>						
+						<h5>100 Participants</h5>
+						<small>
+							<p><span style="color: #FF7F0E;">Temperature</span> (N = 50), <span style="color: cornflowerblue;">Sleep</span> (N = 50)</p>	
+
+							<p>
+								<span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><br>
+								<span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><br>
+								<span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><br>
+								<span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><br>
+								<span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span>
+							</p>
+							<p>84 trials per participant, 20 - 25 minutes to complete full experiment</p>
+						</small>	
+						<span class="attribution">icons: <a href="https://fontawesome.com" target="_blank">fontawesome.com</a></span>
+													
+						<aside class="notes">
+							We recruited 100 participants from Mechanical Turk's U.S. crowd worker population, split evenly into a temperature range group and a sleep range group. <br><br>
+							They only had one opportunity to perform the experiment in its entirety, which took between 20 and 25 minutes. <br><br>
+							They had to use a mobile phone running a recent version of iOS or Android and either the Chrome or Safari mobile browser. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>						
+						<h5>Results from 87 Participants</h5>
+						<small>
+							<p><span style="color: #FF7F0E;">Temperature</span> (N = 40), <span style="color: cornflowerblue;">Sleep</span> (N = 47)</p>	
+							<p>
+								<span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><br>
+								<span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><br>
+								<span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><br>
+								<span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><br>
+								<span style="color: white;"> <i class="far fa-user"></i></span><span style="color: white;"> <i class="far fa-user"></i></span><span style="color: white;"> <i class="far fa-user"></i></span><span style="color: white;"> <i class="far fa-user"></i></span><span style="color: white;"> <i class="far fa-user"></i></span><span style="color: white;"> <i class="far fa-user"></i></span><span style="color: white;"> <i class="far fa-user"></i></span><span style="color: white;"> <i class="far fa-user"></i></span><span style="color: white;"> <i class="far fa-user"></i></span><span style="color: white;"> <i class="far fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: white;"> <i class="far fa-user"></i></span><span style="color: white;"> <i class="far fa-user"></i></span><span style="color: white;"> <i class="far fa-user"></i></span>
+							</p>							
+							<p>3,337 <span style="color: #FF7F0E;">Temperature</span> group trials; 3,926 <span style="color: cornflowerblue;">Sleep</span> group trials</p>
+						</small>	
+						<span class="attribution">icons: <a href="https://fontawesome.com" target="_blank">fontawesome.com</a></span>
+													
+						<aside class="notes">
+							We excluded results from 13 participants, due to non-completion, non-compliance, or for failing to correctly respond to quality control trials distributed throughout the experiment, leaving 40 participants in the Temperature group and 47 participants in the Sleep group. <br><br>
+							With the remaining data, we calculated ratios in completion time and differences in error rate between the two layouts and between the 3 levels of granularity. 
+						</aside>
+					</section>
+		
+					<!-- ================================================== -->
+
+					<section>
+						<img data-src="assets/plot_completion_time_ratios.png" style="box-shadow: none" width="100%"/>		
+						<small>Radial / Linear completion time ratios</small>
+						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
+	
+						<aside class="notes">
+							Let's first consider ratios in task completion time between linear and radial layouts, where the error bars here are 95% confidence intervals, and in cases where the confidence interval crosses a completion time ratio of 1 (the white dashed line), we interpret these as cases where layout has little or no effect. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+						<img data-src="assets/plot_completion_time_ratios_2.png" style="box-shadow: none" width="100%"/>		
+						<small>Radial / Linear completion time ratios</small>
+						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
+	
+						<aside class="notes">
+							Given our results, people tend to complete comparison tasks in about the same amount of time with either layout, 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+						<img data-src="assets/plot_completion_time_ratios_3.png" style="box-shadow: none" width="100%"/>		
+						<small>Radial / Linear completion time ratios</small>
+						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
+	
+						<aside class="notes">
+							but for tasks that require locating values, people tend to be slower with radial layouts, irrespective of the source of the data, especially when reading values for an indicated day. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+						<img data-src="assets/plot_error_rate_ratios.png" style="box-shadow: none" width="100%"/>		
+						<small>Radial - Linear error rate differences</small>
+						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
+	
+						<aside class="notes">
+							However, radial layouts don't seem to incur accuracy costs, at least with temperature range data, where there tends to be a lot of seasonal variation. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+						<img data-src="assets/plot_error_rate_ratios_2.png" style="box-shadow: none" width="100%"/>		
+						<small>Radial - Linear error rate differences</small>
+						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
+	
+						<aside class="notes">
+							With sleep range data, which exhibits no seasonal variation, people are less accurate when reading values for indicated dates or when locating extreme values. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+						<h5>Interpreting Radial vs. Linear performance differences</h5>
+						<img data-src="assets/layout_interpretation.png" style="box-shadow: none" height="600"/>					
+						<span class="attribution"><span style="color: gold;">Note</span>: dimensions of an iPhone 6 (w = 375 pt) with a device-pixel ratio of 2x and 12.5% margins</span>	
+	
+						<aside class="notes">
+							The difficulty in reading range values for indicated dates may be due to the fact that the quantitative domain in a radial layout is compressed to half of the chart area, from the center to the periphery, thus putting it at a disadvantage relative to a linear layout, where the quantitative domain spans the entire height of the chart, so individual marks are twice as tall. <br><br>
+							We kept the chart size constant between the two layout conditions, but it would be interesting to repeat our experiment in which mark size is kept constant instead of chart size, meaning that linear range charts would be compressed to half of their current height. 
+
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+						<h5>No advantage at the periphery relative to the center</h5>
+						<img data-src="assets/layout_interpretation_periphery.png" style="box-shadow: none" width="600"/>				
+						<span class="attribution"><span style="color: gold;">Note</span>: dimensions of an iPhone 6 (w = 375 pt) with a device-pixel ratio of 2x and 12.5% margins</span>	
+						<aside class="notes">
+							Our findings also suggest that it does not make a difference whether the task has to do with the beginning or end of the range. <br><br>
+							We had speculated about whether the increased chronological resolution around the periphery of a radial layout would contribute to better performance for locating and reading values at the periphery, and conversely whether the center of a radial layout would incur worse performance. <br><br>
+							People tended to be slower with a radial layout irrespective of whether the task asked them about the start or end of the range, there were no pronounced differences in accuracy in this regard.
+
+						</aside>
+					</section>
+		
+					<!-- ================================================== -->
+					
+
+					<section data-background="assets/teaser.png" data-background-opacity="0.1">
+						<h5 style="color: gold;">Radial or Linear?</h5>
+
+						<small>
+							<p>People are, in general, slower with Radial layouts.</p>
+							<p>Only in some data + task contexts are people less accurate.</p>	
+							<span class='fragment'><p>(Reading and locating values in the absence of seasonal variation)</p></span>	
+							<p>People prefer (and are more confident) with Linear layouts</p>
+						</small>
+						
+						<aside class="notes">
+							So you might be wondering if our results contribute another nail in the coffin so to speak for radial layouts in general, this despite their popularity in practice and design communities. <br><br>
+							It's tempting to say this but our results are somewhat more nuanced. <br><br>
+							Yes, people tend to be slower with radial layouts, but only in value reading task contexts are they less accurate, while there seems to be no difference in accuracy for comparison tasks. <br><br>
+							However, it's also worth remarking that participants universally preferred linear layouts, and they felt more confident using linear layouts relative to radial ones.
+
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+
+						<img data-src="assets/ff.png" style="box-shadow: none" width="100%"/>					
+	
+						<aside class="notes">
+							Our other primary question in this work is how many ranges can you fit in a mobile display and still retain reasonable task performance, such as when you jump from a week of 7 ranges to a month of 31 ranges to a year of 365. <br><br>
+							You might expect that adding more marks in a chart will incur worse performance, but again our findings are more nuanced.
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+						<img data-src="assets/plot_g_RT.png" style="box-shadow: none; margin: 0px" width="100%"/>					
+						<small>Completion time ratios between granularities</small>
+						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
+	
+						<aside class="notes">
+							As you might expect, people were slower with a month ranges than with a week of ranges, 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+						<img data-src="assets/plot_g_RT_2.png" style="box-shadow: none; margin: 0px" width="100%"/>					
+						<small>Completion time ratios between granularities</small>
+						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
+	
+						<aside class="notes">
+							and in some instances the ratios in completion time from a week to a month was greater than from a month to a year. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+						<img data-src="assets/plot_g_err.png" style="box-shadow: none; margin: 0px" width="100%"/>			
+						<small>Accuracy differences between granularities</small>
+						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
+	
+						<aside class="notes">
+							With regards to accuracy, the jump from a week to a month only incurred noticeably worse performance when locating extreme values. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+						<img data-src="assets/plot_g_err_2.png" style="box-shadow: none; margin: 0px" width="100%"/>			
+						<small>Accuracy differences between granularities</small>
+						<span class="attribution"><span style="color: gold;">Note</span>: Error bars are 95% Confidence Intervals</span>			
+	
+						<aside class="notes">
+							Interestingly, there were cases where people were as accurate or even more accurate with a year of ranges than with a month of ranges, particularly among those looking for extreme temperatures. <br><br>
+							It is in this respect that we observed different results between the temperature and sleep range groups, where the expected annual trend of temperature ranges appears to make the task easier relative to examining a month of sleep ranges. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section>
+						<h5>Temperature and Sleep don't follow Monthly cycles</h5>
+						<img data-src="assets/radial_month.png" style="box-shadow: none; margin: 0px"/>			
+						<aside class="notes">
+							One interpretation of our results is that a month may not be an appropriate granularity for either temperature ranges or sleep ranges, since temperatures follow an annual cycle, not a monthly one, and we tend to have a weekly sleep routine across weekdays and weekends, as opposed to a monthly sleep routine.  						
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section data-background-video="assets/tides.mp4" data-background-video-loop data-state="dimbg" data-background-opacity=0.5>
+						<h5 style="color: gold;">Selecting an appropriate layout and granularity</h5>
+
+						<small>
+							<p>Is a cycle meaningful in the context of the data?</p>
+							<p>Is the task involve locating values? Or comparing them?</p>
+							<p>Is efficiency the primary consideration?</p>		
+							<p><br></p>
+							<span class="fragment">
+								<p>Locating values (quickly)? → <span style="color: gold;">Linear</span></p>
+								<p>Comparing values (unconcerned with efficiency)? → <span style="color: gold;">Radial or Linear</span></p>
+							</span>
+						</small>
+
+						<span class="attribution">video: <a href="https://flic.kr/p/29GNLNH" target="_blank"> flickr/50663863@N02</a> (cc by)</span>
+
+						
+						<aside class="notes">
+							Ultimately, the questions of which layout and which granularity to display are really questions about congruence with the data and task.  <br><br>
+							You should ask whether a cycle is meaningful in the context of the data, whether the task is about locating values or comparing values, and whether task efficiency is the first priority.   						
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section data-background="assets/smartphone.png" data-state="dimbg" data-background-opacity=0.3>
+						<h5>Our findings only apply to mobile contexts</h5>
+
+						<span class="attribution" style="color:white">image: <a href="https://flic.kr/p/24mfesr" target="_blank"> flickr/newkemall</a> (cc by)</span>
+						
+						<aside class="notes">
+							It's important to stress that our results and how we interpreted them in terms of implications for design should in no way be used to inform the visualization of ranges over time in non-mobile contexts.  <br><br>
+							Our experiment was conducted exclusively on mobile phones and we can only speak to that form factor.  					
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section data-background-video="assets/task-comparison.mp4" data-background-video-loop data-background-size="contain" data-background-opacity=0.25>
+						<h5>Interacting with visualization on mobile devices</h5>
+
+						<aside class="notes">
+							Nor do our results allow us to comment on the experience of interacting with range charts with different layouts and granularities.  <br><br>
+							We designed the response mechanism in each task to be fairly simple, without requiring precise selection or the entering of responses into text fields.  
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section data-background="assets/teaser.png" data-background-opacity="0.05">
+						<h5>Visualizing Ranges Over Time on Mobile Phones</h5>		
+						<hr>
+						<small><a href="http://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> &middot; Microsoft Research &middot; <a href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a>
+						<br><br>In collaboration with Bongshin Lee, Petra Isenberg, & Eun Kyoung Choe
+						<hr>
+						<p>
+							(mobile only) experimental app: <a href="http://aka.ms/ranges" target="_blank">aka.ms/ranges</a><br>
+							code: <a href="https://github.com/microsoft/RangesOnMobile" target="_blank">github.com/microsoft/RangesOnMobile</a><br>
+							slides: <a href="https://aka.ms/ranges-vis" target="_blank">aka.ms/ranges-vis</a><br>
+						</p></small>
+	
+						<span class="affiliation"><img data-src="assets/authors/affiliations.png" height="50" style="box-shadow: none"/></span>
+		
+						<span class="attribution">IEEE VIS 2018 &middot; video: <a href="https://flic.kr/p/6rPtGo" target="_blank"> flickr/notthisorthat</a> (cc by-nc)</span>
+	
+						<aside class="notes">
+							Ultimately, we hope that this work inspires you to consider visualization for mobile directions and the potential research questions we as a community can ask via crowdsourced experimentation.  <br><br>
+							For our part, the experimental application used in our experiment is available under an MIT open source license, and you can still experience our experiment on your own phone at aka.ms/ranges.  <br><br>
+							At this point I'd like to thank my collaborators, thank you for listening, and I welcome your questions and comments.      
+						</aside>
+	
+					</section>
+
+					<!-- ================================================== -->
+
+					<section>
+						<h5>Supplemental</h5>
+
+						<aside class="notes">
+ 
+						</aside>
+					</section>
+
+					<!-- ================================================== -->
+
+					<section>
+						<h5>Layout does not appear to affect comparison performance</h5>
+						<img data-src="assets/compare_interpretation.png" style="box-shadow: none" width="100%"/>
+
+						<aside class="notes">
+							Yet, If the task is primarily about comparing ranges values or comparing spans of observed and averages ranges, like comparing whether the observed temperatures in one month were more aligned with average temperatures relative to some other month, it doesn't appear to matter whether you use a linear or radial layout, at least in terms of accuracy. 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<section data-background="#333">
+						<h5 style="color: gold;">Radial layouts for other tasks?</h5>
+						<img data-src="assets/hawkins.gif" style="box-shadow: none" height="500"/>
+						<span class="attribution">animation: <a href="https://www.climate-lab-book.ac.uk/spirals/" target="_blank">Ed Hawkins' <em>Climate Spirals</em></a></span>
+
+						<aside class="notes">
+							It's also possible that there are tasks other than those we considered where a radial layout has an advantage or performance parity with a linear layout, such as in year-over-year comparisons like in Ed Hawkins' Climate Spirals - future research could involve reconsidering our choice of encoding and instead opt for paging, scrolling, or animation, at which point performance may depend on memory as well as perception. 
+						</aside>
+					</section>
+					
+					<!-- ================================================== -->
+
+					<section data-background="assets/health_apps.png" data-state="dimbg" data-background-opacity=0.15>
+						<h5>Beyond temperature and sleep range data</h5>
+
+						<img data-src="assets/no_semantics_frame.png" style="box-shadow: none; margin: 0px" height="650"/>	
+						
+						<aside class="notes">
+							In light of our results and the possible differences between participants who saw temperature ranges and those who saw sleep ranges, a potentially informative follow-up experiment would be to remove the semantic cues from the charts and the task wording, to use synthetic data, or to repeat the experiment with other sources of range data, such as heart rate or blood pressure.  
+						</aside>
+					</section>
+
+					<!-- ================================================== -->
+
+					<section data-background="assets/boam.png" data-background-opacity=0.1>
+						<h5 style="color: gold;">The role of personal data and lived experience</h5>
+						<span class="attribution">image: <a href="https://ericboam.com/7-Months-of-Sleep" target="_blank">Eric Boam's <em>7 Months of Sleep</em></a></span>
+						
+						<aside class="notes">
+							Another question pertains to what would our task performance results would have looked like if participants were looking at their own sleep data? Or if they were looking at temperature data from where they lived? 
+						</aside>
+					</section>
+	
+					<!-- ================================================== -->
+
+					<!-- <section data-background="#fff">
+						<h5>Research on visualization for mobile devices: <span style="color: cornflowerblue;">A call to action</span></h5>
+
+						<img data-src="assets/mobilevis.png" style="box-shadow: none; margin: 0px"/>
+
+						<span class="attribution" style="color:black">image: <a href="https://mobilevis.github.io/" target="_blank" style="color: cornflowerblue;"> mobilevis.github.io</a></span>
+						
+						<aside class="notes">
+							Beyond range data, our work reaffirms the need for more studies of visualization for mobile devices, particularly as more and more data from of our lives becomes accessible on our phones. The presence of visualization in mobile apps and in mobile-first news outlets will continue to rise, and the visualization research community must continue to investigate mobile-first and mobile-only visual encodings and interactions. Our work offers one approach to carrying out this research via crowdsourced experimentation, though there are certainly other approaches worth considering.    
+						</aside>
+					</section> -->
+
+					<!-- ================================================== -->
+	
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				progress: false,
+				slideNumber: false,
+				showNotes: false,
+				mouseWheel: false,
+				history: true,
+				viewDistance: 5,
+				transition: 'fade',
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+		<script type="text/javascript" src="preloader.js" charset="UTF-8"></script>     
+    <script>
+
+      imagesArray = [
+				"assets/nyt.png",
+				"assets/olson.png",
+				"assets/boam.png",
+				"assets/nyt_olson_boam.png",
+				"assets/weather_apps.png",
+				"assets/sleep_apps.png",
+				"assets/health_apps.png",
+				"assets/weather_radial.png",
+				"assets/book_of_circles.png",
+				"assets/sadowski.png",
+				"assets/ff.png",
+				"assets/smartphone.png",
+				"assets/screenshots/linear_year_temp.png",
+				"assets/screenshots/linear_year_sleep.png",
+				"assets/sleep_apps_average.png",
+				"assets/encoding.png",
+				"assets/plot_completion_time_ratios.png",
+				"assets/plot_completion_time_ratios_2.png",
+				"assets/plot_completion_time_ratios_3.png",
+				"assets/plot_error_rate_ratios.png",
+				"assets/plot_error_rate_ratios_2.png",
+				"assets/layout_interpretation.png",
+				"assets/layout_interpretation_periphery.png",
+				"assets/plot_pref.png",
+				"assets/compare_interpretation.png",
+				"assets/hawkins.gif",
+				"assets/plot_g_RT.png",
+				"assets/plot_g_err.png",
+				"assets/plot_g_RT_2.png",
+				"assets/plot_g_err_2.png",
+				"assets/radial_month.png",
+				"assets/no_semantics_frame.png",
+				"assets/mobilevis.png" 
+      ];
+
+      new preLoader(imagesArray, {
+        onProgress: function(img, imageEl, index){
+            // fires every time an image is done or errors.
+            // imageEl will be falsy if error
+            // console.log('just ' +  (!imageEl ? 'failed: ' : 'loaded: ') + img);
+            // imageContainer.appendChild(imageEl);
+            // can access any propery of this
+            // console.log(this.completed.length + this.errors.length + ' / ' + this.queue.length + ' done');
+        },
+        onComplete: function(loaded, errors){
+            // fires when whole list is done. cache is primed.
+            console.log('assets loaded:', loaded);
+            // imageContainer.style.display = 'block';
+            if (errors){
+                console.log('the following failed', errors);
+            }
+        }
+      });
+    </script>
+	</body>
+</html>
