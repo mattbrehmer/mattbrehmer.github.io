@@ -8,7 +8,7 @@
 /*********************************************
  * RESET STYLES
  *********************************************/
-html, body, .reveal div, .reveal span, .reveal applet, .reveal object, .reveal iframe,
+html, body, .reveal div, .reveal applet, .reveal object, .reveal iframe,
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal p, .reveal blockquote, .reveal pre,
 .reveal a, .reveal abbr, .reveal acronym, .reveal address, .reveal big, .reveal cite, .reveal code,
 .reveal del, .reveal dfn, .reveal em, .reveal img, .reveal ins, .reveal kbd, .reveal q, .reveal s, .reveal samp,
@@ -31,6 +31,7 @@ html, body, .reveal div, .reveal span, .reveal applet, .reveal object, .reveal i
 .reveal article, .reveal aside, .reveal details, .reveal figcaption, .reveal figure,
 .reveal footer, .reveal header, .reveal hgroup, .reveal menu, .reveal nav, .reveal section {
   display: block; }
+
 
 /*********************************************
  * GLOBAL STYLES
@@ -322,9 +323,9 @@ body {
     .reveal .controls .navigate-right .controls-arrow {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
-    .reveal .controls .navigate-right.highlight {
+    /* .reveal .controls .navigate-right.highlight {
       -webkit-animation: bounce-right 2s 50 both ease-out;
-              animation: bounce-right 2s 50 both ease-out; }
+              animation: bounce-right 2s 50 both ease-out; } */
   .reveal .controls .navigate-up {
     right: 3.2em;
     bottom: 6.4em;
@@ -341,9 +342,9 @@ body {
     .reveal .controls .navigate-down .controls-arrow {
       -webkit-transform: rotate(-90deg);
               transform: rotate(-90deg); }
-    .reveal .controls .navigate-down.highlight {
+    /* .reveal .controls .navigate-down.highlight {
       -webkit-animation: bounce-down 2s 50 both ease-out;
-              animation: bounce-down 2s 50 both ease-out; }
+              animation: bounce-down 2s 50 both ease-out; } */
   .reveal .controls[data-controls-back-arrows="faded"] .navigate-left.enabled,
   .reveal .controls[data-controls-back-arrows="faded"] .navigate-up.enabled {
     opacity: 0.3; }
@@ -463,7 +464,7 @@ body {
   position: absolute;
   display: block;
   right: 8px;
-  bottom: 8px;
+  top: 8px;
   z-index: 31;
   font-family: Helvetica, sans-serif;
   font-size: 12px;
@@ -1619,4 +1620,8 @@ html .white_img {
     background: none;
     border: none;
     box-shadow: none;
+}
+
+.reveal .controls .navigate-left, .reveal .controls .navigate-up {
+    display: none;
 }
