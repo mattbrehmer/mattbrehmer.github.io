@@ -256,7 +256,11 @@ body {
   margin: 15px 0px;
   background: transparent;
   border: 0px solid transparent;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); 
+  }
 
 .reveal section img.plain {
   border: 0;
