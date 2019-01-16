@@ -1,0 +1,455 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Timeline Storyteller: The Design & Deployment of an Interactive Authoring Tool for Expressive Timeline Narratives</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300;700" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="shortcut icon" href="favicon.ico" />
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- ================================================== -->
+
+				<section data-background="assets/dimbg.png" data-background-opacity=0.15>
+
+					<h3>Timeline Storyteller</h3>
+					<hr>
+					<h5>The Design & Deployment of an Interactive Authoring Tool <br>For Expressive Timeline Narratives</h5>
+
+					<small><br><a href="http://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> &middot; Microsoft Research &middot; <a href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a><br><br>
+					In collaboration with Bongshin Lee, Nathalie Henry Riche, David Tittsworth,<br>Kate Lytvynets, Darren Edge, and Christopher White.</small>
+
+					<br>
+
+					<span class="affiliation"><img data-src="assets/authors/affiliations.png" height="50" style="box-shadow: none"/></span>
+						
+					<span class="attribution">The 2019 Computation + Journalism Symposium &middot; slides: <a href="https://aka.ms/cj19" target="_blank">aka.ms/cj19</a></span>
+
+					<aside class="notes">					
+
+					</aside>
+
+				</section>
+
+				<!-- ================================================== -->
+				
+				<section>
+
+					<h4><span style="color:gold">Using</span> our Timeline Design Space</h4>
+					<hr>
+
+					<span class="small_emph">representation</span>
+					<br>
+					<img class="white_img" width="120" height="120" data-src="assets/r-lin.png" alt="Linear" style="margin:0px; background: none; border: none; box-shadow:none">
+					<img class="white_img" width="120" height="120" data-src="assets/r-rad.png" alt="Radial" style="margin:0px; background: none; border: none; box-shadow:none">
+					<img class="white_img" width="120" height="120" data-src="assets/r-spi.png" alt="Spiral" style="margin:0px; background: none; border: none; box-shadow:none">
+					<img class="white_img" width="120" height="120" data-src="assets/r-cal.png" alt="Calendar" style="margin:0px; background: none; border: none; box-shadow:none">
+					<img class="white_img" width="120" height="120" data-src="assets/r-arb.png" alt="Curve" style="margin:0px; background: none; border: none; box-shadow:none">
+					<br>
+					<span class="small_emph">scale</span>
+					<br>
+					<img class="white_img" width="120" height="120" data-src="assets/s-chron.png" alt="Chronological" style="margin:0px; background: none; border: none; box-shadow:none">
+					<img class="white_img" width="120" height="120" data-src="assets/s-rel.png" alt="Relative" style="margin:0px; background: none; border: none; box-shadow:none">
+					<img class="white_img" width="120" height="120" data-src="assets/s-log.png" alt="Logarithmic" style="margin:0px; background: none; border: none; box-shadow:none">
+					<img class="white_img" width="120" height="120" data-src="assets/s-seq.png" alt="Sequential" style="margin:0px; background: none; border: none; box-shadow:none">
+					<img class="white_img" width="120" height="120" data-src="assets/s-intdur.png" alt="Collapsed" style="margin:0px; background: none; border: none; box-shadow:none">
+					<br>
+					<span class="small_emph">layout</span>
+					<br>
+					<img class="white_img" width="120" height="120" data-src="assets/l-uni.png" alt="Unified" style="margin:0px; background: none; border: none; box-shadow:none">
+					<img class="white_img" width="120" height="120" data-src="assets/l-fac.png" alt="Faceted" style="margin:0px; background: none; border: none; box-shadow:none">
+					<img class="white_img" width="120" height="120" data-src="assets/l-seg.png" alt="Segmented" style="margin:0px; background: none; border: none; box-shadow:none">
+
+					<span class="attribution"><span style="color:gold"><em>Timelines Revisited: A Design Space and Considerations for Expressive Storytelling</em></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Bach, Riche, and Munzner. In <em>IEEE TVCG</em> 2017.<br><a href="https://timelinesrevisited.github.io" target="_blank">timelinesrevisited.github.io</a></span>
+
+					<aside class="notes">
+						 
+					</aside>
+
+				</section>
+
+				<!-- ================================================== -->
+
+				<section>
+
+					<h4><span style="color:gold">Expressive Storytelling</span> with Timelines</h4>
+					<hr>
+						<small>Support for chronological or non-chronological narratives,<br><br>
+						Choice of representations for time,<br><br>
+						Choice of time scales.</small>
+
+					<aside class="notes">
+						Existing tools also tend towards a chronological narrative: either the whole timeline is shown up front, so readers are likely to begin at the start of the timeline, or events are revealed in chronological order.  
+						<br><br>
+						For some stories, a chronological introduction of events makes total sense, while for others it does not,<br><br>
+						Like in my painters example, I revealed the career of Matisse after I showed you Dali's, which added context to his career. 
+						<br><br>
+						To achieve this expressive narrative design, we can make use of animation, highlighting, and annotation to incrementally reveal parts of a narrative (that may not be chronological), to allow the viewer to make new comparisons.
+					</aside>
+
+				</section>
+
+				<!-- ================================================== -->
+
+				<section data-background="#fff">
+					<h4>Timeline Storyteller</h4>
+					<hr>
+					<small><span class="body_span">Produce visually expressive timeline narratives in the browser or in <a href="https://powerbi.microsoft.com/en-us/" style="color:cornflowerblue;" target="_blank">Microsoft Power BI</a>.</span></small>
+					<img data-src="assets/dailyroutines.gif" width="50%"></img>
+					<br>
+					<span class="body_span"><a href="https://timelinestoryteller.com/" style="color:cornflowerblue;" target="_blank">timelinestoryteller.com</a></span>
+
+					<aside class="notes">
+						So I set about building and deploying an authoring tool so that anyone could tell expressive timeline stories and make use of our design space without having to program these stories from scratch.
+						<br><br>
+						This effort culminated in Timeline Storyteller, an open-source and freely available interactive authoring tool for the web and for Microsoft's Power BI application that we released in mid 2017. 
+						<br><br>
+						You could think of it as PowerPoint for timeline data.
+					</aside>
+
+				</section>
+
+				<section data-background="#fff">
+							
+					<h4>The Daily Routines of Famous Creative People</h4>
+
+					<!-- <iframe width="680" height="510" data-src="https://msit.powerbi.com/view?r=eyJrIjoiYjczZDAyZjUtNWZmZS00NjM5LWIyNWYtZmYzZDEwZTczZDRlIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9" frameborder="0" allowFullScreen="true"></iframe> -->
+					<iframe width="680" height="510" src="https://msit.powerbi.com/view?r=eyJrIjoiYjczZDAyZjUtNWZmZS00NjM5LWIyNWYtZmYzZDEwZTczZDRlIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9" frameborder="0" allowFullScreen="true"></iframe>
+					
+					<span class="attribution">Inspired by infographics by <a href="https://podio.com/site/creative-routines" style="color:cornflowerblue;" target="_blank">Podio</a> and <a href="http://infowetrust.com/creative-routines/" style="color:cornflowerblue;" target="_blank">info we trust</a>. 
+					<br>Data source: <a href="https://www.goodreads.com/book/show/15799151-daily-rituals" style="color:cornflowerblue;" target="_blank"><em>Daily Rituals: How Artists Work</em></a> by <a href="http://masoncurrey.com/" style="color:cornflowerblue;" target="_blank">Mason Currey</a> (2013)</span>
+
+					<aside class="notes">
+						As a second example that ties all of this together, I'm going to present a story about the daily routines of famous creative people.
+						<br><br><span style="color:red">MAX</span>: What you see here is a set of radial timelines depicting a typical 24 hours in the lives of 26 writers, artists, composers, and the like.
+						<br><br>When they work, eat, sleep, exercise, and do other activities. 
+						<br><br><span style="color:red">NEXT</span>: A good starting point is to ask: when do creative people create? Are people similar in this regard?
+						<br><br>It looks as though some people prefer to work in short, focused bursts, like Darwin or Kant, while people like Murakami and Voltaire get up early and work for long uninterrupted periods of time. 
+						<br><br>Meanwhile, you have people like Kafka who work all night long. 
+						<br><br><span style="color:red">NEXT</span>: We can also ask about the relationship between sleep and creativity: how much? how often? and when do creative people sleep?
+						<br><br>Most people in this dataset sleep at night, with notable exceptions like Balzac who would turn in at 6pm, and Kafka, who just seemed to keep odd hours.
+						<br><br>What about variation and creativity? How often should you change activities if you want to be creative?
+						<br><br><span style="color:red">NEXT</span>: This chronological scale isn't the best way to convey the number or heterogeneity of activities, so let's transition to a sequential scale. 
+						<br><br><span style="color:red">NEXT</span>: To determine who varied the most and least, a linear representation is perhaps best, where we can easily see that Darwin has the most varied day of all the people in this dataset, 
+						<br><br>while Murakami prefers less variation.
+						<br><br><span style="color:red">NEXT</span>: Finally, we can restore chronology to compare these timelines just by scanning up and down, to spot synchronocities like who tends to work or sleep at the same time.
+						<br><br>And this is a good design choice to finish the story with, to invite the viewer to compare their own daily rhythm to these creative people.
+					</aside>	
+
+				</section>
+
+				<!-- ================================================== -->
+
+				<section>
+
+					<h4><span style="color:gold">Evaluating</span> Timeline Storyteller</h4>
+					<hr>				
+
+					<small>
+						A laboratory study to assess expressivity seemed to be inappropriate.<br><br>
+						How do people use it with their own data?<br><br>
+						How does the content they produce reflect our design space? 
+					</small>	
+
+					<aside class="notes">
+						Since its release in mid 2017, I've put considerable amount of my time and effort into promoting and demonstrating Timeline Storyteller, as well as understanding how people are using it.   
+						<br><br>
+						For an design tool such as Timeline Storyteller, a controlled user study in a lab measuring task completion time and error didn't seem appropriate. 
+						<br><br>
+						I was instead interested in finding out how people would express themselves with their own data and on their own time, <br><br>
+						
+						And to determine if our timeline design space and the ideas put forward in our journal paper would be reflected in what people make.
+					</aside>
+
+				</section>
+
+				<!-- ================================================== -->
+
+				<section>
+
+					<h4><span style="color:gold">Promoting</span> Timeline Storyteller</h4>
+					<hr>			
+
+					<small>
+						I demonstrated it at the 2017 <a href="http://tapestryconference.com/" target="_blank">Tapestry Conference</a> and at <a href="https://youtu.be/gQKUl_1ryo4" target="_blank">OpenVisConf</a> 2017.<br><br>
+						Co-author (Chris White) used it in his keynote at the 2017 <a href="https://youtu.be/oaHjYXnxRJs" target="_blank">Dublin Data Summit</a>.<br><br>
+						Microsoft's Data Journalism Team demonstrated it at the 2017 <a href="https://futureofstorytelling.org/summit" target="_blank">Future of Storytelling Summit</a>, <br><br>
+						Wrote about it on the official <a href="https://aka.ms/timelinestoryteller-blog" target="_blank">Power BI Blog</a>, and <br><br>
+						Produced a tutorial and interview for the <a href="https://youtu.be/bwiMfwBVsSQ" target="_blank">Power BI YouTube channel</a>.<br><br> 
+					</small>		
+
+					<aside class="notes">
+						Regarding promotion, I was fortunate to give a demonstration of Timeline Storyteller at the 2017 Tapestry conference, a practitioner conference on data storytelling,
+						<br><br>
+						and I was able to speak about it at the 2017 OpenVisConf, which is one of the most renowned practitioner-oriented visualization conferences.
+						<br><br>
+						My colleagues at Microsoft also contributed to this effort to attract users with their own demonstrations and presentations.
+						<br><br>
+						As well as by publishing blog posts and a 45-minute interview and tutorial posted to the official Power BI YouTube channel.
+					</aside>
+
+				</section>
+
+				<!-- ================================================== -->
+
+				<section>
+							
+					<h4><span style="color:gold">Promoting</span> Timeline Storyteller (cont.)</h4>
+
+					<a href="https://www.youtube.com/embed/zaVGt-IbuhU?rel=0&amp;showinfo=0&amp;start=1689" target="_blank"><img data-src="assets/nationaltrust.png"></a>
+					
+					<small>A customer demonstrated it in the opening keynote of the 2017 <a href="https://www.microsoft.com/en-us/datainsightssummit/sessions?date=june13" target="_blank">Data Insights Summit</a>.</small>		
+
+					<aside class="notes">
+					But the real break came when Power BI decided to feature a live demo of Timeline Storyteller in the opening keynote of the 2017 Data Insights Summit, a major Microsoft customer conference. 
+					<br><br>
+					This was in front of about three thousand people and recorded online, and if that wasn't worrying enough, Power BI asked a customer to demo it using data from his organization. 
+					<br><br>
+					Thankfully it didn't break and the demo went very well. 
+					</aside>	
+
+				</section>
+
+				<!-- ================================================== -->
+
+				<section>
+
+					<h4>Timeline Storyteller: <span style="color:gold">Usage</span></h4>
+					<hr>				
+
+					<small>
+						We held a <a href="https://aka.ms/timelinestoryteller-contest" target="_blank">data storytelling contest</a> with the Power BI user community.<br><br>
+						We also collected exported content and tracked usage metrics. 
+					</small>	
+
+					<aside class="notes">
+						Next came the challenge of finding out how people use Timeline Storyteller. 
+						<br><br>
+						First, we ran a storytelling contest within the Power BI community, where participants would post a timeline story created with Timeline Storyteller, which we and members of the journalism team would judge.
+					</aside>
+
+				</section>
+
+				<!-- ================================================== -->
+
+				<section>
+
+					<h4>Timeline Storyteller: <span style="color:gold">Contest Winners</span></h4>
+					<hr>				
+
+					<a href="https://community.powerbi.com/t5/Data-Stories-Gallery/Tropical-Cyclones-Timeline-Storyteller/m-p/252648" target="_blank"><img data-src="assets/cyclones.png" width="45%"></a>
+
+					<a href="https://community.powerbi.com/t5/Data-Stories-Gallery/TV-Network-Ratings/m-p/253388" target="_blank"><img data-src="assets/tvratings.png" width="45%"></a>
+
+					<span class="attribution"><em>[L] <a href="https://community.powerbi.com/t5/Data-Stories-Gallery/Tropical-Cyclones-Timeline-Storyteller/m-p/252648" target="_blank" style="color:gold;">Tropical Cyclones</a></em> by Manga Solutions (2017).
+					<br><br>[R] <em><a href="https://community.powerbi.com/t5/Data-Stories-Gallery/TV-Network-Ratings/m-p/253388" target="_blank" style="color:gold;">TV Network Ratings</a></em> by Pragmatic Works (2017).</span>
+
+					<aside class="notes">
+						Of the qualifying entries, we narrowed it down to an honorable mention that told a story about tropical cyclones, incorporating faceted spiral timelines and a custom color palette mapped to cyclone severity, 
+						<br><br>
+						and a winning entry that incrementally revealed the history of the highest rated television shows over the course of past few decades, and this story was richly annotated and hit several points in our design space.
+					</aside>
+
+				</section>
+
+				<!-- ================================================== -->
+
+				<section>
+
+					<h4>Timeline Storyteller: <span style="color:gold">Content Analysis</span></h4>
+					<hr>				
+
+					<small>
+						We examined exported content from the web version (subject to author consent).<br><br>
+						This resulted in a corpus of <span style="color:gold">223 unique artifacts</span>.<br><br>
+						This corpus spanned our timeline design space (with a couple of exceptions), <br><br>
+						Though the <span style="color:gold">Linear</span> representation and <span style="color:gold">Chronological</span> scale were most common.
+					</small>
+
+					<aside class="notes">
+						Second, we saved copies of content exported from the web version of Timeline Storyteller over the course of several months, subject to the approval of content authors.
+						<br><br>
+						After reviewing all of this content and discarding duplicate versions of content, we identified 223 unique artefacts generated with Timeline Storyteller, which included static images, animated GIFs, and multi-scene stories. 
+						<br><br>
+						And what we found was that nearly every point in our timeline design space was represented in this corpus, though most of this corpus incorporated a linear representation and a chronological time scale. 
+					</aside>
+
+				</section>
+
+				<!-- ================================================== -->
+
+				<section>
+
+					<h4>Timeline Storyteller: <span style="color:gold">Usage Metrics</span></h4>
+					<hr>	
+
+					<small>
+						Over <span style="color:gold">36,000 downloads</span> of the Power BI version (as of Dec 2018).<br><br>
+						Over <span style="color:gold">51,000 views</span> of our YouTube tutorial (as of Jan 2018).<br><br>
+						<span style="color:gold">156 stars</span> of Github repository (as of Jan 2018).
+					</small>			
+
+					<span class="attribution">Tracking issues at: <a href="https://github.com/Microsoft/timelinestoryteller" target="_blank" style="color:gold;">github.com/Microsoft/timelinestoryteller/</a> | <a href="mailto:timelinestoryteller@microsoft.com" target="_blank" style="color:gold;">timelinestoryteller@microsoft.com</a></span>
+
+					<aside class="notes">
+						Finally, we had coarse quantitative metrics.
+						<br><br>
+						Since Power BI is a desktop product and has different protocols for data collection and retention than Microsoft Research, we don't know as much about how people use it unless they contact us directly.
+						<br><br>
+						However, we do know that by the end of 2018, the Timeline Storyteller component for Power BI had been downloaded over 36,000 times. 
+					</aside>
+
+				</section>
+
+				<!-- ================================================== -->
+
+				<section>
+
+					<h4>Timeline Storyteller: <span style="color:gold">Lessons Learned</span></h4>
+					<hr>		
+
+					<small>
+						You can never have enough <span style="color:gold">tutorial content</span> and <span style="color:gold">design inspiration</span>.<br><br>
+						We could <span style="color:gold">recommend design choices</span> and <span style="color:gold">annotations</span>.<br><br>
+						The viewing experience ought to be <span style="color:gold">more responsive</span>.
+					</small>		
+
+					<aside class="notes">
+						Over the course of this long-term deployment and analysis of its usage, we've come to appreciate that you can never have enough example datasets, design inspiration, and tutorial content. 
+						<br><br>
+						We also saw the potential for surfacing design recommendations more overtly within the interface, for recommending annotations.
+						<br><br>
+						And finally, we now have a better appreciation for responsive design, as the experience of viewing Timeline Storyteller content from a mobile device is certainly lacking, which foreshadows the second topic area that I'll focus on today.   
+					</aside>
+
+				</section>
+
+				<!-- CONCLUSION ================================================== -->
+
+				<section data-background="assets/dimbg.png" data-background-opacity=0.15>
+
+					<h3>Timeline Storyteller</h3>
+					<hr>
+					<h5>The Design & Deployment of an Interactive Authoring Tool <br>For Expressive Timeline Narratives</h5>
+
+					<small><br><a href="http://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> &middot; Microsoft Research &middot; <a href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a><br><br>
+					In collaboration with Bongshin Lee, Nathalie Henry Riche, David Tittsworth,<br>Kate Lytvynets, Darren Edge, and Christopher White.<br><br>
+					Slides: <a href="https://aka.ms/cj19" target="_blank">aka.ms/cj19</a><br><br>
+					<a href="https://timelinestoryteller.com/" target="_blank">timelinestoryteller.com</a></small>
+
+					<br>
+
+						
+					<span class="attribution"></span>
+
+					<aside class="notes">					
+
+					</aside>
+
+				</section>
+
+				<!-- ================================================== -->								
+	
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				progress: false,
+				slideNumber: true,
+				showNotes: false,
+				mouseWheel: false,
+				history: true,
+				overview: true,
+				touch: true,
+				hideAddressBar: true,
+				controlsLayout: 'bottom-right',
+				viewDistance: 5,
+				transition: 'fade',
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+		<script type="text/javascript" src="preloader.js" charset="UTF-8"></script>     
+    <script>
+
+      imagesArray = [
+				"assets/authors/affiliations.png",
+				"assets/cyclones.png",
+				"assets/dailyroutines.gif",
+				"assets/dimbg.png",
+				"assets/l-fac.png",
+				"assets/l-seg.png",
+				"assets/l-uni.png",
+				"assets/r-arb.png",
+				"assets/r-cal.png",
+				"assets/r-grid.png",
+				"assets/r-lin.png",
+				"assets/r-rad.png",
+				"assets/r-spi.png",
+				"assets/s-chron.png",
+				"assets/s-intdur.png",
+				"assets/s-log.png",
+				"assets/s-rel.png",
+				"assets/s-seq.png",
+				"assets/timelinesrevisited.png",
+				"assets/timelinestoryteller.png",
+				"assets/timelinestorytellercom.png",
+				"assets/tvratings.png",
+				"assets/nationaltrust.png"
+      ];
+
+      new preLoader(imagesArray, {
+        onProgress: function(img, imageEl, index){
+            // fires every time an image is done or errors.
+            // imageEl will be falsy if error
+            // console.log('just ' +  (!imageEl ? 'failed: ' : 'loaded: ') + img);
+            // imageContainer.appendChild(imageEl);
+            // can access any propery of this
+            // console.log(this.completed.length + this.errors.length + ' / ' + this.queue.length + ' done');
+        },
+        onComplete: function(loaded, errors){
+            // fires when whole list is done. cache is primed.
+            console.log('assets loaded:', loaded);
+            // imageContainer.style.display = 'block';
+            if (errors){
+                console.log('the following failed', errors);
+            }
+        }
+      });
+    </script>
+	</body>
+</html>
