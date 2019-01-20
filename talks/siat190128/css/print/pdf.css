@@ -162,3 +162,19 @@ ul, ol, div, p {
 	position: absolute;
 	font-size: 14px;
 }
+
+html .attribution {
+	position:fixed;
+	bottom:0;
+	left:50%;
+	transform: translate(-50%, 0);
+	font-size:0.25em;
+	font-weight: 100;
+}
+
+html .affiliation {
+position:fixed;
+bottom:0px;
+left:50%;
+transform: translate(-50%, 0);  
+}
