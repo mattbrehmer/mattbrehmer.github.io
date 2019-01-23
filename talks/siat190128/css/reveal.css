@@ -1625,3 +1625,10 @@ html .white_img {
 .reveal .controls .navigate-left, .reveal .controls .navigate-up {
     display: none;
 }
+
+.reveal small sup {
+  vertical-align: super;
+  font-size: 0.5em;
+  color: #999;
+  font-weight: 700;
+}
