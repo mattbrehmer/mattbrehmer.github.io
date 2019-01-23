@@ -32,11 +32,13 @@
 
 				<!-- ================================================== -->
 				
-				<section>
+				<section class="center">
 					<h3>Constraints and Opportunities for<br> Expressive Information Design</h3>	
 					<hr>	
 					
-					<small><br><a href="http://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> &middot; Microsoft Research &middot; <a href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a></small>
+					<small>
+						<a href="http://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> &middot; Microsoft Research &middot; <a href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a>
+					</small>
 
 					<br>
 
@@ -50,193 +52,265 @@
 
 				</section>
 
+				<!-- OUTLINE ================================================== -->
+
+				<section>
+
+					<h3><span style="color:gold">Outline</span></h3>
+					<hr>
+					<small style="text-align:left">
+						&middot; What is <strong>expressive</strong> <strong>information</strong> <strong>design</strong>?<br><br>
+						&middot; My <strong>background</strong>, <strong>methods</strong>, and <strong>values</strong><br><br>
+						&middot; <strong>Focus</strong> section 1: <span style="color:gold"><em>Considerations and tools for expressive information design</em></span><br><br>
+						&middot; <strong>Focus</strong> section 2: <span style="color:gold"><em>Expressive information design for mobile devices</em></span><br><br>
+						&middot; <strong>Ongoing</strong> and <strong>future</strong> research<br><br>
+						&middot; Why <strong>SIAT</strong>?
+					</small>
+
+					<aside class="notes">
+						I'll be telling you about expressive information design, though before telling you what this means,
+						<br><br>
+						Here's a brief outline of what I'll be covering today.
+						<br><br>
+						I'll touch upon about my background, methods, and values,
+						<br><br>
+						And then I'll dive into two focus areas in my recent research relating to expressive information design,
+						<br><br>
+						The first pertaining to presenting timelines
+						<br><br>
+						And the second pertaining to presenting information on mobile devices
+						<br><br>
+						I'll close with an overview of my ongoing and future work, 
+						<br><br>
+						As well as my thoughts on why I think SIAT is the best place for me to do this research. 
+					</aside>
+
+				</section>
+
 				<!-- WHY VISUALIZATION ================================================== -->
 
 				<section>
 
 					<!-- ================================================== -->
 
-					<section data-background="assets/whyvis.png" data-background-opacity=0.1>
+					<section class="center">
 
-						<h3>Why <span style="color:gold">Visualization</span>?</h3>
+						<h3>What is <span style="color:gold">Expressive Information Design</span>?</h3>
 						<hr>
+						<small>
+							From the perspective of an <strong>information visualization</strong> researcher.
+						</small>
 
-						<span class="attribution"><i class="far fa-file"></i> <span style="color:gold"><em>Why Visualization? Task Abstraction for Analysis and Design</em></span>. <br><span style="font-weight: 700">Brehmer</span>. PhD Dissertation, University of British Columbia, 2016.</span>
+						<!-- <span class="attribution"><i class="far fa-file"></i> <span style="color:gold"><em>Why Visualization? Task Abstraction for Analysis and Design</em></span>. <br><span style="font-weight: 700">Brehmer</span>. PhD Dissertation, University of British Columbia, 2016.</span> -->
 
 						<aside class="notes">
-							I'll begin with the question "Why visualization?"" or "Why do I think data visualization is important and relevant as we look toward the third decade of the 21st century?"
-						</aside>
-
-					</section>
-
-					<!-- ================================================== -->
-
-					<section data-background="assets/rosling.png" data-background-opacity=0.15>
-
-						<h4>Data Visualization in a <span style="color:gold">Societal</span> Context</h4>
-						<hr>
-						<small>In journalism, education, public institutions, civic engagement, ... </small>
-
-						<span class="attribution">Image of Hans Rosling: <a href="https://www.flickr.com/photos/okfde/9504183446" target="_blank">Open Knowledge Foundation Deutschland</a> (flickr, cc by).</span>
-
-						<aside class="notes">
-							What interests me about visualization is its value in a societal context, when it is for the public good. 
+							When I talk about expressive information design,
 							<br><br>
-							I believe that visualization allows people to tell richer stories that are grounded in data. <br><br>
-
-							Here I refer to visualization in the context of journalism, education, and public institutions where the intent is to present information to an audience.
+							My perspective is one of an information visualization researcher,
+							<br><br>
+							Much of my work is published in the IEEE Transactions on Visualization and Computer Graphics journal,
+							<br><br>
+							And I've presented much of it at the IEEE InfoVis conference. 
+							<br><br>
+							That being said, I see expressive information design as encompassing information visualization, but more precisely,
 						</aside>
 
 					</section>
 
 					<!-- ================================================== -->
 
-					<section data-background="assets/smartphone.png" data-background-opacity=0.15>
+						<section>
 
-						<h4>Data Visualization in a <span style="color:gold">Personal</span> Context</h4>
+						<h4>What is <span style="color:gold">Expressive Information Design</span>?</h4>
 						<hr>
-						<small>In personal health, finance, resource conservation, ... </small>
+						<small style="text-align:left">
+							&middot; Combining <strong>visualization</strong>, <strong>annotation</strong>, and <strong>explanation</strong> to <strong>present</strong> information to an audience. 
+							<br><br>
+							&middot; Thinking systematically about <strong>tasks</strong>, <strong>design</strong> <strong>choices</strong>, and <strong>constraints</strong>.
+							<br><br>
+							&middot; Identifying ways to <strong>assess</strong> alternative design choices. 
+
+						</small>
+
+						<!-- <span class="attribution"><i class="far fa-file"></i> <span style="color:gold"><em>Why Visualization? Task Abstraction for Analysis and Design</em></span>. <br><span style="font-weight: 700">Brehmer</span>. PhD Dissertation, University of British Columbia, 2016.</span> -->
+
+						<aside class="notes">
+							Expressive information design is about combining visualization, annotation, and explanation in various ways to present information to an audience,
+							<br><br>
+							It requires thinking systematically about the tasks that designers do, that presenters do, and what the audience is expected to do,
+							<br><br>
+							Similarly, it requires thinking about alternative design choices and the constraints imposed upon them,
+							<br><br>
+							And because I am a researcher, it involves assessing these design choices in appropriate ways,
+							<br><br>
+							And disseminating the results of these assessments.
+						</aside>
+
+					</section>
+
+					<!-- ================================================== -->
+
+					<section data-background="assets/rosling.png" data-background-opacity=0.75>
+
+						<h4>Presenting Information <span style="color:gold">to the Public</span></h4>
+						<hr>
+						<small style="text-align:left">
+							e.g., Hans Rosling's TED presentations about global economic and public health indicators. 
+						</small>
+						<br>
+						<!-- <img data-src="assets/rosling.png"  height="480"></img> -->
+
+						<span class="attribution">Image: <a href="https://www.flickr.com/photos/okfde/9504183446" target="_blank">Open Knowledge Foundation Deutschland</a> (flickr, cc by).</span>
+
+						<aside class="notes">
+							Consider the challenge of presenting information to a large public audience.
+							<br><br>
+							Where you might use visualization to tell a richer story that is grounded in data.
+							<br><br>
+							Some great examples of this can be seen in a series of TED conference presentations by the late public health expert Hans Rosling.
+							<br><br>
+							But more broadly, this process of combining visualization and narrative explanation is common in the fields of journalism, education, and public policy.
+						</aside>
+
+					</section>
+
+					<!-- ================================================== -->
+
+					<section data-background="assets/smartphone.png" data-background-opacity=0.25>
+
+						<h4>Presenting Information <span style="color:gold">to the Individual</span></h4>
+						<hr>
+						<small style="text-align:left">
+							Information that is <strong>personally</strong>-<strong>relevant</strong> and <strong>appropriate</strong> for the <strong>context</strong>.
+							<br><br>
+							e.g., Mobile news; apps for tracking personal activity, health, finance, ...
+						</small>
 
 
 						<span class="attribution" style="color:white">Image: <a href="https://flic.kr/p/24mfesr" target="_blank">newkemall</a> (flickr, cc by).</span>
 
 						<aside class="notes">
-							I am also motivated by visualization in a personal context, <br><br>
-							
-							When it's used for making informed data-based decisions in areas such as personal health, finance, and resource conservation.
+							Or consider the challenges of presenting information to an individual,
+							<br><br>							
+							Where the individual can't ask the designer or presenter for clarification.
+							<br><br>  
+							In my work, I pay special attention to the context of consuming information using a mobile device,
+							<br><br>
+							Which is motivated by use cases in mobile news consumption and by apps that present personally-relevant quantitative information.
+							<br><br>
+							Such as those involving personal activities, health, and finance.
 						</aside>
 
-					</section>
+					</section>				
 
 					<!-- ================================================== -->
 
-					<section>
+					<section class="center">
 
-						<h4>Visualization and Visual Analytics</h4>
+						<h4>Aspects of <span style="color:gold">Expressive Information Design</span></h4>
 						<hr>
-						<small style="text-align:left">
-							How do I <span style="color:gold">situate my research</span> within the academic visualization community?
-							<br><br>
-							Let's consider applications of visualization beyond those in professional data analysis.														
+						<small>
+							Thinking systematically about <strong>tasks</strong>, <strong>design</strong> <strong>choices</strong>, and <strong>constraints</strong>.
 						</small>
 
-						<span class="attribution" style="color:white">For more information about InfoVis and Visual Analytics, see <a href="http://ieeevis.org/year/2019/welcome" target="_blank">ieeevis.org</a>.</span>
-
 						<aside class="notes">
-							Now you may be wondering about how my interests set me apart from others in the visualization community, and from those working in visual analytics like Brian. 
-							<br><br>
-							Many in the visualization and visual analytics research community are motivated by use cases from professional data analysis, data science, or business intelligence. 
-							<br><br> 
-							While I think these use cases are important and I'm glad that people are thinking about them, they are <em>NOT</em> the use cases that motivate my research. 
-							<br><br>
-							You may be surprised that I do visualization research motivated by public and personal applications of visualization at a place like Microsoft, with its renown for productivity software and applications like Power BI (where the BI stands for business intelligence). <br><br> 
-
-							However, you might not be aware of initiatives like Microsoft's Modern Journalism Program and the use of Power BI in online news dissemination, <br><br>
-							
-							Or Microsoft Research's investments in personal health technology;<br><br> 
-							
-							And both of these initiatives contribute to the motivation for my research. 
+							So what do I mean when I say that expressive information design means thinking systematically about tasks, design choices, and Constraints?
 						</aside>
 
 					</section>
 
 					<!-- ================================================== -->
 
-				</section>
+					<section data-background="#fff">
 
-				<!-- WHY EXPRESSIVITY ================================================== -->
-
-				<section>
-
-					<section>
-
-						<h3>Why <span style="color:gold">Expressivity</span>?</h3>
-						<hr>
-						<small>What does expressivity mean in the context of visualization and information design?</small>
-
-						<aside class="notes">
-							So my next question is: why is expressivity important? <br><br> 
-
-							And what does expressivity mean in the context of visualization and information design?  					
-
-
-						</aside>
-
-					</section>
-
-					<!-- ================================================== -->
-
-					<section data-background="assets/tasks.png" data-background-opacity=0.25>
-
-						<h4>Expressing Visualization <span style="color:gold">Tasks</span></h4>
-						<hr>
-
-						<span class="attribution"><i class="far fa-file"></i> <span style="color:gold"><em>A Multi-Level Typology of Abstract Visualization Tasks</em></span>. <span style="font-weight: 700">Brehmer</span> and Munzner. <br>In <em>IEEE Transactions on Visualization and Computer Graphics</em> (VIS 2013, InfoVis Track).<br>
-						Icons by Eamonn Maguire (cc by) for Munzner's <em>Visualization Analysis & Design</em> (CRC Press 2014).</span>
-
-						<aside class="notes">
-							First of all, it's about being able to address a wide range of tasks, <br><br>
-							
-							And by this I refer to both the tasks of a visualization producer or author, as well as the tasks of a viewer, or what the audience is expected to do with an information graphic. <br><br>   
-
-							Ultimately, expressivity is about satisfying the intent of the author, allowing them to tell the story they want to tell,
-							
-							<br><br>
-							And whether this story can be reconstructed in the mind of the viewer. 
-
-						</aside>
-
-					</section>
-
-					<!-- ================================================== -->
-
-					<section data-background="assets/tasks.png">
-
-						<h4><span style="color:black">Expressing Visualization</span> <span style="color:cornflowerblue">Tasks</span></h4>
-						<hr>
-
-						<span class="attribution"><span style="color:black"><i class="far fa-file"></i></span> <span style="color:cornflowerblue"><em>A Multi-Level Typology of Abstract Visualization Tasks</em></span>. <span style="color:black"><span style="font-weight: 700">Brehmer</span> and Munzner. <br>In <em>IEEE Transactions on Visualization and Computer Graphics</em> (VIS 2013, InfoVis Track).<br>
-						Icons by Eamonn Maguire (cc by) for Munzner's <em>Visualization Analysis & Design</em> (CRC Press 2014).</span></span>
-
-						<aside class="notes">
-
-							A central theme of my PhD research pertained to classifying visualization tasks and to consolidating the vocabulary for visualization tasks into a typology. <br><br>
-
-							It would seem as though the visualization community has found it to be useful for speaking about the expressiveness of visualization, 
-							<br><br>
-							Since my task typology paper written with my PhD advisor Tamara Munzner has gone on to be the most cited InfoVis paper since 2013, now with more than 280 citations.
-
-						</aside>
-
-					</section>
-
-					<!-- ================================================== -->
-
-					<section>
-
-						<h4>Expressivity and <span style="color:gold">Design Choices</span></h4>
+						<h4>Thinking Systematically about <span style="color:cornflowerblue">Tasks</span></h4>
 						<hr>
 
 						<small style="text-align:left">
-							Visual representation,<br><br>
-							Interaction,<br><br>
-							Highlighting and annotation, and<br><br>
-							Ways to combine visual and textual content.<br><br><br><br>
-							Across each of these, what is the appropriate <span style="color:gold">granularity</span>?
+							<i class="far fa-file"></i> <span style="color:cornflowerblue"><strong><em>A Multi-Level Typology of Abstract Visualization Tasks</em></strong></span>. <span style="font-weight: 700">Brehmer</span> and Munzner. <br>In <em>IEEE Transactions on Visualization and Computer Graphics</em> (VIS 2013, InfoVis Track).
+						</small>
+							
+						<img data-src="assets/tasks.png" style="border: none; box-shadow:none" height="500px">
+
+						<span class="attribution">Icons by Eamonn Maguire (cc by) for Munzner's <em>Visualization Analysis & Design</em> (CRC Press, 2014).</span>
+
+						<aside class="notes">
+							A central theme of my PhD research pertained to classifying visualization tasks and to consolidating the vocabulary for visualization tasks into a typology,
+							<br><br>
+							Which is the subject of a 2013 paper written with my PhD advisor Tamara Munzner.
+							<br><br>
+							And expressive information design involves being able to address a wide range of tasks, 
+							<br><br>							
+							And by this I refer to both the tasks of a visualization producer or author, as well as the tasks of a viewer, or what the audience is expected to do with the information presented to them. 
+							<br><br>
+							Such as to identify a trend or to compare values.
+							<br><br>
+							Ultimately, expressivity is about satisfying the intent of the author, allowing them to tell the story they want to tell,
+							<br><br>
+							And whether this story can be reconstructed in the mind of the viewer. 
+						</aside>
+
+					</section>
+
+					<!-- ================================================== -->
+
+					<section data-background="#fff">
+
+						<h4>Thinking Systematically about <span style="color:cornflowerblue">Tasks</span></h4>
+						<hr>
+
+						<small style="text-align:left">
+							<i class="far fa-file"></i> <span style="color:cornflowerblue"><strong><em>A Multi-Level Typology of Abstract Visualization Tasks</em></strong></span>. <span style="font-weight: 700">Brehmer</span> and Munzner. <br>In <em>IEEE Transactions on Visualization and Computer Graphics</em> (VIS 2013, InfoVis Track).
+							<br><br>
+							The <strong>most cited IEEE InfoVis paper since 2013</strong>, with more than 280 citations*. 
+							<br><br>
+						</small>
+
+						<img data-src="assets/task-sequence.png" style="border: none; box-shadow:none" height="400px">
+
+						<span class="attribution">* Google Scholar, Jan 2019.<br><br>Icons by Eamonn Maguire (cc by) for Munzner's <em>Visualization Analysis & Design</em> (CRC Press, 2014).</span>
+						
+						<aside class="notes">
+							This task typology paper also presents a way to break down tasks and task sequences into elements of why, what, and how. 
+							<br><br>
+							And you'll see that this categorization of tasks is a recurring theme in my work.
+							<br><br>
+							It would also seem as though the visualization community has found it to be useful for speaking about why people visualize data, 
+							<br><br>
+							As my task typology paper has gone on to be the most cited InfoVis paper since 2013, now with more than 280 citations.
+						</aside>
+
+					</section>
+
+					<!-- ================================================== -->
+
+					<section>
+
+						<h4>Thinking Systematically about <span style="color:gold">Design Choices</span></h4>
+						<hr>
+
+						<small style="text-align:left">
+							Identifying the dimensions of <strong>design spaces</strong> that characterize...<br><br>
+							... ways to <strong>visually</strong> <strong>represent</strong> data,<br><br>
+							... ways to <strong>interact</strong> with these representations,<br><br>
+							... ways to <strong>highlight</strong> and <strong>annotate</strong> them, and<br><br>
+							... ways to <strong>combine</strong> <strong>visual</strong> content with <strong>textual</strong> explanation.<br><br><br><br>
+							In an expressive information design tool, how do you present these choices?
 						</small>
 
 						<!-- <span class="attribution">See the <em>"How"</em> elements in <span style="color:gold"><em>A Multi-Level Typology of Abstract Visualization Tasks</em></span>. <br><span style="font-weight: 700">Brehmer</span> and Munzner. In <em>IEEE TVCG</em> (VIS 2013, InfoVis Track).<br>
 							Icons by Eamonn Maguire (cc by) for Munzner's <em>Visualization Analysis & Design</em> (CRC Press 2014).</span> -->
 
 						<aside class="notes">
-						Expressivity also refers to a palette of design choices: <br><br>
-						
-						Of visual representation choices, or interaction design choices, of ways to highlight, annotate, and otherwise embellishing information graphics, and of ways to combine visual and textual explanations in compelling and engaging ways. <br><br>
-
-						And for each of these design choices, there is a question about the level of granularity: <br><br>
-						
+						Expressivity also refers to a palette of design choices, or what I'll refer to as design spaces: 
+						<br><br>						
+						Which are systematic ways of categorizing visual representation choices for a particular type and amount of data, of interaction design choices, of ways to highlight, annotate, and embellish visual representations, or of ways to combine visual and textual explanations in compelling and engaging ways. 
+						<br><br>
+						Characterizing these design spaces becomes particularly important when you decide to expose them to an author in the form of an information design tool, where there is a question about the level of granularity: 
+						<br><br>						
 						For example, as a designer are you controlling low-level visual encoding channels like shape or color, or are you picking a chart type from a template?
-
+						<br><br>
+						As you'll see this process identifying and assessing points in the design space in the two focus sections later in this talk.
 						</aside>
 
 					</section>
@@ -247,137 +321,66 @@
 
 						<h4><span style="color:gold">Constraints</span> on Expressivity</h4>
 						<hr>
-
-						<aside class="notes">
-						Expressivity is also bound to constraints, and it is these constraints that I find to be particularly challenging and deserving of research. 
-
-						</aside>
-
-					</section>
-
-					<!-- ================================================== -->
-
-					<section>
-
-						<h4><span style="color:gold">Expertise</span> Constraints</h4>
-						<hr>
-						<small>How can I empower non-programmers? Non-designers?</small>
-
-						<aside class="notes">
-						One constraint is expertise: <br><br>
-						
-						I want to empower non-programmers to visualize their data<br><br>
-						
-						And I want to empower non-designers to make compelling and useful information graphics?  
-
-						</aside>
-
-					</section>
-
-					<!-- ================================================== -->
-
-					<section>
-
-						<h4><span style="color:gold">Limited Resource</span> Constraints</h4>
-						<hr>
-						<small>How can I support visualization design for those on a deadline?</small>
-
-						<aside class="notes">
-						Another constraint is about resources: <br><br>
-						
-						I want to enable over-committed, understaffed, and poorly funded local news teams to produce data-driven stories about their community while meeting all their deadlines.
-						<br><br>
-						Similarly I want to enable professors and teachers to produce visual explanations for all of their lectures? 
-						</aside>
-
-					</section>
-
-					<!-- ================================================== -->
-
-					<section data-background="assets/smartphone.png"data-background-opacity=0.15>
-
-						<h4><span style="color:gold">Context</span> Constraints</h4>
-						<hr>
+	
 						<small style="text-align:left">
-							What are the best practices for visualization design on mobile devices?<br><br>
-							How can I improve data literacy among the audience for visualization content? 
+							Constraints imposed by <strong>authors</strong>, and those imposed by the <strong>context</strong> or the <strong>audience</strong>.
+							<br><br><br><br>
+							<span class="fragment"><strong>Expertise</strong>. e.g., empowering non-programmers and non-designers. 
+							<br><br></span>
+							<span class="fragment"><strong>Resources</strong>. e.g., enabling expressive information design for those on a deadline.
+							<br><br></span>
+							<span class="fragment"><strong>Context</strong>. e.g., anticipating the visual and data literacy of the audience,
+							<br><br>
+							Or anticipating the device that the audience will use.
+							</span>
 						</small>
 
 						<aside class="notes">
-						Yet another constraint is context: <br><br>
-						
-						What if my audience is consuming my visualization content from a mobile device? <br><br>
-
-						Or what if my audience lacks the sufficient visual literacy or data literacy needed to interpret my particular choice of visual representation? 
-						<br><br>
-						How can I make use of their prior knowledge as part of the communication process?
-						
+							Expressivity is also bound to constraints, and it is these constraints that I find to be particularly challenging and deserving of research. 
+							<br><br>
+							And these include constraint imposed by designers or authors, as well as those imposed by the audience and the context in which the information is presented.
+							<br><br>			
+							<span style="color:crimson"><< CLICK >></span> 
+							One constraint is expertise: 
+							<br><br>						
+							I want to empower non-programmers to present information with interactive visualization and presentation tools.
+							<br><br>						
+							And I want to empower non-designers to make compelling and useful information graphics by offering design guidance.  		
+							<br><br>		
+							<span style="color:crimson"><< CLICK >></span> 
+							Another constraint is about resources: 
+							<br><br>						
+							For example, I want to enable over-committed, understaffed, and poorly funded local news teams to produce data-driven stories about their community while meeting all their deadlines.
+							<br><br>
+							<span style="color:crimson"><< CLICK >></span> 
+							Yet another constraint is context: 
+							<br><br>						
+							What if my audience lacks the sufficient visual literacy or data literacy needed to interpret my particular choice of visual representation? 
+							<br><br>
+							How can I make use of their prior knowledge as part of the communication process?
+							<br><br>
+							What if my audience is consuming this information from a mobile device? 
 						</aside>
 
-					</section>
+					</section>					
 
-					<!-- ================================================== -->
-
-					<section>
-
-						<h4><span style="color:gold">Democratizing</span> Data Visualization</h4>
-						<hr>
-						<small style="text-align:left">
-							How can I enable more people to... <br><br><br><br>
-							Expressively visualize their data? <br><br>
-							Present compelling data-driven stories?<br><br>
-							Make personal decisions grounded in data?
-						</small>
-
-						<aside class="notes">
-						Addressing each of these constraints serves the larger goal of democratizing data visualization: <br><br>
-						
-						And this means enabling more people to visualize their data, tell stories, and make decisions that are grounded in data that is relevant to their personal lives.					
-						</aside>
-
-					</section>
-
-					<!-- ================================================== -->
-					
-
-					<section>
-
-						<h4>Connecting Visualization <span style="color:gold">Research</span> and <span style="color:gold">Practice</span></h4>
-						<hr>
-
-						<small>Disseminating research into practice, and practice into research.</small>						
-
-						<span class="attribution">The VisInPractice speaker series at IEEE VIS: <a href="https://visinpractice.github.io" target="_blank">VisInPractice.github.io</a>.</span></span>
-
-						<aside class="notes">
-						Finally, increasing expressivity and democratizing visualization are only possible if there is an ongoing process of communication and outreach between visualization researchers and practitioners. <br><br> 
-
-						This means disseminating research into practice, and just as importantly, disseminating practice into research. <br><br> 
-
-						I can speak to this interplay directly as an organizer of the VisInPractice speaker series at the IEEE VIS conference, where we invite visualization practitioners speak to a largely academic audience. 
-						<br><br>
-						I also bring the perspective of someone based in an industrial research lab who consults with product groups, as someone who has deployed visualization tools, and as a researcher who speaks and demos at practitioner conferences. 					
-						</aside>
-
-					</section>
-
-					<!-- ================================================== -->
+					<!-- ================================================== -->					
 
 				</section>
 
-				<!-- WHY ME ================================================== -->
+				<!-- BACKGROUND ================================================== -->
 
 				<section>
 
-					<section>
+					<section class="center">
 
-						<h3>Why <span style="color:gold">Me</span>?</h3>
+						<h3>My <span style="color:gold">Background</span>, <span style="color:gold">Methods</span>, & <span style="color:gold">Values</span></h3>
 						<hr>
 
 						<aside class="notes">
-						Beyond my connections to the visualization practitioner community, <br><br>
-						
-						I want to expand on why I think that I am uniquely poised to conduct research on expressive information design in light of the constraints that I've spoken about.				
+						This is a good time to tell you about how I am prepared to address these constraints and assess alternative design choices, 
+						<br><br>						
+						As well as why I think my research is important.				
 						</aside>
 
 					</section>
@@ -386,12 +389,16 @@
 
 					<section>
 
-						<h4>Fields of Study</h4>
+						<h4>My Background</h4>
 
 						<img data-src="assets/timeline-fields.png" style="border: none; box-shadow:none">
 
 						<aside class="notes">
-						I'll first point to my background in terms of the fields in which I've studied, which includes computer science, cognitive science, human-computer interaction, and visualization. 
+						I'll first point to my background in terms of the fields in which I've studied
+						<br><br>
+						My Postdoc and PhD research in information visualization follows my Master's program in Human-Computer Interaction,
+						<br><br>
+						And an undergraduate program in Computer science with a specialization in Cognitive Science.
 						</aside>
 
 					</section>
@@ -400,94 +407,124 @@
 
 					<section>
 
-						<h4>Methods</h4>
+						<h4>My Background</h4>
 
 						<img data-src="assets/timeline-skills.png" style="border: none; box-shadow:none">
 
 						<aside class="notes">
-						In terms of the design and research methods that I use, <br><br>
-						
-						Over the last decade I have alternated between visualization and interface design, software development leading to deployed products and prototypes, requirements analysis, both qualitative and quantitative evaluation, and theory development.
+						In terms of the design and research methods that I use, 
+						<br><br>						
+						Over the last decade I have alternated between visualization and interface design, 
+						<br><br>
+						and software development resulting in a to deployed product, toolkit, and visualization tool. 
+						<br><br>
+						More important are the human-centred research methods that I use,
+						<br><br>
+						Which includes lab-based experimental work before my PhD and more recent experimental work involving crowdsourcing,
+						<br><br>
+						As well as extensive qualitative evaluation work during my PhD in the context of visualization design studies,
+						<br><br>
+						Which included requirements analysis and the adoption analysis of a deployed visualization tool.
+						<br><br>
+						And finally there's the theory development that comes from systematically collecting and categorizing previous research as well as visualization work in the wild.
+						<br><br>
+						You'll see me touch upon these methods and the need for methodological innovation throughout the rest of this talk. 
 						</aside>
 
-					</section>
+					</section>				
 
 					<!-- ================================================== -->
 
 					<section>
 
-						<h4>Application Domains: <span style="color:gold">Journalism</span></h4>
-
-						<img data-src="assets/timeline-domains-journalism.png" style="border: none; box-shadow:none">
-
-						<span class="attribution"><i class="far fa-file"></i> <span style="color:gold"><em>Overview: The Design, Adoption, and Analysis of a Visual Document Mining Tool For Investigative Journalists</em></span>. <span style="font-weight: 700">Brehmer</span>, Ingram, Stray, and Munzner. In <em>IEEE TVCG</em> (VIS 2014, InfoVis Track).<br><br>
-						
-						<i class="far fa-file"></i> <span style="color:gold"><em>Timeline Storyteller</em></span>. <span style="font-weight: 700">Brehmer</span>, Lee, Riche, Tittsworth, Lytvynets, Edge, and White. <br>In Proc. 2019 <em>Computation + Journalism</em> Symp.
-						</span>
+						<h4>The Value of <span style="color:gold">Democratizing</span> Information Design</h4>
+						<hr>
+						<small style="text-align:left">
+							How can I enable under-served groups of people to... <br><br><br><br>
+							Expressively <strong>visualize</strong> their data? <br><br>
+							<strong>Present</strong> compelling data-driven stories?<br><br>
+							Make personal <strong>decisions</strong> grounded in data?
+						</small>
 
 						<aside class="notes">
-						In terms of application domains, <br><br>
-						
-						I'll first mention my connections with the journalism community and particularly the computer-assisted reporting and hacks/hackers communities, <br><br>
-						
-						And as a postdoc I've worked with Microsoft's Data Journalism Program, and I've spoken about my work to a couple of journalism schools. 
+						With respect to the values that underlie my research,
+						<br><br>
+						I aspire to advance the democratization of information design and data visualization: 
+						<br><br>						
+						And this means enabling more people to visualize their data and tell stories, 
+						<br><br>
+						As well as giving people well-designed information tools that help them to make decisions that are relevant to their personal lives.					
 						</aside>
 
 					</section>
 
-					<!-- ================================================== -->
+					<!-- ================================================== -->			
 
 					<section>
 
-						<h4>Application Domains: <span style="color:gold">Personal Health</span></h4>
-
-						<img data-src="assets/timeline-domains-health.png" style="border: none; box-shadow:none">
-
-						<span class="attribution"><i class="far fa-file"></i> <span style="color:gold"><em>Activate Your GAIM: A Toolkit for Input in Active Games</em></span>. <br><span style="font-weight: 700">Brehmer</span>, Graham, and Stach. In Proc. 2010 <em>ACM Future Play</em> Conf.<br><br>
-						
-						<i class="far fa-file"></i> <span style="color:gold"><em>Investigating Interruptions in the Context of Computerized Cognitive Testing for Older Adults</em></span>. <br><span style="font-weight: 700">Brehmer</span>, McGrenere, Tang, and Jacova. In Proc. 2012 <em>ACM CHI</em> Conf.
-						</span>
+						<h4>The Value of <span style="color:gold">Democratizing</span> Information Design</h4>
+						<hr>
+						<small style="text-align:left">
+							<strong>Situating my research</strong> within the academic visualization community.
+							<br><br>
+							Applications of visualization <strong>beyond</strong> those in <strong>professional data analysis</strong>.
+							<br><br><br><br>
+							e.g., Why are <strong>journalists</strong> and <strong>educators</strong> presenting information using <strong>business</strong> <strong>intelligence</strong> tools?
+							<br><br>
+							e.g., What are the <strong>best practices</strong> for the visual display of personal information on a <strong>phone</strong>?
+						</small>
 
 						<aside class="notes">
-						Then there's the domain of personal health,<br><br>
-						
-						Particularly in the context of my undergraduate research on exercise gaming and my Master's research on cognitive health assessment.<br><br>
-						
-						Also some of my recent research at Microsoft is motivated in part by activity tracking and sleep tracking in particular, which you'll see later in this talk. 
+							This is a good moment to situate my research from that of others in the broader visualization community, such as those working in visual analytics like Brian. 
+							<br><br>
+							Many in the visualization and visual analytics research community are motivated by use cases from professional data analysis, data science, or business intelligence. 
+							<br><br> 
+							While I think these use cases are important and I'm glad that people are thinking about them, they are <em>NOT</em> the use cases that motivate my research. 
+							<br><br>
+							Instead, I'm interested in incorporating visualization to present information to people who don't identify as data analysts, in both public and personal contexts.
+							<br><br>
+							This leads me to ask questions like ``why are journalists and educators are using business intelligence tools to present to their audiences``?
+							<br><br>
+							Can I build better tools for these communities?
+							<br><br>
+							Or can can I identify best practices for the visual display of personal information on a mobile phone?
+							<br><br>
+							Whether that's based on health or activity data, personal finance data, or other personally-relevant data.
 						</aside>
 
-					</section>
-
-					<!-- ================================================== -->
+					</section>		
 
 					<section>
 
-						<h4>Application Domains: <span style="color:gold">Energy Conservation</span></h4>
+						<h4>The Value of Connecting <span style="color:gold">Research</span> & <span style="color:gold">Practice</span></h4>
+						<hr>
 
-						<img data-src="assets/timeline-domains-energy.png" style="border: none; box-shadow:none">
+						<small style="text-align:left">
+							Disseminating visualization <strong>research</strong> into <strong>practice</strong>, and <strong>vice</strong> <strong>versa</strong>.
+							<br><br>
+							Promoting and studying the <strong>adoption</strong> of deployed information design tools and research prototypes.
+							<br><br>
+							<strong>Collecting examples</strong> of information design <strong>produced by practitioners</strong>.
+							<br><br><br><br>
+							<strong>Fostering</strong> a <strong>dialogue</strong> between <strong>researchers</strong> and <strong>practitioners</strong> (e.g., OpenVisConf, VisInPractice)*.
+						</small>						
 
-						<span class="attribution"><i class="far fa-file"></i> <span style="color:gold"><em>Matches, Mismatches, and Methods: Multiple-View Workflows for Energy Portfolio Analysis</em></span>. <br><span style="font-weight: 700">Brehmer</span>, Ng, Tate, and Munzner. In <em>IEEE TVCG</em> (VIS 2015, InfoVis Track).
-						</span>
-
-						<aside class="notes">
-						And finally there's the domain of resource conservation and management, which was the focus of one of my PhD projects, <br><br>
-						
-						Where I designed and developed a prototype application for monitoring the energy usage of multi-building organizations, such as university campuses, school boards, or retail chains.
-
-						</aside>
-
-					</section>
-
-					<section>
-
-						<h4>Application Domains</h4>
-
-						<img data-src="assets/timeline-domains.png" style="border: none; box-shadow:none">
+						<span class="attribution">* OpenVisConf: <a href="https://openvisconf.com" target="_blank">openvisconf.com</a> | VisInPractice speaker series at IEEE VIS: <a href="https://visinpractice.github.io" target="_blank">VisInPractice.github.io</a>.</span></span>
 
 						<aside class="notes">
-						Despite the variety of these application domains, <br><br>
-						
-						I continue to be interested in the potential for expressive information design in each of them; though today I'll only be able tell you about some of this work.
+						Finally, increasing expressivity and democratizing visualization are only possible if there is an ongoing process of communication and outreach between visualization researchers and practitioners. 
+						<br><br> 
+						This means disseminating research into practice, and just as importantly, disseminating practice into research. 
+						<br><br>
+						As you'll see in my own research, this manifests as studying the adoption of deployed tools and prototypes.
+						<br><br>
+						And collecting examples of information design produced by practitioners.
+						<br><br>
+						Particularly in cases where there's little overlap with approaches to information design produced by researchers.
+						<br><br> 
+						And finally by speaking directly with practitioners, such as when I spoke at OpenVisConf, one of the most renowned practitioner-oriented visualization conferences, 
+						<br><br>
+						Or how I co-organized the VisInPractice event at last year's IEEE VIS conference, where we invited prominent visualization practitioners to speak to a largely academic audience. 					
 						</aside>
 
 					</section>
@@ -502,18 +539,21 @@
 
 					<h3><span style="color:gold">Outline</span></h3>
 					<hr>
-					<small>
-						Why Visualization?<br><br>
-						Why Expressivity? What are the Constraints?<br><br>
-						Why Me? <br><br>
-						<span style="color:gold"><strong>Focus Section 1</strong>: Supporting Expressive Information Design</span><br><br>
-						Focus Section 2: Expressive Information Design for Mobile Devices<br><br>
-						Ongoing Work and Future Research Program<br><br>
-						Why SIAT?
+					<small style="text-align:left">
+						<span style="color:#666">&middot; What is <strong>expressive</strong> <strong>information</strong> <strong>design</strong>?<br><br>
+						&middot; My <strong>background</strong>, <strong>methods</strong>, and <strong>values</strong><br><br></span>
+						&middot; <strong>Focus</strong> section 1: <span style="color:gold"><em>Considerations and tools for expressive information design</em></span><br><br>
+						&middot; <strong>Focus</strong> section 2: <span style="color:gold"><em>Expressive information design for mobile devices</em></span><br><br>
+						&middot; <strong>Ongoing</strong> and <strong>future</strong> research<br><br>
+						&middot; Why <strong>SIAT</strong>?
 					</small>
 
 					<aside class="notes">
-						Now that I've set the context of visualization and expressivity, as well as telling you about my background, I will now speak about the first of two focus areas, which relates to supporting the expressive information design process.							
+						Now that I've set the context for expressive information design and told you about my background and values, 
+						<br><br>
+						I will speak about supporting expressive information design and presentation,
+						<br><br>				
+						And I'll do so with a form of data that is poorly supported by many existing tools, 
 					</aside>
 
 				</section>
@@ -1032,9 +1072,9 @@
 						<h4>Timeline Storyteller</h4>
 						<hr>
 						<small>Produce visually expressive timeline narratives in the browser or in <a href="https://powerbi.microsoft.com/en-us/" style="color:cornflowerblue;" target="_blank">Microsoft Power BI</a>.</small>
-						<img data-src="assets/dailyroutines.gif" width="50%"></img>
+						<img data-src="assets/dailyroutines.gif" width="50%">
 						<br>
-						<small><a href="https://timelinestoryteller.com/" style="color:cornflowerblue;" target="_blank">timelinestoryteller.com</a></small>
+						<small style="color:cornflowerblue;" ><a href="https://timelinestoryteller.com/" target="_blank">timelinestoryteller.com</a></small>
 
 						<span class="attribution"><i class="far fa-file"></i> <span style="color:cornflowerblue"><em>Timeline Storyteller: The Design & Deployment of an Interactive Authoring Tool for Expressive Timeline Narratives</em></span>. <span style="font-weight: 700">Brehmer</span>, Lee, Riche, Tittsworth, Lytvynets, Edge, and White. <br>In Proc. 2019 <em>Computation + Journalism</em> Symp.</span>	
 
@@ -2205,6 +2245,7 @@
 				showNotes: false,
 				mouseWheel: false,
 				history: true,
+				center: false,
 				overview: true,
 				touch: true,
 				hideAddressBar: true,
@@ -2279,6 +2320,7 @@
 				"assets/smartphone.png",
 				"assets/studiocurve-calendar.jpg",
 				"assets/tasks.png",
+				"assets/task-sequence.png",
 				"assets/teaser-radial.png",
 				"assets/teaser.png",
 				"assets/timeline-domains-energy.png",
