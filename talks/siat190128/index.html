@@ -765,7 +765,7 @@
 						<br><br>
 						You could think of it as PowerPoint for timeline data.
 						<br><br>
-						It requires no programming expertise to use, and it runs in the browser at timelinestoryteller.com or as a free extension for Microsoft's Power BI,
+						It requires no programming expertise to use, and it runs in the browser or as a free extension for Microsoft's Power BI,
 						<br><br>
 						which is a popular interactive data analysis, visualization, and presentation tool.
 						<br><br>
@@ -785,21 +785,21 @@
 							<i class="far fa-file"></i> <span style="color:gold"><em>Timelines Revisited: A Design Space and Considerations for Expressive Storytelling</em></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Bach, Riche, and Munzner. In <em>IEEE TVCG</em> (presented at VIS 2017). 
 							<br><br><br><br>						
 							<strong>Timelines</strong> are visual representations of categorical event sequences.<br><br>
+							How have people drawn timelines over the course of history?<br><br>
 							The <strong>visualization research community</strong> has focused on their use in data analysis.<br><br>
-							How have <strong>practitioners</strong> used them for storytelling?<br><br>
-							How have people drawn timelines over the course of history?
+							How have <strong>practitioners</strong> used them for storytelling?
 						</small>
 
 						<aside class="notes">
-							In late 2014, I became fascinated by timelines and the potential for expressive information design with timelines, 
+							In late 2014, I became fascinated by the potential for expressive information design with timelines, 
 							<br><br>							
 							Which are used to tell stories in domains such as journalism, education, and project management.
 							<br><br> 
-							I began collecting and systematically categorizing how people have drawn timelines over the course of history to present stories.
+							I began collecting and systematically categorizing how people have drawn timelines over the course of history.
 							<br><br> 
-							I did so upon realizing that most of the visualization research community has focused on timelines and their uses in data analysis, such as for understanding patterns in electronic health records.
+							I did so upon realizing that prior visualization research involving timelines had focused on their uses in data analysis, such as for understanding patterns in electronic health records.
 							<br><br>
-							Because of this focus, the expressive range of design choices considered by the research community was far smaller than the range of design choices considered by the design and practice community.
+							And because of this focus, the expressive range of design choices considered by the research community was far smaller than the range of design choices considered by the design and practice community.
 						</aside>
 
 					</section>
@@ -825,9 +825,10 @@
 						</small>
 						
 						<aside class="notes">
-							Before I continue, it helps to ask the question: ``what it a timeline for?''
+							Before I continue, it helps to ask the question: ``what's a timeline for?''
+							<br><br>Why do we draw them? And why do people find them interesting?
 							<br><br>Basically, a timeline communicates to the viewer "WHAT HAPPENED WHEN". 
-							<br><br>But if I unpack this question, timelines present a whole lot more detail, such as:
+							<br><br>But if you unpack this, timelines present a whole lot more detail, such as:
 							<br><br>The sequence in which events occur, their duration, the time between events, their extent of overlap or periodicity, 
 							<br><br>As well as when events occur relative to some baseline event.
 						</aside>	
@@ -868,13 +869,13 @@
 						<img class="white_img" width="80" height="80" data-src="assets/l-seg.png" alt="Segmented" style="margin:0px; background: none; border: none; box-shadow:none">
 						
 						<aside class="notes">
-							It turns out that there are many ways to answer these questions and present this information. 
+							It turns out that there are many ways to answer these questions and present timelines, which brings me to my design space. 
 							<br><br>
 							You can represent time in various ways, such as linearly, radially, or by using spirals, grids such as calendars, or along a curve 
 							<br><br>
 							And you can combine these representations with different time scales: you could use an absolute or relative chronological scale, a logarithmic scale, or a purely sequential scale.
 							<br><br>
-							The third dimension of this design space is called "Layout", or how to draw one or more timelines within a page or display: 
+							And then there's "Layout", or how to draw one or more timelines within a page or display: 
 							<br><br>This has to do with deciding between a single timeline, faceting into multiple timelines (like how I did for each creative person), 
 							<br><br>Or wrapping a single timeline into meaningful segments of time, like a decade or a century.
 						</aside>	
@@ -905,8 +906,8 @@
 							<br><br>
 							You may recall from my background section that I incorporate various forms of qualitative analysis in my work, 
 							<br><br>
-							And that I place great value on connecting research and practice, 
-							<br><br>So in this case, I collected and categorized 145 timelines and timeline visualization tools produced by both researchers and practitioners, 
+							And that I strive to connect research and practice, 
+							<br><br>This manifested here in my collection and categorization of 145 timelines and timeline visualization tools produced by both researchers and practitioners, 
 							<br><br>
 							And out of that came the dimensions of the design space.							 
 							<br><br>	
@@ -914,7 +915,7 @@
 							<br><br>
 							And finally I used implementation as a research method, in that I implemented points in the design space with 28 event datasets which varied in a number of ways, 
 							<br><br>
-							Such as the number of events, the temporal extent of the data, the rate of event co-occurrence, and topics, which included
+							Such as the number of events, the temporal extent of the data, the rate of event co-occurrence, and their topical content, which included
 							<br><br>
 							Lifespans, news stories, natural disasters, publication records, and extremely long-spanning timelines of geological and astronomical history.
 						</aside>	
@@ -930,7 +931,7 @@
 						<img data-src="assets/gallery.png" height="600">
 												
 						<aside class="notes">
-							And this process of categorization and implementation led me to identify viable points in the design space, 
+							And this process of categorization and implementation led me to identify a set of viable points in the design space, 
 							<br><br>or combinations of representation, scale, and layout that are:
 							<br><br><em>Purposeful</em> in terms of their communicative intent, <em>interpretable</em> in terms of which perceptual task the viewer is expected to make, and <em>generalizable</em> across a range of timeline datasets.
 							<br><br>This is a thumbnail gallery that acts as a visual index for these points in the design space, and if I enlarge part of this gallery, 
@@ -949,9 +950,9 @@
 						<aside class="notes">
 							You can see each of these example designs in detail along with a description of what communicative intent they serve, 
 							<br><br>
-							And a characterization of the viewer's task, 
+							And a characterization of the viewer's task.
 							<br><br>
-							And altogether this serves as an instance of the systematic thinking about tasks and design choices that I mentioned during the introduction to this talk.
+							Altogether this is an instance of the systematic thinking about tasks and design choices that I mentioned during the introduction to this talk.
 						</aside>	
 
 					</section>
@@ -965,7 +966,7 @@
 						<img data-src="assets/gallery.png" height="600">	
 						
 						<aside class="notes">
-							So now that I've given you all of these design choices, how do you use these design choices to tell stories with timelines?  
+							So now that I've given you all of these design choices, how do you use them to tell stories with timelines?  
 							<br><br>
 							In other words, how do you combine different points in this design space? 
 							<br><br>
@@ -989,17 +990,18 @@
 								Provide <strong>alternative</strong> time <strong>scales</strong>.<br><br>
 								Anticipate <strong>chronological</strong> or <strong>non-chronological</strong> narratives.<br><br>
 								Incrementally <strong>reveal</strong> visual elements, selectively <strong>highlighting</strong> and <strong>annotating</strong> to direct attention.
-								<br><br><br><br>
-								<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a href="http://timelinesrevisited.github.io/supplemental/gallery/gallery.png" target="_blank" style="color:skyblue;">timelinesrevisited.github.io</a></strong> | project website. 
 							</small>
 
 						<aside class="notes">
 							In this TVCG paper I make the case that timeline design tools should provide alternative representations of time and alternative time scales.
 							<br><br>
-							I should also emphasize that existing timeline presentation tools also tend towards a chronological narrative: either the whole timeline is shown as a static image, so readers are likely to begin at the start of the timeline, or events are revealed in chronological order, one event at a time, like a slide deck.  
+							I should also emphasize that existing timeline presentation tools also tend towards a chronological narrative: 
 							<br><br>
-							For some stories, a chronological introduction of events makes total sense, while for others it does not,<br><br>
-							Like in my creative people story, I revealed and highlighted aspects of those timelines in an order that wasn't chronological starting at midnight. 
+							Either the whole timeline is shown as a static image, so readers are likely to begin at the start of the timeline, or events are revealed in chronological order, one event at a time as a series of slides.  
+							<br><br>
+							For some stories, a chronological introduction of events makes total sense, while for others it does not,
+							<br><br>
+							Like how in my story about the routines of creative people, I revealed and highlighted aspects of those timelines in an order that wasn't chronological starting at midnight. 
 							<br><br>
 							To achieve this expressive narrative design, designers should make use of animation, highlighting, and annotation to incrementally reveal parts of a narrative (that may not be chronological), to allow the viewer to make new comparisons.
 						</aside>
@@ -1049,11 +1051,9 @@
 						</small>	
 
 						<aside class="notes">
-							Since its release in mid 2017, I've been thinking about ways to evaluate Timeline Storyteller,
+							Since its release in mid 2017, I've been thinking about ways to evaluate Timeline Storyteller and to better understand how people are using it.   
 							<br><br>
-							Specifically when it comes to understanding how people are using it.   
-							<br><br>
-							For an information design tool such as Timeline Storyteller, a controlled user study in a lab measuring task completion time and error didn't seem appropriate. 
+							For an expressive information design tool like Timeline Storyteller, a controlled user study in a lab measuring task completion time and error didn't seem appropriate. 
 							<br><br>
 							I was instead interested in finding out how people would express themselves with their own data and on their own time, 
 							<br><br>							
@@ -1124,14 +1124,16 @@
 
 						<small style="text-align: left">
 							I collected <strong>exported content</strong> from the web version, and<br><br>
-							I tracked <strong>download metrics</strong> of the Power BI desktop version. <br><br>
-							I collected entries from a <strong><a style="color:skyblue;" href="https://aka.ms/timelinestoryteller-contest" target="_blank">data storytelling contest</a></strong> with the Power BI user community.
+							I collected entries from a <strong><a style="color:skyblue;" href="https://aka.ms/timelinestoryteller-contest" target="_blank">data storytelling contest</a></strong> with the Power BI user community.<br><br>
+							I tracked <strong>download metrics</strong> of the Power BI desktop version. 
 						</small>	
 
 						<aside class="notes">
 							Following the promotional effort, I set about collecting data on how people were using Timeline Storyteller. 
 							<br><br>
-							Which included a storytelling contest within the Power BI community, a joint initiative with the Microsoft Data Journalism team, where participants would post a timeline story created with Timeline Storyteller to the Power BI community forum.
+							Which included collecting the content that people exported from the tool, as well as collecting entries from a storytelling contest within the Power BI community,							
+							<br><br>
+							And finally we collected usage statistics from the Power BI version.
 						</aside>
 
 					</section>
@@ -1171,13 +1173,13 @@
 							<br><br>
 							After reviewing all of this content and discarding duplicate versions of content, I identified 223 unique artefacts generated with Timeline Storyteller, which included static images, animated GIFs, and multi-scene stories. 
 							<br><br>
-							And by qualitatively analyzing this content, I found was that nearly every timeline design choice was represented in this corpus, though most of this corpus incorporated a linear representation and a chronological time scale.
+							And by qualitatively analyzing this content, I found was that nearly every timeline design choice was represented in this corpus, though most of this corpus made use of the familiar linear representation and chronological time scale.
 							<br><br>
-							I didn't see use of the calendar grid or logarithmic time scales.
+							I didn't see any use of the calendar grid or the logarithmic time scale.
 							<br><br>
-							And if you do a Google image search for Timeline Storyteller and looks at images created by other people,
+							And if you do a Google image search for Timeline Storyteller and look at the content produced by people other than myself,
 							<br><br>
-							The prevalence of linear and chronological is also reflected there.   
+							You'll see the prevalence of the linear representation and chronological time scale reflected there.   
 						</aside>
 
 					</section>
@@ -1203,7 +1205,11 @@
 						</small>
 
 						<aside class="notes">
-							Here are a couple of screenshots form contest entries; 
+							With regards to the contest,
+							<br><br>
+							Where participants would post a timeline story created with Timeline Storyteller to the Power BI community forum.
+							<br><br>
+							Here are a couple of screenshots form contest entries,  
 							<br><br>
 							The one on the left told a story about tropical cyclones, incorporating faceted spiral timelines and a custom color palette mapped to cyclone severity, 
 							<br><br>
@@ -1252,7 +1258,7 @@
 						<small style="text-align: left">
 							<strong>No prior interactive tools</strong> for presenting <strong>expressive timeline narratives</strong>.
 							<br><br>
-							The <strong></strong>first</strong> to incorporate multi-scene stories with <strong>unconventional visual representations</strong>.
+							The <strong></strong>first</strong> to incorporate multi-scene stories with <strong>multiple visual representation choices</strong>.
 							<br><br>
 							Incremental <strong>reveal</strong> + <strong>transform</strong>; selective <strong>highlight</strong> + <strong>annotate</strong> can be applied to other data types</strong>.
 							<br><br><br><br>
@@ -1262,11 +1268,9 @@
 						</small>							
 
 						<aside class="notes">
-							To wrap up this section, Timeline Storyteller fills a gap in that no existing tool allows a non-programmer to present a visually expressive timeline narrative.
+							In summary, Timeline Storyteller fills a gap in that no existing tool allows a non-programmer to present a visually expressive timeline narrative.
 							<br><br>
-							It's really the first to incorporate this animated multi-scene PowerPoint-like story format with unconventional visual representations;
-							<br><br>
-							As others have done with conventional charts like bar charts, line charts, and scatterplots.
+							It's really the first to incorporate this animated multi-scene PowerPoint-like story format along with multiple visual representation choices;
 							<br><br>
 							And I believe that many aspects of its design can be applied to other forms of data, such as its ability to incrementally reveal and selectively highlight content.
 							<br><br>
@@ -1274,9 +1278,9 @@
 							<br><br>
 							As our limited evaluation of content analysis and usage only revealed so much.
 							<br><br>
-							While the content produced does reflect our timeline design space to an extent.
+							And while the content produced does reflect our timeline design space to an extent,
 							<br><br>   
-							Seeing this content made me realize the opportunity for providing overt recommendations of design choices, captions, and annotations within the application based on properties of the dataset, such as the temporal extent and distribution of the events.
+							Seeing this content made me realize the opportunity for providing overt recommendations of design choices, captions, and annotations more overtly within the application based on properties of the dataset, such as the temporal extent and distribution of the events.
 							<br><br>   
 							I also realized an opportunity to improve the viewing experience of content produced with Timeline Storyteller, particularly on mobile devices, which is a topic that I'll cover in the second focus area of this talk.
 						</aside>
@@ -1298,26 +1302,28 @@
 						<h4>Other <span style="color:cornflowerblue">Expressive Information Design</span> Tools (1 of 3)</h4>
 						<hr>				
 						
-						<small style="text-align: left">
-							</span><i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>ChartAccent: Annotation for Data-Driven Storytelling</em></span></strong>. <br>Ren, <span style="font-weight: 700">Brehmer</span>, Lee, Höllerer, and Choe. In Proc. 2017 <em>IEEE PacificVis</em> Symp. 
-						</small>		
+						<span class="fragment">
+							<small style="text-align: left">
+								<i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>ChartAccent: Annotation for Data-Driven Storytelling</em></span></strong>. <br>Ren, <span style="font-weight: 700">Brehmer</span>, Lee, Höllerer, and Choe. In Proc. 2017 <em>IEEE PacificVis</em> Symp. 
+							</small>		
+						
+							<img width="400px" data-src="assets/chartaccent1.gif"></img>
 
-						<img width="400px" data-src="assets/chartaccent1.gif"></img>
+							<img width="400px" data-src="assets/chartaccent2.gif"></img>
 
-						<img width="400px" data-src="assets/chartaccent2.gif"></img>
+							<img width="400px" data-src="assets/chartaccent3.gif"></img>
 
-						<img width="400px" data-src="assets/chartaccent3.gif"></img>
+							<img width="400px" data-src="assets/chartaccent4.gif"></img>			
 
-						<img width="400px" data-src="assets/chartaccent4.gif"></img>			
-
-						<small style="text-align: left">							
-							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue;" href="https://chartaccent.github.io/" target="_blank">chartaccent.github.io</a></strong> | <i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue;" href="https://github.com/chartaccent" target="_blank">github.com/chartaccent</a></strong>
-						</small>			
+							<small style="text-align: left">							
+								<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue;" href="https://chartaccent.github.io/" target="_blank">chartaccent.github.io</a></strong> | <i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue;" href="https://github.com/chartaccent" target="_blank">github.com/chartaccent</a></strong>
+							</small>
+						</span>			
 
 						<aside class="notes">
 							Now I'll step back to mention that Timeline Storyteller is just one of the expressive information design tool research projects that I've contributed to over the past couple of years, with PhD interns leading their development. 
 							<br><br>
-							One of these is ChartAccent, which is an open-source interactive tool for annotating charts via direct manipulation, 
+							<span style="color:crimson"><< CLICK >></span> One of these is ChartAccent, which is an open-source interactive tool for annotating charts via direct manipulation, 
 							<br><br>
 							This project was also motivated by a desire to bridge research and practice,
 							<br><br>
@@ -1347,7 +1353,7 @@
 						</small>	
 
 						<aside class="notes">						
-							There's DataToon, which will appear at CHI this year, which is a Pen + Touch tool for drawing comics about dynamic network data
+							A second tool is DataToon, which will appear at CHI this year, which is a Pen + Touch tool for drawing comics about dynamic network data
 							<br><br>
 							Where you can drop network data into a canvas, get recommendations for panels, position panels with touch, and annotate and style nodes and edges with the pen.	
 							<br><br>
@@ -1413,7 +1419,9 @@
 						<aside class="notes">
 							The evaluation of Timeline Storyteller and these other expressive information design tools has also allowed me to reflect on the methods for evaluating them.
 							<br><br>
-							And so I recently contributed to this BELIV workshop paper, where I commented on the process of analyzing content produced once a tool is deployed, which was the case with Timeline Storyteller,
+							And so I recently contributed to this BELIV paper, where BELIV is a VIS workshop dedicated to evaluation methods for visualization.
+							<br><br>
+							And in it I commented on the process of analyzing content produced once a tool is deployed, which was the case with Timeline Storyteller,
 							<br><br>
 							As well as on the reproduction studies that we performed for ChartAccent and Charticulator, in which we asked study participants to reproduce a completed chart using the tool. 
 					</section>
@@ -1447,7 +1455,7 @@
 							<br><br>
 							So in book chapter that I wrote for last year's Data-Driven Storytelling book,
 							<br><br>
-							Where my co-authors and I attempted to catalog all the ways you might evaluate this form of content.
+							My co-authors and I attempted to catalog all the ways you might evaluate this form of content.
 							<br><br>
 							And we also did our best to consider different perspectives and constraints from both research and practice,
 							<br><br>
@@ -1482,13 +1490,13 @@
 						<aside class="notes">
 							So far, the constraints on expressive information design that I've spoken about have been largely constraints about authorship, 
 							<br><br>
-							Or about how I can empower people to create useful and relevant presentations of information without having to know how to program or use design software.
+							Or about how I can empower people to create useful and relevant presentations of information without having to know how to program or be visualization experts.
 							<br><br>
 							I've also touched upon constraints imposed by the audience, 
 							<br><br>
 							And I've told you about ways that designers can capture attention and incrementally reveal information while maintaining coherency story.
 							<br><br>
-							But it's another constraint that leads me to my second focus area in this talk, 
+							But it's another constraint that I'll cover in the second focus area in this talk, 
 							<br><br>
 							And it's a very common constraint in 2019: the audience is not using a desktop display. They are on their phone. 
 						</aside>
@@ -1514,13 +1522,13 @@
 						</small>	
 
 						<aside class="notes">
-						The specific project that I'll focus on now is one that actually arose during demonstrations of Timeline Storyteller to a group at Microsoft designing personal health apps. 
+						The specific project that I'll focus on now is one that I presented a few months ago at VIS,
+						<br><br>
+						And its origins came during demonstrations of Timeline Storyteller to a group at Microsoft designing personal health apps. 
 						<br><br>
 						They asked me "will this work on mobile?", since they were designing mobile apps involving time-oriented personal activity data, namely sleep data. 
 						<br><br>
 						Like with the timeline project, I started this one by looking to current practice and how designers currently visualize data on mobile phones. 
-						<br><br>
-						I also looked to how practitioners work with activity data and sleep data in particular.
 						</aside>
 
 					</section>				
@@ -1611,7 +1619,7 @@
 						<aside class="notes">
 							As you recall from the timeline project, time is also cyclical; we experience seasons, lunar cycles, and weekday/weekend routines. 						
 							<br><br>						
-							The cyclicality of time is exemplified in work like Tim Kekeritz's Weather Radials
+							This is nicely captured here in this project by Tim Kekeritz called Weather Radials, in which temperature ranges are drawn radially.
 						</aside>
 					</section>
 
@@ -1625,7 +1633,7 @@
 						<aside class="notes">
 							But are radial designs appropriate for mobile displays? 
 							<br><br>
-							Bear in mind that mobile app and website designers appear to be quite fond of radial representations, as illustrated in a survey by Sebastian Sadowski. 
+							It would seem as though mobile app and website designers appear to be quite fond of radial representations, as indicated in this mobile infovis survey by Sebastian Sadowski. 
 						</aside>
 					</section>
 
@@ -1645,7 +1653,7 @@
 							<br><br>
 							I know this because I conducted a crowdsourced quantitative experiment in which I asked crowd workers to perform a set of different tasks on their mobile phone.
 							<br><br>
-							And not only is there much in terms of previous visualization research that is specific to mobile phones,
+							And not only is there a scarcity of previous visualization research that is specific to mobile phones,
 							<br><br>
 							This is really the first time that anyone has done a crowdsourced visualization evaluation or graphical perception study exclusively on mobile phones. 
 						</aside>
@@ -1766,13 +1774,11 @@
 						<aside class="notes">		
 							In the interest of time, I won't get into the detailed stats including confidence intervals and effect sizes for each task, which you can find in the paper; for now, I'll stick to high-level results. 
 							<br><br>
-							People tend to complete comparison tasks in about the same amount of time with either representation, 
-							<br><br>
-							But for tasks that require locating values, people tend to be slower with radial representations, irrespective of the source of the data.
+							In general, people tend to be slower with radial representations, irrespective of the source of the data.
 							<br><br>					
 							However, radial representations don't seem to incur accuracy costs, at least with temperature range data, where there tends to be a lot of seasonal variation.
 							<br><br>
-							With sleep range data, which exhibits no seasonal variation, people are less accurate when identifying values for specific dates or when locating extreme values.
+							With sleep range data, which exhibits no seasonal variation, people are less accurate when identifying values or when locating extreme values.
 							<br><br>
 							It's also worth remarking that participants universally preferred linear representations, and they felt more confident using linear representations relative to radial ones.
 							<br><br>
@@ -1814,15 +1820,15 @@
 						<aside class="notes">
 							As you might expect, people were slower with a month ranges than with a week of ranges, 
 							<br><br>
-							but they weren't that much slower with a year relative to to a month. 
+							but they weren't that much slower when they moved from a month to a year. 
 							<br><br>						
 							With regards to accuracy, the jump from a week to a month only incurred noticeably worse performance when locating extreme values. 
 							<br><br>
 							Interestingly, there were cases where people were as accurate or even more accurate with a year of ranges than with a month of ranges, particularly among those looking for extreme temperatures.
 							<br><br>  
-							It is in this respect that I observed different results between the temperature and sleep range groups, 
+							It is in this respect that I observed different results between the temperature and sleep range participant groups, 
 							<br><br>
-							Where the expected seasonal trend of temperature ranges appears to make the task easier relative to examining a month of sleep ranges.
+							Where it would seem as though the expected seasonal trend of temperature ranges appears to make the task easier relative to examining a month of sleep ranges.
 						</aside>
 					</section>								
 	
@@ -1863,7 +1869,7 @@
 							<br><br>
 							Designers should ask whether a cycle is meaningful in the context of the data, 
 							<br><br>
-							Whether the task is about locating values or comparing values, 
+							Whether the task is about locating values or comparing them, 
 							<br><br>
 							And whether task efficiency is the first priority.   						
 						</aside>
@@ -1889,13 +1895,13 @@
 						<aside class="notes">									
 							My hope for this work was to inspire the visualization research community to consider the future of visualization for mobile devices as well as the potential research questions that can be asked via crowdsourced experimentation,
 							<br><br>
-							And to this end I open-sourced my experimental application any the data analysis code so that others could run similar experiments on mobile phones, 
+							And to this end I open-sourced my experimental application and the data analysis code so that others could run similar experiments on mobile phones, 
 							<br><br>
 							though substituting different data and chart types.
 							<br><br>
-							I also have a post on the Multiple Views Visualization Research blog, which is a platform to communicate to practitioners, 
+							I also contributed a post to the Multiple Views Visualization Research blog, which is a platform to communicate to practitioners, 
 							<br><br>
-							So that they can put our findings into action.        
+							So that they can put my findings into action.        
 						</aside>
 	
 					</section>
@@ -1952,8 +1958,6 @@
 							<br><br>
 							Which was inspired by the rise of looped animated news graphics that you might encounter on social media, 
 							<br><br>
-							As well as by Hans Rosling's TED talks in which he visualized economic and public health indicators for the world's countries. 
-							<br><br>
 							If you're interested in the results of this study, 
 							<br><br>
 							I have a working paper that I'll be submitting to VIS this year which I can send you. 			
@@ -1986,7 +1990,7 @@
 						<br><br>
 						Despite the presence of additional interactivity.
 						<br><br>
-						So I've been assessing alternative interaction techniques that aim to be discoverable while conserving precious screen real estate.
+						So in this project I've been assessing alternative interaction techniques that aim to be discoverable while conserving precious screen real estate.
     				</aside>
 	
 					</section>
@@ -2028,7 +2032,9 @@
 						
 						<span class="attribution"><span style="color:gold">Images L to R</span>: narrative diagram by Kurt Vonnegut, "board game"-like timeline by Matthew Lee, timeline by Mark Twain, a curve timeline in Timeline Storyteller.</span>			
 
-						<aside class="notes">							
+						<aside class="notes">			
+						I'm also continuing to do research about expressive information design tools.
+						<br><br>				
 						My colleagues in the HCI group at Microsoft are some of the leaders when it comes to pen and touch interaction design, and I've collaborated with them already on two projects that unite pen + touch interaction with expressive information design.
 						<br><br>
 						I plan to investigate the potential of pen and touch interaction for drawing and annotating timelines, particularly in the context of live presentations and in application domains such as education. 
@@ -2044,7 +2050,7 @@
 						<h4><span style="color:gold">A Research Program</span></h4>
 	
 						<aside class="notes">							
-						What I've spoken about today can be situated within a larger effort across the research community to democratize the visualization of data.
+						What I've spoken about today can be situated within a longer-term research agenda in expressive information design.
     				</aside>
 	
 					</section>							
@@ -2069,7 +2075,7 @@
 							<br><br>
 							Such as spatiotemporal data or networks that change over time,
 							<br><br>
-							This will involve collecting and categorizing both good and bad examples, 
+							This will involve collecting and categorizing both good and bad examples from both research and practice, 
 							<br><br>
 							Identifying design patterns and design spaces, 
 							<br><br>
@@ -2091,7 +2097,7 @@
 							<br><br>
 							Information design for an audience with a <strong>limited attention span</strong>.
 							<br><br>
-							<strong>Mobile-first</strong> and <strong>mobile-only</strong> information design.
+							<strong>Mobile-first</strong> and <strong>mobile-only</strong> information design (and addressing the <strong>scarcity of research</strong>).
 							<br><br><br><br>
 							More <strong>laboratory-</strong> and <strong>crowd-based experimental</strong> work to assess alternative design choices.
 						</small>
@@ -2099,13 +2105,17 @@
 						<span class="attribution">* <em><a style="color:skyblue" href="http://www.thefunctionalart.com/2017/10/uncertainty-graphicacy-and-power-of.html" target="_blank">Uncertainty, graphicacy, and the power of statistics</a></em>. <br>Alberto Cairo (Oct 18, 2017), <a style="color:skyblue" href="http://www.thefunctionalart.com" target="_blank">thefunctionalart.com</a> <i class="fas fa-external-link-alt" aria-hidden="true"></i>. </span>
 	
 						<aside class="notes">							
-							A second opportunity pertains to the constraint of the audience's limited "graphicacy", which is how renowned journalist and author Alberto Cairo refers to the combination of data, visual, and statistical literacy. 
+							A second opportunity pertains to audience constraints,
 							<br><br>
-							Both in terms of how to measure this construct and how to improve it.
+							Such as their limited "graphicacy", which is how renowned journalist and author Alberto Cairo refers to the combination of data, visual, and statistical literacy. 
 							<br><br>
-							There's also the constraint of the limited attention span and the challenge of designing information that both attracts this attention and yet does not mislead or misinform.
+							I want to identify how to measure this construct as well as how to improve it.
 							<br><br>
-							Finally there's the constraint imposed by small displays, which motivates me to identify where the limitations are for visual representation and interaction design choices. 
+							There's also the constraint of the audience's limited attention span and the challenge of designing information that both attracts this attention and yet does not mislead or misinform.
+							<br><br>
+							Finally there's the constraint imposed by small displays, which motivates me to identify where the limitations are for visual representation and interaction design choices.
+							<br><br>
+							And I'll reiterate that there's not a lot of prior research from the visualization community when it comes to mobile devices, and I plan to fix this. 
 							<br><br>
 							And for each of these constraints, I believe more experimental work is needed, both in the lab and with online crowd worker participants. 
     				</aside>
@@ -2128,13 +2138,13 @@
 						</small>
 	
 						<aside class="notes">							
-							This means giving more people the ability to use and present information that is relevant to them:
+							In summary my research enedavors to give more people the ability to use and present information that is relevant to them:
 							<br><br>
-							For individuals this means applications for visualizing personaly relevant information for making decisions in daily life.  
+							For individuals this means applications for visualizing personaly-relevant information for making decisions in daily life.  
 							<br><br>
 							And for presenters and authors this means taking a process that would have previously required programming expertise, visual design expertise, and / or ample amounts of time, 
 							<br><br>
-							And instead offer an interactive experience that provides both expressivity and design guidance.
+							And instead offeriung an interactive experience that provides both expressivity and design guidance.
 							<br><br>
 							And to do this I would aim to partner with groups such as
 							<br><br>
@@ -2194,7 +2204,7 @@
 							<br><br>
 							Second, there are opportunities to collaborate with faculty members in application areas of mutual interest, such as resource conservation, health, and cultural heritage.
 							<br><br>
-							Third, I believe that my own research reflect the stated themes of research at SIAT:
+							Third, I believe that my research already reflects the stated themes of research at SIAT:
 							<br><br>
 							Interactive computing, design, people, and the science of interaction.
 							<br><br>
