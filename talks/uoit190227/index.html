@@ -1,0 +1,1592 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Considerations for Interactive & Expressive Information Design Tools</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300;700" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="shortcut icon" href="favicon.ico" />
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- ================================================== -->
+				
+				<section class="center">
+					<h3>Considerations for Interactive & Expressive Information Design Tools</h3>	
+					<hr>	
+					
+					<small>
+						<a href="http://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> &middot; EPIC Research Group, Microsoft Research &middot; <a href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a>
+					</small>
+
+					<br>
+
+					<span class="affiliation"><img data-src="assets/authors/affiliations.png" height="100" style="box-shadow: none"/></span>
+	
+					<span class="attribution">Presentation at UOIT 2019-02-27 &middot; slides: <a style="color:skyblue" href="https://mattbrehmer.github.io#talks" target="_blank">mattbrehmer.github.io#talks</a> </span>
+
+					<aside class="notes">
+						Good morning. Thank you for the introduction and for the invitation to visit. 
+					</aside>
+
+				</section>
+
+				<!-- FRONT MATTER ================================================== -->
+				
+				<section>
+
+					<!-- OUTLINE ================================================== -->
+
+					<section>
+
+						<h3><span style="color:gold">Outline</span></h3>
+						<hr>
+						<small style="text-align:left">							
+							&middot; Considerations for expressive information design<br><br>
+							&middot; <em>Timeline Storyteller</em><br><br>
+							&middot; Other recent tools: <em>ChartAccent, Charticulator, & DataToon</em><br><br>
+							&middot; Opportunities for future research<br><br>
+						</small>
+
+						<aside class="notes">
+							Here's a brief outline of what I'll be covering in my talk.
+							<br><br>
+							I'll begin by telling about my background and the methods that I use in my research,
+							<br><br>
+							And then I'll speak about expressive information design as a preface to the research projects that I've been a part of in this area
+							<br><br>
+							I'll focus on one I led at Microsoft over the past couple of years, one involving a tool called Timeline Storyteller,
+							<br><br>
+							And I'll also speak a little bit about some of the other research projects that I've contributed to in this area in collaboration with interns and academic colleagues
+							<br><br>
+							I'll close with an overview of some opportunities for future research
+						</aside>
+
+					</section>
+
+				</section>
+
+				<!-- WHAT IS EXPRESSIVE INFORMATION DESIGN ================================================== -->
+
+				<section>
+
+					<!-- EXPRESSIVE INFORMATION DESIGN ================================================== -->
+
+					<section class="center">
+
+						<h3><span style="color:gold">Expressive Information Design</span></h3>
+						<hr>
+						<small>
+							From the perspective of an <strong>information visualization</strong> researcher.
+						</small>
+
+						<aside class="notes">
+							Now that I've told you about my background and the context for my work, 
+							<br><br>
+							I'd like to talk about expressive information design. 
+							<br><br>
+							My perspective is one of an information visualization researcher,
+							<br><br>
+							However, I see expressive information design as something broader that just information visualization,
+						</aside>
+
+					</section>
+
+					<!-- DEFINING EXPRESSIVE INFORMATION DESIGN ================================================== -->
+
+						<section>
+
+						<h4><span style="color:gold">Expressive Information Design</span></h4>
+						<hr>
+						<small style="text-align:left">
+							&middot; Combining <strong>visualization</strong>, <strong>annotation</strong>, and <strong>explanation</strong> to <strong>present</strong> information to an audience. 
+							<br><br>
+							&middot; Thinking systematically about <strong>tasks</strong>, <strong>design</strong> <strong>choices</strong>, and <strong>constraints</strong>.
+							<br><br>
+							&middot; Identifying ways to <strong>assess</strong> alternative design choices. 
+
+						</small>
+
+						<aside class="notes">
+							It's is about combining visualization, annotation, and explanation in various ways to present information to an audience,
+							<br><br>
+							It requires thinking systematically about the tasks that designers do, that presenters do, and what the audience is expected to do with the resulting information,
+							<br><br>
+							It requires thinking about alternative design choices and the constraints imposed upon them,
+							<br><br>
+							And because I am a researcher, it involves assessing these design choices in appropriate ways,
+							<br><br>
+							And of course disseminating the results of these assessments.
+						</aside>
+
+					</section>
+
+					<!-- PRESENTING INFORMATION TO THE PUBLIC ================================================== -->
+
+					<section data-background="assets/rosling.png" data-background-opacity=0.75>
+
+						<h4>Presenting Information <span style="color:gold">to the Public</span></h4>
+						<hr>
+						<small style="text-align:left">
+							e.g., Hans Rosling's TED presentations about global economic and public health indicators. 
+						</small>
+						<br>
+						<!-- <img data-src="assets/rosling.png"  height="480"></img> -->
+
+						<span class="attribution">Image: <a style="color:skyblue" href="https://www.flickr.com/photos/okfde/9504183446" target="_blank">Open Knowledge Foundation Deutschland</a> (flickr, cc by).</span>
+
+						<aside class="notes">
+							I'm particularly motivated by the challenge of presenting information to a large public audience.
+							<br><br>
+							Where I might use visualization to tell a richer story that is grounded in data.
+							<br><br>
+							Some great examples of this process are a series of TED conference presentations by the late public health expert Hans Rosling, who you see here, who would combine his spoken narration with animated and annotated charts, 
+							<br><br>
+							More broadly, this process of combining visualization and narrative explanation has become common in the fields of journalism, education, and public policy.
+						</aside>
+
+					</section>
+
+					<!-- PRESENTING INFORMATION TO THE INDIVIDUAL ================================================== -->
+
+					<section data-background="assets/smartphone.png" data-background-opacity=0.25>
+
+						<h4>Presenting Information <span style="color:gold">to the Individual</span></h4>
+						<hr>
+						
+						<span class="attribution" style="color:white">Image: <a style="color:skyblue" href="https://flic.kr/p/24mfesr" target="_blank">newkemall</a> (flickr, cc by).</span>
+
+						<aside class="notes">
+							I'm also motivated by the challenges of presenting information to an individual,
+							<br><br>							
+							Where the individual can't ask the designer or presenter for clarification.
+							<br><br>  
+							In my work, I often think of uses cases in online news consumption and online education material, where there is a growing interest in visual and potentially interactive explanations.
+						</aside>
+
+					</section>				
+
+					<!-- ASPECTS OF EXPRESSIVE INFORMATION DESIGN ================================================== -->
+
+					<section class="center">
+
+						<h4>Aspects of <span style="color:gold">Expressive Information Design</span></h4>
+						<hr>
+						<small>
+							Thinking systematically about <strong>tasks</strong>, <strong>design</strong> <strong>choices</strong>, and <strong>constraints</strong>.
+						</small>
+
+						<aside class="notes">
+							Expressive information design, from my perspective, requires thinking systematically about tasks, design choices, and constraints
+						</aside>
+
+					</section>
+
+					<!-- THINKING SYSTEMATICALLY ABOUT TASKS ================================================== -->
+
+					<section data-background="#fff">
+
+						<h4>Thinking Systematically about <span style="color:cornflowerblue">Tasks</span></h4>
+						<hr>
+
+						<small style="text-align:left">
+							<i class="far fa-file"></i> <span style="color:cornflowerblue"><strong><em>A Multi-Level Typology of Abstract Visualization Tasks</em></strong></span>. <span style="font-weight: 700">Brehmer</span> and Munzner. <br>In <em>IEEE Transactions on Visualization and Computer Graphics</em> (InfoVis 2013).
+						</small>
+							
+						<img data-src="assets/tasks.png" style="border: none; box-shadow:none" height="500px">
+
+						<span class="attribution">Icons by <a style="color:cornflowerblue" href="https://www.cs.ubc.ca/~tmm/vadbook/figures.html" target="_blank">Eamonn Maguire</a> (cc by) for Munzner's <em>Visualization Analysis & Design</em> (CRC Press, 2014).</span>
+
+						<aside class="notes">
+							A central theme of my PhD research pertained to classifying visualization tasks and to consolidating the vocabulary for visualization tasks into a typology,
+							<br><br>
+							Which is the subject of a 2013 paper written with my PhD advisor Tamara Munzner.
+							<br><br>
+							And expressive information design requires being able to address a wide range of tasks, 
+							<br><br>							
+							Including both the tasks of an information designer or author, as well as the tasks of a viewer, or what the audience is expected to do with the information presented to them. 
+							<br><br>
+							Such as to identify a trend or to compare values.
+							<br><br>
+							Ultimately, expressivity is about satisfying the intent of the author, allowing them to tell the story they want to tell,
+							<br><br>
+							And whether this story can be reconstructed in the mind of the viewer. 
+						</aside>
+
+					</section>
+
+					<!-- THINKING SYSTEMATICALLY ABOUT TASKS ================================================== -->
+
+					<section data-background="#fff">
+
+						<h4>Thinking Systematically about <span style="color:cornflowerblue">Tasks</span></h4>
+						<hr>
+
+						<small style="text-align:left">
+							<i class="far fa-file"></i> <span style="color:cornflowerblue"><strong><em>A Multi-Level Typology of Abstract Visualization Tasks</em></strong></span>. <span style="font-weight: 700">Brehmer</span> and Munzner. <br>In <em>IEEE Transactions on Visualization and Computer Graphics</em> (InfoVis 2013).
+							<br><br>
+							The <strong>most cited IEEE InfoVis paper since 2013</strong>, with more than 280 citations*. 
+							<br><br>
+						</small>
+
+						<img data-src="assets/task-sequence.png" style="border: none; box-shadow:none" height="400px">
+
+						<span class="attribution">* Google Scholar, Jan 2019.<br><br>Icons by <a style="color:cornflowerblue" href="https://www.cs.ubc.ca/~tmm/vadbook/figures.html" target="_blank">Eamonn Maguire</a> (cc by) for Munzner's <em>Visualization Analysis & Design</em> (CRC Press, 2014).</span>
+						
+						<aside class="notes">
+							This task typology paper also presents a way to break down tasks and task sequences into elements of why visualization is used, what the inputs and outputs are, and how the task is realized in terms of design choices. 
+							<br><br>
+							And I apply this way of thinking about tasks throughout my work.
+							<br><br>
+							It would also seem as though the visualization research community has found this to be a useful approach to analyzing tasks, 
+							<br><br>
+							As my task typology paper has gone on to be the most cited InfoVis paper since 2013, now with more than 280 citations.
+						</aside>
+
+					</section>
+
+					<!-- THINKING SYSTEMATICALLY ABOUT DESIGN CHOICES ================================================== -->
+
+					<section>
+
+						<h4>Thinking Systematically about <span style="color:gold">Design Choices</span></h4>
+						<hr>
+
+						<small style="text-align:left">
+							Identifying the dimensions of <strong>design spaces</strong> that characterize:<br><br>
+							... ways to <strong>visually</strong> <strong>represent</strong> data.<br><br>
+							... ways to <strong>interact</strong> with these representations.<br><br>
+							... ways to <strong>highlight</strong> and <strong>annotate</strong> them.<br><br>
+							... ways to <strong>combine</strong> <strong>visual</strong> content with <strong>textual</strong> explanation.<br><br><br><br>
+							In an expressive information design tool, how do you present these choices?
+							<br><br>
+							e.g., Low-level visual encoding choices (shape, color, ...) or chart templates (bar, line, ...)
+						</small>
+
+						<aside class="notes">
+						Expressivity also refers to thinking systematically about design choices and design spaces: 
+						<br><br>						
+						Which are ways to categorize visual representation choices for a particular type of data, 
+						<br><br>
+						Interaction design choices, ways to highlight, annotate, and embellish visual representations, 
+						<br><br>
+						Or ways to combine visual and textual explanations in compelling and engaging ways. 
+						<br><br>
+						Characterizing these design spaces becomes particularly important when you decide to expose them to an author in the form of an information design tool, where there is a question about the level of granularity: 
+						<br><br>						
+						For example, as a designer are you controlling low-level visual encoding channels like shape or color, or are you picking a chart type from a template?
+						<br><br>
+						As you'll see an example of this process of identifying and assessing points in a design space in the next section of this talk .
+						</aside>
+
+					</section>
+
+					<!-- CONSTRAINTS ON EXPRESSIVITY ================================================== -->
+
+					<section>
+
+						<h4><span style="color:gold">Constraints</span> on Expressivity</h4>
+						<hr>
+	
+						<small style="text-align:left">
+							Constraints imposed by <strong>authors</strong>, by the <strong>audience</strong>, or by the <strong>context</strong>.
+							<br><br><br><br>
+							<span class="fragment"><strong>Expertise</strong>: empowering non-programmers and non-designers. 
+							<br><br></span>
+							<span class="fragment"><strong>Resources</strong>: enabling expressive information design for those on a deadline.
+							<br><br></span><br><br>
+							<span class="fragment"><strong>Literacy</strong>: anticipating the visual and data literacy of the audience.
+							<br><br>
+							<span class="fragment"><strong>Device</strong>: anticipating the audience's viewing experience.
+							</span>
+						</small>
+
+						<aside class="notes">
+							But first I want to mention that expressivity is also bound to constraints, and it is these constraints that I find to be particularly challenging and deserving of research. 
+							<br><br>
+							And these include constraints imposed by designers or authors, as well as those imposed by the audience and the context in which the information is presented.
+							<br><br>			
+							<span style="color:crimson"><< CLICK >></span> 
+							One of these constraints is expertise: 
+							<br><br>						
+							I want to empower non-programmers to present information with interactive visualization and presentation tools.
+							<br><br>						
+							And I want to empower non-designers to make compelling and useful information graphics by offering design guidance.  		
+							<br><br>		
+							<span style="color:crimson"><< CLICK >></span> 
+							Another constraint is about resources: 
+							<br><br>						
+							For example, I want to enable over-committed, understaffed, and poorly funded local news teams to produce data-driven stories about their community while meeting all their deadlines.
+							<br><br>							
+							<span style="color:crimson"><< CLICK >></span> 
+							Yet another constraint is literacy: 
+							<br><br>						
+							What if my audience lacks the sufficient visual literacy or data literacy needed to interpret my particular choice of visual representation? 
+							<br><br>
+							How can I make use of their prior knowledge as part of the communication process?
+							<br><br>
+							<span style="color:crimson"><< CLICK >></span> 
+							And finally there's the device: what if my audience is consuming this information from a mobile device? 
+							<br><br>
+							How does that constrain my choices? 
+						</aside>
+
+					</section>		
+					
+					
+					<!-- VALUE OF DEMOCRATIZING INFORMATION DESIGN ================================================== -->
+
+					<section>
+
+						<h4><span style="color:gold">Democratizing</span> Information Design</h4>
+						<hr>
+						<small style="text-align:left">
+							How can I enable under-served groups of people to... <br><br><br><br>
+							Expressively <strong>visualize</strong> their data? <br><br>
+							<strong>Produce</strong> and <strong>present</strong> compelling data-driven stories?
+							<br><br><br><br>
+							Applications of visualization <strong>beyond</strong> those in <strong>professional data analysis</strong>.
+							<br><br>
+							e.g., Why are <strong>journalists</strong> and <strong>educators</strong> presenting information using <strong>business</strong> <strong>intelligence</strong> tools?
+						</small>
+
+						<aside class="notes">
+						With respect to the values and goals that underlie my research,
+						<br><br>
+						I'm really hoping to advance the democratization of information design and data visualization: 
+						<br><br>						
+						And this means enabling more people to visualize and present compelling stories about their data, 
+						<br><br>
+						And its in this respect that I contrast my research from that of many others in the broader visualization community, such as those working in visual analytics. 
+						<br><br>
+						Many in the visualization and visual analytics research community are motivated by use cases from professional data analysis, data science, or business intelligence. 
+						<br><br> 
+						While I think these use cases are important and I'm glad that people are thinking about them, they are <em>NOT</em> the use cases that motivate my research. 
+						<br><br>
+						Instead, I'm interested in incorporating visualization to present information to people who don't identify as data analysts, in both public and personal contexts.
+						<br><br>
+						This leads me to ask questions like ``why are journalists and educators are using business intelligence tools to present information to their audiences``?
+						<br><br>
+						And I wonder if I build better tools for these communities and the needs that they have
+						</aside>
+
+					</section>
+
+					<!-- VALUE OF CONNECTING RESEARCH AND PRACTICE ================================================== -->			
+
+					<section>
+
+						<h4>Connecting <span style="color:gold">Research</span> & <span style="color:gold">Practice</span></h4>
+						<hr>
+
+						<small style="text-align:left">
+							Disseminating visualization <strong>research</strong> into <strong>practice</strong>, and <strong>vice</strong> <strong>versa</strong>.
+							<br><br>
+							Promoting and studying the <strong>adoption</strong> of deployed information design tools and research prototypes.
+							<br><br>
+							<strong>Collecting examples</strong> of information design <strong>produced by practitioners</strong>.
+							
+						</small>						
+
+						<aside class="notes">
+						Another thing that drives my work is connecting visualization researchers and practitioners. 
+						<br><br> 
+						This means disseminating research into practice, and just as importantly, disseminating practice into research. 
+						<br><br>
+						In my own work, this manifests as studying the adoption of deployed tools and prototypes.
+						<br><br>
+						And collecting examples of information design produced by practitioners.
+						<br><br> 
+						And finally this means speaking directly with practitioners and presenting my work at conferences like OpenVisConf,which is one of the most renowned practitioner-oriented visualization events, 
+						<br><br>
+						Or how I co-organized the VisInPractice event at last year's IEEE VIS conference, where I invited prominent visualization practitioners to speak to a largely academic audience. 					
+						</aside>
+
+					</section>
+
+
+				</section>							
+
+				<!-- FOCUS SECTION 1A: TIMELINES REVISITED ================================================== -->
+
+				<section>
+
+					<!-- OUTLINE ================================================== -->
+
+					<section>
+
+						<h3><span style="color:gold">Outline</span></h3>
+						<hr>
+						<small style="text-align:left">
+							<span style="color:#666">&middot; Considerations for expressive information design<br><br></span>
+							&middot; <em>Timeline Storyteller</em><br><br>
+							&middot; Other recent tools: <em>ChartAccent, Charticulator, & DataToon</em><br><br>
+							&middot; Opportunities for future research<br><br>							
+						</small>
+
+						<aside class="notes">
+							Now that I've set the context for expressive information design, 
+							<br><br>
+							I will speak about a tool that I built for expressive information design and presentation,
+							<br><br>				
+							One that addresses a form of data that is poorly supported by many existing tools, 
+							<br><br>
+							and that's event sequence data, data that is often represented as Timelines
+						</aside>
+
+					</section>
+
+					<!-- DAILY ROUTINES ================================================== -->
+
+					<section data-background="#EAEAEA">
+								
+						<h4>The Daily Routines of Famous Creative People</h4>
+
+						<iframe width="680" height="510" src="https://msit.powerbi.com/view?r=eyJrIjoiYjczZDAyZjUtNWZmZS00NjM5LWIyNWYtZmYzZDEwZTczZDRlIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9" frameborder="0" allowFullScreen="true"></iframe>
+						
+						<span class="attribution">Story inspired by infographics by <strong><a href="https://podio.com/site/creative-routines" style="color:cornflowerblue;" target="_blank">Podio</a></strong> and <strong><a href="http://infowetrust.com/creative-routines/" style="color:cornflowerblue;" target="_blank">info we trust</a></strong>. 
+						<br>Data source: <strong><a href="https://www.goodreads.com/book/show/15799151-daily-rituals" style="color:cornflowerblue;" target="_blank"><em>Daily Rituals: How Artists Work</em></a></strong> by <strong><a href="http://masoncurrey.com/" style="color:cornflowerblue;" target="_blank">Mason Currey</a></strong> (2013)</span>
+
+						<aside class="notes">
+							To illustrate this, I want to tell you a few interesting things about the daily routines of famous creative people.
+							<br><br><span style="color:red">MAX</span>: What you see here is a set of radial timelines depicting a typical 24 hours in the lives of 26 writers, artists, composers, and other creative types.
+							<br><br>When they work, eat, sleep, exercise, and do other activities. 
+							<br><br><span style="color:red">NEXT</span>: I had wondered if there was any pattern as to when creative people do their  creative work.
+							<br><br>It turns out that at least among these people, some creative people prefer to work in short, focused bursts, like Darwin or Kant, while people like Murakami and Voltaire get up early and work for long uninterrupted periods of time. 
+							<br><br>Meanwhile, you have odd ones like Kafka who work all night long. 
+							<br><br><span style="color:red">NEXT</span>: I had also wondered about the potential relationship between sleep and creativity, so let me focus your attention to these blue arcs.
+							<br><br>Most people here tend to sleep at night, with notable exceptions like Balzac who would turn in at 6pm, and Kafka, who just seemed to keep odd hours.
+							<br><br>A third question I had was about variation and creativity. Let me show you how often these creative people change activities throughout their day.
+							<br><br><span style="color:red">NEXT</span>: This 24-hour clock metaphoe isn't the best way to convey the number or heterogeneity of activities, so I'm going to transition to a just show you a sequence of activities without any duration, effectively resulting in a radial bar chart. 
+							<br><br><span style="color:red">NEXT</span>: To show who varied the most and least among these people, a linear representation is probably better, where you can see that Darwin has the most varied day of all the people here while Murakami prefers less variation.
+							<br><br><span style="color:red">NEXT</span>: Finally, I'll restore the duration of events so that you can compare these timelines just by scanning up and down, where you might spot times where some routines appear to be in sync with one another, such as when people work or sleep at the same time.
+							<br><br>And this is a good time to ask you to compare your own daily rhythm to these creative people.
+							<br><br>When do you sleep, eat, or do you best creative work?
+						</aside>	
+
+					</section>
+
+					<!--TIMELINE STORYTELLING  ================================================== -->
+
+					<section>
+
+						<h4>Expressive Information Design with Timelines</h4>
+						<hr>
+
+						<small style="text-align:left">
+							<i class="far fa-file"></i> <span style="color:gold"><em>Timeline Storyteller: The Design & Deployment of an Interactive Authoring Tool for <br>Expressive Timeline Narratives</em></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Henry Riche, Tittsworth, Lytvynets, Edge, and White. In Proc. <em>Comp. + Journalism</em> 2019. 
+						</small><br>
+
+						<img height="350px" data-src="assets/timelinestoryteller.png"></img><br>
+						
+						<small><i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://timelinestoryteller.com" target="_blank">timelinestoryteller.com</a></strong> | <i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://github.com/Microsoft/timelinestoryteller" target="_blank" style="color:gold;">github.com/Microsoft/timelinestoryteller</a></strong></small>						
+
+						<aside class="notes">
+						To present that narrative sequence about creative routines,
+						<br><br>
+						I just used an open-source tool that I designed and developed called Timeline Storyteller  
+						<br><br>
+						Which I'll be presented earlier this month and the Computation and Journalism Symposium in Miami. 
+						<br><br>
+						You could think of it as PowerPoint for timeline data.
+						<br><br>
+						It requires no programming expertise to use, and it runs in the browser or as a free extension for Microsoft's Power BI,
+						<br><br>
+						which is a popular interactive data analysis, visualization, and presentation tool.
+						<br><br>
+						But before I speak more about this tool and its evaluation, I'll provide its back story and motivation.
+						</aside>
+
+					</section>
+
+					<!-- TIMELINES REVISITED ================================================== -->
+
+					<section>
+
+						<h4>Timelines <span style="color:gold">Revisited</span></h4>
+						<hr>
+
+						<small style="text-align:left">
+							<i class="far fa-file"></i> <span style="color:gold"><em>Timelines Revisited: A Design Space and Considerations for Expressive Storytelling</em></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Bach, Henry Riche, and Munzner. In <em>IEEE TVCG</em> (presented at InfoVis 2017). 
+							<br><br><br><br>						
+							<strong>Timelines</strong> are visual representations of categorical event sequences.<br><br>
+							How have people drawn timelines over the course of history?<br><br>
+							The <strong>visualization research community</strong> has focused on their use in data analysis.<br><br>
+							How have <strong>practitioners</strong> used them for storytelling?
+						</small>
+
+						<aside class="notes">
+							In late 2014, I became fascinated by the potential for expressive information design with timelines, 
+							<br><br>							
+							Which are used to tell stories in domains such as journalism, education, and project management.
+							<br><br> 
+							I began collecting and systematically categorizing how people have drawn timelines over the course of history.
+							<br><br> 
+							I did so upon realizing that prior visualization research involving timelines had focused on their uses in data analysis, such as for understanding patterns in electronic health records.
+							<br><br>
+							And because of this focus, the expressive range of design choices considered by the research community was far smaller than the range of design choices considered by the design and practice community.
+						</aside>
+
+					</section>
+
+					<!-- WHAT HAPPENED WHEN ================================================== -->
+
+					<section>	
+
+						<h4><span style="color:gold">What</span> Happened <span style="color:gold">When</span>?</h4>
+
+						<hr/>
+
+						<small style="text-align: left">
+							In what sequence did the events occur?
+							<br><br>
+							How long did the events last?
+							<br><br>
+							How long between event <span style="color:gold"><strong>A</strong></span> and event <span style="color:gold"><strong>B</strong></span>?
+							<br><br>
+							Did <span style="color:gold"><strong>A</strong></span> and <span style="color:gold"><strong>B</strong></span> co-occur or repeat?
+							<br><br>
+							When did <span style="color:gold"><strong>A</strong></span> and <span style="color:gold"><strong>B</strong></span> occur relative to event <span style="color:gold"><strong>C</strong></span>?
+						</small>
+						
+						<aside class="notes">
+							Before I continue, it helps to ask the question: ``what's a timeline for?''
+							<br><br>Why do we draw them? And why do people find them interesting?
+							<br><br>Basically, a timeline communicates to the viewer "WHAT HAPPENED WHEN". 
+							<br><br>But if you unpack this, timelines present a whole lot more detail, such as:
+							<br><br>The sequence in which events occur, their duration, the time between events, their extent of overlap or periodicity, 
+							<br><br>As well as when events occur relative to some baseline event.
+						</aside>	
+
+					</section>		
+
+					<!-- TIMELINE DESIGN SPACE ================================================== -->
+
+					<section>
+
+						<h4>A Timeline <span style="color:gold">Design Space</span></h4>
+						<hr>
+
+						<small style="text-align:left">
+							<i class="far fa-file"></i> <span style="color:gold"><em>Timelines Revisited: A Design Space and Considerations for Expressive Storytelling</em></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Bach, Henry Riche, and Munzner. In <em>IEEE TVCG</em> (presented at InfoVis 2017). 							
+						</small><br><br>
+						
+						<small><strong>Representation</strong></small>
+						<br>
+						<img class="white_img" width="80" height="80" data-src="assets/r-lin.png" alt="Linear" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/r-rad.png" alt="Radial" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/r-spi.png" alt="Spiral" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/r-cal.png" alt="Calendar" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/r-arb.png" alt="Curve" style="margin:0px; background: none; border: none; box-shadow:none">
+						<br>
+						<small><strong>Scale</strong></small>
+						<br>
+						<img class="white_img" width="80" height="80" data-src="assets/s-chron.png" alt="Chronological" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/s-rel.png" alt="Relative" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/s-log.png" alt="Logarithmic" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/s-seq.png" alt="Sequential" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/s-intdur.png" alt="Collapsed" style="margin:0px; background: none; border: none; box-shadow:none">
+						<br>
+						<small><strong>Layout</strong></small>
+						<br>
+						<img class="white_img" width="80" height="80" data-src="assets/l-uni.png" alt="Unified" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/l-fac.png" alt="Faceted" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/l-seg.png" alt="Segmented" style="margin:0px; background: none; border: none; box-shadow:none">
+						
+						<aside class="notes">
+							It turns out that there are many ways to answer these questions and present timelines, which brings me to my design space. 
+							<br><br>
+							You can represent time in various ways, such as linearly, radially, or by using spirals, grids such as calendars, or along a curve 
+							<br><br>
+							And you can combine these representations with different time scales: you could use an absolute or relative chronological scale, a logarithmic scale, or a purely sequential scale.
+							<br><br>
+							And then there's "Layout", or how to draw one or more timelines within a page or display: 
+							<br><br>This has to do with deciding between a single timeline, faceting into multiple timelines (like how I did for each creative person), 
+							<br><br>Or wrapping a single timeline into meaningful segments of time, like a decade or a century.
+						</aside>	
+
+					</section>
+
+					<!-- TIMELINE PROCESS ================================================== -->					
+
+					<section>
+								
+						<h4>Timelines Revisited: The <span style="color:gold">Research Process</span></h4>
+
+						<hr/>
+
+						<small style="text-align: left">
+							<span style="color:gold">1</span>. <strong>Collecting</strong> and <strong>categorizing</strong> <span style="color:gold"><strong>145</strong></span> timelines and timeline tools to establish the dimensions. 
+							<br>&middot; <span style="font-size:0.675em">Sources included: <a style="color:skyblue" href="https://www.papress.com/html/product.details.dna?isbn=9781616890582" target="_blank"><em>Cartographies of Time</em></a> (Rosenberg & Grafton), <a style="color:skyblue" href="http://timeviz.net/" target="_blank"><em>Visualization of Time-Oriented Data</em></a> (Aigner <em>et al.</em>), <a style="color:skyblue" href="http://lenagroeger.s3.amazonaws.com/talks/nicar-2015/timelines-nicar/timelines.html" target="_blank"><em>Making Timelines</em></a> (Groeger).</span>
+							<br><br>
+							<span style="color:gold">2</span>. <strong>Validating</strong> the dimensions of the design space with <span style="color:gold"><strong>118</strong></span> additional timelines (<span style="color:gold"><strong>263</strong></span> total).
+							<br>&middot; <span style="font-size:0.675em">Sources included: <a style="color:skyblue" href="https://visual.ly/view" target="_blank">visual.ly</a>, the <a style="color:skyblue" href="https://www.informationisbeautifulawards.com/showcase" target="_blank">Kantar Information is Beautiful Awards</a> showcase, <a style="color:skyblue" href="http://massvis.mit.edu/" target="_blank">massvis.mit.edu</a>.</span>
+							<br><br>
+							<span style="color:gold">3</span>. <strong>Implementing</strong> points in the design space with <span style="color:gold"><strong>28</strong></span> representative datasets.
+							<br>&middot; <span style="font-size:0.675em">e.g., Conflicts, epidemics, lifespans, head of state tenures, news stories, natural disasters, publication records, geological history.</span>
+						</small>															
+
+						<aside class="notes">						
+							So how did I come up with this design space? 
+							<br><br>
+							You may recall from my background section that I incorporate various forms of qualitative analysis in my work, 
+							<br><br>
+							And that I strive to connect research and practice, 
+							<br><br>This manifested here in my collection and categorization of 145 timelines and timeline visualization tools produced by both researchers and practitioners, 
+							<br><br>
+							And out of that came the dimensions of the design space.							 
+							<br><br>	
+							Next, I verified that the design space could be used to label 118 additional timelines drawn from collections of practitioner work.
+							<br><br>
+							And finally I used implementation as a research method, in that I implemented points in the design space with 28 event datasets which varied in a number of ways, 
+							<br><br>
+							Such as the number of events, the temporal extent of the data, the rate of event co-occurrence, and their topical content, which included
+							<br><br>
+							Biographical data, news stories, natural disasters, publication records, and extremely long-spanning timelines of geological and astronomical history.
+						</aside>	
+
+					</section>
+
+					<!-- PURPOSEFUL, INTERPRETABLE, GENERALIZABLE ================================================== -->
+
+					<section data-background="#fff">
+
+						<small style="text-align: left" style="color:black;"><strong></strong>A set of purposeful, interpretable, & generalizable <br>timeline designs at <strong><a href="http://timelinesrevisited.github.io/supplemental/gallery/gallery.png" target="_blank" style="color:cornflowerblue;">timelinesrevisited.github.io</a></strong> <i class="fas fa-external-link-alt" aria-hidden="true"></i>.</small><br>
+
+						<img data-src="assets/gallery.png" height="600">
+												
+						<aside class="notes">
+							And this process of categorization and implementation led me to identify a set of viable points in the design space, 
+							<br><br>or combinations of representation, scale, and layout that are:
+							<br><br><em>Purposeful</em> in terms of their communicative intent, <em>interpretable</em> in terms of which perceptual task the viewer is expected to make, and <em>generalizable</em> across a range of timeline datasets.
+							<br><br>This is a thumbnail gallery that acts as a visual index for these points in the design space, and if I enlarge part of this gallery, 
+						</aside>	
+
+					</section>
+
+					<!-- THINKING SYSTEMATICALLY ABOUT TIMELINES ================================================== -->
+
+					<section data-background="#fff" data-transition="zoom">		
+						
+						<h4>Thinking Systematically About Tasks & Design Choices</h4>
+							
+						<img data-src="assets/gallery-zoom.png" width="100%">
+												
+						<aside class="notes">
+							You can see each of these example designs in detail along with a description of what communicative intent they serve, 
+							<br><br>
+							And a characterization of the viewer's task.
+							<br><br>
+							Altogether this is an instance of the systematic thinking about tasks and design choices that I mentioned during the introduction to this talk.
+						</aside>	
+
+					</section>
+
+					<!-- USING THE DESIGN SPACE ================================================== -->
+
+					<section data-background="#fff">
+
+						<h4>Using our Timeline Design Space</h4>
+
+						<img data-src="assets/gallery.png" height="600">	
+						
+						<aside class="notes">
+							So now that I've given you all of these design choices, how do you use them to tell stories or make presentations with timelines?  
+							<br><br>
+							In other words, how do you combine different points in this design space? 
+							<br><br>
+							This is important because despite the variety of ways that people visually represent and scale time, 
+							<br><br>
+							Many existing timeline tools will limit you to linear representations and chronological time scales. 
+						</aside>
+
+					</section>
+
+					<!-- STORYTELLING CONSIDERATIONS ================================================== -->
+
+					<section>
+
+						<h4><span style="color:gold">Expressive Storytelling</span> with Timelines</h4>
+						<hr>
+							<small style="text-align: left">
+								<i class="far fa-file"></i> <span style="color:gold"><em>Timelines Revisited: A Design Space and Considerations for Expressive Storytelling</em></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Bach, Henry Riche, and Munzner. In <em>IEEE TVCG</em> (presented at InfoVis 2017). 
+								<br><br><i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a href="http://timelinesrevisited.github.io" target="_blank" style="color:skyblue;">timelinesrevisited.github.io</a></strong>	
+
+								<br><br><br><br>		
+								Provide <strong>alternative</strong> <strong>representations</strong> for time. <br><br>
+								Provide <strong>alternative</strong> time <strong>scales</strong>.<br><br>
+								Anticipate <strong>chronological</strong> or <strong>non-chronological</strong> narratives.<br><br>
+								Incrementally <strong>reveal</strong> visual elements, selectively <strong>highlighting</strong> and <strong>annotating</strong> to direct attention.
+							</small>
+
+						<aside class="notes">
+							In this TVCG paper I make the case that timeline design tools should provide alternative representations of time and alternative time scales.
+							<br><br>
+							I should also emphasize that existing timeline tools also tend towards a chronological narrative: 
+							<br><br>
+							Either the whole timeline is shown as a static image, so readers are likely to begin at the start of the timeline, or events are revealed in chronological order, one event at a time as a series of slides.  
+							<br><br>
+							For some stories, a chronological introduction of events makes total sense, while for others it does not,
+							<br><br>
+							Like how in my story about the routines of creative people, I revealed and highlighted aspects of those timelines in an order that wasn't chronological starting at midnight. 
+							<br><br>
+							To achieve this expressive narrative design, you should make use of animation, highlighting, and annotation to incrementally reveal parts of a narrative (that may not be chronological), to allow the viewer to make new comparisons.
+						</aside>
+
+					</section>
+
+					<!-- TIMELINE STORYTELLER ================================================== -->
+
+					<section data-background="#EAEAEA">
+							
+						<h4>The Authoring Interface of Timeline Storyteller</h4>
+						<hr>
+
+						<small style="text-align: left">
+							<strong>Web</strong> version imports CSV, JSON, GSheet. <strong>Power BI</strong> version imports various data formats.<br>	
+							<strong>Web</strong> version exports PNG, SVG, GIF, JSON spec. <strong>Power BI</strong> version exports PBIX, iFrame.<br>
+						</small>	
+
+						<iframe width="640" height="480" src="https://msit.powerbi.com/view?r=eyJrIjoiYjczZDAyZjUtNWZmZS00NjM5LWIyNWYtZmYzZDEwZTczZDRlIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9" frameborder="0" allowFullScreen="true"></iframe>	
+						<br>
+
+						<aside class="notes">
+							Timeline Storyteller is the realization of the design space and the considerations for expressive storytelling that we put forward in our TVCG paper
+							<br><br>
+							I'll take a moment now to show you the authoring interface that allowed me to create what I showed you earlier. 
+							<br><br>
+							You can upload event data in a variety of formats.
+							<br><br>
+							And you can export content either as images, vector graphics, animated GIFs, or you can embed iframes of animated multi-scene stories.							
+						</aside>
+
+					</section>						
+
+					<!-- TIMELINE STORYTELLER EVALUATION ================================================== -->
+
+					<section>
+
+						<h4><span style="color:gold">Evaluating</span> Timeline Storyteller</h4>
+						<hr>				
+
+						<small style="text-align: left">
+							A controlled <strong>laboratory study</strong> to assess expressivity seemed to be <strong>inappropriate</strong>.<br><br>
+							How do people use it <strong>with their own data</strong>?<br><br>
+							How does the content they produce <strong>reflect</strong> our timeline <strong>design space</strong>? 
+						</small>	
+
+						<aside class="notes">
+							Since its release in mid 2017, I've been thinking about ways to evaluate Timeline Storyteller and to better understand how people are using it.   
+							<br><br>
+							For an expressive information design tool like Timeline Storyteller, a controlled user study in a lab measuring task completion time and error didn't seem appropriate. 
+							<br><br>
+							I was instead interested in finding out how people would express themselves with their own data and on their own time, 
+							<br><br>							
+							And to determine if my timeline design space and the ideas put forward in the prior TVCG paper would be reflected in what people make.
+						</aside>
+
+					</section>
+
+					<!-- TIMELINE STORYTELLER PROMOTION ================================================== -->
+
+					<section>
+
+						<h4><span style="color:gold">Promoting</span> Timeline Storyteller to Practitioners</h4>
+						<hr>			
+
+						<small style="text-align: left">
+							Demos / talks at the <strong><a style="color:skyblue;" href="http://tapestryconference.com/" target="_blank">Tapestry Conference</a></strong>, <strong><a style="color:skyblue;" href="https://youtu.be/gQKUl_1ryo4" target="_blank">OpenVisConf</a></strong>, and the <strong><a style="color:skyblue;" href="https://youtu.be/oaHjYXnxRJs" target="_blank">Dublin Data Summit</a></strong> in 2017.<br><br>
+							Demo by Microsoft's <strong><a style="color:skyblue" href="https://powerbi.microsoft.com/en-us/datajournalism/">Data Journalism Team</a></strong> at the 2017 <strong><a style="color:skyblue;" href="https://futureofstorytelling.org/summit" target="_blank">Future of Storytelling Summit</a></strong>. <br><br>						
+							Posts on the official <strong><a style="color:skyblue;" href="https://aka.ms/timelinestoryteller-blog" target="_blank">Power BI Blog</a></strong>, tutorial + interview for the <strong><a style="color:skyblue;" href="https://youtu.be/bwiMfwBVsSQ" target="_blank">Power BI YouTube channel</a></strong>.<br><br> 
+							Demo by a customer during the opening keynote of the 2017 <strong><a style="color:skyblue;" href="https://www.microsoft.com/en-us/datainsightssummit/sessions?date=june13" target="_blank">Data Insights Summit</a></strong>:
+						</small>
+						<a href="https://www.youtube.com/embed/zaVGt-IbuhU?rel=0&amp;showinfo=0&amp;start=1689" target="_blank"><img height="350px" data-src="assets/nationaltrust.png"></a>					
+						
+						<aside class="notes">
+							Now in order to study how people use a deployed tool, you need to promote it to practitioners, 
+							<br><br>
+							So I demonstrated Timeline Storyteller at visualization practitioner conferences like Tapestry and OpenVisConf.
+							<br><br>
+							My colleagues also contributed to this effort to attract users with their own demonstrations and presentations, including demos by Microsoft's Data Journalism Team at the Future of Storytelling Summit in 2017.
+							<br><br>
+							I blogged about it on the official Power BI blog,
+							<br><br>
+							And along with the Microsoft Data Journalism team, I co-produced an interview and tutorial video for the Power BI YouTube channel.
+							<br><br>
+							And finally Power BI featured a demo of Timeline Storyteller in the opening keynote of the 2017 Data Insights Summit, a major Microsoft customer conference. 
+							<br><br>
+							This was in front of about three thousand people and recorded online, and for this demo, Power BI asked a customer to demo it using data from his organization,
+							<br><br>
+							Which in this case was the UK National Trust, a heritage foundation that maintains historic landmarks
+							<br><br>
+							And they had an interesting dataset about the chronology of several of these landmarks. 
+						</aside>
+
+					</section>
+
+
+					<!-- TIMELINE STORYTELLER USAGE ================================================== -->
+
+					<section>
+
+						<h4>Timeline Storyteller: <span style="color:gold">Collecting Usage Data</span></h4>
+						<hr>				
+
+						<small style="text-align: left">
+							<strong>Exported content</strong> from the web version in mid 2017.<br><br>
+							Entries from a <strong><a style="color:skyblue;" href="https://aka.ms/timelinestoryteller-contest" target="_blank">Storytelling Contest</a></strong> with the Power BI user community in late 2017, <br>
+							coordinated by the <strong><a style="color:skyblue" href="https://powerbi.microsoft.com/en-us/datajournalism/">Microsoft Data Journalism Team</a></strong>.<br><br>
+							<strong>Download metrics</strong> of the Power BI desktop version:
+							<br>
+							Over <strong>36,000 downloads</strong> of the Power BI version as of January 2019.
+						</small>	
+
+						<aside class="notes">
+							Following the promotional effort, I set about collecting data on how people were using Timeline Storyteller. 
+							<br><br>
+							Which included collecting the content that people exported from the tool, as well as collecting entries from a storytelling contest within the Power BI community coordinated by Microsoft's Data Journalism Team,							
+							<br><br>
+							And finally we collected usage statistics from the Power BI version.
+							<br><br>
+							Since Power BI is a desktop product and has different protocols for data collection and retention than Microsoft Research, 
+							<br><br>
+							I don't know as much about how people use it unless they contact us directly or post content publicly online.
+							<br><br>
+							However, I do know that by the end of 2018, the Timeline Storyteller component for Power BI had been downloaded over 36,000 times. 
+						</aside>
+
+					</section>
+
+					<!-- TIMELINE STORYTELLER CONTENT ================================================== -->
+
+					<section>
+
+						<h4>Timeline Storyteller: <span style="color:gold">Content Analysis</span></h4>
+						<hr>				
+
+						<small style="text-align: left">
+							<strong>223 unique items</strong> of exported content from the web version (subject to author consent).<br><br>
+							The corpus spanned the timeline design space - with a couple of exceptions. <br><br>
+							The <strong>Linear</strong> representation and <strong>Chronological</strong> time scale were most common.
+						</small>
+
+						<br><br>
+						<img class="white_img" width="80" height="80" data-src="assets/r-lin.png" alt="Linear" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/r-rad.png" alt="Radial" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/r-spi.png" alt="Spiral" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/r-cal.png" alt="Calendar" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/r-arb.png" alt="Curve" style="margin:0px; background: none; border: none; box-shadow:none">
+						<br>
+						<img class="white_img" width="80" height="80" data-src="assets/s-chron.png" alt="Chronological" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/s-rel.png" alt="Relative" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/s-log.png" alt="Logarithmic" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/s-seq.png" alt="Sequential" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/s-intdur.png" alt="Collapsed" style="margin:0px; background: none; border: none; box-shadow:none">
+						<br>
+						<img class="white_img" width="80" height="80" data-src="assets/l-uni.png" alt="Unified" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/l-fac.png" alt="Faceted" style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="assets/l-seg.png" alt="Segmented" style="margin:0px; background: none; border: none; box-shadow:none">
+
+						<aside class="notes">
+							I saved copies of content exported from the web version of Timeline Storyteller over the course of about 9 months, subject to the approval of content authors.
+							<br><br>
+							After reviewing all of this content and discarding duplicate versions of content, I identified 223 unique artefacts generated with Timeline Storyteller, which included static images, animated GIFs, and multi-scene stories. 
+							<br><br>
+							And by qualitatively analyzing this content, I found was that nearly every timeline design choice was represented in this corpus, though most of this corpus made use of the familiar linear representation and chronological time scale.
+							<br><br>
+							I didn't see any use of the calendar grid or the logarithmic time scale.
+							<br><br>
+							And if you do a Google image search for Timeline Storyteller and look at the content produced by people other than myself,
+							<br><br>
+							You'll see the prevalence of these design choices reflected there.   
+						</aside>
+
+					</section>
+
+					<!-- TIMELINE STORYTELLER CONTEST ================================================== -->
+
+					<section>
+
+						<h4>Timeline Storyteller: <span style="color:gold">Content Analysis</span> (cont.)</h4>
+						<hr>		  
+
+						<small style="text-align: left">
+							 Example entries from the Power BI user community <strong><a style="color:skyblue;" href="https://aka.ms/timelinestoryteller-contest" target="_blank">data storytelling contest</a></strong>:
+						</small>
+
+						<img data-src="assets/cyclones.png" width="45%">
+
+						<img data-src="assets/tvratings.png" width="45%">
+
+						<small>
+							<em><a style="color:skyblue;" href="https://community.powerbi.com/t5/Data-Stories-Gallery/Tropical-Cyclones-Timeline-Storyteller/m-p/252648" target="_blank" style="color:gold;">Tropical Cyclones</a></em> by Manga Solutions.
+						 | <em><a style="color:skyblue;" href="https://community.powerbi.com/t5/Data-Stories-Gallery/TV-Network-Ratings/m-p/253388" target="_blank" style="color:gold;">TV Network Ratings</a></em> by Pragmatic Works.
+						</small>
+
+						<aside class="notes">
+							With regards to the storytelling contest,
+							<br><br>
+							Where participants would post a timeline story created with Timeline Storyteller to the Power BI community forum.
+							<br><br>
+							Here are a couple of screenshots form contest entries,  
+							<br><br>
+							The one on the left told a story about tropical cyclones, incorporating faceted spiral timelines and a custom color palette mapped to cyclone severity, 
+							<br><br>
+							While the one on the right incrementally revealed the history of the highest rated television shows over the course of past few decades, 
+							<br><br>
+							And this story was richly annotated and hit several points in our design space.
+						</aside>
+
+					</section>				
+
+					<!-- TIMELINE STORYTELLER CONCLUSIONS ================================================== -->
+
+					<section>
+
+						<h4>Timeline Storyteller: <span style="color:gold">Conclusions</span> & <span style="color:gold">Opportunities</span></h4>
+						<hr>		
+
+						<small style="text-align: left">
+							<strong>No prior interactive tools</strong> for presenting <strong>expressive timeline narratives</strong>.
+							<br><br>
+							The <strong></strong>first</strong> to incorporate multi-scene stories with <strong>multiple visual representation choices</strong>.
+							<br><br>
+							Incrementally <strong>reveal</strong> + <strong>transform</strong>; selectively <strong>highlight</strong> + <strong>annotate</strong>; applicable to other data types</strong>.
+							<br><br><br><br>
+							<strong>Recommend design choices</strong> and <strong>annotations</strong> based on properties of the dataset.
+						</small>							
+
+						<aside class="notes">
+							In summary, Timeline Storyteller fills a gap in that no existing tool allows a non-programmer to present a visually expressive timeline narrative.
+							<br><br>
+							It's really the first to incorporate this animated multi-scene PowerPoint-like story format along with multiple visual representation choices;
+							<br><br>
+							And I believe that many aspects of its design can be applied to other forms of data, such as its ability to incrementally reveal and selectively highlight content.
+							<br><br>
+							We're still learning about how it's being used in the wild, 
+							<br><br>
+							As our limited evaluation of content analysis and usage only revealed so much.
+							<br><br>
+							And while the content produced does reflect our timeline design space to an extent,
+							<br><br>   
+							Seeing this content made me realize the opportunity for providing overt recommendations of design choices, captions, and annotations more overtly within the application based on properties of the dataset, such as the temporal extent and distribution of the events.
+						</aside>
+
+					</section>
+
+					<!-- ================================================== -->
+
+				</section>			
+
+				<!-- FOCUS SECTION 2A: OTHER TOOLS ================================================== -->
+
+				<section>							
+
+					<!-- OUTLINE ================================================== -->
+
+					<section>
+
+						<h3><span style="color:gold">Outline</span></h3>
+						<hr>
+						<small style="text-align:left">
+							<span style="color:#666">&middot; Considerations for expressive information design<br><br>
+							&middot; <em>Timeline Storyteller</em><br><br></span>
+							&middot; Other recent tools: <em>ChartAccent, Charticulator, & DataToon</em><br><br>
+							&middot; Opportunities for future research<br><br>
+						</small>
+
+						<aside class="notes">
+							Now I'll step back to mention that Timeline Storyteller is just one of the expressive information design tool research projects that I've contributed to over the past couple of years, with PhD interns leading their development. 
+						</aside>
+
+					</section>		
+
+					<!-- CHARTACCENT ================================================== -->
+					
+					<section data-background="#fff">
+
+						<h4>Other <span style="color:cornflowerblue">Expressive Information Design</span> Tools (1 of 3)</h4>
+						<hr>				
+						
+						<small style="text-align: left">
+							<i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>ChartAccent: Annotation for Data-Driven Storytelling</em></span></strong>. <br>Ren, <span style="font-weight: 700">Brehmer</span>, Lee, Höllerer, and Choe. In Proc. 2017 <em>IEEE PacificVis</em> Symp. 
+						</small>		
+					
+						<img width="400px" data-src="assets/chartaccent1.gif"></img>
+
+						<img width="400px" data-src="assets/chartaccent2.gif"></img>
+
+						<img width="400px" data-src="assets/chartaccent3.gif"></img>
+
+						<img width="400px" data-src="assets/chartaccent4.gif"></img>			
+
+						<small style="text-align: left">							
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue;" href="https://chartaccent.github.io/" target="_blank">chartaccent.github.io</a></strong> | <i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue;" href="https://github.com/chartaccent" target="_blank">github.com/chartaccent</a></strong>
+						</small>
+
+						<aside class="notes">
+							One of these is ChartAccent, a project led by Donghao Ren from UCSB, which is an open-source interactive tool for annotating charts via direct manipulation, 
+							<br><br>
+							This project was also motivated by a desire to bridge research and practice,
+							<br><br>
+							As its design choices were motivated by the chart annotation practices of major news rooms like the Economist or the New York Times,
+							<br><br>
+							And we learned about these practices by collecting and categorizing over a hundred examples. 
+						</aside>
+
+					</section>					
+
+					<!-- CHARTICULATOR  ================================================== -->
+
+					<section data-background="#fff">
+
+						<h4>Other <span style="color:cornflowerblue">Expressive Information Design</span> Tools (2 of 3)</h4>
+						<hr>				
+						
+						<small style="text-align: left">
+							</span><i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>Charticulator: Interactive Construction of Bespoke Chart Layouts</em></span></strong>. 
+							<br>Ren, Lee, and <span style="font-weight: 700">Brehmer</span>. In <em>IEEE TVCG</em> (InfoVis 2018).
+						</small>		
+
+						<img width="100%" data-src="assets/charticulator.png"></img>
+
+						<small style="text-align: left">
+							<i class="fas fa-trophy"></i> <strong>Honorable Mention for Best Paper</strong> at IEEE InfoVis 2018.<br><br>
+							<i class="fas fa-award"></i> <strong>Shortlisted</strong> for the 2018 Kantar <strong><a style="color:cornflowerblue" href="https://www.informationisbeautifulawards.com/showcase/3334-charticulator-interactive-construction-of-bespoke-chart-layouts" target="_blank">Information is Beautiful Awards</a></strong>.<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://charticulator.com/" target="_blank">charticulator.com</a></strong> | <i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://github.com/microsoft/charticulator" target="_blank">github.com/Microsoft/Charticulator</a></strong>
+						</small>		
+						
+						<aside class="notes">						
+							Donghao continued to work with us and he created another tool called Charticulator, a highly expressive interactive tool for designing bespoke charts and exportable chart templates,
+							<br><br>
+							Which received an honorable mention at last year's InfoVis conference,
+							<br><br>
+							And it was shortlisted for the Kantar Information is Beautiful Awards last year, 
+							<br><br>
+							Which is a bit like the academy awards of information visualization. 			
+						</aside>
+
+					</section>
+
+					<!-- DATATOON ================================================== -->
+
+					<section data-background="#fff">
+
+						<h4>Other <span style="color:cornflowerblue">Expressive Information Design</span> Tools (3 of 3)</h4>
+						<hr>				
+						
+						<small style="text-align: left">
+							</span><i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>DataToon: Drawing Dynamic Network Comics With Pen + Touch Interaction</em></span></strong>. 
+							<br>Kim, Henry Riche, Bach, Xu, <span style="font-weight: 700">Brehmer</span>, Hinckley, Pahud, Xia, McGuffin, and Pfister. In Proc. <em>CHI</em> 2019.
+						</small>		
+
+						<img width="100%" data-src="assets/datatoon.png" style="box-shadow: none"></img>						
+
+						<small style="text-align: left">							
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://aka.ms/DataToon" target="_blank">aka.ms/DataToon</a></strong>
+						</small>	
+
+						<aside class="notes">						
+							Finally there's DataToon, which will appear at CHI this year, which is a Pen + Touch tool for drawing comics about dynamic network data.
+							<br><br>
+							This one was led by Nam Wook Kim at Harvard.
+							<br><br>
+							Where you can drop network data into a canvas, get recommendations for panels, position panels with touch, and annotate and style nodes and edges with the pen.	
+							<br><br>
+							And I should mention that limiting the interaction to pen and touch was a fun and challenging constraint. 				
+						</aside>
+
+					</section>	
+
+					<!-- BELIV PAPER ================================================== -->
+
+					<section data-background="#fff">
+
+						<h4>Evaluating <span style="color:cornflowerblue">Expressive Information Design Tools</span></h4>
+						<hr>		
+
+						<small style="text-align: left">
+							</span><i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>Reflecting on the Evaluation of Visualization Authoring Systems</em></span></strong>. 
+							<br>Ren, Lee, <span style="font-weight: 700">Brehmer</span>, and Henry Riche. <br>In Proc. <em>BELIV 2018 (Evaluation and Beyond - Methodological Approaches for Visualization)</em>.
+						</small>			
+
+						<img width="100%" data-src="assets/designtools.png" style="box-shadow: none">
+
+						<small style="text-align: left">	
+							Lessons from evaluating tools: <strong>Timeline Storyteller</strong>, <strong>ChartAccent</strong>, & <strong>Charticulator</strong>.
+							<br><br>	
+							Emphasis on <strong>post-deployment content analysis</strong> and <strong>chart reproduction studies</strong>.
+							<br><br>						
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://aka.ms/renbeliv18" target="_blank">aka.ms/renbeliv18</a></strong>
+						</small>	
+										
+						<aside class="notes">
+							The evaluation of Timeline Storyteller and these other expressive information design tools has also allowed me to reflect on the methods for evaluating them.
+							<br><br>
+							And so I recently contributed to this BELIV paper, where BELIV is a VIS workshop dedicated to evaluation methods for visualization.
+							<br><br>
+							And in it I commented on the process of analyzing content produced once a tool is deployed, which was the case with Timeline Storyteller,
+							<br><br>
+							As well as on the chart reproduction studies that we performed for ChartAccent and Charticulator, in which we asked study participants to reproduce a completed chart using the tool. 
+					</section>
+
+					<!-- DDS CHAPTER ================================================== -->
+
+					<section data-background="#fff">
+
+						<h4>Beyond Tools: Evaluating <span style="color:cornflowerblue">Data-Driven Stories</span></h4>
+						<hr>		
+
+						<small style="text-align: left">
+							</span><i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>Evaluating Data-Driven Stories & Storytelling Tools</em></span></strong>. 
+							<br>Amini*, <span style="font-weight: 700">Brehmer</span>* (equal contribution), Bolduan, Elmer, and Wiederkehr. <br>In <em>Data-Driven Storytelling</em> (CRC Press 2018).
+						</small>			
+
+						<img width="100%" data-src="assets/evaluation.png" style="box-shadow: none">
+
+						<small>
+							A summary of <strong>perspectives</strong>, <strong>criteria</strong>, <strong>methods</strong>, <strong>metrics</strong>, and <strong>constraints</strong> w.r.t. <strong>evaluation</strong>.  
+						</small>		
+										
+						<aside class="notes">							
+							The process of looking at the content produced with Timeline Storyteller and other tools also makes me wonder about
+							<br><br>
+							How the visualization community should evaluate data-driven stories more generally.
+							<br><br>
+							Consider a story that makes use of visualization, annotation, text, and potentially interaction. 
+							<br><br>
+							It might incorporate many design choices, in that the author was highly expressive; but was it any good?
+							<br><br>
+							So in book chapter that I wrote for last year's Data-Driven Storytelling book,
+							<br><br>
+							My co-authors and I attempted to catalog all the ways you might evaluate this form of content.
+							<br><br>
+							And we also did our best to consider different perspectives and constraints from both research and practice,
+							<br><br>
+							Which was possible as one of our co-authors was Christina Elmer, a data journalist from Der Spiegl in Germany, 
+							<br><br>
+							And another was Benjamin Wiederkehr, who leads the Interactive Things information design firm in Switzerland.
+					</section>				
+
+				</section>				
+
+				<!-- FUTURE WORK ================================================== -->	
+
+				<section>	
+					
+					<!-- OUTLINE ================================================== -->
+
+					<section>
+
+						<h3><span style="color:gold">Outline</span></h3>
+						<hr>
+						<small style="text-align:left">
+							<span style="color:#666">&middot; Considerations for expressive information design<br><br>
+							&middot; <em>Timeline Storyteller</em><br><br>
+							&middot; Other recent tools: <em>ChartAccent, Charticulator, & DataToon</em><br><br></span>
+							&middot; Opportunities for future research<br><br>
+						</small>
+	
+						<aside class="notes">
+							At this point I'd like to speak about some opportunities that I'd like to pursue in future research.   
+						</aside>
+	
+					</section>
+
+					<!-- DRAWING TIME ================================================== -->
+
+					<section data-background="#3f3f3f">
+						
+						<h4>Expressive Information Design with <span style="color:gold">Pen + Touch Input</span></h4>
+						<hr>
+
+						<img width="90%" data-src="assets/drawingtime.png" style="box-shadow: none"></img>
+						
+						<span class="attribution"><span style="color:gold">Images L to R</span>: narrative diagram by Kurt Vonnegut, "board game"-like timeline by Matthew Lee, timeline by Mark Twain, Vonnegut drawing a narrative, a curve timeline in Timeline Storyteller.</span>			
+
+						<aside class="notes">			
+						I'm also continuing to do research about expressive information design tools.
+						<br><br>				
+						My colleagues in the EPIC group at Microsoft are some of the leaders when it comes to natural user interaction and  pen and touch interaction design, and I've collaborated with them already on two projects that unite pen + touch interaction with visualization.
+						<br><br>
+						Going forward I want to continue to investigate the potential of pen and touch interaction for drawing and annotating time-oriented data, particularly in the context of live presentations and in application domains such as education, drawing inspiration from diverse places like the lectures of author Kurt Vonnegut, who would draw storylines as he spoke .  
+    				</aside>
+	
+					</section>
+					
+					<!-- MOBILE VIS ================================================== -->
+
+					<section data-background="#fff">
+						
+						<h4><span style="color:cornflowerblue">Mobile</span>, <span style="color:cornflowerblue">Responsive</span>, & Expressive Information Design</h4>
+						<hr>						
+
+						<img width="90%" data-src="assets/mobilevis.png" style="box-shadow: none"></img>	
+
+						<small style="text-align:left">
+							<i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>Data Visualization on Mobile Devices</em></span></strong>. <strong>CHI 2018</strong> Workshop organized by: <br>Lee, <span style="font-weight: 700">Brehmer</span>, Choe, Isenberg, Langer, and Dachselt.
+							<br><br>
+							<i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>Visualizing Ranges over Time on Mobile Phones</em></span></strong>. 
+							<br><span style="font-weight: 700">Brehmer</span>, Lee, Isenberg, and Choe. In <em>IEEE TVCG</em> (InfoVis 2018).
+							<br><br>
+							<i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>A Comparative Evaluation of Animation and Small Multiples<br>For Trend Visualization on Mobile Phones</em></span></strong>. 
+							<br><span style="font-weight: 700">Brehmer</span>, Lee, Isenberg, and Choe. Working paper (Feb. 2019).
+						</small><br>
+
+						<aside class="notes">			
+							My other current area of research is visualization design for mobile devices. 
+							<br><br>
+							Much of my recent research has been experimentally comparing visualization design choices.
+							<br><br>
+							But a natural next step here is to consider interactive authoring tools that allow authors to design and test their data stories on different devices. 
+    				</aside>
+	
+					</section>
+
+					<!-- ================================================== -->	
+
+					<section class="center">
+						<h4>Opportunities for Expressive Information Design</h4>
+						<hr>
+						<h4><span style="color:gold">Future Research Directions</span></h4>
+	
+						<aside class="notes">							
+						What I've spoken about today can be situated within a longer-term research agenda in expressive information design.
+    				</aside>
+	
+					</section>							
+
+					<!-- ================================================== -->
+
+					<section>
+						<h4><span style="color:gold">Opportunities</span> for Expressive Information Design (1/2)</h4>
+						<hr>
+						<small style="text-align:left">
+							Designing and evaluating <strong>inviting</strong> and <strong>memorable</strong> techniques for <strong>presenting information</strong>. 
+							<br><br>
+							Widening the scope of data types: e.g., <strong>spatiotemporal</strong> data, <strong>dynamic networks</strong>.
+							<br><br>
+							<strong>Collecting</strong> and <strong>assessing</strong> design choices from the <strong>research</strong> and <strong>practice</strong> communities.
+						</small>	
+	
+						<aside class="notes">							
+							I intend to continue my design and evaluation of inviting and memorable tools and techniques for presenting information,
+							<br><br>
+							And this may involve replicating what I did with the timeline project for other forms of data,
+							<br><br>
+							Such as spatiotemporal data or networks that change over time,
+							<br><br>
+							This will involve collecting and categorizing examples from both research and practice, 
+							<br><br>
+							Identifying design patterns and design spaces, 
+							<br><br>
+							As well as comparatively assessing them, 
+							<br><br>
+							In both quantitative experimental studies and by qualitatively examining their usage in the wild.   
+    				</aside>
+	
+					</section>		
+
+					<!-- ================================================== -->					
+
+					<section>
+						<h4><span style="color:gold">Opportunities</span> for Expressive Information Design (2/2)</h4>
+						<hr>
+
+						<small style="text-align:left">							
+							Measuring audience <strong>graphicacy</strong>* (visual / data / statistical literacy) and identifying ways to <strong>boost</strong> it. 
+							<br><br>
+							Information design for an audience with a <strong>limited attention span</strong>.
+							<br><br>
+							<strong>Mobile-first</strong> and <strong>mobile-only</strong> information design (and addressing the <strong>scarcity of research</strong>).
+						</small>
+
+						<span class="attribution">* <em><a style="color:skyblue" href="http://www.thefunctionalart.com/2017/10/uncertainty-graphicacy-and-power-of.html" target="_blank">Uncertainty, graphicacy, and the power of statistics</a></em>. <br>Alberto Cairo (Oct 18, 2017), <a style="color:skyblue" href="http://www.thefunctionalart.com" target="_blank">thefunctionalart.com</a> <i class="fas fa-external-link-alt" aria-hidden="true"></i>. </span>
+	
+						<aside class="notes">							
+							Another opportunity for future research pertains to studying audience constraints,
+							<br><br>
+							Such as their limited "graphicacy", and by this I mean a combination of data, visual, and statistical literacy. 
+							<br><br>
+							I want to identify how to measure this construct as well as how to improve it.
+							<br><br>
+							There's also the constraint of the audience's limited attention span and the challenge of designing information that both attracts this attention and yet does not mislead or misinform.
+							<br><br>
+							Finally there's the constraint imposed by small displays, which motivates me to identify where the limitations are for visual representation and interaction design choices.
+							<br><br>
+							There's not a lot of prior research from the visualization community when it comes to mobile devices, and I hope to rectify this. 
+    				</aside>
+	
+					</section>						
+
+				</section>
+
+				<!-- CONCLUSION ================================================== -->
+				
+				<section>
+
+					<!-- TITLE SLIDE ================================================== -->
+
+					<section class="center">
+						<h3>Considerations for Interactive & Expressive Information Design Tools</h3>	
+						<hr>	
+						
+						<small>
+							<a href="http://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> &middot; EPIC Research Group, Microsoft Research &middot; <a href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a><br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://mattbrehmer.github.io#talks" target="_blank">mattbrehmer.github.io#talks</a></strong> | slides</small>
+
+						</small>
+
+						<br>
+
+						<span class="affiliation"><img data-src="assets/authors/affiliations.png" height="100" style="box-shadow: none"/></span>
+		
+						<span class="attribution">Presentation at UOIT 2019-02-27 </span>
+
+						<aside class="notes">
+						With that I'd like to thank you for your attention, though before I take questions,     
+						</aside>
+
+					</section>							
+
+					<!-- ACKS ================================================== -->
+
+					<section data-background="assets/collabs.png">
+
+						<aside class="notes">							
+						I'd like to take a moment to acknowledge my current and recent collaborators spanning a number of institutions and countries, 
+						<br><br>
+						Which includes visiting faculty researchers and PhD interns.     
+						</aside>
+
+					</section>		
+
+				</section>
+
+				<section>
+
+					<section class="center">
+					<h3>Supplemental</h3>
+
+					</section>
+					
+					<!-- RANGES STUDY INTRO ================================================== -->				
+
+					<section>
+
+						<h4>Information <span style="color:gold">Design Choices</span> on Mobile Phones</h4>
+						<hr>
+
+						<small style="text-align: left">
+							</span><i class="far fa-file"></i> <strong><span style="color:gold"><em>Visualizing Ranges over Time on Mobile Phones: A Task-Based Crowdsourced Evaluation</em></span></strong>. 
+							<br><span style="font-weight: 700">Brehmer</span>, Lee, Isenberg, and Choe. In <em>IEEE TVCG</em> (InfoVis 2018).
+						</small>
+
+						<br><img data-src="assets/teaser.png" style="box-shadow: none" width="62.5%"/><br>
+
+						<small style="text-align: left">							
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://aka.ms/ranges-tvcg" target="_blank">aka.ms/ranges-tvcg</a></strong>
+						</small>	
+
+						<aside class="notes">
+						The specific project that I'll focus on now is one that I presented a few months ago at VIS,
+						<br><br>
+						And its origins came during demonstrations of Timeline Storyteller to a group at Microsoft designing personal health apps. 
+						<br><br>
+						They asked me "will this work on mobile?", since they were designing mobile apps involving time-oriented personal activity data, namely sleep data. 
+						<br><br>
+						Like with the timeline project, I started this one by looking to current practice and how designers currently visualize data on mobile phones. 
+						</aside>
+
+					</section>	
+
+					<!-- ANIMATION VS SMALL MULTIPLES ================================================== -->
+
+					<section>
+						<h4>Information <span style="color:gold">Design Choices</span> on Mobile Phones (Cont.)</h4>
+						<hr>
+						<small style="text-align:left">
+							<i class="far fa-file"></i> <strong><span style="color:gold"><em>A Comparative Evaluation of Animation and Small Multiples<br>For Trend Visualization on Mobile Phones</em></span></strong>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Isenberg, and Choe. Working paper, Feb. 2019.
+						</small><br>
+
+						<img height="350px" data-src="assets/toosmallformultiples.gif"></img>
+						<img height="350px" data-src="assets/toosmallformultiples-crop.png"></img>
+
+						<small style="text-align:left">							
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="http://aka.ms/multiples" target="_blank">aka.ms/multiples</a></strong> | (mobile only) experimental app.
+						</small>								
+
+						<aside class="notes">							
+							First, I've continued my crowdsourced experimental research and made use of the same experimental application framework and protocol from the ranges work, 
+							<br><br>
+							For another experiment that compared two design alternatives for trend visualization on mobile phones, 
+							<br><br>
+							Which was inspired by the rise of looped animated news graphics that you might encounter on social media, 
+							<br><br>
+							If you're interested in the results of this study, 
+							<br><br>
+							I have a working paper that I'll be submitting to VIS this year which I can send you. 			
+						</aside>
+
+					</section>							
+
+					<!-- MOBUBBLE ================================================== -->
+
+					<section data-background="#ffffff">
+						<h4>Expressive Info. Design for Mobile Devices: <span style="color:cornflowerblue">Ongoing</span></h4>
+						<hr>					
+
+						<small style="text-align:left">
+							<strong><span style="color:cornflowerblue"><em>Discoverable Interactions for Navigating & Selecting Time-Varying Data on Mobile Phones</em></span></strong>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Collins, and Hinckley. 
+							<br><br><br><br>
+							<!-- <img width="90%" data-src="assets/tilt.png" style="border: none; box-shadow: none"></img> -->
+							<strong>Motivation</strong>: few people interact with interactive news graphics beyond scrolling.
+							<br><br>
+							Many interactions anticipate a desktop context, but most of the audience is <strong>using a mobile device</strong>. 
+							<br><br>
+							UI elements for navigating multidimensional time-varying data occupy <strong>too much screen real estate</strong>.							
+							<br><br>
+
+						</small>
+	
+						<aside class="notes">							
+						Meanwhile, I've also been developing novel techniques for interacting with representations of time-varying data on mobile phones.
+						<br><br>
+						Which is motivated by statements from news organizations that few people interact with their news graphics aside from scrolling, 
+						<br><br>
+						Despite the presence of additional interactivity.
+						<br><br>
+						So in this project I've been assessing alternative interaction techniques that aim to be discoverable while conserving precious screen real estate.
+    				</aside>
+	
+					</section>
+
+					<!-- RANGES SLIDES ================================================== -->
+
+					<section class="center">
+						<h3>Ranges Over Time on Mobile Phones</h3>
+						<hr>
+						<small><strong><a style="color:skyblue" href="http://mattbrehmer.github.io/talks/ranges" target="_small">Detailed Experimental Design and Results Slides</a></strong> <i class="fas fa-external-link-alt" aria-hidden="true"></i></small></section>
+	
+					</section>
+
+				</section>
+	
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				progress: false,
+				slideNumber: false,
+				showNotes: false,
+				mouseWheel: false,
+				history: true,
+				center: false,
+				overview: true,
+				touch: true,
+				hideAddressBar: true,
+				controlsLayout: 'bottom-right',
+				viewDistance: 5,
+				transition: 'fade',
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+		<script type="text/javascript" src="preloader.js" charset="UTF-8"></script>     
+    <script>
+
+      imagesArray = [
+				"assets/authors/affiliations.png",
+				"assets/chartaccent1.gif",
+				"assets/chartaccent2.gif",
+				"assets/chartaccent3.gif",
+				"assets/chartaccent4.gif",
+				"assets/charticulator.png",
+				"assets/collabs.png",
+				"assets/cyclones.png",
+				"assets/datatoon.png",
+				"assets/dds.jpg",
+				"assets/drawingtime.png",
+				"assets/gallery.png",
+				"assets/gallery-zoom.png",
+				"assets/l-fac.png",
+				"assets/l-seg.png",
+				"assets/l-uni.png",
+				"assets/mobilevis.png",
+				"assets/nationaltrust.png",
+				"assets/r-arb.png",
+				"assets/r-cal.png",
+				"assets/r-grid.png",
+				"assets/r-lin.png",
+				"assets/r-rad.png",
+				"assets/r-spi.png",
+				"assets/rosling.png",
+				"assets/s-chron.png",
+				"assets/s-intdur.png",
+				"assets/s-log.png",
+				"assets/s-rel.png",
+				"assets/s-seq.png",
+				"assets/smartphone.png",
+				"assets/tasks.png",
+				"assets/task-sequence.png",
+				"assets/teaser.png",
+				"assets/timelinestoryteller.png",
+				"assets/toosmallformultiples.gif",
+				"assets/toosmallformultiples-crop.png",
+				"assets/tvratings.png"
+      ];
+
+      new preLoader(imagesArray, {
+        onProgress: function(img, imageEl, index){
+            // fires every time an image is done or errors.
+            // imageEl will be falsy if error
+            // console.log('just ' +  (!imageEl ? 'failed: ' : 'loaded: ') + img);
+            // imageContainer.appendChild(imageEl);
+            // can access any propery of this
+            // console.log(this.completed.length + this.errors.length + ' / ' + this.queue.length + ' done');
+        },
+        onComplete: function(loaded, errors){
+            // fires when whole list is done. cache is primed.
+            console.log('assets loaded:', loaded);
+            // imageContainer.style.display = 'block';
+            if (errors){
+                console.log('the following failed', errors);
+            }
+        }
+      });
+    </script>
+	</body>
+</html>
