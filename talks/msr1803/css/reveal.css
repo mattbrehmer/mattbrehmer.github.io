@@ -1629,6 +1629,10 @@ html .white_img {
 .reveal small sup {
   vertical-align: super;
   font-size: 0.5em;
-  color: #999;
+  color: skyblue;
   font-weight: 700;
+}
+
+.reveal .supdim {
+  color: #777;
 }
