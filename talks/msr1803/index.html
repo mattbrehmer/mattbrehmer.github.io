@@ -48,7 +48,15 @@
 					<span class="attribution">Presentation at Microsoft Research 2019-03-13</span>
 
 					<aside class="notes">
-						Good morning. Thank you for the introduction and for the invitation to visit. 
+						Good morning. 
+						<br><br>
+						Thank you for the introduction. 
+						<br><br>
+						Many of you know me and may have seen some of my work while I've been here,
+						<br><br>
+						But you likely haven't seen much of what I'll present today, 
+						<br><br>
+						which focuses on visualizing information on mobile devices
 					</aside>
 
 				</section>
@@ -128,7 +136,7 @@
 						<aside class="notes">
 							The scope of my visualization research dating back to the start of my PhD spans several cross-cutting themes, 
 							<br><br>
-							And here I've sorted my projects in a way that best matches the topics that I'll speak about today.  
+							And here I've sorted my projects in a way where the two more recent themes are at the top.  
 						</aside>
 
 					</section>					
@@ -187,7 +195,7 @@
 							<br><br>
 							I'm going to focus today on what I've been working on here at MSR. 
 							<br><br>
-							Though I will make some nods to task analysis and resource consumption at points in this talk.
+							Though I will make some nods to task analysis and to resource consumption at various points in this talk.
 						</aside>
 
 					</section>
@@ -237,7 +245,7 @@
 						</small>
 
 						<aside class="notes">
-							I'll also be focusing on work that I led,  
+							I'll also be focusing on projects that I led,  
 							<br><br>
 							And because my current research spans two themes,  
 							<br><br>
@@ -258,7 +266,7 @@
 						<hr>						
 
 						<aside class="notes">
-							
+							So why this theme? Why is it important?
 						</aside>
 
 					</section>
@@ -288,7 +296,15 @@
 						</small>
 
 						<aside class="notes">			
-							
+							Well as many of you know, visualization is increasingly prevalent in mobile apps,
+							<br><br>
+							These websites by Ros and Sadowski are good indicators of the breadth of visualization design choices being used on mobile phones
+							<br><br>
+							Visualization is also increasingly prevalent in online news, which is often consumed from a mobile device,
+							<br><br>
+							As of a couple years ago, there was evidence to suggest that half of the country regularly consumes their news from a mobile device,
+							<br><br>
+							And I learned from a news graphics designer at the Seattle Times that over half of the visitors to their site came from a non-desktop device. 
     				</aside>
 	
 					</section>
@@ -309,9 +325,36 @@
 						</small>
 
 						<aside class="notes">			
-							
+							Many visualization practitioners look to what industry leaders like the New York Times do,
+							<br><br>
+							And as a result many are rethinking some of the familiar design patterns for visualizing and interacting with data,
+							<br><br>
+							This is a slide from a particularly influential Information+ keynote talk by the Gregor Aisch in 2016 while he was working at the Times, 
+							<br><br>
+							One that contributed to a shift in how visualization designers and developers work.
     				</aside>
 	
+					</section>
+
+					<!-- MOBILE BI ================================================== -->
+				
+					<section data-background="#fff">
+						<h4>Mobile Business Intelligence</h4>
+						<hr>
+
+						<br><img data-src="assets/powerbi-mobile.png" style="box-shadow: none" width="47.5%"/>
+						<img data-src="assets/tableau-mobile.png" style="box-shadow: none" width="47.5%"/><br>
+
+						<small style="text-align:left">								
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://powerbi.microsoft.com/mobile" target="_blank">powerbi.microsoft.com/mobile</a></strong>	|
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://www.tableau.com/products/mobile" target="_blank">tableau.com/products/mobile</a></strong><br><br>
+						</small>
+						
+						<aside class="notes">		
+							Meanwhile, over the past few years we've seen a demand for mobile business intelligence applications,
+							<br><br>
+							At Microsoft we have a Power BI mobile app, and just a few weeks ago Tableau launched a new interactive mobile app.
+						</aside>
 					</section>
 
 					<!-- VISUALIZING INFORMATION ON MOBILE PHONES ================================================== -->
@@ -322,7 +365,7 @@
 						<hr>		
 
 						<small style="text-align:left">
-							There is scant previous work involving mobile devices in the visualization research literature. 			
+							There is <strong>little previous work</strong> focusing on mobile devices in the visualization research literature. 			
 						</small>				
 
 						<img width="90%" data-src="assets/mobilevis.png" style="box-shadow: none"></img>	
@@ -333,7 +376,15 @@
 						</small>
 
 						<aside class="notes">			
-							
+							Despite the increasing interest in visualization for mobile devices among practitioners, 
+							<br><br>
+							There is actually very little in terms of prior research on this topic, especially in the visualization research literature,
+							<br><br>
+							Now I could speculate on why this is the case,
+							<br><br>
+							But instead I'm going to focus on what I and my colleagues have done to rectify this gap over the past couple of years,
+							<br><br>
+							Which included organizing this CHI workshop last year as a way to kick-start a new research sub-community.
     				</aside>
 	
 					</section>		
@@ -346,7 +397,7 @@
 						<hr>
 
 						<small style="text-align:left">
-							<i class="far fa-file"></i> <span style="color:gold"><em>Timeline Storyteller: The Design & Deployment of an Interactive Authoring Tool for <br>Expressive Timeline Narratives</em></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Henry Riche, Tittsworth, Lytvynets, Edge, and White. In Proc. <em>Comp. + Journalism</em> 2019. 
+							<i class="far fa-file"></i> <span style="color:gold"><strong><em>Timeline Storyteller: The Design & Deployment of an Interactive Authoring Tool for <br>Expressive Timeline Narratives</em></strong></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Henry Riche, Tittsworth, Lytvynets, Edge, and White. In Proc. <em>Comp. + Journalism</em> 2019. 
 						</small>						
 
 						<img height="350px" data-src="assets/timelinestoryteller.png">
@@ -356,7 +407,25 @@
 						</small>		
 
 						<aside class="notes">
-						
+							My own foray into research about visualization on mobile devices came about somewhat unexpectedly.
+							<br><br>
+							Some of you will know my about work on Timeline Storyteller, an open-course and interactive visualization presentation tool for the web and Power BI,
+							<br><br>
+							Which launched in 2017, and it's a project I've spoken about over 20 times over the past couple years, including at last month's Computation and Journalism symposium.
+							<br><br>
+							As the name implies, Timeline Storyteller is all about expressive PowerPoint-esque presentations of annotated events sequences.
+							<br><br>
+							In 2017, I demoed Timeline Storyteller to a since-disbanded group in MSR NEXT designing personal health and activity tracking mobile apps,
+							<br><br>
+							And they asked me: will Timeline Storyteller work on mobile?
+							<br><br>
+							Until then, I hadn't given this question much thought.
+							<br><br>
+							The simple answer, unfortunately, was no.
+							<br><br>
+							The authoring interface really required a desktop environment to use,
+							<br><br>
+							And the viewing or presentation experience of content produced with Timeline Storyteller, while possible to view on a mobile device, certainly wasn't optimized for it.
 						</aside>
 
 					</section>
@@ -369,7 +438,7 @@
 						<hr>
 
 						<small style="text-align:left">
-							<i class="far fa-file"></i> <span style="color:gold"><em>Timelines Revisited: A Design Space and Considerations for Expressive Storytelling</em></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Bach, Henry Riche, and Munzner. In <em>IEEE TVCG</em> 2017. 							
+							<i class="far fa-file"></i> <span style="color:gold"><strong><em>Timelines Revisited: A Design Space and Considerations for Expressive Storytelling</em></strong></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Bach, Henry Riche, and Munzner. In <em>IEEE TVCG</em> 2017. 							
 						</small><br><br>
 						
 						<small><strong>Representation</strong></small>
@@ -395,7 +464,11 @@
 						<img class="white_img" width="80" height="80" data-src="assets/l-seg.png" alt="Segmented" style="margin:0px; background: none; border: none; box-shadow:none">
 						
 						<aside class="notes">
-							
+							However, the more interesting underlying question was whether and to what extent the visualization design choices provided by Timeline Storyteller are viable for use on small screens.
+							<br><br>
+							And these choices for visualizing time-oriented event data come from our earlier journal paper. 
+							<br><br>
+							In particular, the question focused on the choice of visual representation for time, such as whether you draw time linearly or cyclically.
 						</aside>	
 
 					</section>
@@ -422,7 +495,9 @@
 						</small>
 
 						<aside class="notes">
-							
+							And this instigated our first experiment in this nascent research area, 
+							<br><br>
+							One directly motivated by the type of data that the group in NEXT was working with, which was sleep tracking data, or more abstractly, ranges over time.
 						</aside>
 
 					</section>		
@@ -446,13 +521,9 @@
 						</small>	
 
 						<aside class="notes">
-						The specific project that I'll focus on now is one that I presented a few months ago at VIS,
+						I presented this work a few months ago at the VIS conference,
 						<br><br>
-						And its origins came during demonstrations of Timeline Storyteller to a group at Microsoft designing personal health apps. 
-						<br><br>
-						They asked me "will this work on mobile?", since they were designing mobile apps involving time-oriented personal activity data, namely sleep data. 
-						<br><br>
-						Like with the timeline project, I started this one by looking to current practice and how designers currently visualize data on mobile phones. 
+						And I started this project by looking to current practice and how designers currently visualize this form of data. 
 						</aside>
 
 					</section>				
@@ -541,9 +612,9 @@
 
 
 						<aside class="notes">
-							As you recall from the timeline project, time is also cyclical; we experience seasons, lunar cycles, and weekday/weekend routines. 						
+							But of course time is also cyclical; we experience seasons, lunar cycles, and weekday/weekend routines. 						
 							<br><br>						
-							This is nicely captured here in this project by Tim Kekeritz called Weather Radials, in which temperature ranges are drawn radially.
+							This is nicely captured here in this project by Timm Kekeritz called Weather Radials, in which temperature ranges are drawn radially.
 						</aside>
 					</section>
 
@@ -555,7 +626,7 @@
 						<span class="attribution">Images: <strong><a href="https://mobileinfovis.com" target="_blank" style="color:cornflowerblue">mobileinfovis.com</a></strong> <i class="fas fa-external-link-alt" aria-hidden="true"></i> by Sebastian Sadowski, 2018.</span>
 
 						<aside class="notes">
-							But are radial designs appropriate for mobile displays? 
+							But the question was whether radial designs are appropriate for mobile displays. 
 							<br><br>
 							It would seem as though mobile app and website designers appear to be quite fond of radial representations, as indicated in this mobile infovis survey by Sebastian Sadowski. 
 						</aside>
@@ -600,8 +671,8 @@
 						<h4>Thinking Systematically About <span style="color:gold">Tasks</span></h4>		
 						<hr>
 						<small style="text-align: left">
-							Tasks derived from <span style="color:gold"><em>A Multi-Level Typology of Abstract Visualization Tasks</em></span>. 
-							<br><span style="font-weight: 700">Brehmer</span> and Munzner. In <em>IEEE TVCG</em> (InfoVis 2013):</span>
+							Tasks derived from <span style="color:gold"><strong><em>A Multi-Level Typology of Abstract Visualization Tasks</em></strong></span>. 
+							<br><span style="font-weight: 700">Brehmer</span> and Munzner. In <em>IEEE TVCG</em> (InfoVis 2013).</span>
 
 						<br><br>
 							<p>&middot; <strong>Locate</strong> Dates</p>
@@ -609,16 +680,24 @@
 							<p>&middot; <strong>Locate</strong> Extreme Values</p>
 							<p>&middot; <strong>Compare</strong> Values</p>
 							<p>&middot; <strong>Compare</strong> Ranges</p>
-						</small>
-
-						
+						</small>						
 
 						<aside class="notes">
-							Using my visualization task typology as a way to think systematically about relevant tasks, I designed 5 experimental tasks, 
+							For this experiment we designed 5 experimental tasks, 
 							<br><br>
 							Having increasing difficulty and completed in order, 
 							<br><br>
 							Though within each task I counterbalanced the presentation of representation and granularity, with several trials for each combination. 
+							<br><br>
+							These tasks were designed using a visualization task typology that I developed during my PhD,
+							<br><br>
+							And this typology was a big focus of my postdoc job talk back in 2016.
+							<br><br>
+							It's a tool that I've used in several recent projects, and it's also got a lot of traction in the research community for specifying or analyzing tasks,
+							<br><br>
+							With now almost 300 citations, making it the most cited InfoVis paper since its publication,
+							<br><br>
+							But I digress,
 						</aside>
 					</section>	
 						
@@ -691,7 +770,7 @@
 
 							<p><span style="color: gold;"><i class="fas fa-stopwatch"></i></span> People are, in general, <strong>slower with radial</strong> representations.</p>
 							<p><span style="color: gold;"><i class="fas fa-check-circle"></i></span> Accuracy appears to be <strong>data-</strong> and <strong>task-dependent</strong>:</p>	
-							<p>e.g., <strong>less accurate with radial</strong> when <strong>identifying</strong> and <strong>locating</strong> values in absence of seasonal variation.</p>	
+							<p>e.g., <strong>less accurate with radial</strong> when <strong>locating</strong> values in absence of seasonal variation.</p>	
 							<p><br></p>
 							<p><span style="color: gold;"><i class="fas fa-thumbs-up"></i></span> People <strong>prefer</strong> and are <strong>more confident</strong> with <strong>linear</strong> representations.</p>
 						</small>
@@ -803,9 +882,7 @@
 							<br><br>
 							And whether task efficiency is the first priority.   						
 						</aside>
-					</section>
-	
-					
+					</section>					
 
 					<!-- ================================================== -->				
 
@@ -831,15 +908,7 @@
 						</small>
 
 						<aside class="notes">
-							Here's a brief outline of what I'll be covering in my talk.
-							<br><br>
-							I'll begin by telling about the context of this research and why I think it's important,
-							<br><br>
-							And then I'll speak about two recent experiments that I led that investigated design choices for visualizing time-oriented data on mobile phones,
-							<br><br>
-							And I'll also speak about some recent interaction design research, imagining new ways to interact with time-oriented data on mobile phones,
-							<br><br>
-							I'll close with an overview of some prospects for the future and tie my research into new and ongoing initiatives at Microsoft.
+							
 						</aside>
 
 					</section>	
@@ -850,7 +919,7 @@
 						<h4>Experiment 2: Animation vs. Small Multiples</h4>
 						<hr>
 						<small style="text-align:left">
-							<i class="far fa-file"></i> <span style="color:gold"><em>A Comparative Evaluation of Animation & Small Multiples For Trend Visualization on Mobile Phones</em></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Isenberg, and Choe. Working paper (InfoVis 2019 Submission).
+							<i class="far fa-file"></i> <span style="color:gold"><strong><em>A Comparative Eval. of Animation & Small Multiples for Trend Visualization on Mobile Phones</em></strong></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Isenberg, and Choe. Working paper (InfoVis 2019 Submission).
 						</small><br>
 
 						<img height="350px" data-src="assets/toosmallformultiples.gif"></img>
@@ -1041,11 +1110,11 @@
 						<h4>5-Stage Task Format</h4>
 						<hr>
 
-						<img width="100%" data-src="assets/multiples-task-steps.png" style="box-shadow: none"></img>
-
 						<small style="text-align:left">
 							Show instruction & axes → 5s delay → Start → Select 1 - 3 countries → Done 
 						</small>
+
+						<img width="100%" data-src="assets/multiples-task-steps.png" style="box-shadow: none"></img>
 
 						<aside class="notes">
 							
@@ -1095,6 +1164,7 @@
 						<aside class="notes">
 							
 						</aside>
+
 					</section>
 					
 					<!-- RESULTS ================================================== -->
@@ -1105,7 +1175,9 @@
 
 						<small style="text-align: left">
 							Detailed statistics are provided in:<br><br> 
-							<i class="far fa-file"></i> <span style="color:gold"><em>A Comparative Evaluation of Animation & Small Multiples For Trend Visualization on Mobile Phones</em></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Isenberg, and Choe. Working paper (InfoVis 2019 Submission). <br><br> <i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://aka.ms/multiples-infovis" target="_blank">aka.ms/multiples-infovis</a></strong> (do not redistribute).
+							<i class="far fa-file"></i> <span style="color:gold"><strong><em>A Comparative Eval. of Animation & Small Multiples For Trend Visualization on Mobile Phones</em></strong></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Isenberg, and Choe. Working paper (InfoVis 2019 Submission). 
+							<br><br> 
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://aka.ms/multiples-infovis" target="_blank">aka.ms/multiples-infovis</a></strong> (do not redistribute).
 							<br><br><br><br>
 
 							<p><span style="color: gold;"><i class="fas fa-stopwatch"></i></span> Participants were <strong>faster with Small Multiples</strong> (for 7 of 9 tasks). No difference in remaining 2 tasks.</p>
@@ -1116,6 +1188,7 @@
 						<aside class="notes">		
 							
 						</aside>
+
 					</section>
 
 					<!-- RESULTS 4+7 ================================================== -->
@@ -1191,7 +1264,7 @@
 					<!-- RESULTS ================================================== -->
 				
 					<section>
-						<h4><span style="color: gold;">Animation</span> or <span style="color: gold;">Small Multiples</span>?</h4>
+						<h4>Conclusions: <span style="color: gold;">Animation</span> or <span style="color: gold;">Small Multiples</span>?</h4>
 						<hr>
 
 						<small style="text-align: left">
@@ -1207,11 +1280,14 @@
 							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="http://aka.ms/multiples" target="_blank">aka.ms/multiples</a></strong> | (mobile only) experimental app.
 							<br><br>
 							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://github.com/microsoft/MobileTrendVis" target="_blank">github.com/Microsoft/MobileTrendVis</a></strong> | open source app and analysis.
+							<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://aka.ms/multiples-infovis" target="_blank">aka.ms/multiples-infovis</a></strong> | working paper (do not redistribute).
 						</small>
 						
 						<aside class="notes">		
 							
 						</aside>
+
 					</section>
 
 				</section>
@@ -1276,12 +1352,13 @@
 						<aside class="notes">		
 							
 						</aside>
+
 					</section>
 
 					<!-- CONTEXT 2================================================== -->
 				
 					<section data-background="#fff">
-						<h4>Interactive BI Tools are Increasingly	Mobile</h4>
+						<h4>Interactive Mobile BI is in Demand</h4>
 						<hr>
 
 						<br><img data-src="assets/powerbi-mobile.png" style="box-shadow: none" width="47.5%"/>
@@ -1295,6 +1372,26 @@
 						<aside class="notes">		
 							
 						</aside>
+
+					</section>
+
+					<!-- MOBUBBLE SKETCHES ================================================== -->
+
+					<section data-background="#fff">
+						<h4>"Mo'Bubble" Interaction Sketches</h4>
+						<hr>					
+
+						<small style="text-align:left">
+							<span style="color:cornflowerblue"><strong><em>Tilting, Brushing, & Dialing Interactions for Data Visualization on Mobile Phones</em></strong></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Collins, and Hinckley. (Work in progress, 2019). 	
+						</small>
+
+						<br><img data-src="assets/mobubble-sketches.png" style="box-shadow: none" width="100%"/><br>
+
+	
+						<aside class="notes">							
+						
+						</aside>
+	
 					</section>
 
 					<!-- MOBUBBLE ================================================== -->
@@ -1304,7 +1401,7 @@
 						<hr>					
 
 						<small style="text-align:left">
-							<span style="color:cornflowerblue"><strong><em>Tilting, Brushing, & Dialing Interactions for Data Visualization on Mobile Phones</em></strong></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Collins, and Hinckley. Work in progress, 2019. 	
+							<span style="color:cornflowerblue"><strong><em>Tilting, Brushing, & Dialing Interactions for Data Visualization on Mobile Phones</em></strong></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Collins, and Hinckley. (Work in progress, 2019). 	
 						</small>
 
 						<br><img data-src="assets/mobubble.png" style="box-shadow: none" width="100%"/><br>
@@ -1321,26 +1418,7 @@
 						
     				</aside>
 	
-					</section>
-
-					<!-- MOBUBBLE SKETCHES ================================================== -->
-
-					<section data-background="#fff">
-						<h4>"Mo'Bubble" Interaction Sketches</h4>
-						<hr>					
-
-						<small style="text-align:left">
-							<span style="color:cornflowerblue"><strong><em>Tilting, Brushing, & Dialing Interactions for Data Visualization on Mobile Phones</em></strong></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Collins, and Hinckley. Work in progress, 2019. 	
-						</small>
-
-						<br><img data-src="assets/mobubble-sketches.png" style="box-shadow: none" width="100%"/><br>
-
-	
-						<aside class="notes">							
-						
-						</aside>
-	
-					</section>
+					</section>					
 
 					<!-- MOBUBBLE SCREENSHOTS ================================================== -->
 
@@ -1404,7 +1482,7 @@
 						<hr>
 
 						<small style="text-align: left">
-							<p><span style="color:gold"><strong><em>Tilting, Brushing, & Dialing Interactions for Data Visualization on Mobile Phones</em></strong></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Collins, and Hinckley. Work in progress, 2019.</p>
+							<p><span style="color:gold"><strong><em>Tilting, Brushing, & Dialing Interactions for Data Visualization on Mobile Phones</em></strong></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Collins, and Hinckley. (Work in progress, 2019).</p>
 							<p><br></p>
 							<p>Preliminary evaluaton with human subjects.</p>
 							<p>Comparison with scrubbing / swiping interactions with varying numbers of time steps / list items.</p> 
@@ -1418,6 +1496,7 @@
 						<aside class="notes">		
 							
 						</aside>
+
 					</section>
 
 				</section>
@@ -1455,7 +1534,7 @@
 
 						<small style="text-align: left">
 							<p>
-								Ranges, Animation vs. Small Multiples, Mo'Bubble web applications share common infrastructure:
+								<em>Ranges, Animation vs. Small Multiples, Mo'Bubble</em> web applications share common infrastructure:
 								<br><br>
 								&middot; Node.js web application
 								<br>
@@ -1488,6 +1567,7 @@
 						<aside class="notes">		
 							
 						</aside>
+
 					</section>
 
 					<!-- SMALLER MULTIPLES ================================================== -->	
@@ -1496,7 +1576,7 @@
 						<h4>Visualization for Mobile Devices: Future Experiments</h4>
 						<hr>
 						<small style="text-align:left">
-							<strong><span style="color:cornflowerblue"><em>Smaller Multiples: Assessing Multidimensional Glyph Design on Mobile Phones</em></span></strong>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Isenberg, and Choe.
+							<strong><span style="color:cornflowerblue"><em>Smaller Multiples: Assessing Multidimensional Glyph Design on Mobile Phones</em></span></strong>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Isenberg, and Choe. (Future work).
 						</small><br>
 
 						<img width="90%" data-src="assets/smallermultiples.png" style="box-shadow: none"></img>
@@ -1520,14 +1600,38 @@
 						<hr>
 						<small style="text-align:left">
 							<strong><span style="color:cornflowerblue"><em>Graph Exploration on Mobile Phones</em></span></strong>. <br>
-							Eichmann, Edge, Evans, <span style="font-weight: 700">Brehmer</span>, and Lee. Work-in-progress.
+							Eichmann, Edge, Evans, <span style="font-weight: 700">Brehmer</span>, and Lee. (Work in progress, 2019).
 						</small><br>
 
 						<img width="90%" data-src="assets/orchard.png" style="box-shadow: none"></img>
 
 						<span class="attribution">"Orchard", a mobile web application for pivoting over graphs (e.g., IMDB metadata).</span>
 	
-						<aside class="notes">							
+						<aside class="notes">		
+
+						</aside>
+	
+					</section>
+
+					<!-- THUMBNAILS ================================================== -->	
+
+					<section data-background="#fff">
+						<h4>What Makes a Good Data Story Thumbnail?</h4>
+						<hr>
+						<small style="text-align:left">
+							<strong><span style="color:cornflowerblue"><em>A Study on Designing Visualization Thumbnails</em></span></strong>. <br>
+							Kim, Oh, Han, Ko, <span style="font-weight: 700">Brehmer</span>, and Kwon. (InfoVis 2019 submission).
+						</small><br>
+
+						<img width="90%" data-src="assets/thumbnails.png" style="box-shadow: none"></img>
+
+						<small style="text-align:left">								
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://pudding.cool" target="_blank">pudding.cool</a></strong>	|
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://fivethirtyeight.com" target="_blank">fivethirtyeight.com</a></strong><br><br>
+						</small>
+	
+						<aside class="notes">	
+
 						</aside>
 	
 					</section>
@@ -1539,42 +1643,59 @@
 						<hr>
 						<small style="text-align:left">
 							<strong><span style="color:cornflowerblue"><em>Recreate: An Interactive Authoring Tool for Responsive Map-Based Data Stories</em></span></strong>. <br>
-							Badam, Lee, Henry Riche, <span style="font-weight: 700">Brehmer</span>, Hinckley, and Collins. Work-in-progress.
+							Badam, Lee, Henry Riche, <span style="font-weight: 700">Brehmer</span>, Hinckley, and Collins. (Work in progress, 2019).
 						</small><br>
 
 						<img width="90%" data-src="assets/recreate.png" style="box-shadow: none"></img>
-	
-						<aside class="notes">							
+						
+						<aside class="notes">	
+													
 						</aside>
-	
+
 					</section>
 
 					<!-- INTERACTIVE DOCUMENTS ================================================== -->	
 
 					<section data-background="#fff">
 						<h4>Responsive Interactive Documents</h4>
-						<hr>
-						<small style="text-align:left">
-							
-						</small><br>
+						<hr>						
 
+						<img width="100%" data-src="assets/msrinteractivescience.png" style="box-shadow: none"></img>
 	
+						<small style="text-align:left">								
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="http://www.msrinteractivescience.com/" target="_blank">msrinteractivescience.com</a></strong> (related initiatives: <i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://distill.pub/" target="_blank">distill.pub</a></strong> | <i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://parametric.press/" target="_blank">parametric.press</a></strong>)
+							<br><br>
+							<strong>Right</strong>: My work in progress responsive MSR Interactive Science article in support of:
+							<br>
+							<i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>Forecasting U.S. Domestic Migration Using Internet Search Queries</em></span></strong>. <br>
+							Lin, Cranshaw, and Counts. Proc. Web Conf. 2019.
+						</small>
+
 						<aside class="notes">							
+
 						</aside>
 	
-					</section>
+					</section>					
 
 					<!-- URBAN INNOVATION ================================================== -->	
 
 					<section data-background="#fff">
 						<h4>Visualization & MSR's Urban Innovation Initative</h4>
 						<hr>
-						<small style="text-align:left">
-							
-						</small><br>
 
+						<img width="90%" data-src="assets/urban_innovation.png" style="box-shadow: none"></img>
+						<br>
+
+						<small style="text-align:left">								
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://aka.ms/urbaninnovation" target="_blank">aka.ms/urbaninnovation</a></strong>				
+							<br><br>
+							Opportunity to revisit my PhD project on resource consumption; e.g., mobile analysis tools for RE+F. 
+							<br><br>
+							<i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>Matches, Mismatches, and Methods: Multiple-View Workflows for Energy Portfolio Analysis</em></span></strong>. <br><span style="font-weight: 700">Brehmer</span>, Ng, Tate, and Munzner. IEEE TVCG (2016, Proc. InfoVis 2015).			
+						</small>
 	
-						<aside class="notes">							
+						<aside class="notes">				
+
 						</aside>
 	
 					</section>
@@ -1601,7 +1722,57 @@
 						<span class="attribution">Presentation at Microsoft Research 2019-03-13</span>
 
 						<aside class="notes">							
-						With that I'd like to thank you for your attention, though before I take questions,     
+						     
+						</aside>
+
+					</section>								
+
+					<!-- REFLECTION ================================================== -->
+
+					<section>
+
+						<h4>Reflection: 2+ Years at MSR</h4>
+						<hr>
+						<small style="text-align:left">
+							<strong style="color: gold">Timeline Storyteller</strong>:<br><br>											
+							&middot; Deployed an open-source visualization authoring tool to the web<br><br>
+							&middot; Released as a Power BI custom visual (35K+ downloads as of early 2019)<br><br>
+							&middot; Featured in opening keynote of 2017 Microsoft Data Insights Summit<br><br><br>
+
+							<strong style="color: gold">Research Goals</strong>:<br><br>											
+							&middot; Initiated a new research program in visualization for mobile devices<br><br>
+							&middot; A return to quantitative experimental work<br><br>
+							&middot; Acquired new skills in crowdsourced experimentation, inferential statistics
+						</small>
+
+						<aside class="notes">
+							
+						</aside>
+
+					</section>
+
+					<!-- REFLECTION 2 ================================================== -->
+
+					<section>
+
+						<h4>Reflection: 2+ Years at MSR (cont.)</h4>
+						<hr>
+						<small style="text-align:left">						
+							<strong style="color: gold">Collaborations</strong>:<br><br>
+							&middot; 7 PhD interns, 3 visiting faculty researchers<br><br>
+							&middot; <em>Charticulator, DataToon, ChartAccent, InkSight, Orchard, Barhopper, ReCreate</em><br><br>
+							&middot; EPIC, VIDA, MSR Special Projects, Power BI, Microsoft Modern (Data) Journalism Team<br><br>
+							&middot; Academic colleagues in USA, Canada, UK, France, Germany, & Korea<br><br>
+							&middot; Timeline Consortium<br><br><br>
+
+							<strong style="color: gold">Community</strong>:<br><br>
+							&middot; Speaking & demoing at practitioner events (e.g., OpenVisConf, Tapestry, Uber Vis Nights)<br><br>
+							&middot; Co-organized VisInPractice (2018-19), PacificVis Data Storytelling Contest (2017-18)<br><br>
+							&middot; PC Member of IEEE InfoVis, Information+, VIS Arts Program, Computation + Journalism, others...
+						</small>
+
+						<aside class="notes">
+							
 						</aside>
 
 					</section>		
@@ -1611,12 +1782,33 @@
 					<section data-background="assets/collabs.png">
 
 						<aside class="notes">							
-						I'd like to take a moment to acknowledge my current and recent collaborators spanning a number of institutions and countries, 
-						<br><br>
-						Which includes visiting faculty researchers and PhD interns.     
+							I'd like to take a moment to acknowledge my current and recent collaborators spanning a number of institutions and countries, 
+							<br><br>
+							Which includes visiting faculty researchers and PhD interns.     
 						</aside>
 
-					</section>		
+					</section>
+
+					<!-- TITLE SLIDE ================================================== -->
+
+					<section class="center">
+						<h3>Visualizing Information on Mobile Phones</h3>	
+						<h5>Recent Experiments, Novel Interactions, & Prospects for the Future</h5>
+						<hr>
+
+						<small><a href="http://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> &middot; Microsoft Research &middot; <a href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a></small>
+
+						<br>
+
+						<span class="affiliation"><img data-src="assets/authors/affiliations.png" height="100" style="box-shadow: none"/></span>
+		
+						<span class="attribution">Presentation at Microsoft Research 2019-03-13</span>
+
+						<aside class="notes">	
+													
+						</aside>
+
+					</section>
 
 				</section>
 
@@ -1644,7 +1836,7 @@
 						<hr>
 
 						<small style="text-align:left">
-							<i class="far fa-file"></i> <span style="color:cornflowerblue"><strong><em>Saliency Deficit and Motion Outlier Detection in Animated Scatterplots</em></strong></span>. <br>Veras and Collins. To appear in Proc CHI 2019.
+							<i class="far fa-file"></i> <span style="color:cornflowerblue"><strong><em>Saliency Deficit and Motion Outlier Detection in Animated Scatterplots</em></strong></span>. <br>Veras and Collins. To appear in Proc ACM CHI 2019.
 						</small>
 						
 						<img width="100%" data-src="assets/veras.png" style="box-shadow: none"></img>
@@ -1746,9 +1938,7 @@
 				"assets/timelinestoryteller.png",
 				"assets/timelinestorytellercom.png",
 				"assets/toosmallformultiples.gif",
-				"assets/toosmallformultiples.MP4",
 				"assets/toosmallformultiples.png",
-				"assets/toosmallformultiples-crop.mp4",
 				"assets/toosmallformultiples-crop.png",
 				"assets/weather_apps.png",
 				"assets/weather_radial.png"
