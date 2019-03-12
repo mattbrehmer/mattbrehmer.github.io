@@ -48,11 +48,9 @@
 					<span class="attribution">Presentation at Microsoft Research 2019-03-13</span>
 
 					<aside class="notes">
-						Good morning. 
+						Good morning. Thank you for the introduction. 
 						<br><br>
-						Thank you for the introduction. 
-						<br><br>
-						Many of you know me and may have seen some of my work while I've been here,
+						Many of you know me and may have seen some of my work over the course of my PostDoc,
 						<br><br>
 						But you likely haven't seen much of what I'll present today, 
 						<br><br>
@@ -80,11 +78,13 @@
 						</small>
 
 						<aside class="notes">
-							Here's a brief outline of what I'll be covering in my talk.
+							Here's a brief outline of what I'll be covering today.
 							<br><br>
 							I'll begin by telling about the context of this research and why I think it's important,
 							<br><br>
-							And then I'll speak about two recent experiments that I led that investigated design choices for visualizing time-oriented data on mobile phones,
+							And then I'll speak about two recent experiments that I led,
+							<br><br>
+							Experiments where we investigated design choices for visualizing time-oriented data on mobile phones,
 							<br><br>
 							And I'll also speak about some recent interaction design research that imagines new ways to interact with time-oriented data using your phone, 
 							<br><br>
@@ -298,9 +298,9 @@
 						</small>
 
 						<aside class="notes">			
-							Well as many of you know, visualization is increasingly prevalent in mobile apps,
+							As many of you know, visualization is increasingly prevalent in mobile apps,
 							<br><br>
-							These websites by Ros and Sadowski are good indicators of the breadth of visualization design choices being used on mobile phones
+							These survey collection websites by Ros and Sadowski are good indicators of the breadth of visualization design choices being used on mobile phones
 							<br><br>
 							Visualization is also increasingly prevalent in online news, which is often consumed from a mobile device,
 							<br><br>
@@ -334,6 +334,14 @@
 							This is a slide from a particularly influential Information+ keynote talk by the Gregor Aisch in 2016 while he was working at the Times, 
 							<br><br>
 							One that contributed to a shift in how visualization designers and developers work.
+							<br><br>
+							From Ben Shneiderman's Visual Information Seeking Mantra of "Overview First, Zoom and Filter, Details on Demand" 
+							<br><br>
+							To "Details First, No Zoom and Filter, Overview on Desktop Only"
+							<br><br>
+							Statements like this, however, mask the difference between analysis tasks and presentation tasks, 
+							<br><br>
+							But nevertheless this shift has taken place.
     				</aside>
 	
 					</section>
@@ -357,6 +365,7 @@
 							<br><br>
 							At Microsoft we have a Power BI mobile app, and just a few weeks ago Tableau launched a new interactive mobile app.
 						</aside>
+
 					</section>
 
 					<!-- VISUALIZING INFORMATION ON MOBILE PHONES ================================================== -->
@@ -411,11 +420,11 @@
 						<aside class="notes">
 							My own foray into research about visualization on mobile devices came about somewhat unexpectedly.
 							<br><br>
-							Some of you will know my about work on Timeline Storyteller, an open-sourse and interactive visualization presentation tool for the web and Power BI,
+							Some of you will know about my work on Timeline Storyteller, an interactive visualization presentation tool for the web and Power BI,
 							<br><br>
 							This tool launched in 2017, and it's a project I've spoken about over 20 times over the past couple years, including at last month's Computation and Journalism symposium.
 							<br><br>
-							As the name implies, Timeline Storyteller is all about expressive PowerPoint-esque presentations of annotated events sequences or Timelines
+							As the name implies, Timeline Storyteller is all about expressive PowerPoint-like presentations of annotated events sequences (or Timelines)
 							<br><br>
 							In 2017, I demoed Timeline Storyteller to a since-disbanded group in MSR NEXT designing personal health and activity tracking mobile apps,
 							<br><br>
@@ -523,9 +532,9 @@
 						</small>	
 
 						<aside class="notes">
-						I presented this work a few months ago at the VIS conference,
-						<br><br>
-						And I started this project by looking to current practice and how designers currently visualize this form of data. 
+							I presented this work a few months ago at the VIS conference,
+							<br><br>
+							And I started this project by looking to current practice and how designers currently visualize this form of data. 
 						</aside>
 
 					</section>				
@@ -541,6 +550,7 @@
 							<br><br>
 							I realized that this form of data can be abstractly characterized as a series of ranges over time, with each range having a high and low value, in this case corresponding to bedtimes and waking times. 
 						</aside>
+
 					</section>
 
 					<!-- NYT================================================== -->
@@ -566,12 +576,12 @@
 						
 						<span class="attribution">Images (clockwise from left): <em>The New York Times</em> &middot;  <a href="https://ericboam.com/7-Months-of-Sleep" target="_blank"  style="color:cornflowerblue">Eric Boam</a> &middot; <a href="https://fivethirtyeight.com/features/what-12-months-of-record-setting-temperatures-looks-like-across-the-u-s/" target="_blank" style="color:cornflowerblue">Randy Olson</a>.</span>
 
-
 						<aside class="notes">
 							These examples work well in print and when shown on large displays, but that's not how many of us now consume weather data or personal health and activity data, such as sleep duration. 
 							<br><br>
 							Instead, these and several other sources of range data are likely to be consumed from a mobile device. 
 						</aside>
+
 					</section>
 
 					<!-- WEATHER APPS================================================== -->
@@ -588,6 +598,7 @@
 							<br><br>
 							There are weather apps like these that display ranges for 7 or 10 days or aggregated across 12 months. 
 						</aside>
+
 					</section>
 
 					<!-- SLEEP APPS ================================================== -->
@@ -598,10 +609,10 @@
 						
 						<span class="attribution">Apps: <a href="https://www.azumio.com/s/sleeptime/index.html" target="_blank" style="color:cornflowerblue">Azumio Sleep Time</a> © &middot;  <a href="https://connect.garmin.com/en-US/" target="_blank" style="color:cornflowerblue">Garmin Connect</a> © &middot; <a href="https://apple.com" target="_blank" style="color:cornflowerblue">Bedtime (iOS Clock)</a> ©.</span>
 
-
 						<aside class="notes">
 							And similarly there are ranges shown in sleep tracking apps such as these, with weekly or monthly time window options. 
 						</aside>
+
 					</section>
 
 					<!-- RADIALS ================================================== -->
@@ -612,12 +623,12 @@
 						
 						<span class="attribution">Image:  <a href="http://www.weather-radials.com/" target="_blank" style="color:cornflowerblue"><em>Weather Radials</em> (by Timm Kekeritz)</a> ©.</span>
 
-
 						<aside class="notes">
 							But of course time is also cyclical; we experience seasons, lunar cycles, and weekday/weekend routines. 						
 							<br><br>						
 							This is nicely captured here in this project by Timm Kekeritz called Weather Radials, in which temperature ranges are drawn radially.
 						</aside>
+
 					</section>
 
 					<!-- MOBILEINFOVIS ================================================== -->
@@ -632,6 +643,7 @@
 							<br><br>
 							It would seem as though mobile app and website designers appear to be quite fond of radial representations, as indicated in this mobile infovis survey by Sebastian Sadowski. 
 						</aside>
+
 					</section>
 
 					<!-- EXPERIMENT ================================================== -->
@@ -665,6 +677,7 @@
 						<aside class="notes">
 							My experiment's stimuli involved both linear and radial representations, as well as three granularities of time: a week of 7 seven ranges, a month of up to 31 ranges, and a year of 365 ranges. 
 						</aside>
+
 					</section>					
 		
 					<!-- TASKS ================================================== -->
@@ -698,6 +711,7 @@
 							<br><br>
 							With now almost 300 citations, making it the most cited InfoVis paper since 2013
 						</aside>
+
 					</section>	
 						
 					<!-- ================================================== -->
@@ -722,6 +736,7 @@
 							<br><br>
 							I asked participants about their preference and their overall confidence in their responses for each combination of representation and granularity.
 						</aside>
+
 					</section>
 	
 					<!-- ================================================== -->
@@ -751,6 +766,7 @@
 							<br><br>
 							They had to use their own mobile phone running a recent version of iOS or Android.
 						</aside>
+
 					</section>					
 								
 					<!-- ================================================== -->
@@ -787,6 +803,7 @@
 							<br><br>
 							Altogether these findings are interesting given the popularity of radial representations of time in practice and design communities. 
 						</aside>
+
 					</section>
 	
 					<!-- ================================================== -->					
@@ -800,6 +817,7 @@
 							<br><br>
 							You might expect that adding more marks in a chart will incur worse performance, but again the results are more nuanced.
 						</aside>
+
 					</section>
 	
 					<!-- ================================================== -->
@@ -833,13 +851,17 @@
 							<br><br>
 							Where it would seem as though the expected seasonal trend of temperature ranges appears to make the task easier relative to examining a month of sleep ranges.
 						</aside>
+
 					</section>								
 	
 					<!-- ================================================== -->
 
 					<section>
+
 						<small><strong><span style="color: #FF7F0E;">Temperature</span></strong> (L) and <strong><span style="color: cornflowerblue;">Sleep</span></strong> (R) don't follow monthly cycles.</small><br>
+
 						<img data-src="assets/radial_month.png" style="box-shadow: none; margin: 0px"/>			
+
 						<aside class="notes">
 							One interpretation of my results is that a month may not be an appropriate granularity for either temperature ranges or sleep ranges,
 							<br><br>
@@ -849,6 +871,7 @@
 							<br><br>
 							What's interesting here is that many health and sleep tracking apps have a month or 4-week time window setting. 						
 						</aside>
+
 					</section>
 	
 					<!-- ================================================== -->
@@ -884,6 +907,7 @@
 							Some might argue that the goal of sleep and activity tracking apps should be to provoke reflection on your habits rather than allow you to quickly answer a question.		  <br><br>
 							You're also welcome to try the experiment yourself, or read a non-research-oriented blog post about this project 						
 						</aside>
+
 					</section>					
 
 					<!-- ================================================== -->				
@@ -1188,7 +1212,7 @@
 								<span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><br>
 								<span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span>
 							</p>
-							<p>+17 excluded participants who responded incorrectly to quality assurance task.</p>
+							<p>+17 excluded participants who responded incorrectly to quality control task.</p>
 						</small>	
 													
 						<aside class="notes">
@@ -2012,10 +2036,6 @@
 							&middot; Acquired new skills in crowdsourced experimentation, inferential statistics
 						</small>
 
-						<aside class="notes">
-							
-						</aside>
-
 					</section>
 
 					<!-- REFLECTION 2 ================================================== -->
@@ -2038,10 +2058,6 @@
 							&middot; PC Member of IEEE InfoVis, Information+, VIS Arts Program, Computation + Journalism, others...
 						</small>
 
-						<aside class="notes">
-							
-						</aside>
-
 					</section>							
 
 					<!-- TITLE SLIDE ================================================== -->
@@ -2058,10 +2074,6 @@
 						<span class="affiliation"><img data-src="assets/authors/affiliations.png" height="100" style="box-shadow: none"/></span>
 		
 						<span class="attribution">Presentation at Microsoft Research 2019-03-13</span>
-
-						<aside class="notes">	
-
-						</aside>
 
 					</section>
 
@@ -2099,10 +2111,6 @@
 						<small style="text-align:left">
 							<strong>Notable results</strong>: Visual channels (size, color, etc.) interfere w/ outlier detection to varying extents. <br>Direction contributes most to speed outliers, position contributes most to direction outliers.
 						</small>
-
-						<aside class="notes">							
-									
-						</aside>
 
 					</section>
 	
