@@ -939,33 +939,10 @@
 							We have a working paper that we'll be submitting to VIS in a couple weeks. 			
 						</aside>
 
-					</section>	
+					</section>					
 					
-					<!-- ANIMATION VS SMALL MULTIPLES: MOTIVATION ================================================== -->
 
-					<section data-background="#fff">
-						<h4>Animation on Mobile, Small Multiples on Desktop?</h4>
-						<hr>
-						
-						<img height="350px" data-src="assets/npr.png"></img>
-						<img height="350px" data-src="assets/npr.gif"></img>
-						
-						<small style="text-align:left">
-							<i class="fas fa-external-link-alt" aria-hidden="true"></i> 
-							<strong><em><a style="color:cornflowerblue" href="https://twitter.com/brianboyer/status/583311823245561856" target="_blank">Data viz solutions: small multiples on desktop, GIFs on yer phone!</a></strong></em> <br>Brian Boyer (NPR News Graphics, 2015).
-						</small>
-
-						<aside class="notes">							
-							I had become interested in comparing animation and small multiple designs a few years ago when I started seeing animated graphics appear in online news and especially in social media,
-							<br><br>
-							The NPR News Graphics Team had proposed this design pattern of displaying small multiples on desktop and looped animated GIFs on phones,
-							<br><br>
-							But I wanted to know if there was evidence behind this allocation of designs to different device profiles.  			
-						</aside>
-
-					</section>
-
-					<!-- ANIMATION VS SMALL MULTIPLES: MOTIVATION (CONT) ================================================== -->
+					<!-- DATA GIFS ================================================== -->
 
 					<section data-background="#fff">
 						<h4>The Rise of the Data GIF</h4>
@@ -992,6 +969,30 @@
 							There was a whole session devoted to the creation of so-called Data GIFs,
 							<br><br>
 							The ones that interest me the most are those that make use of position change over time, such as in these examples.
+						</aside>
+
+					</section>
+
+					<!-- ANIMATION VS SMALL MULTIPLES: MOTIVATION ================================================== -->
+
+					<section data-background="#fff">
+						<h4>Animation on Mobile, Small Multiples on Desktop?</h4>
+						<hr>
+						
+						<img height="350px" data-src="assets/npr.png"></img>
+						<img height="350px" data-src="assets/npr.gif"></img>
+						
+						<small style="text-align:left">
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> 
+							<strong><em><a style="color:cornflowerblue" href="https://twitter.com/brianboyer/status/583311823245561856" target="_blank">Data viz solutions: small multiples on desktop, GIFs on yer phone!</a></strong></em> <br>Brian Boyer (NPR News Graphics, 2015).
+						</small>
+
+						<aside class="notes">							
+							I had become interested in comparing animation and small multiple designs a few years ago when I started seeing animated graphics appear in online news and especially in social media,
+							<br><br>
+							The NPR News Graphics Team had proposed this design pattern of displaying small multiples on desktop and looped animated GIFs on phones,
+							<br><br>
+							But I wanted to know if there was evidence behind this allocation of designs to different device profiles.  			
 						</aside>
 
 					</section>
@@ -1688,7 +1689,7 @@
 						</small>
 
 						<aside class="notes">
-							
+							In this last part of the talk, I'd like to highlight a few planned and ongoing projects relating to visualization on mobile devices.
 						</aside>
 
 					</section>	
@@ -1701,15 +1702,15 @@
 
 						<small style="text-align: left">
 							<p>
-								<em>Ranges, Animation vs. Small Multiples, Mo'Bubble</em> web applications share common infrastructure:
+								<em>Ranges, Animation vs. Small Multiples, Mo'Bubble</em> applications share common infrastructure:
 								<br><br>
 								&middot; Node.js web application
-								<br>
-								&middot; Condition assignment & re-balancing
 								<br>
 								&middot; Custom event logging
 								<br>
 								&middot; Media queries to enforce mobile-only
+								<br>
+								&middot; Condition assignment & re-balancing
 								<br>
 								&middot; Handlers for orientation changes  
 							</p>
@@ -1722,7 +1723,7 @@
 								<br>
 								&middot; Trial bank initialization 
 							</p>
-							<p>A mobile-only alternative (or extension of) the <em>experimentr</em> framework?</p>
+							<p>Mobile-only alternative (or extension of) the <em>experimentr</em> framework?</p>
 							<p>								
 								<i class="fas fa-file"></i> <strong><span style="color:skyblue"><em>experimentr</em></span></strong>. L. Harrison, C. Gramazio, F. Yang, K. Aragam, E. Peck, and D. Schroeder (2019).
 								<br>
@@ -1732,7 +1733,33 @@
 						</small>
 						
 						<aside class="notes">		
-							
+							The first of which is a framework for running mobile-only visualization experiments,
+							<br><br>
+							The three projects I spoke about until now in this talk share a common infrastructure:
+							<br><br>
+							They're all node applications running as Azure web applications
+							<br><br>
+							With media queries and to enforce mobile-only participation
+							<br><br>
+							Server-side condition assignment and rebalancing for crowdsourced deployment
+							<br><br>
+							And handlers for orientation changes.
+							<br><br>
+							Refactoring this into an application framework could allow for experiment application developers to focus on
+							<br><br>
+							Just designing the stimuli, meaning the visualization components,
+							<br><br>
+							And defining what constitues a trial and how a bank of trials are initialized.
+							<br><br>
+							I should mention that there is a precedent for this.
+							<br><br>
+							A team led by Lane Harrison at WPI have developed a framework for crowdsourced visualization studies, 
+							<br><br>
+							Though it is intended for desktop environments. 
+							<br><br>
+							What I propose could be a mobile-only alternative or extensions to this,
+							<br><br>
+							And I believe that this would be a good intern project.
 						</aside>
 
 					</section>
@@ -1751,11 +1778,15 @@
 						<span class="attribution">Images CW from top left: <span style="color:cornflowerblue">StressScan, Clue, FitBit Surge, Activity, Sleep++, Daily Goals</span>.</span>
 	
 						<aside class="notes">							
-						I'm also planning another study that will look at the design of multidimensional glyphs on mobile phones and their scalability, 
-						<br><br>
-						Which takes inspiration from the many activity and exercise tracking apps now on the market, 
-						<br><br>
-						And I'll likely use a similar crowdsourced experimental protocol to the ranges and animation studies that I've told you about.
+							In the meantime, I'm also planning another experiment,
+							<br><br>
+							Once again considering another common representation of time-oriented data. 
+							<br><br>
+							This experiment will consider design choices for multidimensional glyphs on mobile phones and their scalability, 
+							<br><br>
+							And this takes inspiration from the many activity and exercise tracking apps now on the market, 
+							<br><br>
+							And I'll likely use a similar experimental protocol to the ranges and animation experiments.
     				</aside>
 	
 					</section>
@@ -1773,7 +1804,15 @@
 						<img width="90%" data-src="assets/orchard.png" style="box-shadow: none"></img>
 
 						<span class="attribution">"Orchard", a mobile web application for pivoting over graphs (e.g., IMDB metadata).</span>
-	
+							I'll also take a few moments to tell you about a few of my ongoing collaborations related to visualization on mobile devices.
+							<br><br>
+							The first is a recent intern project led by Philipp Eichmann from Brown University
+							<br><br>
+							And Philipp built a mobile web application for navigating graph structures without resorting to node-link diagrams,
+							<br><br>
+							Instead opting for an interface where you swipe to pivot along node types.
+							<br><br>
+							And we're currently planning a user study and a paper about this project.
 						<aside class="notes">		
 
 						</aside>
@@ -1798,7 +1837,17 @@
 						</small>
 	
 						<aside class="notes">	
-
+							Meanwhile, I'm also collaborating with a research lab at UNIST in Korea, 
+							<br><br>
+							Where they're conducting experiments about the effectiveness of different design choices in visualization thumbnails,
+							<br><br>
+							Such as those that you may encounter on social media or on data journalism sites such as the Pudding or fivethirtyeight
+							<br><br>
+							Sites that receive a lot of mobile traffic.
+							<br><br>
+							We're currently analyzing data from several crowdsourced experiments where workers interpret and review thumbnails,
+							<br><br>
+							And we're planning to submit to InfoVis in a couple weeks.
 						</aside>
 	
 					</section>
@@ -1816,7 +1865,15 @@
 						<img width="90%" data-src="assets/recreate.png" style="box-shadow: none"></img>
 						
 						<aside class="notes">	
-													
+							I'll also highlight another intern project from last summer,
+							<br><br>
+							In which intern Karthik Badam built a prototype interactive authoring tool for creating responsive data stories,
+							<br><br>
+							Where visualization and text content would automatically adjust across different device profiles, from phones to Surface Hub-like displays
+							<br><br>
+							This is important because the current practice involves creating multiple static versions of the same document for different device profiles,
+							<br><br>
+							And or sinking a lot of time and effort into a bespoke programmatic solution.
 						</aside>
 
 					</section>
@@ -1832,14 +1889,26 @@
 						<small style="text-align:left">								
 							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="http://www.msrinteractivescience.com/" target="_blank">msrinteractivescience.com</a></strong> (related initiatives: <i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://distill.pub/" target="_blank">distill.pub</a></strong> | <i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://parametric.press/" target="_blank">parametric.press</a></strong>)
 							<br><br>
-							<strong>Right</strong>: My work in progress responsive MSR Interactive Science article in support of:
+							R: Screenshots of my work in progress responsive MSR Interactive Science article in support of:
 							<br>
 							<i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>Forecasting U.S. Domestic Migration Using Internet Search Queries</em></span></strong>. <br>
 							A. Y. Lin, J. Cranshaw, and S. Counts. Proc. Web Conf. 2019.
 						</small>
 
 						<aside class="notes">							
-
+							Speaking of data stories, I should also mention the MSR Interactive Science initiative led by Scott Counts and Justin Cranshaw,
+							<br><br>
+							The aim of which is to publish a series of web-based interactive companion articles to research papers published at MSR,
+							<br><br>
+							Similar in spirit to the interactive machine learning journal Distill or the forthcoming Parametric Press journal
+							<br><br>
+							Over the past couple of months I've started working on a piece for this series based on a forthcoming Web Conference paper by Lin, Cranshaw, and Counts,
+							<br><br>
+							On the topic of domestic migration,
+							<br><br>
+							And I've started with a mobile-first and responsive mindset, and these are some recent screenshots from my design process
+							<br><br>
+							Which depict interactive and animated origin-destination flow maps.
 						</aside>
 	
 					</section>					
@@ -1862,9 +1931,58 @@
 						</small>
 	
 						<aside class="notes">				
-
+							And finally, another new initiative at MSR that I'm excited about is the recently launched Urban Innovation initiative,
+							<br><br>
+							Which will investigate the impact and potential of future technologies in cities.
+							<br><br>
+							This initiative is also fortunate to have a living lab, being the Microsoft Redmond campus, 
+							<br><br>
+							An urban campus environment undergoing significant changes over the coming years.
+							<br><br>
+							I find this exciting because it's an opportunity to revisit some of my PhD work,
+							<br><br>
+							Which focused on analyzing energy usage and resource conservation across multi-building organizations and communities.
+							<br><br>
+							One of the unexplored aspects of that work pertained to on-the-ground facilities and engineering staff,
+							<br><br>
+							People who are not at a desk and yet must monitor and respond to signals from instrumented buildings.
+							<br><br>
+							Which points to another opportunity and potential use case for the effective display of information to mobile devices.
 						</aside>
 	
+					</section>
+
+					<!-- VISUALIZING INFORMATION ON MOBILE DEVICES ================================================== -->
+
+					<section class="center" data-background="assets/smartphone.png" data-background-opacity=0.15>
+
+						<h3>Why Visualization on Mobile Devices?</h3>
+						<hr>						
+
+						<small style="text-align:left">
+							&middot; In demand in journalism, education, scientific communication, & business intelligence<br><br>
+							&middot; There is little (visualization) research to support design choices<br><br>
+							&middot; Researchers need tools to conduct experiments<br><br>
+							&middot; Practitioners need tools to create mobile-first and responsive visualization content<br><br>
+							&middot; Unexplored directions for interaction design<br><br>
+						</small>
+
+						<aside class="notes">
+							In closing I'll highlight why I think this research direction is exciting and important.
+							<br><br>
+							First of all, visualization on mobile devices is already happening
+							<br><br>
+							But there is little research (especially in the visualization community) that supports existing design choices or proposes alternatives
+							<br><br>
+							We can build tools to support this research,
+							<br><br>
+							Just as we can imagine new tools for supporting practitioners' workflows
+							<br><br>
+							And finally, I think that there are some interasting possibilities in terms interacting with visualization content on mobile devices,
+							<br><br>
+							And I think that here is the best place to do this research.
+						</aside>
+
 					</section>
 
 				</section>						
