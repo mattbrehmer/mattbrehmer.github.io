@@ -42,7 +42,7 @@
 
 					<br>
 	
-					<span class="attribution">Presentation at Tableau Research 2019-04-09 &middot; slides: <a style="color:skyblue" href="https://mattbrehmer.github.io#talks" target="_blank">mattbrehmer.github.io#talks</a> </span>
+					<span class="attribution">Presentation at Tableau Research 2019-04-09 &middot; slides: <a style="color:skyblue" href="https://mattbrehmer.github.io/talks/tableau190409" target="_blank">mattbrehmer.github.io/talks/tableau190409</a> </span>
 
 					<aside class="notes">
 						Good morning. Thank you for the introduction and for the invitation to visit. 
@@ -77,9 +77,9 @@
 							<br><br>
 							I'll focus on one I led at Microsoft over the past couple of years, one involving a tool called Timeline Storyteller,
 							<br><br>
-							And I'll also speak a little bit about some of the other research projects that I've contributed to in this area in collaboration with interns and academic colleagues
+							And then I'll speak about how mobile devices may constrain visualization design choices and some experimental work that I've done in that area,
 							<br><br>
-							I'll close with an overview of some opportunities for future research
+							And I'll close with an overview of some opportunities for future research
 						</aside>
 
 					</section>
@@ -104,9 +104,9 @@
 						<aside class="notes">
 						With regards to my background, 
 						<br><br>
-						My Postdoc and PhD research has been devoted to information visualization 
+						My Postdoc at Microsoft Research and PhD at UBC were both devoted to information visualization, 
 						<br><br>
-						But my current research follows a Master's in Human-Computer Interaction,
+						Which were preceded by a Master's in Human-Computer Interaction,
 						<br><br>
 						And an undergraduate in Cognitive Science.
 						</aside>
@@ -129,7 +129,7 @@
 								
 								<i class="fas fa-mobile"></i> <strong>Visualizing information on mobile devices</strong>:
 								<br>
-								&middot; <span style="font-size:0.75em"><em>Ranges Over Time</em> <sup>- TVCG 19</sup> | <em>Animation vs. Small Multiples</em> <sup>- in review</sup> | <em>Tilt Interaction For Mobile Visualization</em> <sup>- in preparation</sup></span>
+								&middot; <span style="font-size:0.75em"><em>Ranges Over Time</em> <sup>- TVCG 19</sup> | <em>Animation vs. Small Multiples</em> <sup>- in review</sup> | <em>Novel Interaction For Mobile Visualization</em> <sup>- in preparation</sup></span>
 
 								<br><br><br>
 																					
@@ -177,7 +177,7 @@
 								
 								<i class="fas fa-mobile"></i> <strong>Visualizing information on mobile devices</strong>:
 								<br>
-								&middot; <span style="font-size:0.75em"><em>Ranges Over Time</em> <sup>- TVCG 19</sup> | <em>Animation vs. Small Multiples</em> <sup>- in review</sup> | <em>Tilt Interaction For Mobile Visualization</em> <sup>- in preparation</sup></span>
+								&middot; <span style="font-size:0.75em"><em>Ranges Over Time</em> <sup>- TVCG 19</sup> | <em>Animation vs. Small Multiples</em> <sup>- in review</sup> | <em>Novel Interaction For Mobile Visualization</em> <sup>- in preparation</sup></span>
 	
 								<br><br><br>							
 								
@@ -213,9 +213,9 @@
 						<aside class="notes">
 							And since I have a finite amount of time,
 							<br><br>
-							I'm going to focus on the three projects highlighted in gold. 
+							I'm going to focus on work from my Postdoc. 
 							<br><br>
-							Though I'll briefly mention some of my other projects where appropriate.
+							Though I'll briefly mention the approach to task analysis from my PhD where appropriate.
 						</aside>
 
 					</section>
@@ -236,7 +236,7 @@
 							
 							<i class="fas fa-mobile"></i> <strong style="color:gold">Visualizing information on mobile devices</strong>:
 							<br>
-							&middot; <span style="font-size:0.75em"><em>Ranges Over Time</em> <sup>- TVCG 19</sup> | <em>Animation vs. Small Multiples</em> <sup>- in review</sup> | <span style="color:#777"><em>Tilt Interaction For Mobile Visualization</em> <sup>- in preparation</sup></span></span>
+							&middot; <span style="font-size:0.75em"><em>Ranges Over Time</em> <sup>- TVCG 19</sup> | <span style="color:#777"><em>Animation vs. Small Multiples</em> <sup>- in review</sup> | <em>Novel Interaction For Mobile Visualization</em> <sup>- in preparation</sup></span></span>
 
 							<br><br><br>
 
@@ -269,13 +269,7 @@
 							<br><br>
 							And because my current research spans two themes,  
 							<br><br>
-							I'm going to focus on what is exciting to me right now, 
-							<br><br>
-							And that's visualizing and interacting with data on mobile phones.
-							<br><br>
-							There is however a connection between this theme and my research on tools for expressive information design,
-							<br><br>
-							Which I'll get to in a few minutes.
+							I'll spend the first half of the talk on the first of these, and then I'll switch to the latter.
 						</aside>
 
 					</section>
@@ -352,9 +346,7 @@
 						<br><br>
 						Instead, I'm interested in incorporating visualization to present information to people who don't identify as data analysts, in both public and personal contexts.
 						<br><br>
-						This leads me to ask questions like ``why are journalists and educators are using business intelligence tools to present information to their audiences``?
-						<br><br>
-						And I wonder if I build better tools for these communities and the needs that they have
+						So I often think of news readers, students, policy makers, and citizens who consume visual displays of information and visual explanations.
 						</aside>
 
 					</section>
@@ -363,7 +355,7 @@
 
 					<section>
 
-						<h4>Connecting <span style="color:gold">Research</span> & <span style="color:gold">Practice</span></h4>
+						<h4>The Value of Connecting <span style="color:gold">Research</span> & <span style="color:gold">Practice</span></h4>
 						<hr>
 
 						<small style="text-align:left">
@@ -372,16 +364,24 @@
 							Promoting and studying the <strong>adoption</strong> of deployed information design tools and research prototypes.
 							<br><br>
 							<strong>Collecting examples</strong> of information design <strong>produced by practitioners</strong>.
+							<br><br><br><br>
+							<strong>Fostering</strong> a <strong>dialogue</strong> between <strong>researchers</strong> and <strong>practitioners</strong> (e.g., <a style="color:skyblue" href="https://openvisconf.com" target="_blank">OpenVisConf</a>, <a style="color:skyblue" href="https://visinpractice.github.io" target="_blank">VisInPractice</a>)*.
 						</small>						
 
+						<span class="attribution">* OpenVisConf: <a style="color:skyblue" href="https://openvisconf.com" target="_blank">openvisconf.com</a> <i class="fas fa-external-link-alt" aria-hidden="true"></i> | VisInPractice event at IEEE VIS: <a style="color:skyblue" href="https://visinpractice.github.io" target="_blank">VisInPractice.github.io</a> <i class="fas fa-external-link-alt" aria-hidden="true"></i>.</span></span>
+
 						<aside class="notes">
-						Another thing that drives my work is connecting visualization researchers and practitioners. 
+						Finally, increasing expressivity and democratizing visualization are only possible if there is an ongoing process of communication and outreach between visualization researchers and practitioners. 
 						<br><br> 
 						This means disseminating research into practice, and just as importantly, disseminating practice into research. 
 						<br><br>
-						In my own work, this manifests as studying the adoption of deployed tools and prototypes.
+						As you'll see in my own research, this manifests as studying the adoption of deployed tools and prototypes.
 						<br><br>
 						And collecting examples of information design produced by practitioners.
+						<br><br> 
+						And finally this means speaking directly with practitioners, such as when I spoke at OpenVisConf, one of the most renowned practitioner-oriented visualization conferences, 
+						<br><br>
+						Or how I co-organized the VisInPractice event at last year's IEEE VIS conference, where I invited prominent visualization practitioners to speak to a largely academic audience. 					
 						</aside>
 
 					</section>
@@ -462,7 +462,7 @@
 							<br><br>
 							Where I might use visualization to tell a richer story that is grounded in data.
 							<br><br>
-							Some great examples of this process are a series of TED conference presentations by the late public health expert Hans Rosling, who you see here, who would combine his spoken narration with animated and annotated charts, 
+							I think of the TED talks by late public health expert Hans Rosling, who you see here, who would combine his spoken narration with animated and annotated charts, 
 							<br><br>
 							More broadly, this process of combining visualization and narrative explanation has become common in the fields of journalism, education, and public policy.
 						</aside>
@@ -520,7 +520,7 @@
 						<span class="attribution">Icons by <a style="color:cornflowerblue" href="https://www.cs.ubc.ca/~tmm/vadbook/figures.html" target="_blank">Eamonn Maguire</a> (cc by) for Munzner's <em>Visualization Analysis & Design</em> (CRC Press, 2014).</span>
 
 						<aside class="notes">
-							A central theme of my PhD research pertained to classifying visualization tasks and to consolidating the vocabulary for visualization tasks into a typology,
+							With respect to tasks, a central theme of my PhD research pertained to classifying visualization tasks and to consolidating the vocabulary for visualization tasks into a typology,
 							<br><br>
 							Which is the subject of a 2013 paper written with my PhD advisor Tamara Munzner.
 							<br><br>
@@ -533,6 +533,36 @@
 							Ultimately, expressivity is about satisfying the intent of the author, allowing them to tell the story they want to tell,
 							<br><br>
 							And whether this story can be reconstructed in the mind of the viewer. 
+						</aside>
+
+					</section>
+
+					<!-- THINKING SYSTEMATICALLY ABOUT TASKS ================================================== -->
+
+					<section data-background="#fff">
+
+						<h4>Thinking Systematically about <span style="color:cornflowerblue">Tasks</span></h4>
+						<hr>
+
+						<small style="text-align:left">
+							<i class="far fa-file"></i> <span style="color:cornflowerblue"><strong><em>A Multi-Level Typology of Abstract Visualization Tasks</em></strong></span>. <span style="font-weight: 700">Brehmer</span> and Munzner. <br>In <em>IEEE Transactions on Visualization and Computer Graphics</em> (InfoVis 2013).
+							<br><br>
+							The <strong>most cited IEEE InfoVis paper since 2013</strong>, with more than 300 citations*. 
+							<br><br>
+						</small>
+
+						<img data-src="assets/task-sequence.png" style="border: none; box-shadow:none" height="400px">
+
+						<span class="attribution">* Google Scholar, Apr 2019.<br><br>Icons by <a style="color:cornflowerblue" href="https://www.cs.ubc.ca/~tmm/vadbook/figures.html" target="_blank">Eamonn Maguire</a> (cc by) for Munzner's <em>Visualization Analysis & Design</em> (CRC Press, 2014).</span>
+						
+						<aside class="notes">
+							This task typology paper also presents a way to break down tasks and task sequences into elements of why visualization is used, what the inputs and outputs are, and how the task is realized in terms of design choices. 
+							<br><br>
+							And you'll see this systematic thinking about tasks throughout my work.
+							<br><br>
+							It would also seem as though the visualization community has found our typology to be useful for analyzing tasks, 
+							<br><br>
+							As my task typology paper has gone on to be the most cited InfoVis paper since 2013, now with more than 280 citations.
 						</aside>
 
 					</section>
@@ -700,22 +730,22 @@
 
 						<img height="350px" data-src="assets/timelinestoryteller.png"></img><br>
 						
-						<small><i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://timelinestoryteller.com" target="_blank">timelinestoryteller.com</a></strong> | <i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://github.com/Microsoft/timelinestoryteller" target="_blank" style="color:gold;">github.com/Microsoft/timelinestoryteller</a></strong></small>						
+						<small><i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://timelinestoryteller.com" target="_blank">timelinestoryteller.com</a></strong> | <i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://github.com/Microsoft/timelinestoryteller" target="_blank" style="color:gold;">github.com/Microsoft/timelinestoryteller</a></strong></small>	
 
 						<aside class="notes">
-						To present that narrative sequence about creative routines,
-						<br><br>
-						I just used an open-source tool that I designed and developed called Timeline Storyteller  
-						<br><br>
-						Which I'll be presented earlier this month and the Computation and Journalism Symposium in Miami. 
-						<br><br>
-						You could think of it as PowerPoint for timeline data.
-						<br><br>
-						It requires no programming expertise to use, and it runs in the browser or as a free extension for Microsoft's Power BI,
-						<br><br>
-						which is a popular interactive data analysis, visualization, and presentation tool.
-						<br><br>
-						But before I speak more about this tool and its evaluation, I'll provide its back story and motivation.
+							To present that narrative sequence about creative routines,
+							<br><br>
+							I just used an open-source tool that I designed and developed called Timeline Storyteller  
+							<br><br>
+							Which I'll be presented earlier a couple of months ago at the Computation and Journalism Symposium in Miami. 
+							<br><br>
+							You could think of it as PowerPoint for timeline data.
+							<br><br>
+							It requires no programming expertise to use, and it runs in the browser or as a free extension for Microsoft's Power BI,
+							<br><br>
+							which is a popular interactive data analysis, visualization, and presentation tool.
+							<br><br>
+							But before I speak more about this tool and its evaluation, I'll provide its back story and motivation.
 						</aside>
 
 					</section>
@@ -850,10 +880,11 @@
 						<aside class="notes">						
 							So how did I come up with this design space? 
 							<br><br>
-							You may recall from my background section that I incorporate various forms of qualitative analysis in my work, 
+							I mentioned earlier that I incorporate various forms of qualitative analysis in my work, 
 							<br><br>
 							And that I strive to connect research and practice, 
-							<br><br>This manifested here in my collection and categorization of 145 timelines and timeline visualization tools produced by both researchers and practitioners, 
+							<br><br>
+							This manifested here in my collection and categorization of 145 timelines and timeline visualization tools produced by both researchers and practitioners, 
 							<br><br>
 							And out of that came the dimensions of the design space.							 
 							<br><br>	
@@ -1232,35 +1263,6 @@
 						</aside>
 
 					</section>
-
-					<!-- MOBILE VIS ================================================== -->
-
-					<section data-background="#fff">
-						
-						<h4><span style="color:cornflowerblue">Mobile</span>, <span style="color:cornflowerblue">Responsive</span>, & Expressive Information Design</h4>
-						<hr>						
-
-						<img width="90%" data-src="assets/mobilevis.png" style="box-shadow: none"></img>	
-
-						<small style="text-align:left">
-							<i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>Data Visualization on Mobile Devices</em></span></strong>. <strong>CHI 2018</strong> Workshop organized by: <br>Lee, <span style="font-weight: 700">Brehmer</span>, Choe, Isenberg, Langer, and Dachselt.
-							<br><br>
-							<i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>Visualizing Ranges over Time on Mobile Phones</em></span></strong>. 
-							<br><span style="font-weight: 700">Brehmer</span>, Lee, Isenberg, and Choe. In <em>IEEE TVCG</em> (InfoVis 2018).
-							<br><br>
-							<i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>A Comparative Evaluation of Animation and Small Multiples<br>For Trend Visualization on Mobile Phones</em></span></strong>. 
-							<br><span style="font-weight: 700">Brehmer</span>, Lee, Isenberg, and Choe. In Review (Apr. 2019).
-						</small><br>
-
-						<aside class="notes">			
-							My other current area of research is visualization design for mobile devices. 
-							<br><br>
-							Much of my recent research has been experimentally comparing visualization design choices.
-							<br><br>
-							But a natural next step here is to consider interactive authoring tools that allow authors to design and test their data stories on different devices. 
-    				</aside>
-	
-					</section>
 					
 					
 					<!-- RANGES STUDY INTRO ================================================== -->				
@@ -1282,13 +1284,13 @@
 						</small>	
 
 						<aside class="notes">
-						The specific project that I'll focus on now is one that I presented a few months ago at VIS,
-						<br><br>
-						And its origins came during demonstrations of Timeline Storyteller to a group at Microsoft designing personal health apps. 
-						<br><br>
-						They asked me "will this work on mobile?", since they were designing mobile apps involving time-oriented personal activity data, namely sleep data. 
-						<br><br>
-						Like with the timeline project, I started this one by looking to current practice and how designers currently visualize data on mobile phones. 
+							The specific project that I'll focus on now is one that I presented a few months ago at VIS,
+							<br><br>
+							And its origins came during demonstrations of Timeline Storyteller to a group at Microsoft designing personal health apps. 
+							<br><br>
+							They asked me "will this work on mobile?", since they were designing mobile apps involving time-oriented personal activity data, namely sleep data. 
+							<br><br>
+							Like with the timeline project, I started this one by looking to current practice and how designers currently visualize data on mobile phones. 
 						</aside>
 
 					</section>				
@@ -1723,7 +1725,7 @@
 					<!-- ================================================== -->
 
 					<section>
-						<h4><span style="color:gold">Opportunities</span> for Expressive Information Design (1/2)</h4>
+						<h4><span style="color:gold">Opportunities</span> for Expressive Information Design</h4>
 						<hr>
 						<small style="text-align:left">
 							Designing and evaluating <strong>inviting</strong> and <strong>memorable</strong> techniques for <strong>presenting information</strong>. 
@@ -1754,15 +1756,13 @@
 					<!-- ================================================== -->					
 
 					<section>
-						<h4><span style="color:gold">Opportunities</span> for Expressive Information Design (2/2)</h4>
+						<h4><span style="color:gold">Opportunities</span> for Expressive Information Design (cont.)</h4>
 						<hr>
 
 						<small style="text-align:left">							
 							Measuring audience <strong>graphicacy</strong>* (visual / data / statistical literacy) and identifying ways to <strong>boost</strong> it. 
 							<br><br>
-							Information design for an audience with a <strong>limited attention span</strong>.
-							<br><br>
-							<strong>Mobile-first</strong> and <strong>mobile-only</strong> information design (and addressing the <strong>scarcity of research</strong>).
+							Information design for an audience with a <strong>limited attention span</strong>.							
 						</small>
 
 						<span class="attribution">* <em><a style="color:skyblue" href="http://www.thefunctionalart.com/2017/10/uncertainty-graphicacy-and-power-of.html" target="_blank">Uncertainty, graphicacy, and the power of statistics</a></em>. <br>Alberto Cairo (Oct 18, 2017), <a style="color:skyblue" href="http://www.thefunctionalart.com" target="_blank">thefunctionalart.com</a> <i class="fas fa-external-link-alt" aria-hidden="true"></i>. </span>
@@ -1774,14 +1774,66 @@
 							<br><br>
 							I want to identify how to measure this construct as well as how to improve it.
 							<br><br>
-							There's also the constraint of the audience's limited attention span and the challenge of designing information that both attracts this attention and yet does not mislead or misinform.
+							There's also the constraint of the audience's limited attention span and the challenge of designing information that both attracts this attention and yet does not mislead or misinform.							
+	
+					</section>	
+
+					<!-- PEN, TOUCH, DIAL ================================================== -->
+				
+					<section>
+						<h4><span style="color:gold">Opportunities</span> for Expressive Information Design (cont.)</h4>
+						<hr>
+
+						<small style="text-align:left">							
+							New <strong>input modalities</strong> for expressive information design, annotation, and presentation.
+						</small>
+
+						<br>
+						<img data-src="assets/pentouchdial.png" style="box-shadow: none" width="75%"/> <br>
+
+						<small style="text-align: left">
+							e.g., </span><i class="far fa-file"></i> <strong><span style="color:gold"><em>DataToon: Drawing Dynamic Network Comics With Pen + Touch Interaction</em></span></strong>. 
+							<br>Kim, Henry Riche, Bach, Xu, <span style="font-weight: 700">Brehmer</span>, Hinckley, Pahud, Xia, McGuffin, and Pfister. In Proc. <em>CHI</em> 2019.
+						</small>		
+						
+						<aside class="notes">		
+							Another area of interest that I've taken to over the past couple of years relates to interaction design beyond mouse and keyboard, perhaps a side effect of being in a research group led by Ken Hinckley.
 							<br><br>
-							Finally there's the constraint imposed by small displays, which motivates me to identify where the limitations are for visual representation and interaction design choices.
+							In this time I've been fortunate to be involved in several projects relating to the intersection of expressive information design and pen and touch interaction, including this one which will be presented by former intern Nam Wook Kim at CHI next month.
+							<br><br>
+							I believe that there is a lot of potential for expressivity and highly personalized data-driven storytelling in this space.
+						</aside>
+
+					</section>
+
+					<!-- MOBILE BI ================================================== -->
+				
+					<section>
+						<h4><span style="color:gold">Opportunities</span> for Expressive Information Design (cont.)</h4>
+						<hr>
+
+						<small style="text-align:left">							
+							<strong>Mobile-first</strong> and <strong>mobile-only</strong> information design (and addressing the <strong>scarcity of research</strong>). 				
+							<br><br>
+							Responding to the demand for mobile business intelligence.			
+						</small>
+
+						<br>
+						<img data-src="assets/tableau-mobile.png" style="box-shadow: none" width="47.5%"/> <img data-src="assets/powerbi-mobile.png" style="box-shadow: none" width="47.5%"/><br>
+						
+						<aside class="notes">		
+							Finally, there's the constraint imposed by small displays, which motivates me to identify where the limitations are for visual representation and interaction design choices.
 							<br><br>
 							There's not a lot of prior research from the visualization community when it comes to mobile devices, and I hope to rectify this. 
-    				</aside>
-	
-					</section>						
+							<br><br>
+							Over the past few years we've seen a demand for mobile business intelligence applications,
+							<br><br>
+							From Microsoft there's the Power BI mobile app, and I saw how a few weeks ago you launched a new interactive mobile app.
+							<br><br>
+							So it's an exciting time to be thinking about visualization on mobiile devices.
+						</aside>
+
+					</section>					
 
 				</section>
 
@@ -1797,7 +1849,7 @@
 						
 						<small>
 							<a href="http://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> &middot; <a href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a><br><br>
-							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://mattbrehmer.github.io#talks" target="_blank">mattbrehmer.github.io#talks</a></strong> | slides</small>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://mattbrehmer.github.io/talks/tableau1904019" target="_blank">mattbrehmer.github.io/talks/tableau1904019</a></strong> | slides</small>
 
 						</small>
 
@@ -1805,7 +1857,7 @@
 						<span class="attribution">Presentation at Tableau Research 2019-04-09</span>
 
 						<aside class="notes">
-						With that I'd like to thank you for your attention, though before I take questions,     
+							With that I'd like to thank you for your attention, though before I take questions,     
 						</aside>
 
 					</section>							
@@ -1815,14 +1867,16 @@
 					<section data-background="assets/collabs.png">
 
 						<aside class="notes">							
-						I'd like to take a moment to acknowledge my current and recent collaborators spanning a number of institutions and countries, 
-						<br><br>
-						Which includes visiting faculty researchers and PhD interns.     
+							I'd like to take a moment to acknowledge my current and recent collaborators spanning a number of institutions and countries, 
+							<br><br>
+							Which includes visiting faculty researchers and PhD interns.     
 						</aside>
 
 					</section>		
 
 				</section>
+
+				<!-- SUPPLEMENTAL HEADER ================================================== -->
 
 				<section>
 
@@ -1830,6 +1884,117 @@
 					<h3>Supplemental</h3>
 
 					</section>
+
+				</section>
+
+				<!-- SUPPLEMENTAL TOOLS ================================================== -->
+
+				<section>
+
+						<!-- CHARTACCENT ================================================== -->
+						
+						<section data-background="#fff">
+	
+							<h4>Other <span style="color:cornflowerblue">Expressive Information Design</span> Tools (1 of 3)</h4>
+							<hr>				
+							
+							<span class="fragment">
+								<small style="text-align: left">
+									<i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>ChartAccent: Annotation for Data-Driven Storytelling</em></span></strong>. <br>Ren, <span style="font-weight: 700">Brehmer</span>, Lee, Höllerer, and Choe. In Proc. 2017 <em>IEEE PacificVis</em> Symp. 
+								</small>		
+							
+								<img width="400px" data-src="assets/chartaccent1.gif"></img>
+	
+								<img width="400px" data-src="assets/chartaccent2.gif"></img>
+	
+								<img width="400px" data-src="assets/chartaccent3.gif"></img>
+	
+								<img width="400px" data-src="assets/chartaccent4.gif"></img>			
+	
+								<small style="text-align: left">							
+									<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue;" href="https://chartaccent.github.io/" target="_blank">chartaccent.github.io</a></strong> | <i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue;" href="https://github.com/chartaccent" target="_blank">github.com/chartaccent</a></strong>
+								</small>
+							</span>			
+	
+							<aside class="notes">
+								Now I'll step back to mention that Timeline Storyteller is just one of the expressive information design tool research projects that I've contributed to over the past couple of years, with PhD interns leading their development. 
+								<br><br>
+								<span style="color:crimson"><< CLICK >></span> One of these is ChartAccent, which is an open-source interactive tool for annotating charts via direct manipulation, 
+								<br><br>
+								This project was also motivated by a desire to bridge research and practice,
+								<br><br>
+								As its design choices were motivated by the chart annotation practices of major news rooms like the Economist or the New York Times,
+								<br><br>
+								And we learned about these practices by collecting and categorizing over a hundred examples. 
+							</aside>
+	
+						</section>					
+	
+						<!-- CHARTICULATOR  ================================================== -->
+	
+						<section data-background="#fff">
+	
+							<h4>Other <span style="color:cornflowerblue">Expressive Information Design</span> Tools (2 of 3)</h4>
+							<hr>				
+							
+							<small style="text-align: left">
+								</span><i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>Charticulator: Interactive Construction of Bespoke Chart Layouts</em></span></strong>. 
+								<br>Ren, Lee, and <span style="font-weight: 700">Brehmer</span>. In <em>IEEE TVCG</em> (InfoVis 2018).
+							</small>		
+	
+							<img width="100%" data-src="assets/charticulator.png"></img>
+	
+							<small style="text-align: left">
+								<i class="fas fa-trophy"></i> <strong>Honorable Mention for Best Paper</strong> at IEEE InfoVis 2018.<br><br>
+								<i class="fas fa-award"></i> <strong>Shortlisted</strong> for the 2018 Kantar <strong><a style="color:cornflowerblue" href="https://www.informationisbeautifulawards.com/showcase/3334-charticulator-interactive-construction-of-bespoke-chart-layouts" target="_blank">Information is Beautiful Awards</a></strong>.<br><br>
+								<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://charticulator.com/" target="_blank">charticulator.com</a></strong> | <i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://github.com/microsoft/charticulator" target="_blank">github.com/Microsoft/Charticulator</a></strong>
+							</small>		
+							
+							<aside class="notes">						
+								There's Charticulator, a highly expressive interactive tool for designing bespoke chart layouts and exportable chart templates,
+								<br><br>
+								Which received an honorable mention at last year's InfoVis conference,
+								<br><br>
+								And it was shortlisted for the Kantar Information is Beautiful Awards last year, 
+								<br><br>
+								Which is a bit like the academy awards of information visualization. 			
+							</aside>
+	
+						</section>
+	
+						<!-- DATATOON ================================================== -->
+	
+						<section data-background="#fff">
+	
+							<h4>Other <span style="color:cornflowerblue">Expressive Information Design</span> Tools (3 of 3)</h4>
+							<hr>				
+							
+							<small style="text-align: left">
+								</span><i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>DataToon: Drawing Dynamic Network Comics With Pen + Touch Interaction</em></span></strong>. 
+								<br>Kim, Henry Riche, Bach, Xu, <span style="font-weight: 700">Brehmer</span>, Hinckley, Pahud, Xia, McGuffin, and Pfister. In Proc. <em>CHI</em> 2019.
+							</small>		
+	
+							<img width="100%" data-src="assets/datatoon.png" style="box-shadow: none"></img>						
+	
+							<small style="text-align: left">							
+								<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://aka.ms/DataToon" target="_blank">aka.ms/DataToon</a></strong>
+							</small>	
+	
+							<aside class="notes">						
+								Finally there's DataToon, which will appear at CHI this year, which is a Pen + Touch tool for drawing comics about dynamic network data
+								<br><br>
+								Where you can drop network data into a canvas, get recommendations for panels, position panels with touch, and annotate and style nodes and edges with the pen.	
+								<br><br>
+								And I should mention that limiting the interaction to pen and touch was a fun and challenging constraint. 				
+							</aside>
+	
+						</section>					
+	
+				</section>	
+
+				<!-- SUPPLEMENTAL EVAL ================================================== -->
+
+				<section>
 
 					<!-- BELIV PAPER ================================================== -->
 
@@ -1899,45 +2064,511 @@
 							Which was possible as one of our co-authors was Christina Elmer, a data journalist from Der Spiegl in Germany, 
 							<br><br>
 							And another was Benjamin Wiederkehr, who leads the Interactive Things information design firm in Switzerland.
-					</section>
-		
+					</section>					
+					
+				</section>
+
+				<!-- SUPPLEMENTAL RANGES ================================================== -->
+
+				<section>
+
 					<!-- RANGES SLIDES ================================================== -->
 
 					<section class="center">
 						<h3>Ranges Over Time on Mobile Phones</h3>
 						<hr>
 						<small><strong><a style="color:skyblue" href="http://mattbrehmer.github.io/talks/ranges" target="_small">Detailed Experimental Design and Results Slides</a></strong> <i class="fas fa-external-link-alt" aria-hidden="true"></i></small>
-	
+
+					</section>
+
+				</section>	
+
+				<!-- FOCUS SECTION: ANIMATION VS. SMALL MULTIPLES ================================================== -->	
+
+				<section>	
+					
+					<!-- ANIMATION VS SMALL MULTIPLES ================================================== -->
+
+					<section>
+						<h4>Animation vs. Small Multiples on Mobile Phones</h4>
+						<hr>
+						<small style="text-align:left">
+							<i class="far fa-file"></i> <span style="color:gold"><strong><em>A Comparative Eval. of Animation & Small Multiples for Trend Visualization on Mobile Phones</em></strong></span>. <br><span style="font-weight: 700">M. Brehmer</span>, B. Lee, P. Isenberg, and E. K. Choe. (InfoVis 2019 Submission).
+						</small><br>
+
+						<img height="350px" data-src="assets/toosmallformultiples.gif"></img>
+						<img height="350px" data-src="assets/toosmallformultiples-crop.png"></img>
+						
+
+						<aside class="notes">							
+							This experiment compares animated and small multiple scatterplots on mobile phones, and 
+							<br><br>
+							We have a paper that we submitted to VIS. 			
+						</aside>
+
+					</section>					
+					
+
+					<!-- DATA GIFS ================================================== -->
+
+					<section data-background="#fff">
+						<h4>The Rise of the Data GIF</h4>
+						<hr>
+						
+						<img height="300px" data-src="assets/brussels.gif"></img>
+						<img height="300px" data-src="assets/migrations.gif"></img>
+						<img height="300px" data-src="assets/pew.gif"></img>
+						
+						<small style="text-align:left">
+							Sources (L → R): The Washington Post | Cornell Lab of Ornithology | Pew Research Center. 
+							<br><br>
+							Curated collections of Data GIFs:<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> 
+							<strong><a style="color:cornflowerblue" href="http://lenagroeger.com/datagifs/" target="_blank">lenagroeger.com/datagifs</a></strong> Lena Groeger (ProPublica, NICAR Tutorial 2017)<br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue" href="https://www.pinterest.com/jsvine/datagifs/" target="_blank">pinterest.com/jsvine/datagifs</a></strong> Jeremy Singer-Vine (Buzzfeed)
+						</small>
+
+						<aside class="notes">							
+							I had become interested in comparing animation and small multiple designs a few years ago when I started seeing animated graphics appear in online news and especially in social media,
+							<br><br>
+							And when I attended NICAR or the National Institute for Computer-Assisted Reporting conference in 2017, 
+							<br><br>
+							There was a whole session devoted to the creation of so-called Data GIFs,
+							<br><br>
+							The ones that interest me the most are those that make use of position change over time, such as in these examples.
+						</aside>
+
+					</section>
+
+					<!-- ANIMATION VS SMALL MULTIPLES: MOTIVATION ================================================== -->
+
+					<section data-background="#fff">
+						<h4>Animation on Mobile, Small Multiples on Desktop?</h4>
+						<hr>
+						
+						<img height="350px" data-src="assets/npr.png"></img>
+						<img height="350px" data-src="assets/npr.gif"></img>
+						
+						<small style="text-align:left">
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> 
+							<strong><em><a style="color:cornflowerblue" href="https://twitter.com/brianboyer/status/583311823245561856" target="_blank">Data viz solutions: small multiples on desktop, GIFs on yer phone!</a></strong></em> <br>Brian Boyer (NPR News Graphics, 2015).
+						</small>
+
+						<aside class="notes">			
+							The NPR News Graphics Team had promoted this design pattern of displaying small multiples on desktop and looped animated GIFs on phones,
+							<br><br>
+							But I wanted to know if there was evidence behind this allocation of designs to different device profiles.  			
+						</aside>
+
+					</section>
+
+					<!-- ANIMATION VS SMALL MULTIPLES: ROBERTSON ================================================== -->
+
+					<section data-background="#fff">
+						<h4>Prior Work: Animation vs. Trails vs. Small Multiples</h4>
+						<hr>
+						
+						<img height="450px" data-src="assets/robertson.png" style="box-shadow: none"></img>
+						<img height="450px" data-src="assets/rosling-reach.png"></img>
+						
+						<small style="text-align:left">
+							<i class="far fa-file"></i> <span style="color:cornflowerblue"><strong><em>Effectiveness of Animation in Trend Visualization</em></strong></span>. <br>G. Robertson, R. Fernandez, D. Fisher, B. Lee, and J. Stasko. IEEE TVCG (Proc InfoVis 2008).<br>
+							Inspired by Hans Rosling's 2006-07 TED Talks | <em>Test-of-Time</em> Award recipient at InfoVis 2018.
+						</small>
+
+						<aside class="notes">							
+							And it made me think of research done here at MSR 11 years ago
+							<br><br>
+							where George Robertson, along with Roland, Danyel, Bongshin, and visiting faculty research John Stasko
+							<br><br>
+							Were also intrigued animation, 
+							<br><br>
+							Particularly after seeing the late public health expert Hans Rosling's amazing TED talks,
+							<br><br>
+							In which he narrates a story about shifting global health and economic metrics
+							<br><br>
+							Set to animated scatterplots. 
+							<br><br>
+							So George and the other researchers conducted an experiment comparing animated, small multiple, and connected trail scatterplots,
+							<br><br>
+							And their paper about the experiment was quite influential, earning a Test-of-Time award at InfoVis last year. 
+						</aside>
+
+					</section>
+
+					<!-- ANIMATION VS SMALL MULTIPLES: ROBERTSON 2 ================================================== -->
+
+					<section data-background="#fff">
+						<h4>Prior Work: Animation vs. Trails vs. Small Multiples</h4>
+						<hr>
+						
+						<img width="100%" data-src="assets/robertson-wide.png" style="box-shadow: none"></img>
+						
+						<small style="text-align:left">
+							<i class="far fa-file"></i> <span style="color:cornflowerblue"><strong><em>Effectiveness of Animation in Trend Visualization</em></strong></span>. <br>G. Robertson, R. Fernandez, D. Fisher, B. Lee, and J. Stasko. IEEE TVCG (Proc InfoVis 2008).
+							<br><br>
+							<strong>Lab Experiment</strong>:<br>
+							<strong>2</strong> Settings (Analysis vs. Presentation) | <strong>3</strong> Design conditions | <strong>2</strong> Dataset sizes (80, 18) | <strong>24</strong> Tasks
+							<br><br>
+							<strong>Notable results</strong>: Analysis performance higher with multiples; participants preferred animation.
+						</small>
+
+						<aside class="notes">							
+							Their experiment considered two settings, a data analysis setting and a presentation setting with a narrator like to emulate Rosling's TED talks,
+							<br><br>
+							They had 3 design conditions (animation, trajectory trails, and small multiples with individual trajectory trails), a large and a small dataset, and 24 trajectory comparison tasks.
+							<br><br>
+							I won't go over all of their results, but in the data analysis setting, the study participants had better overall performance with small multiples,
+							<br><br>
+							Though interestingly, they preferred animation, finding it to be fun and engaging.
+							<br><br>
+							This was all of course done using a large display, and with experimenters observing the participants in a lab setting.
+						</aside>
+
+					</section>
+
+					<!-- EXPERIMENT ================================================== -->
+
+					<section>
+						<h4>A <span style="color:gold">Crowdsourced Experiment</span> on Mobile Phones</h4>
+						<hr>
+						<small style="text-align: left">
+						A crowdsourced <strong>visualization evaluation</strong> study performed <strong>exclusively on phones</strong>.
+						</small>
+
+						<img height="350px" data-src="assets/toosmallformultiples.gif"></img>
+						<img height="350px" data-src="assets/toosmallformultiples-crop.png"></img>
+
+						<small style="text-align:left">
+							<strong>Crowdsourced Experiment</strong>:<br>
+							<strong>1</strong> Context | <strong>2</strong> Design conditions | <strong>1</strong> Dataset size (16) | <strong>13</strong> Tasks (3 Training, 1 QA, 9 Test)
+						</small>
+
+						<aside class="notes">
+							In contrast, we conducted a crowdsourced experiment on mobile phones that borrows some of the elements of their experiment,
+							<br><br>
+							We did not consider a narrated presentation setting, and we only considered a small dataset of 16 items from the 2008 study,
+							<br><br>
+							And we adapted a subset of the 2008 study's experimental tasks, the ones that could be answered with a small dataset.
+						</aside>
+
+					</section>
+
+					<!-- TASKS ================================================== -->
+
+					<section data-background="#fff">
+						<h4>Tasks: <span style="color:darkred">Targets</span> & Distractors</h4>
+						<hr>
+
+						<img width="50%" data-src="assets/multiples-tasks.png" style="box-shadow: none"></img>
+
+						<small style="text-align:left">
+							Tasks adapted from Robertson et al (IEEE TVCG 2008).
+						</small>
+
+						<aside class="notes">
+							One of the things I had observed about the tasks used in the 2008 study was that they were fairly different from one another,
+							<br><br>
+							In that they asked participants to compare and select one to three targets exhibiting different trajectories, 
+							<br><br>
+							And with differing starting and ending distributions.
+							<br><br>
+							So in this new experiment I wanted to examine the experimental tasks individually.
+							<br><br>
+							I should also mention that these are simplified illustrations of the stimuli, not the stimuli themselves.
+							<br><br>
+							And that different participants saw different shuffled orders of these tasks.							
+						</aside>
+
+					</section>					
+
+					<!-- TASK STEPS ================================================== -->
+
+					<section data-background="#fff">
+						<h4>5-Stage Task Format</h4>
+						<hr>
+
+						<small style="text-align:left">
+							Show instruction & axes → 5s delay → Start → Select 1 - 3 countries → Done 
+						</small>
+
+						<img width="80%" data-src="assets/multiples-task-steps.png" style="box-shadow: none"></img>
+
+						<aside class="notes">
+							This is what the task stimuli actually looked like on a phone. 
+							<br><br>
+							Any individual participant saw either animation or small multiples,
+							<br><br>
+							For easch task, we first showed the instruction and the pair of axes for 5 seconds.
+							<br><br>
+							After that, the animation begins to loop in the animation condition,
+							<br><br>
+							In both conditions they have to select responses from a multiple choice list corresponding to alphabetically labeled points in the plot.
+							<br><br>
+							And when they select the correct number of responses, they tap done to complete the task and proceed to the next one.							
+						</aside>
+
+					</section>
+
+					<!-- ================================================== -->
+
+					<section>						
+						<h4>Dependent Measures</h4>
+						<hr>
+						<small style="text-align: left">
+							<p><em>For each task</em>:</p>
+							<p><span style="color: gold;"><i class="fas fa-stopwatch"></i></span> Trial completion time</p>
+							<p><span style="color: gold;"><i class="fas fa-check-circle"></i></span> (Partial) accuracy</p>
+							<p><br></p>
+							<p><em>At the end of the experiment</em>:</p>
+							<p><span style="color: gold;"><i class="fas fa-list-ol"></i></span> Confidence: Low to High</p>
+							<p><span style="color: gold;"><i class="fas fa-thumbs-up"></i></span> Ease of using the charts: Low to High</p>
+						</small>	
+												
+						<aside class="notes">
+							We recorded response time and accuracy for each task, 
+							<br><br>
+							And at the end of the experiment,
+							<br><br>
+							We asked participants to rate their overall confidence in their responses and 
+							<br><br>
+							Their perceived ease of using the charts to respond to these tasks. 
+						</aside>
+
+					</section>
+
+					<!-- ================================================== -->
+
+					<section>						
+						<h4>96 Participants</h4>
+						<hr>
+						<small>
+							<p><strong><span style="color: #FF7F0E;">Small Multiples</span></strong> (N = 45), <strong><span style="color: cornflowerblue;">Animation</span></strong> (N = 51)</p>	
+
+							<p>
+								<span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><br>
+								<span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><br>
+								<span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><br>
+								<span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><br>
+								<span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><br>
+								<span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span><span style="color: #252525;"> <i class="far fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span><span style="color: #252525;"> <i class="fas fa-user"></i></span>
+							</p>
+							<p>+17 excluded participants who responded incorrectly to quality control task.</p>
+						</small>	
+													
+						<aside class="notes">
+							Once again, we recruited participants from Mechanical Turk and after excluding participants who responded incorrectly to an obvious quality control task,
+							<br><br>
+							Our final participant counts were 45 in the Small Multiples condition and 51 in the Animation condition.
+						</aside>
+
+					</section>
+					
+					<!-- RESULTS ================================================== -->
+				
+					<section>
+						<h4><span style="color: gold;">Animation</span> or <span style="color: gold;">Small Multiples</span>?</h4>
+						<hr>
+
+						<small style="text-align: left">
+							Detailed statistics are provided in:<br><br> 
+							<i class="far fa-file"></i> <span style="color:gold"><strong><em>A Comparative Eval. of Animation & Small Multiples For Trend Visualization on Mobile Phones</em></strong></span>. <br><span style="font-weight: 700">M. Brehmer</span>, B. Lee, P. Isenberg, and E. K. Choe. (InfoVis 2019 Submission). 
+							
+							<br><br><br><br>
+
+							<p><span style="color: gold;"><i class="fas fa-stopwatch"></i></span> Participants were <strong>faster with Small Multiples</strong> (for 7 of 9 tasks). No difference in remaining 2 tasks.</p>
+							<p><span style="color: gold;"><i class="fas fa-check-circle"></i></span> Comparable accuracy between <strong>Animation</strong> and <strong>Small Multiples</strong> for 5 tasks. <br>Higher accuracy with <strong>Animation</strong> for 2 tasks. Higher with <strong>Small Multiples</strong> for remaining 2 tasks.</p>	
+							<p><span style="color: gold;"><i class="fas fa-thumbs-up"></i></span> Participants were slightly <strong>more confident</strong> with <strong>Animation</strong>.</p>
+						</small>
+						
+						<aside class="notes">		
+							As with the previous experiment, I'm going to focus on some of the important take-away results, and there's more details in the paper
+							<br><br>
+							This first thing I'll highlight is that we found that despite the smaller screen size, those using the small multiples scatterplots were still faster in 7 of 9 tasks, with no difference in the remaining 2 tasks.
+							<br><br>
+							With respect to accuracy, it was a draw in a sense, in that 5 other tasks, there was no evidence for a difference in accuracy,
+							<br><br>
+							And of the remaining 4 tasks, Small Multiples prevailed in 2 and Animation had higher accuracy in the other 2.
+							<br><br>
+							And finally, we noted that the animation group participants felt slightly more confident than their small multiples counterparts. 
+						</aside>
+
+					</section>
+
+					<!-- RESULTS 4+7 ================================================== -->
+
+					<section data-background="#fff">
+						<h4>No Completion Time Differences in Tasks 4 & 7</h4>
+						<hr>
+
+						<img width="100%" data-src="assets/multiples-results47.png" style="box-shadow: none"></img>
+
+						<small>
+							<strong><span style="color: #FF7F0E;">Small Multiples</span></strong> (N = 45) | <strong><span style="color: cornflowerblue;">Animation</span></strong> (N = 51) | <strong><span style="color: #4c924c;">Ratio / Difference (Effect Size)</span></strong>
+						</small>
+
+						<small style="text-align: left">
+							<br>	
+							Note that both tasks involve targets having trajectories that reverse course,<br>
+							Unlike the targets in the other 7 tasks.
+						</small>
+
+						<aside class="notes">
+							Beyond the overall results, what's interesting is when we consider the individual tasks,
+							<br><br>
+							And particularly those where there was no difference in completion time between the two groups,
+							<br><br>
+							As indicated by the 3rd and 4th columns here.
+							<br><br>
+							If you take a look at the task instructions and illustrations, you'll notice that both tasks involve targets exhibiting a trajectory reversal.
+							<br><br>
+							And these were the only two tasks where the targets exhibit this behavior.
+							<br><br>
+							These reversals may be more apparent using animation, 
+							<br><br>
+							While in a static small multiple design, the trajectory may be obscured since the trail might occlude itself.
+						</aside>
+
+					</section>
+
+					<!-- RESULTS 3+5 ================================================== -->
+
+					<section data-background="#fff">
+						<h4>Higher Accuracy with Small Multiples in Tasks 3 & 5</h4>
+						<hr>
+
+						<img width="100%" data-src="assets/multiples-results35.png" style="box-shadow: none"></img>
+
+						<small>
+							<strong><span style="color: #FF7F0E;">Small Multiples</span></strong> (N = 45) | <strong><span style="color: cornflowerblue;">Animation</span></strong> (N = 51) | <strong><span style="color: #4c924c;">Ratio / Difference (Effect Size)</span></strong>
+						</small>
+
+						<small style="text-align: left">
+							<br>	
+							Note both tasks involve comparing ∆Ys: a ∆Y with no ∆X (Task 3) or the 2 largest ∆Y values (Task 5).
+						</small>
+
+						<aside class="notes">
+							Similarly if we consider the two tasks were the small multiples exhibited higher accuracy, 
+							<br><br>
+							As the confidence interval for the difference in correct responses is to the left of the dashed 0% line, 
+							<br><br>
+							Both tasks involve comparisons over delta Y
+							<br><br>
+							Either a straight downward trajectory or an absence of movement along the X axis in the case of Task 3
+							<br><br>
+							Or the largest decreases over the Y axis in the case of Task 5.
+							<br><br>
+							In our small multiples design, this means that you have to look for a downward trajectory or a large vertical distance along a trajectory,
+							<br><br>
+							Visual comparisons can be done at a glance
+							<br><br>
+							While with animation, these angle and distance comparisons requires a reliance on memory.
+						</aside>
+
+					</section>
+
+					<!-- RESULTS 3+5 ================================================== -->
+
+					<section data-background="#fff">
+						<h4>Higher Accuracy with Animation in Tasks 1 & 8</h4>
+						<hr>
+
+						<img width="100%" data-src="assets/multiples-results18.png" style="box-shadow: none"></img>
+
+						<small>
+							<strong><span style="color: #FF7F0E;">Small Multiples</span></strong> (N = 45) | <strong><span style="color: cornflowerblue;">Animation</span></strong> (N = 51) | <strong><span style="color: #4c924c;">Ratio / Difference (Effect Size)</span></strong>
+						</small>
+
+						<small style="text-align: left">
+							<br>	
+							Both tasks involve assessing both ∆Y and ∆X: target trajectories quite different from distractors.
+						</small>
+
+						<aside class="notes">
+							Finally, there's the two tasks where animation had higher accuracy,
+							<br><br>
+							Where it would appear as though the target items have outlier trajectories in terms of the direction of motion,
+							<br><br>
+							Where all the distractors are moving up in Task 1, the targets are moving to the right.
+							<br><br>
+							And in the case of Task 8, the target is moving to the left while the distractors are moving to the right or almost vertically 
+						</aside>
+
+					</section>
+
+					<!-- RESULTS ================================================== -->
+				
+					<section>
+						<h4>Conclusions: <span style="color: gold;">Animation</span> or <span style="color: gold;">Small Multiples</span>?</h4>
+						<hr>
+
+						<small style="text-align: left">
+							<p>Results call into question the <em>"small multiples on the desktop, animation on the phone"</em> pattern.</p>
+							<p><br></p>
+							<p>Surprisingly, <strong>small multiples</strong> are <strong>still viable</strong> on small displays.</p>
+							<p>They may be particularly well suited for <strong>distance</strong> and <strong>angle</strong> comparisons.</p>	
+							<p><br></p>
+							<p>Animation and small multiples are <strong>comparably accurate</strong> in many cases.</p>
+							<p>Animation may be preferable for cases of <strong>outlier</strong> trajectories and <strong>reversals</strong>.</p>
+							<p><br></p>
+							<hr><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="http://aka.ms/multiples" target="_blank">aka.ms/multiples</a></strong> | (mobile only) experimental app.
+							<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://github.com/microsoft/MobileTrendVis" target="_blank">github.com/Microsoft/MobileTrendVis</a></strong> | open source app and analysis.
+						</small>
+						
+						<aside class="notes">		
+							Ultimately, we were surprised that small multiples remains to be a viable design option for small mobile phone displays.
+							<br><br>
+							And that they may be particularly well-suited if the viewer's task requires detecting or noticing trajectory lengths or angles,
+							<br><br>
+							Meanwhile, animation also seems to have circumstances in which it is suited,
+							<br><br>
+							Such as when there are trajectory outliers or reversals.
+							<br><br>
+							However, all of this points to a need for further research with more tasks and trials,
+							<br><br>
+							Likely with synthetic data, as we were using a subset of the real socioeconomic metric data from the United Nations used in the 2008 study.
+							<br><br>
+							And finally, like our ranges study, the application and our study results and analyses are openly available.  
+						</aside>
+
+					</section>
+
+				</section>
+
+				<!-- SUPPLEMENTAL FW ================================================== -->
+
+				<section>
+
+					<section class="center">
+					<h3>Supplemental: Ongoing & Future Work</h3>
+
 					</section>
 
 					<!-- MOBUBBLE ================================================== -->
 
-					<section>
-						<h4>Expressive Info. Design for Mobile Devices: <span style="color:gold">Ongoing</span></h4>
+					<section data-background="#fff">
+						<h4>Ongoing Mobile Visualization Interaction Research</h4>
 						<hr>					
 
 						<small style="text-align:left">
-							<span style="color:gold"><em>Discoverable Interactions for Navigating & Selecting Time-Varying Data on Mobile Phones</em></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Collins, and Hinckley. 
-							<br><br><br><br>
-							<strong>Motivation</strong>: few people interact with interactive news graphics beyond scrolling.
-							<br><br>
-							Many interactions anticipate a desktop context, but most of the audience is <strong>using a mobile device</strong>. 
-							<br><br>
-							UI elements for navigating multidimensional time-varying data occupy <strong>too much screen real estate</strong>.							
-							<br><br>
-
+							<span style="color:cornflowerblue"><strong><em>Tilting, Brushing, & Dialing Interactions for Data Visualization on Mobile Phones</em></strong></span>. <br><span style="font-weight: 700">M. Brehmer</span>, B. Lee, K. Hinckley, and C. Collins. (Work in progress, 2019). 	
 						</small>
-	
+
+						<br><img data-src="assets/mobubble.png" style="box-shadow: none" width="100%"/><br>
+
+						<small style="text-align:left">
+							Y-axis tilting in portrait or landscape; X-axis tilting for list navigation.	
+						</small>
+
 						<aside class="notes">							
-						Meanwhile, I've also been developing novel techniques for interacting with representations of time-varying data on mobile phones.
-						<br><br>
-						Which is motivated by statements from news organizations that few people interact with their news graphics aside from scrolling, 
-						<br><br>
-						Despite the presence of additional interactivity.
-						<br><br>
-						So in this project I've been assessing alternative interaction techniques that aim to be discoverable while conserving precious screen real estate.
-    				</aside>
-	
+							In this project, tilting the phone along one axis navigates the data's invisible temporal axis, 
+							<br><br>
+							while tilting the device along another axis navigates and highlights a list of data items.
+						</aside>
+
 					</section>
 
 					<!-- SMALLER MULTIPLES ================================================== -->	
@@ -1946,21 +2577,21 @@
 						<h4>Expressive Info. Design for Mobile Devices: <span style="color:cornflowerblue">Planned</span></h4>
 						<hr>
 						<small style="text-align:left">
-							<strong><span style="color:cornflowerblue"><em>Smaller Multiples: Assessing Multidimensional Glyph Design on Mobile Phones</em></span></strong>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Isenberg, and Choe.
+							<strong><span style="color:cornflowerblue"><em>Smaller Multiples: Assessing Multidimensional Glyph Design on Mobile Phones</em></span></strong>. 
 						</small><br>
 
 						<img width="90%" data-src="assets/smallermultiples.png" style="box-shadow: none"></img>
 
 						<span class="attribution">Images CW from top left: <span style="color:cornflowerblue">StressScan, Clue, FitBit Surge, Activity, Sleep++, Daily Goals</span>.</span>
-	
+
 						<aside class="notes">							
-						I'm also planning another study that will look at the design of multidimensional glyphs on mobile phones and their scalability, 
-						<br><br>
-						Which takes inspiration from the many activity and exercise tracking apps now on the market, 
-						<br><br>
-						And I'll likely use a similar crowdsourced experimental protocol to the ranges and animation studies that I've told you about.
-    				</aside>
-	
+							I'm also planning another study that will look at the design of multidimensional glyphs on mobile phones and their scalability, 
+							<br><br>
+							Which takes inspiration from the many activity and exercise tracking apps now on the market, 
+							<br><br>
+							And I'll likely use a similar crowdsourced experimental protocol to the ranges and animation studies that I've told you about.
+						</aside>
+
 					</section>		
 
 					<!-- DRAWING TIME ================================================== -->
@@ -1975,15 +2606,15 @@
 						<span class="attribution"><span style="color:gold">Images L to R</span>: narrative diagram by Kurt Vonnegut, "board game"-like timeline by Matthew Lee, timeline by Mark Twain, Vonnegut drawing a narrative, a curve timeline in Timeline Storyteller.</span>			
 
 						<aside class="notes">			
-						I'm also continuing to do research about expressive information design tools.
-						<br><br>				
-						My colleagues in the EPIC group at Microsoft are some of the leaders when it comes to natural user interaction and  pen and touch interaction design, and I've collaborated with them already on two projects that unite pen + touch interaction with visualization.
-						<br><br>
-						Going forward I want to continue to investigate the potential of pen and touch interaction for drawing and annotating time-oriented data, particularly in the context of live presentations and in application domains such as education, drawing inspiration from diverse places like the lectures of author Kurt Vonnegut, who would draw storylines as he spoke .  
-    				</aside>
-	
+							I'm also continuing to do research about expressive information design tools.
+							<br><br>				
+							My colleagues in the EPIC group at Microsoft are some of the leaders when it comes to natural user interaction and  pen and touch interaction design, and I've collaborated with them already on two projects that unite pen + touch interaction with visualization.
+							<br><br>
+							Going forward I want to continue to investigate the potential of pen and touch interaction for drawing and annotating time-oriented data, particularly in the context of live presentations and in application domains such as education, drawing inspiration from diverse places like the lectures of author Kurt Vonnegut, who would draw storylines as he spoke .  
+						</aside>
+
 					</section>
-					
+
 				</section>
 	
 			</div>
