@@ -33,7 +33,6 @@ margin: 0px 0 10px 0;
 #nav a {
 font-variant: small-caps;
 text-decoration: none;
-font-size: 16px;
 color: #2A5DB0;
 text-align: right;
 padding: 0 0 0 0px;
@@ -94,11 +93,14 @@ margin: 0px 0px 6px 0px;
 
 .left {
 float: left;
+text-align: left;
+font-size: 20px;
 }
 
 .right {
 text-align: right;
 float: right;
+font-size: 20px;
 }
 
 .block{
@@ -155,8 +157,6 @@ float: left;
 #nav{
 width: 715px;
 height: 20px;
-float: right;
-text-align: right;
 padding: 40px 0px 0px 0px;
 }
 
