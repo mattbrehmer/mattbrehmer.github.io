@@ -96,7 +96,7 @@ module.exports = function(grunt) {
 				options: {
 					port: port,
 					base: root,
-					livereload: true,
+					livereload: false,
 					open: true,
 					useAvailablePort: true
 				}
@@ -143,7 +143,7 @@ module.exports = function(grunt) {
 				files: root.map(path => path + '/*.md')
 			},
 			options: {
-				livereload: true
+				livereload: false
 			}
 		},
 
