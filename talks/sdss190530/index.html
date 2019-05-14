@@ -1,0 +1,847 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>The Design and Evaluation of Expressive Visualization Tools for Data-Driven Storytelling</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300;700" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="shortcut icon" href="favicon.ico" />
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- TITLE SLIDE ================================================== -->
+				
+				<section class="center">
+					<h3>The Design and Evaluation of <br> Expressive Visualization Tools for <br>Data-Driven Storytelling</h3>	
+					
+					<hr>
+					
+					<small>
+						<a href="https://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> | <a href="https://mattbrehmer.github.io" target="_blank">mattbrehmer.github.io</a> | <a href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a>
+					</small>
+
+					<br>
+	
+					<span class="attribution">Presentation at ASA SDSS 2019-05-30 &middot; slides: <a style="color:skyblue" href="https://mattbrehmer.github.io/talks/sdss190530" target="_blank">mattbrehmer.github.io/talks/sdss190530</a> </span>
+
+					<aside class="notes">
+					</aside>
+
+				</section>
+
+				<!-- INTRODUCTION ================================================== -->
+
+				<section>
+
+					<!-- FOUR TOOLS ================================================== -->
+
+					<section data-background="#fff">
+					
+						<h4>Interactive & Expressive Visualization Tools</h4>
+					
+						<hr>
+						<img data-src="assets/chartaccent-powerbi.png" height="200px"></img>
+						<img data-src="assets/timelinestoryteller.png" height="200px"></img>
+
+						<span class="body_span">
+							<small>
+								<strong style="color:cornflowerblue">ChartAccent</strong> (2016) | 
+								<strong style="color:cornflowerblue">Timeline Storyteller</strong> (2017) 
+							</small>
+						</span>
+						<br>
+
+						<img data-src="assets/charticulator_ui.png" height="200px"></img>
+						<img data-src="assets/datatoon_tall.png" height="200px"></img>
+					
+						<span class="body_span">
+							<small>
+								<strong style="color:cornflowerblue">Charticulator</strong> (2018) | 
+								<strong style="color:cornflowerblue">DataToon</strong> (2019) </small>
+							</span>
+						</span>					
+
+					</section>
+
+					<!-- CHARACTERISTICS ================================================== -->
+
+					<section>
+
+						<h4>Visualization Design Considerations for <span style="color:gold">Storytelling</span></h4>
+						
+						<hr>
+
+						<small style="text-align:left">
+							&middot; Fine control over visual encoding choices<br><br>
+							&middot; Informative annotations and captions<br><br>
+							&middot; Selective emphasis and highlighting<br><br>
+							&middot; Sequential reveal of information over time and space<br><br><br>
+							&middot; Live audience or asynchronous consumption?<br><br>
+						</small>
+
+						<aside class="notes">
+						</aside>
+
+					</section>
+
+					<!-- TOOL CHARACTERISTICS ================================================== -->
+					
+					<section>
+					
+						<h4>Our Expressive Visualization <span style="color:gold">Tools</span> for Storytelling</h4>
+					
+						<hr>
+					
+						<small style="text-align:left">
+							&middot; Interactive browser-based tools: no programming required<br><br>
+							&middot; Not intended for exploratory data analysis<br><br>
+							&middot; Authoring, not design<br><br>
+							&middot; Correctly formatted, clean data<br><br>
+							&middot; Anticipating alternative export and re-use scenarios<br><br>
+						</small>
+					
+						<aside class="notes">
+						</aside>
+					
+					</section>
+
+				</section>
+				
+				<!-- FOCUS SECTION 1: CHARTACCENT ================================================== -->
+
+				<section>
+
+					<!-- CHARTACCENT ================================================== -->
+					
+					<section data-background="#fff">
+					
+						<small style="text-align: left">
+							<i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>ChartAccent: Annotation for Data-Driven
+										Storytelling</em></span></strong>. <br>Ren, <span style="font-weight: 700">Brehmer</span>, Lee, Höllerer,
+							and Choe. <br>In Proceedings of the 2017 <em>IEEE PacificVis</em> Symposium.
+						</small>
+				
+						<img width="400px" data-src="assets/chartaccent1.gif"></img>
+				
+						<img width="400px" data-src="assets/chartaccent2.gif"></img><br>
+				
+						<img width="400px" data-src="assets/chartaccent3.gif"></img>
+				
+						<img width="400px" data-src="assets/chartaccent4.gif"></img>
+				
+						<small style="text-align: left">
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue;"
+									href="https://chartaccent.github.io/" target="_blank">chartaccent.github.io</a></strong> | <i
+								class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue;"
+									href="https://github.com/chartaccent" target="_blank">github.com/chartaccent</a></strong>
+						</small>
+					
+						<aside class="notes">
+							
+						</aside>
+					
+					</section>
+
+					<!-- NYT ================================================== -->
+
+					<section class="center">
+					
+						<blockquote>
+							<span class="body_span"><em>“the <span style="color:gold">annotation layer</span> is the <br>most important thing we do... <br>otherwise it’s a case
+									of here it is, <br>you go figure it out."</em></span>
+						</blockquote>
+						<span class="body_span">- Amanda Cox, <br><em>New York Times</em> Data Editor</span>
+
+						<aside class="notes">
+						
+						</aside>
+
+					</section>
+
+					<!-- FORMS OF ANNOTATION ================================================== -->
+
+					<section data-background="#fff">
+						<h4>Annotating Points and Values</h4>
+						<img data-src="../assets/targets1.png">
+
+						<aside class="notes">
+							
+						</aside>
+					</section>
+
+					<!-- FORMS OF ANNOTATION ================================================== -->
+					
+					<section data-background="#fff">
+						<h4>Annotating Ranges</h4>
+						<img data-src="../assets/targets2.png">
+
+						<aside class="notes">
+							
+						</aside>
+					</section>
+
+					<!-- FORMS OF ANNOTATION ================================================== -->
+					
+					<section data-background="#fff">
+						<h4>Annotating Sets and Other Annotations</h4>
+						<img data-src="../assets/forms.png">
+
+						<aside class="notes">
+							
+						</aside>
+					</section>
+
+					<!-- CHARTACCENT IFRAME ================================================== -->
+					
+					<section>
+						<small style="text-align: left">
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:gold;"
+									href="https://chartaccent.github.io/" target="_blank">chartaccent.github.io</a></strong> | <i
+								class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:gold;"
+									href="https://github.com/chartaccent" target="_blank">github.com/chartaccent</a></strong>
+						</small>
+					
+						<iframe data-src="https://chartaccent.github.io/" width="100%" height="510"></iframe>
+
+						<small style="text-align: left">
+							Also available as custom visuals for Power BI.
+						</small>
+
+						<aside class="notes">
+						
+						</aside>
+
+					</section>
+
+				</section>
+				
+				<!-- FOCUS SECTION 2: TIMELINE STORYTELLER ================================================== -->
+
+				<section>
+
+					<!-- FOUR TOOLS ================================================== -->
+					
+					<section data-background="#fff">
+					
+						<h4>Interactive & Expressive Visualization Tools</h4>
+					
+						<hr>
+						<img data-src="assets/chartaccent-powerbi.png" height="200px"></img>
+						<img data-src="assets/timelinestoryteller.png" height="200px"></img>
+					
+						<span class="body_span">
+							<small>
+								<strong style="color:cornflowerblue">ChartAccent</strong> (2016) |
+								<strong style="color:cornflowerblue">Timeline Storyteller</strong> (2017)
+							</small>
+						</span>
+						<br>
+					
+						<img data-src="assets/charticulator_ui.png" height="200px"></img>
+						<img data-src="assets/datatoon_tall.png" height="200px"></img>
+					
+						<span class="body_span">
+							<small>
+								<strong style="color:cornflowerblue">Charticulator</strong> (2018) |
+								<strong style="color:cornflowerblue">DataToon</strong> (2019) </small>
+						</span>
+						</span>
+					
+					</section>
+
+					<!--TIMELINE STORYTELLER  ================================================== -->
+					
+					<section>
+					
+						<small style="text-align:left">
+							<i class="far fa-file"></i> <span style="color:gold"><em>Timeline Storyteller: The Design & Deployment of an
+									Interactive Authoring Tool for Expressive Timeline Narratives</em></span>. <br><span
+								style="font-weight: 700">Brehmer</span>, Lee, Henry Riche, Tittsworth, Lytvynets, Edge, and White. <br>
+								In Proceedings of the 2019 <em>Computation + Journalism</em> Symposium.
+						</small><br>
+					
+						<img height="350px" data-src="../assets/timelinestoryteller.png"></img><br>
+					
+						<small><i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="https://timelinestoryteller.com" target="_blank">timelinestoryteller.com</a></strong> <br><br> <i
+								class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="https://github.com/Microsoft/timelinestoryteller" target="_blank"
+									style="color:gold;">github.com/Microsoft/timelinestoryteller</a></strong></small>
+					
+						<aside class="notes">
+							
+						</aside>
+					
+					</section>
+
+					<!-- DAILY ROUTINES ================================================== -->
+					
+					<section data-background="#EAEAEA">
+					
+						<h4>The Daily Routines of Famous Creative People</h4>
+					
+						<iframe width="680" height="510"
+							src="https://msit.powerbi.com/view?r=eyJrIjoiYjczZDAyZjUtNWZmZS00NjM5LWIyNWYtZmYzZDEwZTczZDRlIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9"
+							frameborder="0" allowFullScreen="true"></iframe>
+					
+						<span class="attribution">Story inspired by infographics by <strong><a href="https://podio.com/site/creative-routines"
+									style="color:cornflowerblue;" target="_blank">Podio</a></strong> and <strong><a
+									href="http://infowetrust.com/creative-routines/" style="color:cornflowerblue;" target="_blank">info we trust</a>
+								(RJ Andrews)</strong>.
+							<br>Data source: <strong><a href="https://www.goodreads.com/book/show/15799151-daily-rituals"
+									style="color:cornflowerblue;" target="_blank"><em>Daily Rituals: How Artists Work</em></a></strong> by
+							<strong><a href="http://masoncurrey.com/" style="color:cornflowerblue;" target="_blank">Mason Currey</a></strong>
+							(2013)</span>
+					
+						<aside class="notes">
+							To give you an example of a way to present timelines, I want to show you a brief presentation about the daily
+							routines of famous creative people.
+							<br><br>
+							<span style="color:red">MAX</span>: What you see here is a set of radial timelines depicting a typical 24 hours in
+							the lives of 26 writers, artists, composers, and other creative types.
+							<br><br>
+							When they work, eat, sleep, exercise, and do other activities.
+							<br><br>
+							<span style="color:red">NEXT</span>: I had wondered if there was any pattern as to when creative people do their
+							creative work.
+							<br><br>
+							It turns out that at least among these people, some creative people prefer to work in short, focused bursts, like
+							Darwin or Kant, while people like Murakami and Voltaire get up early and work for long uninterrupted periods of
+							time.
+							<br><br>
+							Meanwhile, you have odd ones like Kafka who work all night long.
+							<br><br>
+							<span style="color:red">NEXT</span>: I had also wondered about the potential relationship between sleep and
+							creativity, so let me focus your attention to these blue arcs.
+							<br><br>
+							Most people here tend to sleep at night, with notable exceptions like Balzac who would turn in at 6pm, and Kafka,
+							who just seemed to keep odd hours.
+							<br><br>
+							A third question I had was about variation and creativity. Let me show you how often these creative people change
+							activities throughout their day.
+							<br><br>
+							<span style="color:red">NEXT</span>: This 24-hour clock metaphor isn't the best way to convey the number or
+							heterogeneity of activities, so I'm going to transition to a just show you a sequence of activities without any
+							duration, effectively resulting in a radial bar chart.
+							<br><br>
+							<span style="color:red">NEXT</span>: To show who varied the most and least among these people, a linear
+							representation is probably better, where you can see that Darwin has the most varied day of all the people here
+							while Murakami prefers less variation.
+							<br><br>
+							<span style="color:red">NEXT</span>: Finally, I'll restore the duration of events so that you can compare these
+							timelines just by scanning up and down, where you might spot times where some routines appear to be in sync with one
+							another, such as when people work or sleep at the same time.
+							<br><br>
+							And this is a good time to ask you to compare your own daily rhythm to these creative people.
+							<br><br>
+							When do you sleep, eat, or do you best creative work?
+						</aside>
+					
+					</section>
+
+					<!-- TIMELINES REVISITED ================================================== -->
+					
+					<section>
+					
+						
+						<small style="text-align:left">
+							<i class="far fa-file"></i> <span style="color:gold"><em>Timelines Revisited: <br>A Design Space & Considerations for
+									Expressive Storytelling</em></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Bach, Henry Riche,
+							and Munzner. <br>In <em>IEEE Trans. Visualization & Computer Graphics</em>, 2017.
+							<hr>
+							<br><br>
+							<strong>Timelines</strong> are visual representations of categorical event sequences.<br><br>
+							How have people drawn timelines over the course of history?
+					
+							<br><br><br> ... A survey of <strong>250+ timelines</strong> and <strong>timeline tools</strong>.
+
+							<br><br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a href="http://timelinesrevisited.github.io"
+									target="_blank" style="color:skyblue;">timelinesrevisited.github.io</a></strong>
+						</small>
+					
+						<aside class="notes">
+							In late 2014, I became fascinated by the potential for expressive information design with timelines,
+							<br><br>
+							Which are used to tell stories in domains such as journalism, education, and project management.
+							<br><br>
+							So I collected and categorized how people have drawn timelines over the course of history.
+							<br><br>
+							And eventually I had collected over 250 timeline and timeline visualization tools which led to a design space for
+							presenting timelines.
+						</aside>
+					
+					</section>					
+					
+					<!-- TIMELINE DESIGN SPACE ================================================== -->
+					
+					<section>
+					
+						<small style="text-align:left">
+							<i class="far fa-file"></i> <span style="color:gold"><em>Timelines Revisited: <br>A Design Space & Considerations for
+									Expressive Storytelling</em></span>. <br><span style="font-weight: 700">Brehmer</span>, Lee, Bach, Henry Riche,
+							and Munzner. <br>In <em>IEEE Trans. Visualization & Computer Graphics</em>, 2017.
+							<hr><br>
+						</small>
+						<small><strong><span style="color:gold">Representation</span></strong></small>
+						<br>
+						<img class="white_img" width="80" height="80" data-src="../assets/r-lin.png" alt="Linear"
+							style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="../assets/r-rad.png" alt="Radial"
+							style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="../assets/r-spi.png" alt="Spiral"
+							style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="../assets/r-cal.png" alt="Calendar"
+							style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="../assets/r-arb.png" alt="Curve"
+							style="margin:0px; background: none; border: none; box-shadow:none">
+						<br>
+						<small><strong><span style="color:gold">Scale</span></strong></small>
+						<br>
+						<img class="white_img" width="80" height="80" data-src="../assets/s-chron.png" alt="Chronological"
+							style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="../assets/s-rel.png" alt="Relative"
+							style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="../assets/s-log.png" alt="Logarithmic"
+							style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="../assets/s-seq.png" alt="Sequential"
+							style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="../assets/s-intdur.png" alt="Collapsed"
+							style="margin:0px; background: none; border: none; box-shadow:none">
+						<br>
+						<small><strong><span style="color:gold">Layout</span></strong></small>
+						<br>
+						<img class="white_img" width="80" height="80" data-src="../assets/l-uni.png" alt="Unified"
+							style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="../assets/l-fac.png" alt="Faceted"
+							style="margin:0px; background: none; border: none; box-shadow:none">
+						<img class="white_img" width="80" height="80" data-src="../assets/l-seg.png" alt="Segmented"
+							style="margin:0px; background: none; border: none; box-shadow:none">
+					
+						<aside class="notes">
+							It turns out that there are many ways to present timelines.
+							<br><br>
+							You can represent time in various ways: linearly, radially, or by using spirals, grids such as calendars, or along a
+							curve
+							<br><br>
+							And you can combine these representations with different time scales: you could use an absolute or relative
+							chronological scale, a logarithmic scale for extremely long-spanning timelines, or you could use a purely sequential
+							scale.
+							<br><br>
+							And then there's "Layout", or how to draw one or more timelines within a page or display:
+							<br><br>
+							This has to do with deciding between a single timeline, faceting into multiple timelines (like how I did for each
+							creative person),
+							<br><br>
+							Or wrapping a single timeline into meaningful segments of time, like a decade or a century.
+						</aside>
+					
+					</section>
+					
+					<!-- STORYTELLING CONSIDERATIONS ================================================== -->
+					
+					<section class="center">
+					
+						<small style="text-align:left">
+							Different combinations of <strong>representation</strong>, <strong>scale</strong>, & <strong>layout</strong><br>
+							serve different communicative goals. <br><br>
+							Anticipate <strong>chronological</strong> or <strong>non-chronological</strong> narratives.<br><br>
+							Incrementally <strong>reveal</strong>, selectively <strong>highlight</strong> & <strong>annotate</strong> to direct attention.
+							<hr><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="https://timelinestoryteller.com" target="_blank">timelinestoryteller.com</a></strong> | interactive tool for the browser or Power BI <br><br> <i
+								class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="https://github.com/Microsoft/timelinestoryteller" target="_blank"
+									style="color:gold;">github.com/Microsoft/timelinestoryteller</a></strong> | open source <br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="https://timelinestoryteller.com" target="_blank">openvisconf.com/2017</a></strong> | <em>What Story Does Your Timeline Tell?</em>
+							
+						</small>
+					
+						<aside class="notes">
+							In this TVCG paper I make the case that timeline design tools should provide alternative representations of time,
+							time scales, and layouts,
+							<br><br>
+							As different combinations of these serve different communicative tasks.
+							<br><br>
+							For instance, sometimes I want to emphasize sequence without duration, other times periodicity.
+							<br><br>
+							I also discuss in this paper how existing timeline tools also tend towards a chronological narrative:
+							<br><br>
+							Either the whole timeline is shown as a static image, so readers are likely to begin at the start of the timeline,
+							or events are revealed in chronological order, one event at a time as a series of slides.
+							<br><br>
+							For some stories, a chronological introduction of events makes total sense, while for others it does not,
+							<br><br>
+							Like how in my story about the routines of creative people, I revealed and highlighted aspects of those timelines in
+							an order that wasn't chronological starting at midnight.
+							<br><br>
+							To achieve this expressive narrative design, you should make use of animation, highlighting, and annotation to
+							incrementally reveal parts of a narrative (that may not be chronological), to allow the viewer to make new
+							comparisons.
+							<br><br>
+							Each of these considerations were realized in the tool Timeline Storyteller.
+						</aside>
+					
+					</section>
+
+				</section>
+
+				<!-- FOCUS SECTION 3: CHARTICULATOR ================================================== -->
+
+				<section>
+
+					<!-- FOUR TOOLS ================================================== -->
+					
+					<section data-background="#fff">
+					
+						<h4>Interactive & Expressive Visualization Tools</h4>
+					
+						<hr>
+						<img data-src="assets/chartaccent-powerbi.png" height="200px"></img>
+						<img data-src="assets/timelinestoryteller.png" height="200px"></img>
+					
+						<span class="body_span">
+							<small>
+								<strong style="color:cornflowerblue">ChartAccent</strong> (2016) |
+								<strong style="color:cornflowerblue">Timeline Storyteller</strong> (2017)
+							</small>
+						</span>
+						<br>
+					
+						<img data-src="assets/charticulator_ui.png" height="200px"></img>
+						<img data-src="assets/datatoon_tall.png" height="200px"></img>
+					
+						<span class="body_span">
+							<small>
+								<strong style="color:cornflowerblue">Charticulator</strong> (2018) |
+								<strong style="color:cornflowerblue">DataToon</strong> (2019) </small>
+						</span>
+						</span>
+					
+					</section>
+
+					<!-- CHARTICULATOR ================================================== -->
+
+					<section data-background="#fff">
+					
+						<small style="text-align: left">
+							</span><i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>Charticulator: Interactive
+										Construction of Bespoke Chart Layouts</em></span></strong>.
+							<br>Ren, Lee, and <span style="font-weight: 700">Brehmer</span>. <br>In <em>IEEE Trans. Visualization & Computer Graphics</em>, 2019.
+						</small>
+						<hr>
+						<img width="100%" data-src="../assets/charticulator.png"></img>
+						
+						<small style="text-align: left">
+							<i class="fas fa-trophy"></i> <strong>Honorable Mention for Best Paper</strong> at IEEE InfoVis 2018.<br><br>
+							<i class="fas fa-award"></i> <strong>Shortlisted</strong> for the 2018 Kantar <strong><a style="color:cornflowerblue"
+									href="https://www.informationisbeautifulawards.com/showcase/3334-charticulator-interactive-construction-of-bespoke-chart-layouts"
+									target="_blank">Information is Beautiful Awards</a></strong>.<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue"
+									href="https://charticulator.com/" target="_blank">charticulator.com</a></strong> | <i
+								class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue"
+									href="https://github.com/microsoft/charticulator" target="_blank">github.com/Microsoft/Charticulator</a></strong>
+						</small>
+					
+					</section>
+
+					<!-- CHARTICULATOR GALLERY ================================================== -->
+					
+					<section class="center" data-background="#fff">
+						<img data-src="../assets/charticulator_gallery.png" width="100%">
+					</section>
+
+					<!-- CHARTICULATOR SITE ================================================== -->
+					
+					<section>
+						<small style="text-align: left">
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:gold"
+									href="https://charticulator.com/" target="_blank">charticulator.com</a></strong>
+						</small>
+						<iframe width="100%" height="510" src="https://www.youtube.com/embed/5EZq4QolNy4" frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</section>
+
+				</section>
+
+				<!-- FOCUS SECTION 4: DATATOON ================================================== -->
+
+				<section>
+
+					<!-- FOUR TOOLS ================================================== -->
+					
+					<section data-background="#fff">
+					
+						<h4>Interactive & Expressive Visualization Tools</h4>
+					
+						<hr>
+						<img data-src="assets/chartaccent-powerbi.png" height="200px"></img>
+						<img data-src="assets/timelinestoryteller.png" height="200px"></img>
+					
+						<span class="body_span">
+							<small>
+								<strong style="color:cornflowerblue">ChartAccent</strong> (2016) |
+								<strong style="color:cornflowerblue">Timeline Storyteller</strong> (2017)
+							</small>
+						</span>
+						<br>
+					
+						<img data-src="assets/charticulator_ui.png" height="200px"></img>
+						<img data-src="assets/datatoon_tall.png" height="200px"></img>
+					
+						<span class="body_span">
+							<small>
+								<strong style="color:cornflowerblue">Charticulator</strong> (2018) |
+								<strong style="color:cornflowerblue">DataToon</strong> (2019) </small>
+						</span>
+						</span>
+					
+					</section>
+
+					<!-- DATATOON ================================================== -->
+					
+					<section data-background="#fff">
+					
+						<small style="text-align: left">
+							</span><i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>DataToon:<br>Drawing Dynamic Network
+										Comics With Pen + Touch Interaction</em></span></strong>.
+							<br>Kim, Riche, Bach, Xu, <span style="font-weight: 700">Brehmer</span>, Hinckley, Pahud, Xia, McGuffin, & Pfister. 
+							<br>In Proceedings of the 2019 ACM <em>CHI</em> Conference.
+						</small>
+						<hr>
+						<img width="100%" data-src="../assets/datatoon.png" style="box-shadow: none"></img>
+					
+						<small style="text-align: left">
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue"
+									href="https://aka.ms/DataToon" target="_blank">aka.ms/DataToon</a></strong>
+						</small>
+					
+						<aside class="notes">
+							
+						</aside>
+					
+					</section>
+
+					<!-- DATATOON SITE ================================================== -->
+
+					<section>
+						<small style="text-align: left">
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:gold"
+									href="https://aka.ms/DataToon" target="_blank">aka.ms/DataToon</a></strong>
+						</small>
+						<iframe width="100%" height="510" data-src="https://www.youtube.com/embed/_CEDKpM6umg" frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</section>
+
+				</section>
+			
+				<!-- FOCUS SECTION 5: EVALUATION ================================================== -->
+
+				<section>
+
+
+
+				</section>
+
+				<!-- CONCLUSION ================================================== -->
+				
+				<section>
+
+					<!-- TITLE SLIDE ================================================== -->
+
+					<section class="center">
+						<h3>The Design and Evaluation of <br> Expressive Visualization Tools for <br>Data-Driven Storytelling</h3>
+						<hr>
+						<small>
+						<a href="https://mattbrehmer.github.io" target="_blank">Matthew Brehmer</a> | <a href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a>
+							<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://mattbrehmer.github.io/talks/sdss190530" target="_blank">mattbrehmer.github.io/talks/sdss190530</a></strong> | slides</small>
+
+						</small>
+
+		
+						<span class="attribution">Presentation at ASA SDSS 2019-05-30</span>
+
+						<aside class="notes">
+							With that I'd like to thank you for your attention and I welcome your questions and comments.     
+						</aside>
+
+					</section>								
+
+				</section>
+	
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				progress: false,
+				slideNumber: false,
+				showNotes: false,
+				mouseWheel: false,
+				history: true,
+				center: false,
+				autoPlayMedia: true,
+				overview: true,
+				touch: true,
+				hideAddressBar: true,
+				controlsLayout: 'bottom-right',
+				viewDistance: 5,
+				transition: 'fade',
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+		
+		<script type="text/javascript" src="preloader.js" charset="UTF-8">
+		</script>     
+		
+		<script>
+
+imagesArray = [
+				"../assets/authors/affiliations.png",
+				"../assets/screenshots/linear_year_temp.png",
+				"../assets/screenshots/linear_year_sleep.png",
+				"../assets/46704958@N07-spiral.jpg",
+				"../assets/accurat-painters.jpg",
+				"../assets/boam.png",
+				"../assets/book_of_circles.png",
+				"../assets/boxplots.png",
+				"../assets/chartaccent1.gif",
+				"../assets/chartaccent2.gif",
+				"../assets/chartaccent3.gif",
+				"../assets/chartaccent4.gif",
+				"../assets/charticulator.png",
+				"../assets/collabs.png",
+				"../assets/consortium.png",
+				"../assets/cyclones.png",
+				"../assets/dailyroutines.gif",
+				"../assets/datatoon.png",
+				"../assets/dds.jpg",
+				"../assets/dimbg.png",
+				"../assets/drawingtime.png",
+				"../assets/ff.png",
+				"../assets/gallery.png",
+				"../assets/gallery-zoom.png",
+				"../assets/how.png",
+				"../assets/l-fac.png",
+				"../assets/l-seg.png",
+				"../assets/l-uni.png",
+				"../assets/layout_interpretation.png",
+				"../assets/mobilevis.png",
+				"../assets/mobubble.png",
+				"../assets/nationaltrust.png",
+				"../assets/nyt.png",
+				"../assets/nyt_olson_boam.png",
+				"../assets/phone-frame.png",
+				"../assets/priestley-annotated.gif",
+				"../assets/priestley.gif",
+				"../assets/pulse/figure1-sm.png",
+				"../assets/pulse/figure2-sm.png",
+				"../assets/pulse/figure8-sm.png",
+				"../assets/pulse/task_analysis.png",
+				"../assets/pulse/video-preview.mp4",
+				"../assets/pulse/design_choices.png",
+				"../assets/pvis.png",
+				"../assets/r-arb.png",
+				"../assets/r-cal.png",
+				"../assets/r-grid.png",
+				"../assets/r-lin.png",
+				"../assets/r-rad.png",
+				"../assets/r-spi.png",
+				"../assets/radial_month.png",
+				"../assets/rosling.png",
+				"../assets/s-chron.png",
+				"../assets/s-intdur.png",
+				"../assets/s-log.png",
+				"../assets/s-rel.png",
+				"../assets/s-seq.png",
+				"../assets/sadowski.png",
+				"../assets/shenghunglin-clock.jpg",
+				"../assets/sleep_apps.png",
+				"../assets/smallermultiples.png",
+				"../assets/smartphone.png",
+				"../assets/studiocurve-calendar.jpg",
+				"../assets/tasks.png",
+				"../assets/task-sequence.png",
+				"../assets/teaser-radial.png",
+				"../assets/teaser.png",
+				"../assets/timeline-domains-energy.png",
+				"../assets/timeline-domains-health.png",
+				"../assets/timeline-domains-journalism.png",
+				"../assets/timeline-domains.png",
+				"../assets/timeline-fields.png",
+				"../assets/timeline-skills.png",
+				"../assets/timelinecurator.jpg",
+				"../assets/timelinesrevisited.png",
+				"../assets/timelinestoryteller.png",
+				"../assets/timelinestorytellercom.png",
+				"../assets/toosmallformultiples.png",
+				"../assets/toosmallformultiples.gif",
+				"../assets/toosmallformultiples-crop.png",
+				"../assets/tvratings.png",
+				"../assets/twain-cover.gif",
+				"../assets/twain.gif",
+				"../assets/twain3.gif",
+				"../assets/visinpractice.png",
+				"../assets/weather_apps.png",
+				"../assets/weather_radial.png",
+				"../assets/whyvis.png",
+				"../assets/wikimedia-life_cycle.png"
+      ];
+
+      new preLoader(imagesArray, {
+        onProgress: function(img, imageEl, index){
+            // fires every time an image is done or errors.
+            // imageEl will be falsy if error
+            // console.log('just ' +  (!imageEl ? 'failed: ' : 'loaded: ') + img);
+            // imageContainer.appendChild(imageEl);
+            // can access any propery of this
+            // console.log(this.completed.length + this.errors.length + ' / ' + this.queue.length + ' done');
+        },
+        onComplete: function(loaded, errors){
+            // fires when whole list is done. cache is primed.
+            console.log('assets loaded:', loaded);
+            // imageContainer.style.display = 'block';
+            if (errors){
+                console.log('the following failed', errors);
+            }
+        }
+      });
+		</script>
+		
+	</body>
+</html>
