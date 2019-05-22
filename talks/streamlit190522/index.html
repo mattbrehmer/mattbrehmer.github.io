@@ -49,6 +49,21 @@
 					<span class="attribution">Presentation at Streamlit 2019-05-22 &middot; slides: <a style="color:skyblue" href="https://mattbrehmer.github.io/talks/streamlit190522" target="_blank">mattbrehmer.github.io / talks / streamlit190522</a> </span>
 
 					<aside class="notes">
+						<p>
+							Good morning. Thank you for the introduction.
+						</p>
+						<p>
+							Today I'll be speaking about a series of projects that I took part in over the past few years during my postdoctoral
+							research at Microsoft Research.
+						</p>
+						<p>
+							I'll preface my talk by acknowledging my collaborators and in particular Bongshin Lee and Nathalie Henry Riche of the
+							EPIC research group.
+						</p>
+						<p>
+							Most of the projects I've been part of were collaborations with visiting PhD student interns and/or colleagues from
+							academic institutions.
+						</p>
 					</aside>
 
 				</section>
@@ -83,39 +98,33 @@
 								<strong style="color:cornflowerblue">Charticulator</strong> (2018) | 
 								<strong style="color:cornflowerblue">DataToon</strong> (2019) </small>
 							</span>
-						</span>					
-
-					</section>
-
-					<!-- CHARACTERISTICS ================================================== -->
-
-					<section>
-
-						<h4>Visualization Design Considerations for <span style="color:gold">Storytelling</span></h4>
+						</span>
 						
-						<hr>
-
-						<small style="text-align:left">
-							&middot; Fine control over visual encoding choices<br><br>
-							&middot; Informative annotations and captions<br><br>
-							&middot; Selective emphasis and highlighting<br><br>
-							&middot; Sequential reveal of information over time and space<br><br><br>
-							&middot; Live audience or asynchronous consumption?<br><br>
-						</small>
-
 						<aside class="notes">
+							<p>
+								Many of the projects that I took part in while at Microsoft Research resulted in the development of a visualization
+								tool.
+							</p>
+							<p>
+								Today I'll speak about four such tools: ChartAccent, Timeline Storyteller, Charticulator, and DataToon.
+							</p>
+							<p>
+								Each of these tools has an associated research paper and website, which I will provide links to throughout the
+								course of this talk.
+							</p>
 						</aside>
 
 					</section>
 
+					
 					<!-- TOOL CHARACTERISTICS ================================================== -->
 					
 					<section>
-					
+						
 						<h4>Our Expressive Visualization <span style="color:gold">Tools</span> for Storytelling</h4>
-					
+						
 						<hr>
-					
+						
 						<small style="text-align:left">
 							&middot; Interactive browser-based tools: no programming required<br><br>
 							&middot; Not intended for exploratory data analysis<br><br>
@@ -124,15 +133,84 @@
 							&middot; Anticipating alternative export and re-use scenarios<br><br><br>
 							&middot; Available to the public, free, open-source*<br><br>
 						</small>
-
+						
 						<span class="attribution">*DataToon public / open-source release is forthcoming.</span>
-
-					
+						
+						
 						<aside class="notes">
+							<p>
+								Before I speak about the individual tools, I'll outline some of their commonalities.
+							</p>
+							<p>
+								While the term "storytelling" can be overloaded, the term is useful when distinguishing data analysis tools and
+								presentation or visual communication tools.
+							</p>
+							<p>
+								Our tools assume that when you've already done your exploratory data analysis via some other means and identified some
+								finding or insight that you want to communicate.
+							</p>
+							<p>
+								They also assume that your data is clean and correctly formatted.
+							</p>
+							<p>
+								Furthermore, these tools assume that you have a visualization design in mind. They are not visualization recommender
+								systems.
+							</p>
+							<p>
+								Instead, they are visualization authoring tools, allowing you to realize your intended visualization design.
+							</p>
+							<p>
+								And they are interactive tools, intended either for people who don't have the time or experience to employ a
+								programmatic approach to visualization such as D3 or Vega.
+							</p>
+							<p>
+								These tools also allow you to easily export content, in all cases as static images, and in some cases as interactive
+								presentations, as animated GIFs, or as reusable content that can be ingested in Microsoft's Power BI software.
+							</p>
+							<p>
+								Finally, with the exception of DataToon, the first three tools I'll present are open-source and freely available for
+								you to use in your browser. I believe that a public DataToon release is forthcoming.
+							</p>
 						</aside>
-					
+						
 					</section>
 
+					<!-- CHARACTERISTICS ================================================== -->
+
+					<section>
+
+						<h4>Considerations for <span style="color:gold">Storytelling</span> with Visualization</h4>
+						
+						<hr>
+
+						<small style="text-align:left">
+							&middot; Fine control over visual encoding choices<br><br>
+							&middot; Informative annotations and captions<br><br>
+							&middot; Selective emphasis and highlighting<br><br>
+							&middot; Sequential reveal of information over time and space<br><br>
+						</small>
+
+						<aside class="notes">
+							<p>
+								These tools draw upon previous research and best practices for storytelling with visualization.
+							</p>
+							<p>
+								This means giving you fine control over visual encoding choices, or the mapping from a data point to a visual
+								representation as a mark on a canvas.
+							</p>
+							<p>
+								This means giving you the ability add informative annotations and captions,
+							</p>
+							<p>
+								To selectively emphasize or highlight content to direct your viewers' attention,
+							</p>
+							<p>
+								Or to sequentially reveal information over time or space.
+							</p>
+						</aside>
+
+					</section>
+						
 				</section>
 				
 				<!-- FOCUS SECTION 1: CHARTACCENT ================================================== -->
@@ -165,7 +243,16 @@
 								<strong style="color:cornflowerblue">Charticulator</strong> (2018) | 
 								<strong style="color:cornflowerblue">DataToon</strong> (2019) </small>
 							</span>
-						</span>					
+						</span>			
+						
+						<aside class="notes">
+							<p>
+								Now I'll show you how our visualization tools realize these considerations for storytelling,
+							</p>
+							<p>
+								Beginning with a tool called ChartAccent.
+							</p>
+						</aside>
 
 					</section>
 
@@ -195,7 +282,9 @@
 						</small>
 					
 						<aside class="notes">
-							
+							<p>
+						
+							</p>
 						</aside>
 					
 					</section>
@@ -211,7 +300,9 @@
 						<span class="body_span">- Amanda Cox, <br><em>New York Times</em> Data Editor</span>
 
 						<aside class="notes">
+							<p>
 						
+							</p>
 						</aside>
 
 					</section>
@@ -223,7 +314,9 @@
 						<img data-src="assets/targets1.png">
 
 						<aside class="notes">
-							
+							<p>
+						
+							</p>
 						</aside>
 					</section>
 
@@ -234,7 +327,9 @@
 						<img data-src="assets/targets2.png">
 
 						<aside class="notes">
-							
+							<p>
+						
+							</p>
 						</aside>
 					</section>
 
@@ -245,7 +340,9 @@
 						<img data-src="assets/forms.png">
 
 						<aside class="notes">
-							
+							<p>
+						
+							</p>
 						</aside>
 					</section>
 
@@ -267,7 +364,9 @@
 						</small>
 
 						<aside class="notes">
+							<p>
 						
+							</p>
 						</aside>
 
 					</section>
@@ -305,6 +404,12 @@
 								<strong style="color:cornflowerblue">DataToon</strong> (2019) </small>
 						</span>
 						</span>
+
+						<aside class="notes">
+							<p>
+						
+							</p>
+						</aside>
 					
 					</section>
 
@@ -327,7 +432,9 @@
 									style="color:gold;">github.com/Microsoft/timelinestoryteller</a></strong></small>
 					
 						<aside class="notes">
-							
+							<p>
+						
+							</p>
 						</aside>
 					
 					</section>
@@ -576,6 +683,12 @@
 								<strong style="color:cornflowerblue">DataToon</strong> (2019) </small>
 						</span>
 						</span>
+
+						<aside class="notes">
+							<p>
+						
+							</p>
+						</aside>
 					
 					</section>
 
@@ -601,6 +714,12 @@
 								class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue"
 									href="https://github.com/microsoft/charticulator" target="_blank">github.com/Microsoft/Charticulator</a></strong>
 						</small>
+
+						<aside class="notes">
+							<p>
+						
+							</p>
+						</aside>
 					
 					</section>
 
@@ -620,6 +739,13 @@
 						</small>
 						<iframe width="100%" height="510" src="https://www.youtube.com/embed/5EZq4QolNy4" frameborder="0"
 							allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+						<aside class="notes">
+							<p>
+						
+							</p>
+						</aside>
+
 					</section>
 
 				</section>
@@ -655,6 +781,12 @@
 								<strong style="color:cornflowerblue">DataToon</strong> (2019) </small>
 						</span>
 						</span>
+
+						<aside class="notes">
+							<p>
+						
+							</p>
+						</aside>
 					
 					</section>
 
@@ -677,7 +809,9 @@
 						</small>
 					
 						<aside class="notes">
-							
+							<p>
+						
+							</p>
 						</aside>
 					
 					</section>
@@ -691,6 +825,13 @@
 						</small>
 						<iframe width="100%" height="510" data-src="https://www.youtube.com/embed/_CEDKpM6umg" frameborder="0"
 							allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+						<aside class="notes">
+							<p>
+						
+							</p>
+						</aside>
+
 					</section>
 
 				</section>
@@ -713,6 +854,9 @@
 						</small>					
 					
 						<aside class="notes">
+							<p>
+						
+							</p>
 						</aside>
 					
 					</section>
@@ -742,6 +886,9 @@
 						</small>
 					
 						<aside class="notes">
+							<p>
+						
+							</p>
 						</aside>
 					
 					</section>
