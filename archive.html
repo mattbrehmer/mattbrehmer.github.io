@@ -1,0 +1,258 @@
+<html xmnls="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Matthew Brehmer, Information Visualization Specialist</title>
+		<link rel = "stylesheet" type="text/css" href="style.css" />
+		<link href="font-awesome.min.css" rel="stylesheet">
+		<link href="flaticon.css" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" type="text/css">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="description" content="Matthew Brehmer, information visualization specialist">
+		<meta name="keywords" content="visualization,storytelling,research">
+		<meta name="author" content="Matthew Brehmer">
+		<link rel="shortcut icon" href="favicon.ico" />
+		<style type="text/css"></style>
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-86220108-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-86220108-1');
+		</script>
+	</head>
+
+	<body>
+
+		<script type="text/javascript" src="preloader.js" charset="UTF-8"></script>     
+		<script>
+
+			imagesArray = [
+				"images/charticulator.png",
+				"images/timeline_storyteller.png",
+				"images/rangesonmobile.png",
+				"images/vip.png",
+				"images/dds.png",
+				"images/mobilevis.png"
+			];
+
+			new preLoader(imagesArray, {
+				onProgress: function(img, imageEl, index){
+						// fires every time an image is done or errors.
+						// imageEl will be falsy if error
+						// console.log('just ' +  (!imageEl ? 'failed: ' : 'loaded: ') + img);
+						// imageContainer.appendChild(imageEl);
+						// can access any propery of this
+						// console.log(this.completed.length + this.errors.length + ' / ' + this.queue.length + ' done');
+				},
+				onComplete: function(loaded, errors){
+						// fires when whole list is done. cache is primed.
+						// console.log('assets loaded:', loaded);
+						// imageContainer.style.display = 'block';
+						if (errors){
+								console.log('the following failed', errors);
+						}
+				}
+			});
+		</script>
+
+		<div id="content-wrapper">
+
+			<div id="header-wrapper">
+				<div id = "header">
+					<!-- <div id="logo">
+						<div id="page-title">
+							Matthew Brehmer
+						</div>
+						<div id="tagline">
+							Matthew Brehmer
+						</div>
+					</div> -->
+					<!--/logo-->
+					<div id="nav">
+						<h2><span class="left">matthew brehmer</span>
+					</div>
+					<!--/nav-->
+				</div>
+				<!--/header-->
+			</div>
+
+			<div id="content">
+
+				<div id="left-column">
+					<!-- <div class="people-thumb">
+						<img title="Matthew Brehmer, Data Visualization Researcher" src="images/matt-new.png" alt="Matthew Brehmer, Data Visualization Researcher" width="120" class="img-rounded"/>
+					</div> -->
+
+					<h2>contact:</h2>
+
+					<p><i class="fa fa-envelope" aria-hidden="true"></i> mattbrehmer at gmail.com</p>
+					<p><i class="fa fa-twitter-square" aria-hidden="true"></i> <a href="http://www.twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a></p>
+					<p><i class="fa fa-linkedin-square" aria-hidden="true"></i> <a href="http://ca.linkedin.com/pub/matthew-brehmer/26/692/98b" target="_blank">linkedin</a></p>
+					<p><i class="fa fa-github-square" aria-hidden="true"></i> <a href="https://github.com/mattbrehmer" target="_blank">github</a></p>
+
+					<h2>details:</h2>
+
+					<p><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <a href="mb_resume.pdf">résumé</a></p>
+					<p><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <a href="mb_cv.pdf">CV</a></p>
+				</div>
+				<!--/left-column-->
+
+				<div id="right-column">
+
+					<div class="pub news">
+						<span id="news" class="anchor"></span>
+						<h1>news</h1>
+					</div>
+
+					<div class="pub">
+						<div class="text">							
+
+							<p>
+								<strong>May. 2019</strong>: I was invited to speak about <strong><a href="https://ww2.amstat.org/meetings/sdss/2019/onlineprogram/AbstractDetails.cfm?AbstractID=305049" target="_blank">Expressive Visualization Tools for Data-Driven Storytelling</a></strong> in the Data Visualization track at the <a href="https://ww2.amstat.org/meetings/sdss/2019/onlineprogram/Program.cfm?TrackID=27" target="_blank">2019 American Statistical Association Symposium on Data Science & Statistics (SDSS)</a>, May 30 in Bellevue, WA.
+							</p>
+							<p>
+								<i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a href="https://ww2.amstat.org/meetings/sdss/2019/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> <span class="moreinfo">sdss website</span></a>	| <a href="https://mattbrehmer.github.io/talks/sdss190530/"> <i
+										class="fa fa-html5" aria-hidden="true"></i> <span class="moreinfo">slides</span></a>
+							</p>							
+						</div>
+						<div class="thumb">
+							<a href="https://ww2.amstat.org/meetings/sdss/2019/onlineprogram/Program.cfm?TrackID=27" target="_blank"><img src="images/sdss.png" width="140"></a>
+						</div>
+					</div>
+
+					<div class="pub">
+						<div class="text">							
+
+							<p>
+								<strong>May. 2019</strong>: Our paper <strong><a href="https://www.microsoft.com/en-us/research/publication/datatoon-drawing-dynamic-network-comics-with-pen-touch-interaction/" target="_blank">DataToon: Drawing Dynamic Network Comics With Pen + Touch Interaction</a></strong> (led by <a href="https://namwkim.org" target="_blank">Nam Wook Kim</a>) appeared at <strong><a href="https://chi2019.acm.org/" target="_blank">CHI 2019</a></strong>, May 4-9 in Glasgow, Scotland.
+							</p>
+							<p>
+								<i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a href="https://www.microsoft.com/en-us/research/uploads/prod/2019/01/datatoon.pdf" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <span class="moreinfo">conference paper (pre-print)</span></a>				
+							</p>
+						</div>
+						<div class="thumb">
+							<a href="https://www.microsoft.com/en-us/research/publication/datatoon-drawing-dynamic-network-comics-with-pen-touch-interaction/" target="_blank"><img src="images/datatoon.png" width="140"></a>
+						</div>
+					</div>
+
+					<div class="pub">
+						<div class="text">							
+
+							<p>
+								<strong>Feb. 2019</strong>: I gave a demo and presented a paper about <strong><a href="https://timelinestoryteller.com/" target="_blank">Timeline Storyteller</a></strong> at the <strong><a href="http://cplusj.org/" target="_blank">2019 Computation + Journalism Symposium</a></strong>, February 1-2 in Miami, FL.
+							</p>
+							<p>
+								<i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a href="https://www.microsoft.com/en-us/research/uploads/prod/2018/12/TSCJ2019.pdf" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <span class="moreinfo">symposium paper (pre-print)</span></a> | <a href="https://timelinestoryteller.com/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> <span class="moreinfo">timelinestoryteller.com</span></a> | <a href="https://vimeo.com/album/5731415/video/314997031"> <i class="fa fa-youtube-play" aria-hidden="true"></i> <span class="moreinfo">video</span></a>						
+							</p>
+						</div>
+						<div class="thumb">
+							<a href="https://timelinestoryteller.com/" target="_blank"><img src="images/bentley.png" width="140"></a>
+						</div>
+					</div>
+
+					<div class="pub">
+						<span id="domains" class="anchor"></span>
+						<h1>application domains</h1>
+						<hr>
+					</div>
+					
+					<div class="pub">
+						<div class="text">
+					
+							<h2>
+								data journalism and communication
+							</h2>
+					
+							<p>
+								Designing, developing, and promoting the use of visualization tools for journalists, educators, and communicators
+								that allow them to expressively present information to their audiences.
+							</p>
+							<p>
+								<i class="fa fa-long-arrow-right" aria-hidden="true"></i> <span class="moreinfo">tools</span>: <a
+									href="https://timelinestoryteller.com/" target="_blank">Timeline Storyteller</a>, <a
+									href="http://www.cs.ubc.ca/labs/imager/tr/2015/TimeLineCurator/" target="_blank">TimeLineCurator</a>
+							</p>
+							<p>
+								As part of my PhD, I conducted case studies of journalists who used the <em><strong><a
+											href="https://www.overviewproject.org/" target="_blank">Overview Project</a></strong></em> to investigate
+								large document corpora, resulting in implications for visualizing hierarchical text data. </p>
+							<p>
+								<i class="fa fa-long-arrow-right" aria-hidden="true"></i> <span class="moreinfo">more info</span>: <a
+									href="http://cs.ubc.ca/labs/imager/tr/2014/Overview/" target="_blank">IEEE VIS 2014</a>
+							</p>
+						</div>
+						<div class="thumb">
+							<img src="images/proj-thumbs/2014-journalism.png" width="140">
+						</div>
+					</div>
+					
+					<div class="pub">
+						<div class="text">
+					
+							<h2>
+								resource management and conservation
+							</h2>
+					
+							<p>
+								As part of my PhD, I designed visualization techniques for interactively monitoring patterns of energy usage in
+								portfolios of buildings, consulting regularly with stakeholders.
+							</p>
+							<p>
+								<i class="fa fa-long-arrow-right" aria-hidden="true"></i> <span class="moreinfo">more info</span>: <a
+									href="http://www.cs.ubc.ca/labs/imager/tr/2015/MatchesMismatchesMethods/">IEEE VIS 2015</a>, <a
+									href="https://mattbrehmer.shinyapps.io/PortfolioSandbox/" target="_blank">Portfolio Sandbox</a>
+							</p>
+						</div>
+						<div class="thumb">
+							<img src="images/proj-thumbs/2014-vis.png" width="140">
+						</div>
+					</div>
+					
+					<div class="pub">
+						<div class="text">
+					
+							<h2>
+								personal health and wellness
+							</h2>
+					
+							<p>
+								In my MSc, I evaluated aspects of <strong>C-TOC</strong>, an online self-administered assessment tool for the
+								early
+								detection of cognitive decline; I focused on how interruptions impact assessment performance.
+							</p>
+							<p>
+								<i class="fa fa-long-arrow-right" aria-hidden="true"></i> <span class="moreinfo">more info</span>: <a
+									href="http://dx.doi.org/10.1097/WAD.0000000000000055" target="_blank">ADAD 2014</a>, <a
+									href="http://cs.ubc.ca/labs/imager/tr/2012/Interruptions/" target="_blank">CHI 2012</a>, <a
+									href="https://mattbrehmer.github.io/pubs/brehmer_msc_thesis11.pdf" target="_blank">MSc 2011</a>
+							</p>
+							<p>
+								Prior to my MSc, I studied the impact of physical exertion on cognitive performance in active games; I developed
+								<strong><a href="http://dundee.cs.queensu.ca/wiki/index.php/GAIM_Developer_Documentation"
+										target="_blank">GAIM</a></strong>, a toolkit allowing players with different input devices to play together.
+							</p>
+							<p>
+								<i class="fa fa-long-arrow-right" aria-hidden="true"></i> <span class="moreinfo">more info</span>: <a
+									href="https://mattbrehmer.github.io/proj/499.pdf" target="_blank">BComp 2009</a>, <a
+									href="https://mattbrehmer.github.io/https://mattbrehmer.github.io/pubs/brehmer_futureplay10.pdf"
+									target="_blank">FuturePlay 2010</a>, <a href="https://mattbrehmer.github.io/pubs/stach_ace09.pdf"
+									target="_blank">ACE 2009</a>
+							</p>
+					
+						</div>
+						<div class="thumb">
+							<img src="images/proj-thumbs/2014-health.png" width="140">
+						</div>
+					</div>
+
+				</div>
+				<!--/right-column-->
+			</div>
+			<!--/content-->
+		</div>
+		<!--/content-wrapper-->
+		<!-- Global site tag (gtag.js) - Google Analytics -->		
+	</body>
+</html>
