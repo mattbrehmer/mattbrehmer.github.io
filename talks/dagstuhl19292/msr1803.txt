@@ -1,0 +1,52 @@
+1.	Please list your top five interview dates in order of preference for the week of March 11, 2019.
+
+>>
+
+From most preferred to least preferred:
+
+1. Wednesday, March 13
+2. Tuesday, March 12
+3. Thursday, March 14
+5. Monday, March 11 and Friday, March 15
+
+<<
+
+2.	Full name (as it appears on photo ID), mailing address and phone number.
+
+>>
+
+Matthew Michael Brehmer
+4455 Interlake Avenue North Apt 408 Seattle WA 98103
++1-778-834-3016 
+
+<<
+
+3.	You will be giving a talk while you are here, so I will also need your talk abstract (with title) and a short biography on yourself as soon as possible.
+
+>>
+
+Speaker: 
+
+Matthew Brehmer
+
+Title: 
+
+Visualizing Information on Mobile Phones: Recent Experiments, Novel Interactions, and Prospects for the Future
+
+Abstract: 
+
+Visualizing data on mobile phones is an increasingly prevalent activity among practitioners, yet it has attracted little attention from the visualization research community. Many mobile applications now incorporate visualization, and there is a growing demand for responsive and mobile-first visualization design. I will describe the results of two recent experiments that were motivated by this demand, which were among the first crowdsourced visualization experiments to be conducted exclusively on mobile phones. The first experiment examines alternative representations of quantitative ranges over time, a form of data that is often encountered in activity tracking and weather reporting applications. In response to the use of animation in mobile-first news graphics, the second experiment assesses the extent to which animated and small multiple scatterplots support trend comparison tasks. In addition to experimental work, I will also describe recent interaction design work incorporating gesture and device orientation, resulting in novel ways of interacting with data on a mobile phone. Finally, I will discuss prospects for future research as well as opportunities to apply my research within the context of ongoing initiatives at Microsoft.
+
+Bio:
+
+Dr. Matthew Brehmer is a postdoctoral researcher at Microsoft Research, where he is a member of the EPIC (Extended Perception, Interaction, & Cognition) research group. His research combines information visualization and human-computer interaction and is motivated by use cases in data-driven storytelling and journalism. While at Microsoft, he led the design and development of Timeline Storyteller, an interactive and expressive information design tool for the web and for Power BI that was featured in the opening keynote of the 2017 Microsoft Data Insights Summit. He has spoken about his work at venues such as IEEE VIS, ACM CHI, and OpenVisConf, and he is the primary author of five papers published in IEEE Transactions on Visualization and Computer Graphics (TVCG), the top journal for visualization research. As part of the IEEE VIS organizing committee, he coordinates VisInPractice, a speaker series for visualization practitioners. He has also served as an organizer of the Visual Data Storytelling Contest at IEEE PacificVis, and as a program committee member of IEEE InfoVis, Information+, Computation + Journalism, and the VIS Arts Program. Prior to joining Microsoft, he completed a PhD and a MSc at the University of British Columbia in Vancouver, where he worked with Tamara Munzner and Joanna McGrenere.
+
+<<
+
+4.	This position requires the successful completion of a background check. Any adverse information that you disclose or that is discovered will not necessarily disqualify you from employment. Are you willing to authorize this process should it be required? 
+
+>>
+
+Yes, I am willing to authorize this process should it be required.
+
+<<

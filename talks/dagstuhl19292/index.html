@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Crowdsourced Evaluation for Mobile Vis</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300;700" rel="stylesheet">
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="shortcut icon" href="favicon.ico" />
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- TITLE ================================================== -->
+				
+				<section class="center">
+					<h3>Crowdsourced Evaluation for Mobile Vis</h3>
+					<hr>	
+					
+	
+					<small>
+						<a href="http://mattbrehmer.ca" target="_blank">Matthew Brehmer</a> &middot; <a href="http://mattbrehmer.ca" target="_blank">mattbrehmer.ca</a> &middot; <a
+							href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a><br><br>
+							<i class="fas fa-envelope" aria-hidden="true"></i> <strong><a style="color:skyblue" href="mailto:mb@mattbrehmer.ca" target="_blank">mb@mattbrehmer.ca</a></strong>
+							<br><br>							
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://mattbrehmer.github.io/talks/dagstuhl19292" target="_blank">mattbrehmer.ca / talks / dagstuhl19292</a></strong>
+									
+					</small>
+
+					<br>
+	
+					<span class="attribution">Tutorial at Dagstuhl Seminar #19292: Mobile Data Visualization, 2019-07-17</span>
+
+					<aside class="notes">
+						
+					</aside>
+
+				</section>				
+	
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				progress: false,
+				slideNumber: false,
+				showNotes: false,
+				mouseWheel: false,
+				history: true,
+				center: false,
+				overview: true,
+				touch: true,
+				hideAddressBar: true,
+				controlsLayout: 'bottom-right',
+				viewDistance: 5,
+				transition: 'fade',
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+		<script type="text/javascript" src="preloader.js" charset="UTF-8"></script>     
+    <script>
+
+      imagesArray = [];
+
+      new preLoader(imagesArray, {
+        onProgress: function(img, imageEl, index){
+					// fires every time an image is done or errors.
+					// imageEl will be falsy if error
+					// console.log('just ' +  (!imageEl ? 'failed: ' : 'loaded: ') + img);
+					// imageContainer.appendChild(imageEl);
+					// can access any propery of this
+					// console.log(this.completed.length + this.errors.length + ' / ' + this.queue.length + ' done');
+        },
+        onComplete: function(loaded, errors){
+					// fires when whole list is done. cache is primed.
+					console.log('assets loaded:', loaded);
+					// imageContainer.style.display = 'block';
+					if (errors){
+						console.log('the following failed', errors);
+					}
+        }
+      });
+    </script>
+	</body>
+</html>
