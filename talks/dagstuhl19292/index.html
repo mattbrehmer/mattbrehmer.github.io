@@ -30,50 +30,474 @@
 		<div class="reveal">
 			<div class="slides">
 
-				<!-- TITLE ================================================== -->
-				
-				<section class="center">
-					<h3>Crowdsourced Evaluation for Mobile Vis</h3>
-					<hr>	
+				<!-- SECTION: FRONT MATTER ================================================== -->
+
+				<section>
+
+					<!-- TITLE ================================================== -->
 					
-	
-					<small>
-						<a href="http://mattbrehmer.ca" target="_blank">Matthew Brehmer</a> &middot; <a href="http://mattbrehmer.ca" target="_blank">mattbrehmer.ca</a> &middot; <a
-							href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a><br><br>
-							<i class="fas fa-envelope" aria-hidden="true"></i> <strong><a style="color:skyblue" href="mailto:mb@mattbrehmer.ca" target="_blank">mb@mattbrehmer.ca</a></strong>
-							<br><br>							
-							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://mattbrehmer.ca/talks/dagstuhl19292" target="_blank">mattbrehmer.ca / talks / dagstuhl19292</a></strong>
-									
-					</small>
-
-					<br>
-	
-					<span class="attribution">Tutorial at Dagstuhl Seminar #19292: Mobile Data Visualization, 2019-07-17</span>
-
-					<aside class="notes">
+					<section class="center">
+						<h3>Crowdsourced Evaluation for Mobile Vis</h3>
+						<hr>	
 						
-					</aside>
+		
+						<small>
+							<a href="http://mattbrehmer.ca" target="_blank">Matthew Brehmer</a> &middot; <a href="http://mattbrehmer.ca" target="_blank">mattbrehmer.ca</a> &middot; <a
+								href="http://twitter.com/mattbrehmer" target="_blank">@mattbrehmer</a><br><br>
+								<i class="fas fa-envelope" aria-hidden="true"></i> <strong><a style="color:skyblue" href="mailto:mb@mattbrehmer.ca" target="_blank">mb@mattbrehmer.ca</a></strong>
+								<br><br>							
+								<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="https://mattbrehmer.ca/talks/dagstuhl19292" target="_blank">mattbrehmer.ca / talks / dagstuhl19292</a></strong>
+										
+						</small>
+
+						<br>
+		
+						<span class="attribution">Tutorial at Dagstuhl Seminar #19292: Mobile Data Visualization, 2019-07-17</span>
+
+						<aside class="notes">
+							
+						</aside>
+
+					</section>
+					
+					<!-- OUTLINE ================================================== -->
+					
+					<section>
+					
+						<h3>Tutorial Outline</h3>
+						<hr>
+						<small style="text-align:left">
+							&middot; Context for this tutorial<br><br>
+							&middot; Building mobile-only web apps for visualization experiments<br><br>
+							&middot; Recruiting and onboarding crowd workers<br><br>
+							&middot; Improving compliance and response quality<br><br>
+							&middot; Other resources<br><br>
+							&middot; Prospects for the future<br><br>
+						</small>
+					
+						<aside class="notes">
+							
+						</aside>
+					
+					</section>
 
 				</section>
+
+				<!-- SECTION: CONTEXT ================================================== -->
 				
-				<!-- OUTLINE ================================================== -->
+				<section>
+
+					<!-- SECTION OUTLINE ================================================== -->
+				
+					<section>
+					
+						<h3>Tutorial Outline</h3>
+						<hr>
+						<small style="text-align:left">
+							&middot; Context for this tutorial<br><br>
+							<span style="color:#666">
+							&middot; Building mobile-only web apps for visualization experiments<br><br>
+							&middot; Recruiting and onboarding crowd workers<br><br>
+							&middot; Improving compliance and response quality<br><br>
+							&middot; Other resources<br><br>
+							&middot; Prospects for the future<br><br></span>
+						</small>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+					
+					<!-- CONTEXT RANGES ================================================== -->
+					
+					<section>
+					
+						<h3>Context for this Tutorial</h3>
+						<hr>
+						
+						<small style="text-align: left">
+							</span><i class="far fa-file"></i> <strong><span style="color:gold"><em>Visualizing Ranges over Time on Mobile Phones:
+										A Task-Based Crowdsourced Evaluation</em></span></strong>.
+							<br><span style="font-weight: 700">M. Brehmer</span>, B. Lee, P. Isenberg, and E. K. Choe. In <em>IEEE TVCG</em> 2019
+							(Proc. InfoVis 2018).
+						</small>
+
+						<br><img data-src="assets/teaser.png" style="box-shadow: none" width="62.5%" /><br>
+						
+						<small style="text-align: left">
+							The <strong>first</strong> crowdsourced <strong>visualization evaluation</strong> study performed <strong>exclusively on
+								phones</strong>.
+								<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="https://aka.ms/ranges-tvcg" target="_blank">aka.ms/ranges-tvcg</a></strong> | <i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+											href="https://github.com/microsoft/RangesOnMobile" target="_blank">github.com/Microsoft/RangesOnMobile</a></strong>
+						</small>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- CONTEXT MULTIPLES ================================================== -->
+					
+					<section>
+					
+						<h3>Context for this Tutorial (cont.)</h3>
+						<hr>
+					
+						<small style="text-align: left">
+							</span><i class="far fa-file"></i> <strong><span style="color:gold"><em>A Comparative Eval. of Animation & Small Multiples for Trend Visualization on Mobile Phones</em></span></strong>.
+							<br><span style="font-weight: 700">M. Brehmer</span>, B. Lee, P. Isenberg, and E. K. Choe. To appear in <em>IEEE TVCG</em> (Proc. InfoVis 2019).
+						</small>
+					
+						<img height="350px" data-src="assets/toosmallformultiples.gif"></img>
+						<img height="350px" data-src="assets/toosmallformultiples-crop.png"></img>
+					
+						<small style="text-align: left">
+							A crowdsourced <strong>visualization evaluation</strong> study performed
+							<strong>exclusively on phones</strong>.
+							<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="https://mattbrehmer.ca" target="_blank">(pre-print forthcoming)</a></strong> | <i
+								class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="https://github.com/microsoft/MobileTrendVis"
+									target="_blank">github.com/Microsoft/MobileTrendVis</a></strong>
+						</small>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+				</section>
+
+				<!-- SECTION: BUILDING APPS ================================================== -->
 				
 				<section>
 				
-					<h3>Tutorial Outline</h3>
-					<hr>
-					<small style="text-align:left">
-						&middot; Context for this tutorial<br><br>
-						&middot; Building mobile-only web apps for visualization experiments<br><br>
-						&middot; Recruiting and onboarding crowd workers<br><br>
-						&middot; Improving compliance and response quality<br><br>
-						&middot; Other resources<br><br>
-						&middot; Prospects for the future<br><br>
-					</small>
+					<!-- SECTION OUTLINE ================================================== -->
 				
-					<aside class="notes">
-						
-					</aside>
+					<section>
+				
+						<h3>Tutorial Outline</h3>
+						<hr>
+						<small style="text-align:left">
+							<span style="color:#666">&middot; Context for this tutorial<br><br></span>							
+							&middot; Building mobile-only web apps for visualization experiments<br><br>
+							<span style="color:#666">
+							&middot; Recruiting and onboarding crowd workers<br><br>
+							&middot; Improving compliance and response quality<br><br>
+							&middot; Other resources<br><br>
+							&middot; Prospects for the future<br><br></span>
+						</small>
+				
+						<aside class="notes">
+				
+						</aside>
+				
+					</section>
+
+				</section>
+
+				<!-- SECTION: RECRUITING ================================================== -->
+				
+				<section>
+				
+					<!-- SECTION OUTLINE ================================================== -->
+				
+					<section>
+				
+						<h3>Tutorial Outline</h3>
+						<hr>
+						<small style="text-align:left">
+							<span style="color:#666">&middot; Context for this tutorial<br><br>
+							&middot; Building mobile-only web apps for visualization experiments<br><br></span>
+							&middot; Recruiting and onboarding crowd workers<br><br>
+							<span style="color:#666">
+								&middot; Improving compliance and response quality<br><br>
+								&middot; Other resources<br><br>
+								&middot; Prospects for the future<br><br></span>
+						</small>
+				
+						<aside class="notes">
+				
+						</aside>
+				
+					</section>
+				
+				</section>
+
+				<!-- SECTION: COMPLIANCE ================================================== -->
+				
+				<section>
+				
+					<!-- SECTION OUTLINE ================================================== -->
+				
+					<section>
+				
+						<h3>Tutorial Outline</h3>
+						<hr>
+						<small style="text-align:left">
+							<span style="color:#666">&middot; Context for this tutorial<br><br>
+								&middot; Building mobile-only web apps for visualization experiments<br><br>
+							&middot; Recruiting and onboarding crowd workers<br><br></span>
+							&middot; Improving compliance and response quality<br><br>
+							<span style="color:#666">
+								&middot; Other resources<br><br>
+								&middot; Prospects for the future<br><br></span>
+						</small>
+				
+						<aside class="notes">
+				
+						</aside>
+				
+					</section>
+				
+				</section>
+
+				<!-- SECTION: RESOURCES ================================================== -->
+				
+				<section>
+				
+					<!-- SECTION OUTLINE ================================================== -->
+				
+					<section>
+				
+						<h3>Tutorial Outline</h3>
+						<hr>
+						<small style="text-align:left">
+							<span style="color:#666">&middot; Context for this tutorial<br><br>
+								&middot; Building mobile-only web apps for visualization experiments<br><br>
+								&middot; Recruiting and onboarding crowd workers<br><br>
+							&middot; Improving compliance and response quality<br><br></span>
+							&middot; Other resources<br><br>
+							<span style="color:#666">
+								&middot; Prospects for the future<br><br></span>
+						</small>
+				
+						<aside class="notes">
+				
+						</aside>
+				
+					</section>
+
+					<!-- SCHWAB EXPERIMENT ================================================== -->
+					
+					<section data-background="#fff">
+					
+						<h3>Another Recent Experiment</h3>
+						<hr>
+					
+						<small style="text-align: left">
+							</span><i class="far fa-file"></i> <strong><span style="color:cornflowerblue"><em>Evaluating Pan and Zoom Timelines and Sliders</em></span></strong>.
+							<br>M. Schwab, S. Hao, O. Vitek, J. Tompkin, J. Huang, & M. A. Borkin. In Proc. <em>ACM CHI</em>
+							2019.
+						</small>
+					
+						<br><img data-src="assets/schwab.png" style="box-shadow: none" width="62.5%" /><br>
+					
+						<small style="text-align: left">
+							A crowdsourced <strong>visualization evaluation</strong> study performed on <strong>both</strong> PCs and phones.
+							<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue"
+									href="https://doi.org/10.1145/3290605.3300786" target="_blank">doi.org/10.1145/3290605.3300786</a></strong> | <i
+								class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:cornflowerblue"
+									href="https://multiscale-timelines.ccs.neu.edu"
+									target="_blank">multiscale-timelines.ccs.neu.edu</a></strong>
+						</small>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- SURVEY ================================================== -->
+					
+					<section>
+					
+						<h3>Crowdsourcing for InfoVis (in General)</h3>
+						<hr>
+					
+						<small style="text-align: left">
+							</span><i class="far fa-file"></i> <strong><span style="color:gold"><em>Information
+										Visualization Evaluation using Crowdsourcing</em></span></strong>.
+							<br>R. Borgo, L. Micallef, B. Bach, F. McGee, & B. Lee. <br>In <em>Computer Graphics Forum (EuroVis 2018
+								State-of-the-Art Reports)</em>.
+							<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="https://doi.org/10.1111/cgf.13444" target="_blank">doi.org/10.1111/cgf.13444</a></strong></span>
+							<br><br><br>
+							<i class="far fa-file"></i> <strong><span style="color:gold"><em>Crowdsourcing for Information Visualization: Promises
+										and
+										Pitfalls</em></span></strong>.
+							<br>R. Borgo, B. Lee, B. Bach, S. Fabrikant, R. Jianu, A. Kerren, S. Kobourov,
+							F. McGee, L. Micallef, T. Landesberger, K. Ballweg, S. Diehl, P. Simonetto,
+							& M. Zhou. <br>In <em>Evaluation in the Crowd. Crowdsourcing and Human-Centered Experiments</em> (2017),
+							<br>Springer (D. Archambault, H. Purchase, and T. Hossfeld, eds).
+							<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="http://www.springer.com/gp/book/9783319664347" target="_blank">springer.com/gp/book/9783319664347</a></strong>
+							<br><br><br>
+							<i class="far fa-file"></i> <strong><span style="color:gold"><em>Crowdsourcing Graphical Perception: Using
+							Mechanical Turk to Assess Visualization Design</em></span></strong>.
+							<br>J. Heer & M. Bostock. In Proc. <em>ACM CHI 2010</em>.
+							<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="http://idl.cs.washington.edu/papers/crowdsourcing-graphical-perception" target="_blank">idl.cs.washington.edu/papers/crowdsourcing-graphical-perception</a></strong>
+						</small>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+				
+				</section>
+
+				<!-- SECTION: PROSPECTS ================================================== -->
+				
+				<section>
+				
+					<!-- SECTION OUTLINE ================================================== -->
+				
+					<section>
+				
+						<h3>Tutorial Outline</h3>
+						<hr>
+						<small style="text-align:left">
+							<span style="color:#666">&middot; Context for this tutorial<br><br>
+								&middot; Building mobile-only web apps for visualization experiments<br><br>
+								&middot; Recruiting and onboarding crowd workers<br><br>
+								&middot; Improving compliance and response quality<br><br>
+								&middot; Other resources<br><br></span>							
+								&middot; Prospects for the future<br><br>
+						</small>
+				
+						<aside class="notes">
+				
+						</aside>
+				
+					</section>
+
+					<!-- EXPERIMENT FRAMEWORK ================================================== -->
+					
+					<section>
+						<h4>An Open-Source Framework for Crowdsourced <span style="color: gold;">Mobile Visualization Experiments</span></h4>
+						<hr>
+					
+						<small style="text-align: left">
+							<p>
+								<em>RangesOnMobile, MobileTrendVis</em> experimental applications share common infrastructure:
+								<br><br>
+								&middot; Node.js web application deployed on Azure 
+								<br>
+								&middot; Custom event logging with <a style="color:skyblue" href="https://aka.ms/azure-app-insights" target="_blank">Azure Application Insights</a>
+								<br>
+								&middot; CSS media queries to enforce mobile-only
+								<br>
+								&middot; Sever-side condition assignment & re-balancing
+								<br>
+								&middot; Handlers for orientation changes & interruptions
+							</p>
+							<p>
+								Application developer to focus on:
+								<br><br>
+								&middot; Isolated chart component
+								<br>
+								&middot; Defining trial logic
+								<br>
+								&middot; Trial bank initialization
+							</p>
+							<p>Mobile-only alternative (or extension of) the <em>experimentr</em> framework?</p>
+							<p>
+								<i class="fas fa-file"></i> <strong><span style="color:skyblue"><em>experimentr</em></span></strong>. L. Harrison,
+								C. Gramazio, F. Yang, K. Aragam, E. Peck, and D. Schroeder (2019).
+								<br>
+								<i class="fas fa-external-link-alt" aria-hidden="true"></i> <a style="color:skyblue"
+									href="https://github.com/codementum/experimentr" target="_blank">github.com/codementum/experimentr</a><br><br>
+							</p>
+					
+						</small>
+					
+						<aside class="notes">
+							The first of which is a framework for running mobile-only visualization experiments,
+							<br><br>
+							The three projects I spoke about until now in this talk share a common infrastructure:
+							<br><br>
+							They're all node applications running as Azure web applications
+							<br><br>
+							With media queries and to enforce mobile-only participation
+							<br><br>
+							Server-side condition assignment and rebalancing for crowdsourced deployment
+							<br><br>
+							And handlers for orientation changes.
+							<br><br>
+							Refactoring this into an application framework could allow for experiment application developers to focus on
+							<br><br>
+							Just designing the stimuli, meaning the visualization components,
+							<br><br>
+							And defining what constitues a trial and how a bank of trials are initialized.
+							<br><br>
+							I should mention that there is a precedent for this.
+							<br><br>
+							A team led by Lane Harrison at WPI have developed a framework for crowdsourced visualization studies,
+							<br><br>
+							Though it is intended for desktop environments.
+							<br><br>
+							What I propose could be a mobile-only alternative or extensions to this,
+							<br><br>
+							And I believe that this would be a good intern project.
+						</aside>
+					
+					</section>
+				
+				</section>
+
+				<!-- SECTION: BACK MATTER ================================================== -->
+				
+				<section>
+				
+					<!-- TITLE ================================================== -->
+				
+					<section class="center">
+						<h3>Crowdsourced Evaluation for Mobile Vis</h3>
+						<hr>
+				
+				
+						<small>
+							<a href="http://mattbrehmer.ca" target="_blank">Matthew Brehmer</a> &middot; <a href="http://mattbrehmer.ca"
+								target="_blank">mattbrehmer.ca</a> &middot; <a href="http://twitter.com/mattbrehmer"
+								target="_blank">@mattbrehmer</a><br><br>
+							<i class="fas fa-envelope" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="mailto:mb@mattbrehmer.ca" target="_blank">mb@mattbrehmer.ca</a></strong>
+							<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="https://mattbrehmer.ca/talks/dagstuhl19292" target="_blank">mattbrehmer.ca / talks /
+									dagstuhl19292</a></strong>
+							<br><br><br><br>
+								<i
+									class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+										href="https://github.com/microsoft/RangesOnMobile"
+										target="_blank">github.com/Microsoft/RangesOnMobile</a></strong> | 
+										<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+												href="https://github.com/microsoft/MobileTrendVis" target="_blank">github.com/Microsoft/MobileTrendVis</a></strong>
+							</small>
+				
+						</small>
+				
+						<br>
+				
+						<span class="attribution">Tutorial at Dagstuhl Seminar #19292: Mobile Data Visualization, 2019-07-17</span>
+				
+						<aside class="notes">
+				
+						</aside>
+				
+					</section>
 				
 				</section>
 	
@@ -89,7 +513,7 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				progress: false,
-				slideNumber: false,
+				slideNumber: true,
 				showNotes: false,
 				mouseWheel: false,
 				history: true,
@@ -112,7 +536,12 @@
 		<script type="text/javascript" src="preloader.js" charset="UTF-8"></script>     
     <script>
 
-      imagesArray = [];
+      imagesArray = [
+				"assets/authors/teaser.png",
+				"assets/toosmallformultiples-crop.png",
+				"assets/toosmallformultiples.gif",
+				"assets/toosmallformultiples.png",
+			];
 
       new preLoader(imagesArray, {
         onProgress: function(img, imageEl, index){
