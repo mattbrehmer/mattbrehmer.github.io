@@ -207,6 +207,415 @@
 				
 					</section>
 
+					<!-- Building Mobile Vis ================================================== -->
+					
+					<section>
+					
+						<h3>Creating Mobile Vis Experiences</h3>
+						<hr>
+
+						<small style="text-align: left">
+							</span><i class="far fa-file"></i> <strong><span style="color:gold"><em>Everything Except the Chart: Responsiveness + Mobile Support</em></span></strong>.
+							<br>D. Baur & M. Stefaner. IEEE VIS 2018 Tutorial</em>.
+							<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="http://webvis-do.minik.us/#/responsiveness" target="_blank">webvis-do.minik.us/#/responsiveness</a></strong></span>
+							<br><br><br>
+							</span><i class="far fa-file"></i> <strong><span style="color:gold"><em>Techniques for Data Visualization on both Mobile & Desktop</em></span></strong>.
+							<br>N. Bremer. <em>Visual Cinnamon</em>, April 2019.
+							<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="https://www.visualcinnamon.com/2019/04/mobile-vs-desktop-dataviz"
+									target="_blank">visualcinnamon.com/2019/04/mobile-vs-desktop-dataviz</a></strong></span>
+							<br><br><br>
+							</span><i class="far fa-file"></i> <strong><span style="color:gold"><em>Building Responsive Data Visualization for the Web</em></span></strong>.
+							<br>B. Hinderman</em>. Wiley, 2016.
+							<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="http://responsivedatavisualization.com/"
+									target="_blank">responsivedatavisualization.com/</a></strong></span>
+						</small>						
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- Building Mobile Vis ================================================== -->
+					
+					<section>
+					
+						<h3>Mobile-Only Vis Experimental Apps</h3>
+						<hr>
+					
+						<small style="text-align: left">
+							<p>
+								&middot; Ensuring mobile-only
+								<br><br>
+								&middot; Aiming for consistency across Mobile OS, browser apps
+								<br><br>
+								&middot; Handling orientation changes
+								<br><br>
+								&middot; Handling interruptions
+								<br><br>
+								&middot; Handling touch events
+								<br><br>
+								&middot; Compartmentalizing the app
+								<br><br>
+								&middot; Logging participant activity + metadata
+							</p>
+						
+						</small>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- Mobile-friendly Head ================================================== -->
+
+					<section>
+
+						<h3>Check Your Head</h3>
+						<hr>
+
+						<pre height="100%"><code class="html" data-trim data-noescape height="100%">
+							< head >
+								...
+								< meta name="HandheldFriendly" 
+									content="true" />
+								< meta name="apple-mobile-web-app-capable" 
+									content="yes" />
+								< meta name="mobile-web-app-capable" 
+									content="yes" />
+								< meta name="viewport" 
+									content="minimal-ui, 
+									width=device-width, 
+									initial-scale=1.0, 
+									minimum-scale=1.0, 
+									maximum-scale=1.0, 
+									user-scalable=no" />
+								...
+							< /head>
+						</code></pre>
+
+						<small>
+							<p>In non-experimental settings, set user-scalable to yes for accessibility.</p>
+
+						</small>
+
+						<aside class="notes">
+						
+						</aside>
+
+					</section>
+
+					<!-- Mobile-friendly CSS ================================================== -->
+					
+					<section>
+					
+						<h3>CSS Media Queries</h3>
+						<hr>
+					
+						<pre height="100%"><code class="css" data-trim data-noescape height="100%">
+							@media only screen
+							and (min-device-width: 320px)
+							and (max-device-width: 1440px)
+							and (max-device-height: 1440px)
+							and (-webkit-min-device-pixel-ratio: 2)
+							and (orientation: portrait) {
+								...
+							}
+
+							@media only screen
+							and (orientation: landscape) {
+								...
+							}
+
+							@media only screen
+							and (min-device-width: 1440px) {
+								...
+							}
+							
+						</code></pre>
+					
+						<small>
+							<p>Most contemporary smartphones have device pixel ratios > 2.</p>
+					
+						</small>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- Orientation Handlers ================================================== -->
+					
+					<section>
+					
+						<h3>Handling Orientation (Change)</h3>
+						<hr>
+						
+						<small>
+							<p>Ensure desired phone orientation (portrait / landscape)</p>					
+						</small>
+
+						<pre height="100%"><code class="javascript" data-trim data-noescape height="100%">
+							window.addEventListener('load', function() {
+							
+							 // respond to loading in undesirable orientation
+							
+							}
+
+							window.onresize = function(e) {
+							 
+							 // respond to rotation to undesirable orientation
+							 
+							}
+							
+						</code></pre>
+					
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- Interruption Handlers ================================================== -->
+					
+					<section>
+					
+						<h3>Handling Interruptions & Resumptions</h3>
+						<hr>
+					
+						<small>
+							<p>e.g., the participant switches apps, responds to a notification, etc.</p>
+						</small>
+					
+						<pre height="100%"><code class="javascript" data-trim data-noescape height="100%">
+							window.onblur = function(e) {
+							
+							 // respond to interruption (e.g., log + discard trial)
+							
+							}
+
+							window.onfocus = function(e) {
+								
+							 // respond to resumption
+								
+							}
+							
+						</code></pre>
+					
+					
+						<aside class="notes">
+					
+						</aside>
+
+					</section>
+
+					<!-- Touch Handlers ================================================== -->
+					
+					<section>
+					
+						<h3>Handling Touch Events</h3>
+						<hr>
+					
+						
+						<pre height="100%"><code class="javascript" data-trim data-noescape height="100%">
+							d3.select('#trial_btn')
+							.on('touchstart', function() {
+
+							 // respond to touch event
+
+							}
+						</code></pre>
+						
+						<small>
+							<p>Also: touchmove, touchend</p>
+						</small>
+					
+						<aside class="notes">
+					
+						</aside>
+
+					</section>
+
+					<!-- Organizing The Code ================================================== -->
+					
+					<section>
+					
+						<h3>Project Structure Example: <a style="color:skyblue"
+						href="https://github.com/microsoft/MobileTrendVis" target="_blank">MobileTrendVis</a></h3>
+						<hr>
+					
+					
+						<pre height="100%"><code data-trim data-noescape height="100%">
+						app.js // node application requiring express, socket.io, ...
+						package.json
+						participantList.js // for server-side condition allocation
+						web.config
+						webpack.config.js
+						
+						src
+						 globals.js // global variables
+						 index.js // app initialization
+						 dataset.js // stimuli data (UN economic metrics)
+						 chart.js // the visualization stimuli
+						 taskList.js // experimental task specifications
+						 initTasks.js // allocate tasks and conditions to participant
+						 trial.js // specifying the logic of a single trial
+						
+						public
+						 style.css
+						 index.html
+						 main.js // output from webpack
+						 assets // folder of images, icons, etc.
+						
+						</code></pre>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- Logging Activity ================================================== -->
+					
+					<section>
+					
+						<h3>Logging Participant Activity</h3>
+						<hr>
+					
+					
+						<pre height="100%"><code class="javascript" data-trim data-noescape height="100%">
+						trial = {
+						 user_id: userID,
+						 trial_index: trial_index,
+						 condition: trial_condition,
+						 accuracy: 0,
+						 start_time: 0,
+						 interruptions: 0,
+						 interruption_time: 0,
+						 end_time: 0,
+						 completion_time: 0,
+						 give_up: false,
+						 ...
+						};
+
+						appInsights.trackEvent("TrialComplete", trial);
+						
+						</code></pre>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- Logging Metadata ================================================== -->
+					
+					<section>
+					
+						<h3>Logging Participant Metadata</h3>
+						<hr>
+					
+					
+						<pre height="100%"><code class="r" data-trim data-noescape height="100%">
+						> colnames(p_metadata.df)
+						[1] "user_id" "load_time" "completion_time" "duration"
+						[5] "client_Model" "client_OS" "client_Reg" "client_Browser"
+						[9] "condition" "ordering" "Height" "Width"
+						[13] "chart_dim" "excluded"
+						
+						> levels(p_metadata.df$client_OS) # MobileTrendVis
+						[1] "Android" 
+						    "Android 4.3" 
+						    "Android 5.0" 
+						    "Android 5.1" 
+						    "Android 6.0" 
+						    "Android 7.0" 
+						    "Android 7.1"
+						[8] "Android 8.0" 
+						    "Android 8.1" 
+						    "iOS 10.3" 
+						    "iOS 11.4" 
+						    "iOS 12.0" 
+						    "iOS 12.1"
+						
+						
+						</code></pre>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- Logging Metadata ================================================== -->
+					
+					<section>
+					
+						<h3>Logging Participant Metadata (Cont.)</h3>
+						<hr>
+					
+					
+						<pre height="100%"><code class="r" data-trim data-noescape height="100%">
+						> levels(p_metadata.df$client_Browser) # MobileTrendVis
+						[1] "Chrome Mobile 51.0" 
+						    "Chrome Mobile 56.0" 
+						    "Chrome Mobile 59.0" 
+						    "Chrome Mobile 67.0"
+						[5] "Chrome Mobile 68.0" 
+						    "Chrome Mobile 69.0" 
+						    "Chrome Mobile 70.0" 
+						    "Chrome Mobile 71.0"
+						[9] "Chrome Mobile iOS 68.0" 
+						    "Chrome Mobile iOS 70.0" 
+						    "Chrome Mobile iOS 71.0" 
+						    "Facebook 193.0"
+						[13] "Firefox iOS 13.2" 
+						     "Firefox Mobile 63.0" 
+						     "Mobile Safari 10.0" 
+						     "Mobile Safari 11.0"
+						[17] "Mobile Safari 12.0" 
+						     "Samsung Internet 7.4"
+						</code></pre>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- Logging Metadata ================================================== -->
+					
+					<section>
+					
+						<h3>Logging Participant Metadata (Cont.)</h3>
+						<hr>
+					
+					
+						<pre height="100%"><code class="r" data-trim data-noescape height="100%">
+							> summary(participant_metadata.df$Height)# MobileTrendVis
+							Min. 1st Qu. Median Mean 3rd Qu. Max.
+							452.0 549.2 560.0 587.0 620.5 822.0
+							
+							> summary(participant_metadata.df$Width)# MobileTrendVis
+							Min. 1st Qu. Median Mean 3rd Qu. Max.
+							320.0 360.0 375.0 378.6 412.0 414.0
+						</code></pre>
+						
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
 				</section>
 
 				<!-- SECTION: RECRUITING ================================================== -->
