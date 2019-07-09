@@ -71,7 +71,7 @@
 						<small style="text-align:left">
 							&middot; Context for this tutorial<br><br>
 							&middot; Building mobile-only web apps for visualization experiments<br><br>
-							&middot; Recruiting and onboarding crowd workers<br><br>
+							&middot; Recruiting, piloting, and onboarding crowd workers<br><br>
 							&middot; Improving compliance and response quality<br><br>
 							&middot; Other resources<br><br>
 							&middot; Prospects for the future<br><br>
@@ -99,7 +99,7 @@
 							&middot; Context for this tutorial<br><br>
 							<span style="color:#666">
 							&middot; Building mobile-only web apps for visualization experiments<br><br>
-							&middot; Recruiting and onboarding crowd workers<br><br>
+							&middot; Recruiting, piloting, and onboarding crowd workers<br><br>
 							&middot; Improving compliance and response quality<br><br>
 							&middot; Other resources<br><br>
 							&middot; Prospects for the future<br><br></span>
@@ -195,7 +195,7 @@
 							<span style="color:#666">&middot; Context for this tutorial<br><br></span>							
 							&middot; Building mobile-only web apps for visualization experiments<br><br>
 							<span style="color:#666">
-							&middot; Recruiting and onboarding crowd workers<br><br>
+							&middot; Recruiting, piloting, and onboarding crowd workers<br><br>
 							&middot; Improving compliance and response quality<br><br>
 							&middot; Other resources<br><br>
 							&middot; Prospects for the future<br><br></span>
@@ -260,6 +260,8 @@
 								&middot; Handling interruptions
 								<br><br>
 								&middot; Handling touch events
+								<br><br>
+								&middot; Trial interaction design
 								<br><br>
 								&middot; Compartmentalizing the app
 								<br><br>
@@ -427,8 +429,10 @@
 					
 						
 						<pre height="100%"><code class="javascript" data-trim data-noescape height="100%">
-							d3.select('#trial_btn')
+							d3.select('#some_button')
 							.on('touchstart', function() {
+							 
+							 d3.event.preventDefault();
 
 							 // respond to touch event
 
@@ -484,11 +488,45 @@
 					
 					</section>
 
+					<!-- Interaction Design ================================================== -->
+					
+					<section data-background="#fff">
+											
+						
+						<h3>Interaction Design: <a style="color:cornflowerblue" href="https://github.com/microsoft/RangesOnMobile"
+							target="_blank">RangesOnMobile</a></h3>
+						<hr>
+						
+						<img data-src="assets/ixd_ranges.png" style="box-shadow: none" width="100%" /><br>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- Interaction Design ================================================== -->
+					
+					<section data-background="#fff">
+					
+						<h3>Interaction Design: <a style="color:cornflowerblue" href="https://github.com/microsoft/MobileTrendVis"
+								target="_blank">MobileTrendVis</a></h3>
+						<hr>
+
+						<img data-src="assets/ixd_multiples.png" style="box-shadow: none" width="100%" /><br>
+				
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>					
+
 					<!-- Logging Activity ================================================== -->
 					
 					<section>
 					
-						<h3>Logging Participant Activity</h3>
+						<h3>Logging Activity w/ <a style="color:skyblue" href="https://aka.ms/azure-app-insights" target="_blank">AppInsights</a></h3>
 						<hr>
 					
 					
@@ -510,6 +548,10 @@
 						appInsights.trackEvent("TrialComplete", trial);
 						
 						</code></pre>
+
+						<small>
+							<p><a style="color:skyblue" href="https://aka.ms/azure-app-insights" target="_blank">Application Insights</a> custom event logging also includes client metadata in the tail of each log event (e.g., device, browser, approximate location).</p>
+						</small>
 					
 						<aside class="notes">
 					
@@ -631,7 +673,7 @@
 						<small style="text-align:left">
 							<span style="color:#666">&middot; Context for this tutorial<br><br>
 							&middot; Building mobile-only web apps for visualization experiments<br><br></span>
-							&middot; Recruiting and onboarding crowd workers<br><br>
+							&middot; Recruiting, piloting, and onboarding crowd workers<br><br>
 							<span style="color:#666">
 								&middot; Improving compliance and response quality<br><br>
 								&middot; Other resources<br><br>
@@ -643,9 +685,99 @@
 						</aside>
 				
 					</section>
+
+					<!-- PILOTING ================================================== -->
+					
+					<section>
+					
+						<h3>Recruiting + Piloting</h3>
+						<hr>
+						<small style="text-align:left">
+							<p>
+								<em>Ranges Over Time</em> experiment (InfoVis 2018):  
+								<br>
+								<br>&middot; <span style="color:gold">13</span> colleagues in pilot experiment #1
+								<br>&middot; <span style="color:gold">12</span> crowdsourced participants in pilot experiment #2
+								<br>&middot; <span style="color:gold">100</span> crowdsourced participants in final experiment (<span
+									style="color:gold">13</span> excluded)
+								<br>---
+								<br>&middot; <span style="color:gold">125</span> participants (total)
+							</p>
+							<p>
+								<br>
+								<em>Mobile Trend Vis</em> experiment (InfoVis 2019): 
+								<br>
+								<br>&middot; <span style="color:gold">20</span> colleagues in pilot experiment #1
+								<br>&middot; <span style="color:gold">16</span> crowdsourced participants in pilot experiment #2
+								<br>&middot; <span style="color:gold">16</span> crowdsourced participants in pilot experiment #3 (improved quality control, added trial time-out)								
+								<br>&middot; <span style="color:gold">113</span> crowdsourced participants in final experiment (<span style="color:gold">17</span> excluded)
+								<br>---
+								<br>&middot; <span style="color:gold">165</span> participants (total)
+							</p>
+						</small>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- ONBOARDING (VIA MTURK) ================================================== -->
+					
+					<section data-background="#fff">
+											
+						<img data-src="assets/procedure.png" style="box-shadow: none" width="70%" /><br>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- ONBOARDING (VIA MTURK) ================================================== -->
+				
+					<section data-background="#fff">
+					
+						<img data-src="assets/mturk.png" style="box-shadow: none" width="100%" /><br>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- CONSENT ================================================== -->
+					
+					<section data-background="#fff">
+					
+						<h3>Repeating & Staging the Consent Process</h3>
+						<hr>
+					
+						<img data-src="assets/consent.png" style="box-shadow: none" width="100%" /><br>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- ONBOARDING ================================================== -->
+					
+					<section>
+
+						<h3>Onboarding: Tutorial + Training (Video)</h3>
+						<hr>
+					
+						<img data-src="assets/onboarding.png" style="box-shadow: none" width="100%" /><br>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
 				
 				</section>
-
+				
 				<!-- SECTION: COMPLIANCE ================================================== -->
 				
 				<section>
@@ -659,7 +791,7 @@
 						<small style="text-align:left">
 							<span style="color:#666">&middot; Context for this tutorial<br><br>
 								&middot; Building mobile-only web apps for visualization experiments<br><br>
-							&middot; Recruiting and onboarding crowd workers<br><br></span>
+							&middot; Recruiting, piloting, and onboarding crowd workers<br><br></span>
 							&middot; Improving compliance and response quality<br><br>
 							<span style="color:#666">
 								&middot; Other resources<br><br>
@@ -687,7 +819,7 @@
 						<small style="text-align:left">
 							<span style="color:#666">&middot; Context for this tutorial<br><br>
 								&middot; Building mobile-only web apps for visualization experiments<br><br>
-								&middot; Recruiting and onboarding crowd workers<br><br>
+								&middot; Recruiting, piloting, and onboarding crowd workers<br><br>
 							&middot; Improving compliance and response quality<br><br></span>
 							&middot; Other resources<br><br>
 							<span style="color:#666">
@@ -771,6 +903,45 @@
 						</aside>
 					
 					</section>
+
+					<!-- Building Mobile Vis ================================================== -->
+					
+					<section>
+					
+						<h3>Creating Mobile Vis Experiences (Encore)</h3>
+						<hr>
+					
+						<small style="text-align: left">
+							</span><i class="far fa-file"></i> <strong><span style="color:gold"><em>Everything Except the Chart: Responsiveness
+										+ Mobile Support</em></span></strong>.
+							<br>D. Baur & M. Stefaner. IEEE VIS 2018 Tutorial</em>.
+							<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="http://webvis-do.minik.us/#/responsiveness"
+									target="_blank">webvis-do.minik.us/#/responsiveness</a></strong></span>
+							<br><br><br>
+							</span><i class="far fa-file"></i> <strong><span style="color:gold"><em>Techniques for Data Visualization on both
+										Mobile & Desktop</em></span></strong>.
+							<br>N. Bremer. <em>Visual Cinnamon</em>, April 2019.
+							<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="https://www.visualcinnamon.com/2019/04/mobile-vs-desktop-dataviz"
+									target="_blank">visualcinnamon.com/2019/04/mobile-vs-desktop-dataviz</a></strong></span>
+							<br><br><br>
+							</span><i class="far fa-file"></i> <strong><span style="color:gold"><em>Building Responsive Data Visualization for
+										the Web</em></span></strong>.
+							<br>B. Hinderman</em>. Wiley, 2016.
+							<br><br>
+							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
+									href="http://responsivedatavisualization.com/"
+									target="_blank">responsivedatavisualization.com/</a></strong></span>
+						</small>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
 				
 				</section>
 
@@ -787,7 +958,7 @@
 						<small style="text-align:left">
 							<span style="color:#666">&middot; Context for this tutorial<br><br>
 								&middot; Building mobile-only web apps for visualization experiments<br><br>
-								&middot; Recruiting and onboarding crowd workers<br><br>
+								&middot; Recruiting, piloting, and onboarding crowd workers<br><br>
 								&middot; Improving compliance and response quality<br><br>
 								&middot; Other resources<br><br></span>							
 								&middot; Prospects for the future<br><br>
@@ -840,33 +1011,46 @@
 						</small>
 					
 						<aside class="notes">
-							The first of which is a framework for running mobile-only visualization experiments,
-							<br><br>
-							The three projects I spoke about until now in this talk share a common infrastructure:
-							<br><br>
-							They're all node applications running as Azure web applications
-							<br><br>
-							With media queries and to enforce mobile-only participation
-							<br><br>
-							Server-side condition assignment and rebalancing for crowdsourced deployment
-							<br><br>
-							And handlers for orientation changes.
-							<br><br>
-							Refactoring this into an application framework could allow for experiment application developers to focus on
-							<br><br>
-							Just designing the stimuli, meaning the visualization components,
-							<br><br>
-							And defining what constitues a trial and how a bank of trials are initialized.
-							<br><br>
-							I should mention that there is a precedent for this.
-							<br><br>
-							A team led by Lane Harrison at WPI have developed a framework for crowdsourced visualization studies,
-							<br><br>
-							Though it is intended for desktop environments.
-							<br><br>
-							What I propose could be a mobile-only alternative or extensions to this,
-							<br><br>
-							And I believe that this would be a good intern project.
+							
+						</aside>
+					
+					</section>
+
+					<!-- IMPROVED SENSING + LOGGING ================================================== -->
+					
+					<section>
+					
+						<h3>Improved Sensing + Logging</h3>
+						<hr>
+						<small style="text-align:left">
+							&middot; Using the camera and/or microphone to gauge distraction level<br><br>
+							&middot; Using the ambient light sensor to detect excessive glare<br><br>
+							&middot; Assessing the WiFi connection quality<br><br>
+							&middot; Using the device accelerometer to identify excessive movement<br><br>
+						</small>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- OTHER STUDIES ================================================== -->
+					
+					<section>
+					
+						<h3>Ideas for Future Mobile Vis Experiments</h3>
+						<hr>
+						<small style="text-align:left">
+							&middot; Comparing interaction design choices; extending Schwab et al (CHI 2019)<br><br>
+							&middot; e.g., Scrolling vs. swiping for staged animated visualization<br><br>
+							&middot; Replicating / extending Heer + Bostock on mobile devices (CHI 2010)<br><br>
+							&middot; Comparing small multiple glyph designs (e.g., calendar-based visualizations)<br><br>
+							&middot; Comparing small multiple time series designs; extending Javed et al (InfoVis 2010)<br><br>
+						</small>
+					
+						<aside class="notes">
+					
 						</aside>
 					
 					</section>
@@ -876,6 +1060,27 @@
 				<!-- SECTION: BACK MATTER ================================================== -->
 				
 				<section>
+
+					<!-- SECTION OUTLINE ================================================== -->
+					
+					<section>
+					
+						<h3>Tutorial Outline</h3>
+						<hr>
+						<small style="text-align:left">
+							&middot; Context for this tutorial<br><br>
+							&middot; Building mobile-only web apps for visualization experiments<br><br>
+							&middot; Recruiting, piloting, and onboarding crowd workers<br><br>
+							&middot; Improving compliance and response quality<br><br>
+							&middot; Other resources<br><br>
+							&middot; Prospects for the future<br><br>
+						</small>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
 				
 					<!-- TITLE ================================================== -->
 				
@@ -955,6 +1160,12 @@
       imagesArray = [
 				"assets/badge.png",
 				"assets/teaser.png",
+				"assets/consent.png",
+				"assets/procedure.png",
+				"assets/onboarding.png",
+				"assets/ixd_ranges.png",
+				"assets/ixd_mutliples.png",
+				"assets/mturk.png",
 				"assets/toosmallformultiples-crop.png",
 				"assets/toosmallformultiples.gif",
 				"assets/toosmallformultiples.png",
