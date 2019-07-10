@@ -236,7 +236,7 @@
 							<br><br>
 							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
 								href="https://webcast.ec.europa.eu/conference-new-techniques-and-technologies-for-statistics-gasp-12-03-19"
-								target="_blank">webcast.ec.europa.eu</a></strong>
+								target="_blank">webcast.ec.europa.eu</a></strong> (8h36m - 8h55m)
 							<br><br><br>
 							</span><i class="far fa-file"></i> <strong><span style="color:gold"><em>Building Responsive Data Visualization for the Web</em></span></strong>.
 							<br>B. Hinderman</em>. Wiley, 2016.
@@ -706,9 +706,9 @@
 							<p>
 								<em>Ranges Over Time</em> experiment (InfoVis 2018):  
 								<br>
-								<br>&middot; <span style="color:gold">13</span> colleagues in pilot experiment #1
-								<br>&middot; <span style="color:gold">12</span> crowdsourced participants in pilot experiment #2
-								<br>&middot; <span style="color:gold">100</span> crowdsourced participants in final experiment (<span
+								<br>&middot; <span style="color:gold">13</span> colleagues in pilot experiment #1, local & remote
+								<br>&middot; <span style="color:gold">12</span> crowdsourced participants (MTurk) in pilot experiment #2
+								<br>&middot; <span style="color:gold">100</span> crowdsourced participants (MTurk) in final experiment (<span
 									style="color:gold">13</span> excluded)
 								<br>---
 								<br>&middot; <span style="color:gold">125</span> participants (total)
@@ -717,10 +717,10 @@
 								<br>
 								<em>Mobile Trend Vis</em> experiment (InfoVis 2019): 
 								<br>
-								<br>&middot; <span style="color:gold">20</span> colleagues in pilot experiment #1
-								<br>&middot; <span style="color:gold">16</span> crowdsourced participants in pilot experiment #2
-								<br>&middot; <span style="color:gold">16</span> crowdsourced participants in pilot experiment #3 (improved quality control, added trial time-out)								
-								<br>&middot; <span style="color:gold">113</span> crowdsourced participants in final experiment (<span style="color:gold">17</span> excluded)
+								<br>&middot; <span style="color:gold">20</span> colleagues in pilot experiment #1, local & remote
+								<br>&middot; <span style="color:gold">16</span> crowdsourced participants (MTurk) in pilot experiment #2
+								<br>&middot; <span style="color:gold">16</span> crowdsourced participants (MTurk) in pilot experiment #3 (improved quality control, added trial time-out)								
+								<br>&middot; <span style="color:gold">113</span> crowdsourced participants (MTurk) in final experiment (<span style="color:gold">17</span> excluded)
 								<br>---
 								<br>&middot; <span style="color:gold">165</span> participants (total)
 							</p>
@@ -812,6 +812,85 @@
 				
 						</aside>
 				
+					</section>
+
+					<!-- BALANCING ================================================== -->
+					
+					<section>
+					
+						<h3>Assigning & Balancing Conditions</h3>
+						<hr>
+						
+						<pre height="100%"><code class="javascript" data-trim data-noescape height="100%">
+
+							socket.on('userID', function(msg) { // new participant
+							
+							 if (participantList.length > 0) { 
+							  // move next participant to progressList
+							  // participantList contains condition assignments
+							 }
+
+							 else if (completedList.length > 0) { 
+							  // add extra participant considering completedList
+							  // and its participants' condition assignments
+							 }
+
+							 else if (progressList.length > 0) { 
+							  // add extra participant when no one has finished yet
+							 }
+
+							 else { 
+							  // this shouldn't ever happen, but if it does, randomize
+							 }
+							}
+							
+						</code></pre>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- Quality Control ================================================== -->
+					
+					<section>
+					
+						<h3>Quality Control Trials</h3>
+						<hr>
+
+						<video data-src="assets/qualitycontrol.mp4" data-autoplay type="video/mp4"></video>
+					
+						<small style="text-align:left">
+							Extremely simple task among shuffled test tasks; if incorrect, exclude participant from analysis.
+						</small>
+					
+						<aside class="notes">
+					
+						</aside>
+					
+					</section>
+
+					<!-- Compliance & Quality Control 				 ================================================== -->
+					
+					<section>
+					
+						<h3>Compliance & Quality Control Measures</h3>
+						<hr>
+										
+						<small style="text-align:left">
+							&middot; Onboarding tutorial<br><br>
+							&middot; Training trials with correctness feedback<br><br>
+							&middot; Unlimited attempts at training trials; hints shown after 3 failed attempts<br><br>
+							&middot; Timeouts on all trials; option to 'Give Up' or 'Continue'<br><br>							
+							&middot; Quality control trials inserted among test trials<br><br>
+							&middot; Metadata log screening: device, OS, browser, location, ...<br><br>
+						</small>
+					
+						<aside class="notes">
+					
+						</aside>
+					
 					</section>
 				
 				</section>
@@ -946,7 +1025,7 @@
 							<br><br>
 							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
 									href="https://webcast.ec.europa.eu/conference-new-techniques-and-technologies-for-statistics-gasp-12-03-19"
-									target="_blank">webcast.ec.europa.eu</a></strong>
+									target="_blank">webcast.ec.europa.eu</a></strong> (8h36m - 8h55m)
 							<br><br><br>
 							</span><i class="far fa-file"></i> <strong><span style="color:gold"><em>Building Responsive Data Visualization for
 										the Web</em></span></strong>.
@@ -1157,6 +1236,7 @@
 				slideNumber: true,
 				showNotes: false,
 				mouseWheel: false,
+				autoPlayMedia: true,
 				history: true,
 				center: false,
 				overview: true,
@@ -1189,6 +1269,7 @@
 				"assets/toosmallformultiples-crop.png",
 				"assets/toosmallformultiples.gif",
 				"assets/toosmallformultiples.png",
+				"assets/qualitycontrol.mp4"
 			];
 
       new preLoader(imagesArray, {
