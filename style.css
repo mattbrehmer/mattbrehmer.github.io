@@ -4,25 +4,29 @@
 
 /* Typeface, Text Size, Colour */
 body {
-font-family: 'Open Sans',"Apple SD Gothic Neo", "Segoe UI Web Regular","wf_segoe-ui_normal","Segoe UI","Segoe UI Symbol","Myriad","Calibri","UnDotum","Damascus","Futura","Helvetica Neue","BBAlpha Sans","S60 Sans","Arial",sans-serif;
-font-size: 12px;
+font-family: 'Lato',"Apple SD Gothic Neo", "Segoe UI Web Regular","wf_segoe-ui_normal","Segoe UI","Segoe UI Symbol","Myriad","Calibri","UnDotum","Damascus","Futura","Helvetica Neue","BBAlpha Sans","S60 Sans","Arial",sans-serif;
+font-size: 0.8em;
 line-height: normal;
 }
 
 h1 {
 font-variant: small-caps;
-font-size: 24px;
-font-weight: bold;
+font-size: 1.5em;
+font-weight: 600;
 margin: 0px 0px 0px 0;
-color: #666;
+color: #2A5DB0;
 }
 
 h2 {
 font-variant: small-caps;
-font-size: 16px;
-font-weight: bold;
-color: #333333;
-margin: 0px 0 10px 0;
+font-weight: 500;
+color: #2A5DB0;
+margin: 0px 0 1em 0;
+}
+
+.matthew {
+  font-weight: 500;
+  text-decoration: underline;
 }
 
 .moreinfo {
@@ -33,9 +37,9 @@ margin: 0px 0 10px 0;
 #nav a {
 font-variant: small-caps;
 text-decoration: none;
+font-size: 1.1em;
 color: #2A5DB0;
 text-align: right;
-padding: 0 0 0 0px;
 }
 
 #nav a:hover{
@@ -71,9 +75,7 @@ text-align: left;
 }
 
 #page-title{
-font-size: 36px;
-width: 450px;
-height: 37px;
+width: 100%;
 clear:both;
 }
 
@@ -93,14 +95,11 @@ margin: 0px 0px 6px 0px;
 
 .left {
 float: left;
-text-align: left;
-font-size: 20px;
 }
 
 .right {
 text-align: right;
 float: right;
-font-size: 20px;
 }
 
 .block{
@@ -109,19 +108,14 @@ margin-bottom: 30px;
 }
 
 #content-wrapper{
-max-width: 720px;
-min-width: 720px;
-width: 720px;
-margin: 0 auto 20px;
+width: 100%;
+padding: 5% 5% 0% 5%;
 }
 
 
 #content{
-max-width: 720px;
-min-width: 720px;
-width: 720px;
-margin: 10px 0 0 0;
-padding-top:75px;
+margin: 0;
+padding: 0;
 }
 
 /* Header file */
@@ -138,10 +132,8 @@ z-index: 10;
 }
 
 #header{
-max-width: 715px;
-min-width: 715px;
-width: 715px;
-min-height: 75px;
+width: 100%;
+min-height: 4em;
 margin:0 auto 0px;
 padding:0;
 background: #FFFFFF;
@@ -155,9 +147,7 @@ float: left;
 }
 
 #nav{
-width: 715px;
-height: 20px;
-padding: 40px 0px 0px 0px;
+padding: 1em 10% 1em 10%;
 }
 
 #title {
@@ -182,11 +172,17 @@ padding: 0 0 0 0px;
 /* Main page (index) */
 
 #left-column {
-width: 120px;
-float: left;
-background: #dddddd;
-border-radius:10px 0px 0px 10px;
-padding: 10px 10px 10px 10px;
+  width: 14%;
+	float: left;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: #eeeeee;
+	border-radius: 10px 0px 0px 10px;
+	padding: 1em 0px 10px 10px;
+	margin-left: 10%;
+  margin-top: 5em;
+  min-width: 11em;
 }
 
 #people-images {
@@ -197,7 +193,7 @@ text-align:right;
 #left-column .people-thumb {
 float:right;
 margin: 0px 0px 10px 0px;
-width: 120px;
+width: 160px;
 }
 
 img {
@@ -208,12 +204,9 @@ img {
 }
 
 #right-column {
-float: left;
-width: 560px;
-margin-bottom: 50px;
-border-left: 1px solid #ccc;
-padding: 0px 0px 0px 15px;
-
+	margin-left: 25%;
+	padding: 5.5em 10px 10px 10px;
+  min-width: 55em;
 }
 
 .bio{
@@ -238,7 +231,7 @@ border-radius:10px 10px 10px 10px;
 }
 
 .pub{
-width: 555px;
+width: 88.5%;
 margin: 0px 0px 10px 0px;
 padding: 0px 0px 10px 0px;
 float: left;
@@ -253,12 +246,11 @@ border-bottom: 1px solid #999999;
 
 .pub .text{
 float: left;
-width: 400px;
+width: 76%;
 }
 
 .pub .thumb{
 float: right;
-width: 140px;
 }
 
 
