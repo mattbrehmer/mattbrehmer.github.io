@@ -5,7 +5,7 @@
 /* Typeface, Text Size, Colour */
 body {
 font-family: 'Lato',"Apple SD Gothic Neo", "Segoe UI Web Regular","wf_segoe-ui_normal","Segoe UI","Segoe UI Symbol","Myriad","Calibri","UnDotum","Damascus","Futura","Helvetica Neue","BBAlpha Sans","S60 Sans","Arial",sans-serif;
-font-size: 0.8em;
+font-size: 1em;
 line-height: normal;
 }
 
@@ -21,7 +21,7 @@ h2 {
 font-variant: small-caps;
 font-weight: 500;
 color: #2A5DB0;
-margin: 0px 0 1em 0;
+margin: 0px 0 0em 0;
 }
 
 .matthew {
@@ -34,17 +34,15 @@ margin: 0px 0 1em 0;
   font-weight: bold;
 }
 
-#nav a {
+#nav {
 font-variant: small-caps;
 text-decoration: none;
-font-size: 1.1em;
+font-size: 1em;
 color: #2A5DB0;
-text-align: right;
 }
 
 #nav a:hover{
 color: #3296CF;
-text-decoration: underline;
 }
 
 h1 a {
@@ -98,8 +96,7 @@ float: left;
 }
 
 .right {
-text-align: right;
-float: right;
+
 }
 
 .block{
@@ -147,6 +144,7 @@ float: left;
 }
 
 #nav{
+text-align: center;
 padding: 1em 10% 1em 10%;
 }
 
@@ -179,7 +177,7 @@ padding: 0 0 0 0px;
 	left: 0px;
 	background: #eeeeee;
 	border-radius: 10px 0px 0px 10px;
-	padding: 1em 0px 10px 10px;
+	padding: 10px 10px 10px 10px;
 	margin-left: 10%;
   margin-top: 5em;
   min-width: 11em;
@@ -204,8 +202,8 @@ img {
 }
 
 #right-column {
-	margin-left: 25%;
-	padding: 5.5em 10px 10px 10px;
+	margin-left: 10%;
+	padding: 5em 10px 10px 10px;
   min-width: 55em;
 }
 
@@ -231,7 +229,7 @@ border-radius:10px 10px 10px 10px;
 }
 
 .pub{
-width: 88.5%;
+width: 90%;
 margin: 0px 0px 10px 0px;
 padding: 0px 0px 10px 0px;
 float: left;
@@ -246,7 +244,7 @@ border-bottom: 1px solid #999999;
 
 .pub .text{
 float: left;
-width: 76%;
+width: 80%;
 }
 
 .pub .thumb{
