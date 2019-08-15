@@ -12,7 +12,7 @@ line-height: normal;
 h1 {
 font-variant: small-caps;
 font-size: 1.5em;
-font-weight: 600;
+font-weight: 500;
 margin: 0px 0px 0px 0;
 color: #2A5DB0;
 }
@@ -45,15 +45,6 @@ color: #2A5DB0;
 color: #3296CF;
 }
 
-h1 a {
-color: #333333;
-text-decoration: none;
-}
-
-h1 a:hover{
-color: #333333;
-text-decoration: none;
-}
 
 a {
 color: #2A5DB0;
