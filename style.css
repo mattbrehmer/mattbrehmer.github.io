@@ -236,10 +236,10 @@ border-radius:10px 10px 10px 10px;
 }
 
 .pub{
-width: 90%;
-margin: 0px 0px 10px 0px;
-padding: 0px 0px 10px 0px;
-float: left;
+  width: 90%;
+	margin: 0px 0px 10px 0px;
+	padding: 0px 0px 10px 0px;
+	float: left;
 }
 
 .pub-one-column{
@@ -249,13 +249,14 @@ margin: 10px 0px 10px 0px;
 border-bottom: 1px solid #999999;
 }
 
-.pub .text{
-float: right;
-width: 80%;
+.pub .text {
+  float: left;
+  width: 79%;
+  padding-left: 1.5em;
 }
 
 .pub .thumb{
-float: left;
+  float: left;
 }
 
 
