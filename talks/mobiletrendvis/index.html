@@ -70,14 +70,20 @@
 				<!-- ANIMATION VS SMALL MULTIPLES ================================================== -->
 
 				<section>
-					<h4>Experiment: Animation vs. Small Multiples</h4>
+					<h4>Animation vs. Small Multiples on Mobile Phones</h4>
 					<hr>
 					
 					<img height="450px" data-src="assets/toosmallformultiples.gif"></img>
-					<img height="450px" data-src="assets/toosmallformultiples-crop.png"></img>				
-
+					<img height="450px" data-src="assets/toosmallformultiples-crop.png"></img>			
+					
+					<small style="text-align:left">
+						<strong>Crowdsourced Experiment</strong>: <strong><span style="color: cornflowerblue;">Animation <i class="fa fa-play-circle" aria-hidden="true"></i></span></strong> vs. <strong><span style="color: #FF7F0E;">Small Multiples <i class="fa fa-th" aria-hidden="true"></i></span></strong>, between subjects<br><br> <strong>Task</strong>: identify 1-3 targets from a set of 16 items.
+					</small>
+					
 					<aside class="notes">							
-						In a nutshell, this experiment compares animated and small multiple scatterplots on mobile phones.
+						In a nutshell, with this experiment we people to identify 1-3 targets among a set of 16 items in either an animated scatterplot or a static small multiples scatterplot where each item includes its trajectory trail.
+						<br><br>
+						And we asked people to do this on their mobile phones.
 					</aside>
 
 				</section>					
@@ -103,11 +109,9 @@
 					</small>
 
 					<aside class="notes">							
-						I personally had become interested animation on small displays a few years ago when animated graphics were becoming more prevalent in online news and especially in social media,
+						Why did we do this experiment? 
 						<br><br>
-						And at the NICAR or the National Institute for Computer-Assisted Reporting conference in 2017, 
-						<br><br>
-						There was a whole session devoted to the creation of so-called Data GIFs,
+						A few years ago we noticed that animated graphics were becoming more prevalent in online news and especially in social media,
 						<br><br>
 						The ones that interest me the most are those that make use of position change over time, such as in these examples.
 					</aside>
@@ -126,6 +130,8 @@
 					<small style="text-align:left">
 						<i class="fab fa-twitter" aria-hidden="true"></i> 
 						<strong><em><a style="color:cornflowerblue" href="https://twitter.com/brianboyer/status/583311823245561856" target="_blank">Data viz solutions: small multiples on desktop, GIFs on yer phone!</a></strong></em> <br>Brian Boyer (NPR News Graphics, 2015).
+						<br><br>
+						<strong>Question</strong>: Is there evidence to justify this allocation of designs to different device profiles? 
 					</small>
 
 					<aside class="notes">			
@@ -151,7 +157,7 @@
 					</small>
 
 					<aside class="notes">							
-						This may remind you of research done at Microsoft Research published 11 years ago
+						Some of you may be reminded of research published over a decade ago
 						<br><br>
 						where George Robertson and colleagues
 						<br><br>
@@ -161,7 +167,7 @@
 						<br><br>
 						In which he narrates a story about shifting global health and economic metrics set to animated scatterplots. 
 						<br><br>
-						So George and the other researchers conducted an experiment comparing animated, small multiple, and connected trail scatterplots,
+						So George and the other researchers conducted an experiment comparing animated and static scatterplots,
 						<br><br>
 						And their paper about the experiment was quite influential, earning a Test-of-Time award at InfoVis last year. 
 					</aside>
@@ -177,12 +183,14 @@
 					<img width="100%" data-src="assets/robertson-wide.png" style="box-shadow: none"></img>
 					
 					<small style="text-align:left">
-						<i class="far fa-file"></i> <span style="color:cornflowerblue"><strong><em>Effectiveness of Animation in Trend Visualization</em></strong></span>. <br>G. Robertson, R. Fernandez, D. Fisher, B. Lee, and J. Stasko. IEEE TVCG (Proc InfoVis 2008).
+						<i class="far fa-file"></i> <span style="color:cornflowerblue"><strong><em>Effectiveness of Animation in Trend Visualization</em></strong></span>. IEEE TVCG (Proc InfoVis 2008).
 						<br><br>
 						<strong>Lab Experiment</strong>:<br>
-						<strong>2</strong> Settings (Analysis vs. Presentation) | <strong>3</strong> Design conditions | <strong>2</strong> Dataset sizes (80, 18) | <strong>24</strong> Tasks
+						<strong>2</strong> Contexts (Analysis vs. Presentation) | <strong>3</strong> Design conditions | <strong>2</strong> Dataset sizes (large, small) | <strong>24</strong> Tasks
 						<br><br>
 						<strong>Notable results</strong>: Analysis performance higher with multiples; participants preferred animation.
+						<br><br>
+						<strong>Question</strong>: Will we arrive at similar results with mobile phones?
 					</small>
 
 					<aside class="notes">							
@@ -213,7 +221,7 @@
 
 					<small style="text-align:left">
 						<strong>Crowdsourced Experiment</strong>:<br>
-						<strong>1</strong> Context | <strong>2</strong> Design conditions | <strong>1</strong> Dataset size (16) | <strong>13</strong> Tasks (3 Training, 1 QA, 9 Test)
+						<strong>1</strong> Context | <strong>2</strong> conditions: <span style="color: cornflowerblue;"><i class="fa fa-play-circle" aria-hidden="true"></i></span> vs. <span style="color: #FF7F0E;"><i class="fa fa-th" aria-hidden="true"></i></span> | <strong>1</strong> Dataset size (16 items) | <strong>13</strong> Tasks (3 Training, 1 QA, 9 Test)
 					</small>
 
 					<aside class="notes">
@@ -275,9 +283,9 @@
 						<br><br>
 						Any individual participant saw either animation or small multiples,
 						<br><br>
-						For each task, we first showed the instruction and the pair of axes for 5 seconds.
+						For each task, we first showed the instruction and the pair of axes.
 						<br><br>
-						After that, the animation begins to loop in the animation condition, and one full animation loop lasts 12.5 seconds.
+						After that, the animation begins to loop in the animation condition.
 						<br><br>
 						In both conditions they have to select responses from a multiple choice list corresponding to alphabetically labeled points in the plot.
 						<br><br>
@@ -289,37 +297,10 @@
 				<!-- ================================================== -->
 
 				<section>						
-					<h4>Dependent Measures</h4>
-					<hr>
-					<small style="text-align: left">
-						<p><em>For each task</em>:</p>
-						<p><span style="color: gold;"><i class="fas fa-stopwatch"></i></span> Trial completion time</p>
-						<p><span style="color: gold;"><i class="fas fa-check-circle"></i></span> (Partial) accuracy</p>
-						<p><br></p>
-						<p><em>At the end of the experiment</em>:</p>
-						<p><span style="color: gold;"><i class="fas fa-list-ol"></i></span> Confidence: Low to High</p>
-						<p><span style="color: gold;"><i class="fas fa-thumbs-up"></i></span> Ease of using the charts: Low to High</p>
-					</small>	
-											
-					<aside class="notes">
-						We recorded response time and accuracy for each task, 
-						<br><br>
-						And at the end of the experiment,
-						<br><br>
-						We asked participants to rate their overall confidence in their responses and 
-						<br><br>
-						Their perceived ease of using the charts to respond to these tasks. 
-					</aside>
-
-				</section>
-
-				<!-- ================================================== -->
-
-				<section>						
 					<h4>96 Participants</h4>
 					<hr>
 					<small>
-						<p><strong><span style="color: #FF7F0E;">Small Multiples</span></strong> (N = 45), <strong><span style="color: cornflowerblue;">Animation</span></strong> (N = 51)</p>	
+						<p><strong><span style="color: #FF7F0E;"><i class="fa fa-th" aria-hidden="true"></i> Small Multiples</span></strong> (N = 45), <strong><span style="color: cornflowerblue;"><i class="fa fa-play-circle" aria-hidden="true"></i> Animation</span></strong> (N = 51)</p>	
 
 						<p>
 							<span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span><span style="color: #FF7F0E;"> <i class="fas fa-user"></i></span> <span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><span style="color: cornflowerblue;"> <i class="fas fa-user"></i></span><br>
@@ -351,11 +332,17 @@
 						
 							<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue"
 									href="https://tinyurl.com/mobiletrendvis" target="_blank">tinyurl.com / mobiletrendvis</a></strong>
-						<br><br><br>
+						<br><br>
 
-						<p><span style="color: gold;"><i class="fas fa-stopwatch"></i></span> Participants were <strong>faster with Small Multiples</strong> (for 7 of 9 tasks). No difference in remaining 2 tasks.</p>
-						<p><span style="color: gold;"><i class="fas fa-check-circle"></i></span> Comparable accuracy between <strong>Animation</strong> and <strong>Small Multiples</strong> for 5 tasks. <br>Higher accuracy with <strong>Animation</strong> for 2 tasks. Higher with <strong>Small Multiples</strong> for remaining 2 tasks.</p>	
-						<p><span style="color: gold;"><i class="fas fa-thumbs-up"></i></span> Participants were slightly <strong>more confident</strong> with <strong>Animation</strong>.</p>
+						<p>
+								<strong><span style="color: #FF7F0E;"><i class="fa fa-th" aria-hidden="true"></i></span></strong> = <strong><span style="color: #FF7F0E;">Small Multiples</i></span></span></strong> | <strong><span style="color: cornflowerblue;"><i class="fa fa-play-circle" aria-hidden="true"></i></span></strong> = <strong><span style="color: cornflowerblue;"> Animation</span></strong> | <strong><i class="fa fa-square" aria-hidden="true"></i></strong> = <strong>comparable performance</strong>
+								<br><br>
+						</p>
+
+						<p><span style="color: gold;"><i class="fas fa-stopwatch"></i></span> Lower completion time by task: <span style="color: #FF7F0E;"><i class="fa fa-th" aria-hidden="true"></i> <i class="fa fa-th" aria-hidden="true"></i> <i class="fa fa-th" aria-hidden="true"></i> </span><i class="fa fa-square" aria-hidden="true"></i> <span style="color: #FF7F0E;"><i class="fa fa-th" aria-hidden="true"></i> <i class="fa fa-th" aria-hidden="true"></i></span> <i class="fa fa-square" aria-hidden="true"></i> <span style="color: #FF7F0E;"><i class="fa fa-th" aria-hidden="true"></i> <i class="fa fa-th" aria-hidden="true"></i></span>
+						</strong></p>
+						<p><span style="color: gold;"><i class="fas fa-check-circle"></i></span> Higher accuracy by task: <span style="color: cornflowerblue;"><i class="fa fa-play-circle" aria-hidden="true"></i></span> <i class="fa fa-square" aria-hidden="true"></i> <span style="color: #FF7F0E;"><i class="fa fa-th" aria-hidden="true"></i></span> <i class="fa fa-square" aria-hidden="true"></i> <span style="color: #FF7F0E;"><i class="fa fa-th" aria-hidden="true"></i></span> <i class="fa fa-square" aria-hidden="true"></i> <i class="fa fa-square" aria-hidden="true"></i> <span style="color: cornflowerblue;"><i class="fa fa-play-circle" aria-hidden="true"></i></span> <i class="fa fa-square" aria-hidden="true"></i></p><br>
+						<p><span style="color: gold;"><i class="fas fa-thumbs-up"></i></span> Slightly <strong>more confident</strong> with <strong><span style="color: cornflowerblue;"><i class="fa fa-play-circle" aria-hidden="true"></i></span></strong></p>
 					</small>
 					
 					<aside class="notes">		
@@ -381,14 +368,15 @@
 					<img width="100%" data-src="assets/multiples-results47.png" style="box-shadow: none"></img>
 
 					<small>
-						<strong><span style="color: #FF7F0E;">Small Multiples</span></strong> (N = 45) | <strong><span style="color: cornflowerblue;">Animation</span></strong> (N = 51) 
+						<strong><span style="color: #FF7F0E;"><i class="fa fa-th" aria-hidden="true"></i> Small Multiples</i></span></span></strong> | <strong><span style="color: cornflowerblue;"><i class="fa fa-play-circle" aria-hidden="true"></i> Animation</span></strong> . 
+						
 						<!-- | <strong><span style="color: #4c924c;">Ratio / Difference (Effect Size)</span></strong> -->
 					</small>
 
 					<small style="text-align: left">
-						<br>	
-						Note that both tasks involve targets having trajectories that reverse course,<br>
-						Unlike the targets in the other 7 tasks.
+						
+						These tasks involve targets having trajectories that reverse course,<br>
+						unlike the targets in the other 7 tasks. 
 					</small>
 
 					<aside class="notes">
@@ -418,13 +406,12 @@
 					<img width="100%" data-src="assets/multiples-results35.png" style="box-shadow: none"></img>
 
 					<small>
-						<strong><span style="color: #FF7F0E;">Small Multiples</span></strong> (N = 45) | <strong><span style="color: cornflowerblue;">Animation</span></strong> (N = 51)
+						<strong><span style="color: #FF7F0E;"><i class="fa fa-th" aria-hidden="true"></i> Small Multiples</i></span></span></strong> | <strong><span style="color: cornflowerblue;"><i class="fa fa-play-circle" aria-hidden="true"></i> Animation</span></strong> 
 						 <!-- | <strong><span style="color: #4c924c;">Ratio / Difference (Effect Size)</span></strong> -->
 					</small>
 
 					<small style="text-align: left">
-						<br>	
-						Note both tasks involve comparing ∆Ys: a ∆Y with no ∆X (top) or the 2 largest ∆Y values (bottom).
+						These tasks involve comparing ∆Ys: a ∆Y with no ∆X (top) or the 2 largest ∆Y values (bottom).
 					</small>
 
 					<aside class="notes">
@@ -454,13 +441,12 @@
 					<img width="100%" data-src="assets/multiples-results18.png" style="box-shadow: none"></img>
 
 					<small>
-						<strong><span style="color: #FF7F0E;">Small Multiples</span></strong> (N = 45) | <strong><span style="color: cornflowerblue;">Animation</span></strong> (N = 51)
+						<strong><span style="color: #FF7F0E;"><i class="fa fa-th" aria-hidden="true"></i> Small Multiples</i></span></span></strong> | <strong><span style="color: cornflowerblue;"><i class="fa fa-play-circle" aria-hidden="true"></i> Animation</span></strong>
 						 <!-- | <strong><span style="color: #4c924c;">Ratio / Difference (Effect Size)</span></strong> -->
 					</small>
 
 					<small style="text-align: left">
-						<br>	
-						Both tasks involve assessing both ∆Y and ∆X: target trajectories quite different from distractors.
+						These tasks involve assessing both ∆Y and ∆X: target trajectories quite different from distractors.
 					</small>
 
 					<aside class="notes">
@@ -480,16 +466,20 @@
 				<section>
 					<h4>Conclusions: <span style="color: gold;">Animation</span> or <span style="color: gold;">Small Multiples</span>?</h4>
 					<hr>
-
+					
 					<small style="text-align: left">
 						<p>Results call into question the <em>"small multiples on the desktop, animation on the phone"</em> strategy.
-						<br><br>
-						<p>Surprisingly, <strong>small multiples</strong> are <strong>still viable</strong> on small displays.</p>
-						<p>Follow-up work should examine <strong>distance</strong> and <strong>angle</strong> comparisons.
-						<br><br>
-						<p>Animation and small multiples are <strong>comparably accurate</strong> in many cases.</p>
-						<p>Follow-up work should examine <strong>outlier</strong> trajectories and <strong>reversals</strong>.</p>
-						<p><br></p>
+						<br>
+						<img width="10%" data-src="assets/long_trajectories.png" style="margin-bottom: 0%; box-shadow: none; position: absolute;"></img>
+						<p style="margin-left: 12%;">
+							Surprisingly, <strong><span style="color: #FF7F0E;"><i class="fa fa-th" aria-hidden="true"></i> Small Multiples</i></span></span></strong> are <strong>still viable</strong> on small displays.</p>
+						<p style="margin-left: 12%;">Follow-up work should examine <strong>distance</strong> and <strong>angle</strong> comparisons.</p>
+						</p>
+						<br>
+						<img width="10%" data-src="assets/reversal_trajectories.png" style="box-shadow: none; position: absolute;"></img>
+						<p style="margin-left: 12%;"><strong><span style="color: cornflowerblue;"><i class="fa fa-play-circle" aria-hidden="true"></i> Animation</span></strong> and <strong><span style="color: #FF7F0E;"><i class="fa fa-th" aria-hidden="true"></i> Small Multiples</i></span></span></strong> are <strong>comparably accurate</strong> in many cases.</p>
+						<p style="margin-left: 12%;">Follow-up work should examine <strong>outlier</strong> trajectories and <strong>reversals</strong>.</p>
+						<br>
 						<hr><br>
 						<i class="fas fa-external-link-alt" aria-hidden="true"></i> <strong><a style="color:skyblue" href="http://aka.ms/multiples" target="_blank">aka.ms / multiples</a></strong><span> | (mobile only) experimental app.</span>
 						<br><br>
@@ -519,7 +509,7 @@
 						<br><br>
 						Likely with synthetic data, as we were using a subset of the real socioeconomic metric data from the United Nations used in Robertson and colleagues' 2008 study.
 						<br><br>
-						I now welcome your questions and conclusions and point you to links to our study application, its source code, our study results and analyses, our pre-print, and these slides.
+						I now welcome your questions and comments and I'll point you to our study application, its source code, our study results and analyses, our pre-print, and these slides.
 						<br><br>
 						Thank you,
 					</aside>
