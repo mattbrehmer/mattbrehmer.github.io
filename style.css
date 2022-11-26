@@ -34,6 +34,40 @@ strong {
   text-decoration: none;
 }
 
+a {
+  color: skyblue;
+  text-decoration: none;
+  }
+  
+  a:hover{
+  color: cornflowerblue;
+  text-decoration: underline;
+  }
+
+#name {
+  color: #222222;
+  display: inline;    
+  background:skyblue;
+  border-radius:10%;
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-block;
+  text-align: center;
+}
+
+#name a {
+  color: #222222;
+}
+
+#name:hover {
+  background:cornflowerblue;
+}
+
+#name a:hover {
+  color: #222222;
+}
+
 #initials {
   display: none;
 }
@@ -56,17 +90,6 @@ color: skyblue;
 
 #nav a:hover{
 color: cornflowerblue;
-}
-
-
-a {
-color: skyblue;
-text-decoration: none;
-}
-
-a:hover{
-color: cornflowerblue;
-text-decoration: underline;
 }
 
 body {
@@ -515,7 +538,27 @@ and (orientation: portrait) {
   }
 
   #initials {
-    display: inline;
+    color: #222222;
+    display: inline;    
+    background:skyblue;
+    border-radius:10%;
+    height: 1em;
+    width: 1em;
+    line-height: 1em;
+    display: inline-block;
+    text-align: center;
+  }
+
+  #initials a {
+    color: #222222;
+  }
+
+  #initials:hover {
+    background:cornflowerblue;
+  }
+
+  #initials a:hover {
+    color: #222222;
   }
 
   #shortname {
@@ -567,9 +610,29 @@ and (orientation: landscape) {
   #initials {
     display: none;
   }
+  
+  #shortname {    
+    color: #222222;
+    display: inline;    
+    background:skyblue;
+    border-radius:10%;
+    height: 1em;
+    width: 1em;
+    line-height: 1em;
+    display: inline-block;
+    text-align: center;
+  }
 
-  #shortname {
-    display: inline;
+  #shortname a {
+    color: #222222;
+  }
+  
+  #shortname:hover {
+    background:cornflowerblue;
+  }
+
+  #shortname a:hover {
+    color: #222222;
   }
 
   #right-column {
