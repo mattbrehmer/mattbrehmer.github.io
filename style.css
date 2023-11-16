@@ -37,6 +37,7 @@ strong {
 a {
   color: skyblue;
   text-decoration: none;
+  cursor:default;
   }
   
   a:hover{
@@ -45,10 +46,9 @@ a {
   }
 
 #name {
-  color: #222222;
+  color: skyblue;
   display: inline;    
-  background:skyblue;
-  border-radius:10%;
+  font-weight:500;
   height: 1em;
   width: 1em;
   line-height: 1em;
@@ -57,15 +57,11 @@ a {
 }
 
 #name a {
-  color: #222222;
-}
-
-#name:hover {
-  background:cornflowerblue;
+  color: skyblue;
 }
 
 #name a:hover {
-  color: #222222;
+  color: cornflowerblue;
 }
 
 #initials {
@@ -538,10 +534,9 @@ and (orientation: portrait) {
   }
 
   #initials {
-    color: #222222;
+    color: skyblue;
     display: inline;    
-    background:skyblue;
-    border-radius:10%;
+    font-weight: 500;
     height: 1em;
     width: 1em;
     line-height: 1em;
@@ -550,15 +545,11 @@ and (orientation: portrait) {
   }
 
   #initials a {
-    color: #222222;
-  }
-
-  #initials:hover {
-    background:cornflowerblue;
+    color:skyblue;
   }
 
   #initials a:hover {
-    color: #222222;
+    color: cornflowerblue;
   }
 
   #shortname {
@@ -612,10 +603,9 @@ and (orientation: landscape) {
   }
   
   #shortname {    
-    color: #222222;
+    color: skyblue;
+    font-weight: 500;
     display: inline;    
-    background:skyblue;
-    border-radius:10%;
     height: 1em;
     width: 1em;
     line-height: 1em;
@@ -624,15 +614,11 @@ and (orientation: landscape) {
   }
 
   #shortname a {
-    color: #222222;
+    color: skyblue;
   }
   
-  #shortname:hover {
-    background:cornflowerblue;
-  }
-
   #shortname a:hover {
-    color: #222222;
+    color: cornflowerblue;
   }
 
   #right-column {
