@@ -50,7 +50,6 @@ a {
   display: inline;    
   font-weight:500;
   height: 1em;
-  width: 1em;
   line-height: 1em;
   display: inline-block;
   text-align: center;
@@ -607,7 +606,6 @@ and (orientation: landscape) {
     font-weight: 500;
     display: inline;    
     height: 1em;
-    width: 1em;
     line-height: 1em;
     display: inline-block;
     text-align: center;
