@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html xmnls="http://www.W3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Forecasting Domestic Migration Using Search Queries</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="flaticon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,600,800" rel="stylesheet" type="text/css">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="description" content="Forecasting Domestic Migration Using Search Queries">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <meta name="author" content="Matthew Brehmer">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta charset="utf-8">
+</head>
+<script type='text/javascript' src='//d3js.org/d3.v4.min.js'></script>
+<script type='text/javascript' src='//d3js.org/topojson.v1.min.js'></script>
+<script type='text/javascript' src='//cdn.jsdelivr.net/lodash/4.16.6/lodash.min.js'></script>
+<script src="https://use.fontawesome.com/b227353f1e.js"></script>
+
+<body ontouchstart="">
+    <div class="double">
+        <h3><a href="https://www.msrinteractivescience.com" target="_blank">Microsoft Research Interactive Science</a></h3>
+        <hr>
+        <h1>Forecasting Domestic Migration Using Search Queries</h1>
+        <hr>
+        <p>
+            Roughly one in ten Americans move every year, bringing significant social and economic impact to both the places they move from and the places they move to.
+        </p>
+        <p>
+            <a href="https://www.microsoft.com/en-us/research/publication/forecasting-u-s-domestic-migration-using-internet-search-queries/"
+               target="_blank">Recently published research</a> has shown that migration intent mined from internet search queries can forecast domestic migration and provide new insights beyond government data.
+        </p>
+        <p>
+            The interactive maps below is based on a sample of 4.2 million Bing search queries extracted between 2014 and 2016, where the query intent suggests an interest in moving from one place to another. Below, we display a <span class="strong">migration score</span> based on these queries showing the intensity of interest in migrating from one state to another.
+        </p>
+        <p>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <a href="https://www.microsoft.com/en-us/research/uploads/prod/2019/03/ForecastMigration_www19.pdf"
+                                                                         target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i><span class="moreinfo">&nbsp;read the research paper</span></a>
+        </p>
+        <hr>
+    </div>
+
+    <div class="double">
+        <hr style="visibility: hidden; clear: both">
+        <div class='caption'>
+            <h2>How do migration queries differ across states?</h2>
+        </div>
+    </div>
+
+    <div class="double">
+        <div class='caption'>
+            <span>This pair of interactive maps show</span>
+            <select id="query_select_0"></select>
+            <select id="flowtype_select_0"></select>
+            <select id="location_select_0"></select>
+            <span>
+                The animated arcs show the top 5 <span style="color:tomato;">origin</span> - <span style="color:cornflowerblue;">destination</span> pairs. <br><br>Click / tap on any state to change the <span style="color:tomato;">origin</span> or <span style="color:cornflowerblue;">destination</span>.
+            </span>
+        </div>
+        <svg id='svg_0'></svg>
+    </div>
+    <div class="double">
+        <div class='caption'>
+            <span>
+                Or click / tap on these examples:
+            </span>
+            <ul>
+                <li><span class="example" onclick="gl.loadPairedQuery(0,'HousingQuery'); gl.changePairedQueryState(0,'Florida','inbound')">The origin of housing searches about Florida</span>,</li>
+                <li>
+                    <span class="example"
+                          onclick="gl.loadPairedQuery(0,'JobManufacturing'); gl.changePairedQueryState(0,'West Virginia','outbound')">
+                        The destinations of manufacturing job
+                        searches originating from West Virginia
+                    </span>,
+                </li>
+                <li><span class="example" onclick="gl.loadPairedQuery(0,'HousingJobRatio'); gl.changePairedQueryState(0,'New York','outbound')">The ratio of housing to job queries originating from New York</span>.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="double">
+        <hr>
+        <h2>About</h2>
+        <p>
+            This is an interactive companion to the the <a href="https://www2019.thewebconf.org/" target="_blank">
+                2019 Web
+                Conference (WWW)
+            </a> paper <a href="https://www.microsoft.com/en-us/research/publication/forecasting-u-s-domestic-migration-using-internet-search-queries/"
+                          target="_blank"><em>"Forecasting U.S. Domestic Migration Using Internet Search Queries"</em></a> by <a href="http://users.eecs.northwestern.edu/~ylo3469/" target="_blank">Allen Yilun Lin</a>
+            (Northwestern University), <a href="http://cranshaw.me" target="_blank">
+                Justin
+                Cranshaw
+            </a> (Microsoft Research), and <a href="https://www.microsoft.com/en-us/research/people/counts/"
+                                              target="_blank">Scott Counts</a> (Microsoft Research).
+        </p>
+        <p>
+            This <a href="https://github.com/mattbrehmer/domesticmigration" target="_blank">open-source interactive document</a> was created by <a href="http://mattbrehmer.ca" target="_blank">Matthew Brehmer</a> in collaboration with Scott Counts and Justin Cranshaw in Spring / Summer 2019.
+        </p>
+        <p>
+            Learn more about the Microsoft Research Interactive Science project at <a href="https://www.msrinteractivescience.com/" target="_blank"><span class="moreinfo">msrinteractivescience.com</span>&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>.
+        </p>
+    </div>
+    <div id="footerHolder">
+        <footer>
+            <a href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy &amp; Cookies</a> |
+            <a href="https://go.microsoft.com/fwlink/?LinkID=246338">Terms of Use</a> |
+            <a href="mailto:interactivescience@microsoft.com">Contact Us</a> | © Microsoft 2019
+        </footer>
+    </div>
+    <div class="single" style="visibility: hidden;">
+        <div class='caption'>
+            <h2>1. Where do migration queries come from?</h2>
+            <span>A map of the <span style="color:tomato;">origins</span> of</span>
+            <select id="query_select_1"></select>
+            <span class="checkboxtext"><br>(</span>
+            <input id="query_cb_1" type="checkbox" name="normalize">
+            <span class="checkboxtext">per capita? )</span>
+            <span class="checkboxtext"></span>
+        </div>
+        <svg id='svg_1'></svg>
+    </div>
+
+    <div class="single" id="beside" style="visibility: hidden;">
+        <div class='caption'>
+            <h2>2. Where do migration queries point to?</h2>
+            <span>A map of <span style="color:cornflowerblue;">destinations</span> for</span>
+            <select id="query_select_2"></select>
+            <span><br><br></span>
+        </div>
+        <svg id='svg_2'></svg>
+    </div>
+</body>
+<script type='text/javascript' src='stateDetails.js'></script>
+<script type='text/javascript' src="tilemap.js"></script>
+<script type='text/javascript' src="paired_tilemap.js"></script>
+<script type='text/javascript' src="index.js"></script>
+

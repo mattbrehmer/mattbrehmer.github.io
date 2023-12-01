@@ -1,0 +1,203 @@
+﻿@charset "UTF-8";
+
+body { 
+  font-family: 'Lato',"Apple SD Gothic Neo", "Segoe UI Web Regular","wf_segoe-ui_normal","Segoe UI","Segoe UI Symbol","Myriad","Calibri","UnDotum","Damascus","Futura","Helvetica Neue","BBAlpha Sans","S60 Sans","Arial",sans-serif;
+  background-color: #222222;
+  font-weight: 400;
+  color: #222;
+}
+
+.legend_text, .tooltip_text {
+  fill: #fff;
+  font-size: 0.6em;
+}
+
+h1, h2, h3 {
+  color: #fff;
+}
+
+h3 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a {
+  color: skyblue;
+  text-decoration: none;
+}
+
+p, li {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.caption {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 1.25%;
+}
+
+select {
+  font-family: 'Lato',"Apple SD Gothic Neo", "Segoe UI Web Regular","wf_segoe-ui_normal","Segoe UI","Segoe UI Symbol","Myriad","Calibri","UnDotum","Damascus","Futura","Helvetica Neue","BBAlpha Sans","S60 Sans","Arial",sans-serif;
+  background-color: #222222;
+  color: #fff;
+  font-size: 1em;
+}
+
+.state-label {
+  fill: #222;
+  fill-opacity: .9;
+  letter-spacing: 0.1em;
+  font-size: 1em;
+  font-weight: 600;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+.single {
+  display: block;
+  margin-top: 1.25%;
+  margin-bottom: 1.25%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  height: 0%;
+}
+
+#footerHolder {
+  left: 0px;
+  height: 2em;
+	right: 0px;
+	bottom: 0px;
+	background: #333;
+	color: white;
+  padding: 0px 0px 0px 5%;
+  line-height: 2em;
+	font-size: 0.5em;
+}
+
+.example {
+  color: skyblue;
+  cursor: pointer;
+}
+
+span.strong {
+    font-weight: 600;
+}
+
+@media screen and (min-width: 506px) { 
+  .single {
+    float: left;
+    width: 44%;
+    margin-right: 1%;
+  }
+
+  #beside {
+    margin-left: 1%;
+    margin-right: 0%;
+  }
+
+}
+
+@media screen 
+and (-webkit-min-device-pixel-ratio: 2) {
+  .caption, p {
+    font-size: 1em;
+  }
+
+  input[type=checkbox] {
+    -ms-transform: scale(1.25); /* IE */
+    -moz-transform: scale(1.25); /* FF */
+    -webkit-transform: scale(1.25); /* Safari and Chrome */
+    -o-transform: scale(1.25); /* Opera */
+    transform: scale(1.25);
+    padding: 5px;
+  }
+  
+  .checkboxtext
+  {
+    /* Checkbox text */
+    font-size: 1em;
+    display: inline;
+    padding-left: 0.25em;
+	  padding-right: 0.25em;
+  }
+
+  .state-label {
+    font-size: 2em;
+  }
+
+  select {
+    max-width: 100%;
+  }
+
+  #footerHolder {
+    height: 2em;
+    background: #333;
+    color: white;
+    position: relative;
+    padding: 0px 0px 0px 5%;
+    line-height: 2em;
+    font-size: 0.5em;
+  }
+
+}
+
+.double {
+  display: block;
+  width: 90%;
+  margin-top: 1.25%;
+  margin-bottom: 1.25%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.incoming_arc, .outgoing_arc {
+  pointer-events: none;
+  fill: none;
+  opacity: 0.8;
+  stroke-width: 4px;
+  stroke-dasharray: 10, 4;
+}
+
+@keyframes flow {
+  from {
+    stroke-dashoffset: 14;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes flow {
+  from {
+    stroke-dashoffset: 14;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes reverseflow {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: 14;
+  }
+}
+
+@-webkit-keyframes reverseflow {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: 14;
+  }
+}
