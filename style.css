@@ -37,12 +37,13 @@ strong {
 a {
   color: skyblue;
   text-decoration: none;
-  cursor:default;
+  /* cursor:pointer; */
   }
   
   a:hover{
   color: cornflowerblue;
   text-decoration: underline;
+  /* cursor:pointer; */
   }
 
 #name {
