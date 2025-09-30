@@ -25,6 +25,7 @@ color: skyblue;
 margin: 0px 0 0em 0;
 }
 
+
 strong {
   font-weight: 400;
 }
@@ -303,6 +304,15 @@ font-weight: 400;
 
 .title{
 font-weight: 400;
+}
+
+.title .pubname {
+  padding: 0 3pt 0 3pt;
+  background-color: skyblue;
+  color: #222222;
+  font-weight: 800;
+  font-size: smaller;
+  border-radius: 5%;
 }
 
 #publications .award{
