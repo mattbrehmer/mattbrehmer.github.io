@@ -306,6 +306,15 @@ font-weight: 400;
 font-weight: 400;
 }
 
+p .announce {
+  padding: 0 3pt 0 3pt;
+  background-color: gold;
+  color: #222222;
+  font-weight: 800;
+  font-size: smaller;
+  border-radius: 5%;
+}
+
 .title .pubname {
   padding: 0 3pt 0 3pt;
   background-color: skyblue;
